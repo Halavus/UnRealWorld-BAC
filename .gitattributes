@@ -1,6 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-.gitignore export-ignore
-.gitatributes export-ignore
-_modguide.txt
+/.gitignore export-ignore
+/.gitatributes export-ignore
+/_modguide.txt
 ObsoleteFiles/ export-ignore
