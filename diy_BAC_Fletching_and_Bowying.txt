@@ -1,20 +1,4 @@
 // BAC integration
-//
-// Signatus v1.0
-//
-// Based on Buoidda's fletching
-//
-// v1.0
-// - Created .Fur-fletched Broadhead Arrow.
-// - Created .Branch arrow shaft. with high skill penalty
-// - Modified arrow shaft recipes to be able to use stored birch and rowan saplings
-// - Moved .Broadhead Arrow. here from Buoidda's ironworking
-// - Moved bone fletching items from Buoidda's boneworking
-//
-// For 3.8 having A for Arrows as a hardocded menu 
-// this is all moved under that letter
-// 
-// Sibs: updated vanilla to 3.84, tuned arrowmaking to be in line with vanilla
 
 [SUBMENU_START:arrow]
 
@@ -49,11 +33,6 @@
 [WEIGHT: 0.05]
 [PRICE:0]
 [TILEGFX:bc-forkbahd]
-//2023-06-08 time increased to be above vanilla bone (non-forked) arrowhead
-//3.84 changed skill to common, changed type to weapon
-
-// .Arrow. 
-// BAC version disabled to avoid conflict with 3.80 vanilla arrow making
 
 .Fur-fletched arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*   %-20% /25/    [patch:5]
 {Arrow shaft}		[remove] [patchwise]
