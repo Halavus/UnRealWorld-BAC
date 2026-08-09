@@ -1,7 +1,7 @@
 # BAC creator:
 [Brygun](https://www.unrealworld.fi/forums/index.php?action=profile;u=9): first maintainer & creator of the mod. Minor adaptations of other's mods.
 ## BAC contributors in alphabetical order
-- [Arimon](https://www.unrealworld.fi/forums/index.php?action=profile;u=5158): updates
+- [Arimon](https://www.unrealworld.fi/forums/index.php?action=profile;u=5158): updates, updates on fletching
 - [Buoidda](https://www.unrealworld.fi/forums/index.php?action=profile;u=4335): fletching: ironworking: boneworking
 - [JEB Davis](https://www.unrealworld.fi/forums/index.php?action=profile;u=11): Lamellar armor: 
 - [JP_Finn](https://www.unrealworld.fi/forums/index.php?action=profile;u=3551): [Bait cutting](https://www.unrealworld.fi/forums/index.php?topic=7112.0)
