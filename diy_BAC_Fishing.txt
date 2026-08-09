@@ -1,0 +1,54 @@
+// BAC version of fishing gear crafting
+//
+// Sibs: 3.84 updated to vanilla
+
+
+[SUBMENU_START:fishing]
+
+//BAC Iron fish hook discontinued
+
+// From Privateer = fish cuts
+// Minor adaption by Brygun
+// I did tweak the time but all credit for the idea 
+// goes to Privateer
+
+.Clean fish. "Pike" [effort:1] [noquality] [phys:arms,one-armed]  *FISHING*  /6/	%10%	|-2|	[patch:5] [assist:3] [NOPAUSE]
+{Raw fish}      #1#     [remove] [name:%s cut] [patchwise]
+{Knife}  '+for chopping and cleaning'
+[WEIGHT:1]
+// by Privateer
+// time per 1 lb cut adjustement by brygun
+// 2023-12-25 returned to make-fishing menu after attempts to put in cooking found it made them cooked no longer raw
+
+// 2023-12-08 added bait cutting from JP Finn 
+// original forum thread:
+// https://www.unrealworld.fi/forums/index.php?topic=7112.0
+// 2023-12-25 cooking menu failed on bait so moved to utility
+// 3.84 relocated to fishing menu
+
+.Cut fish bait. (4) "Perch" [effort:1] [phys:hands,arms]	*COOKERY* /5/ |-2| [noquality] [patch:5] [NOPAUSE]
+{Knife}
+{Raw fish} #1# [remove] [ask_num] [name:%s chunk] [patchwise]
+[WEIGHT:0.25]
+[TYPE:food]
+[PRICE:0.07]
+[SPOILAGE_DAYS:14]
+
+.Cut veg bait. (8) "Turnip" [effort:1] [phys:hands,arms]	*COOKERY* /5/ |-2| [noquality] [patch:5] [NOPAUSE]
+{Knife}
+{Vegetables} #0.7# [remove] [ask_num] [name:%s bait] [patchwise]
+[WEIGHT:0.07]
+[TYPE:food]
+[PRICE:0.05]
+[SPOILAGE_DAYS:0]
+
+.Seed bait. (10) "Rye" [effort:0] [phys:hands] *COMMON* /1/ |-2| [noquality] [NOPAUSE]
+{Seeds} #0.25# [remove] [name:%s bait]
+[WEIGHT:0.025]
+[TYPE:food]
+[PRICE:0.001]
+[SPOILAGE_DAYS:0]
+[tilegfx:jp_seed] // Graphic by Enormous Elk, originally sorrel seeds
+
+
+[SUBMENU_END:fishing]

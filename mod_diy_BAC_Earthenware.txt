@@ -1,0 +1,218 @@
+// BAC integration
+//
+// Signatus v1.0
+//
+// v1.0
+// - Added clay-digging, clay pots and clay amphoras from Brygun
+//
+// Brygun added Kiln
+// Brygun's clay rules:
+//  = Needs a kiln
+//  = Water #0.5# per lump to soften for shaping
+//  = 2 Branch fuel per lump
+//  = Price = lumps, for a sellable yet minor price
+// Brygun setting clay making skill to Weatherlore which for me 
+// tends to otherwise go unused
+// Sibs: Amended 2 Branch to 2 Firewood
+
+[SUBMENU_START:Earthen/Barkware]
+
+.Dig clay. "Hunting Horn" [effort:2] [phys:arms,hands,stance]    *COMMON*   /1/ [noquality] [patch] [NOPAUSE]
+{[TERRAIN:lake river]}            '+be at a lake or river (not rapids nor sea)'
+{[TILE:Pit]}      '+you stand in a pit to get past soil layer'
+{Shovel}<Shovel> [wearpct:80]
+[NAME:clay lump]
+[MATERIAL:stone]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-clay]
+
+.Dig clay from sea shore. "Hunting Horn" [effort:2] [phys:arms,hands,stance]    *COMMON*   /1/ [noquality] [patch] [NOPAUSE]
+{[TERRAIN:sea]}            '+be at a sea shore'
+{[TILE:Water]}            '+you stand in the sea water'
+{Shovel}<Shovel> [wearpct:80]
+[NAME:clay lump]
+[MATERIAL:stone]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-clay]
+
+.Clay kiln. "Hunting horn" [effort:3] [phys:arms,hands,stance]	*BUILDING* [noquality] /2h/ \3h\
+{Shovel} <Shovel> [wearpct:40]
+{Stone}		(8)	[remove]	     [ground] '+for lower and middle walls'
+{Rock}		(24)	[remove]	     [ground] '+for upper walls'
+{Clay lump}	(8)	[remove]	     [ground]	'+as mortar and filling the walls'
+{Wooden stake} (7) [remove] [ground] '+for support during drying'
+{Firewood}	(10) [remove] [ground] '+ for the drying fire'
+[TILEGFX:bp-kiln]
+[MATERIAL:stone]
+[WEIGHT:160]
+[PRICE:0]
+[TILEGFX:bp-kiln]
+// Added by brygun
+// Light a fire to dry the clay
+// Kiln graphic by Bard of Prey
+//
+
+
+//////////////////////////
+// Make clay pots, containers
+//
+// For the fire 2 branch per clay lump used
+// Price one per clay lump used
+// makes selling possible but not op
+
+.Clay cup. "Wooden cup"   [effort:0] [phys:hands,one-armed] *COMMON*  %30%    /15/ \2h\
+{Clay lump}   (1)   [remove]
+{Water} #0.5# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Fire}
+{Firewood} (2) [remove] [ground] '+as fuel to dry clay'
+[PRICE:0.1]
+// Above average time to have good holding surface or handle
+
+
+.Clay mug. "Wooden mug"   [effort:0] [phys:hands,one-armed] *COMMON*  %30%   /20/ \2h\
+{Clay lump}   (2)   [remove]
+{Water} #1# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Fire}
+{Firewood} (4) [remove] [ground]'+as fuel to dry clay'
+[PRICE:0.1]
+// Above average time to have good holding surface or handle
+
+
+.Clay bowl. "Wooden bowl"   [effort:0] [phys:hands,one-armed] *COMMON*  %30%    /20/ \2h\
+{Clay lump}   (2)   [remove]
+{Water} #1# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Fire}
+{Firewood} (4) [remove] [ground] '+as fuel to dry clay'
+[PRICE:0.1]
+
+
+.Clay kettle pot. "Pot" [effort:0] [phys:hands,one-armed] *COMMON*  %30%    /30/ \2h\
+{Clay lump}   (2)   [remove]
+{Water} #1# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Fire}
+{Firewood} (4) [remove] [ground] '+as fuel to dry clay'
+[PRICE:0.1]
+[CONT_CAPACITY:1.5]
+[WEIGHT:1.5]
+[TILEGFX:bc-claypot]
+// A smaller version sized for boiling teas and medicines
+// Higher than average build time for pouring shape
+
+.Clay pot. "Pot"   [effort:0] [phys:hands,one-armed]    *COMMON*  %30%    /45/ \3h\
+{Clay lump}   (5)   [remove]
+{Water} #2.5# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Fire}
+{Firewood} (10) [remove] [ground] '+as fuel to dry clay'
+[PRICE:0.3]
+[CONT_CAPACITY:5]
+[TILEGFX:bc-claypot]
+// From Bouidda craft
+// Brygun's rule 2 branch per lump and price = lumps
+
+.Amphora. "Wooden Tub"   [effort:0] [phys:hands,one-armed] *COMMON*  %30%    /90/ \6h\
+{Clay lump}   (15)   [remove]
+{Water} #7.5# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Fire}
+{Firewood} (15) [remove] [ground] '+as fuel to dry clay'
+[PRICE:1]
+[CONT_CAPACITY:25]
+[WEIGHT:9]
+[TILEGFX:bc-claypot]
+// Inspired by amphora to hold large quantites.
+// Tub in name to be seen by other recipes
+// As a tub it isn't able to be used in cooking
+// Good for storing the grains from threshing
+// Used efficiency of scale on capacity vs weight
+// Probably would be pushing what could be fit in the kiln
+
+
+.Large Amphora. "Wooden Tub"   [effort:0] [phys:hands,one-armed] *COMMON*  %30%    /180/ \12h\
+{Clay lump}   (45)   [remove]
+{Water} #22.5# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Fire}
+{Firewood} (45) [remove] [ground] '+as fuel to dry clay'
+[PRICE:2.7]
+[CONT_CAPACITY:125]
+[WEIGHT:25.5]
+[TILEGFX:bc-claypot]
+// A regular amphora will hold enough water to make the large.
+// An amphora so big it will be about all you can carry when
+// full. 125 lbs is about 15 gallons of fresh water
+// This is actually too big for the kiln presented but not
+// worth having a seperate menu.
+// 2023-05-12 25.5 is the highest weight without bugs
+
+///////////////////////
+// Decorative trade clay items
+//
+// Will have improved trade values but not do other things
+
+.Clay figurine. "Rock"   [effort:0] [phys:hands,one-armed] *COMMON*  %30%    /1h/ \2h\ 
+{Clay lump}   (1)   [remove]
+{Water} #0.5# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Fire}
+{Firewood} (2) [remove] [ground] '+as fuel to dry clay'
+{Small knife} [optional] '+for better shaping'
+[WEIGHT:1]
+[PRICE:.1]
+[TYPE:valuable]
+[TILEGFX:it-candle]
+
+
+.Decorated spinner. "Rock"   [effort:0] [phys:hands,one-armed] *COMMON*  %30%    /1.5h/ \2h\ 
+{Clay lump}   (1)   [remove]
+{Water} #0.5# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Thin cordage} =2= [remove] 
+//'+as pull cord'
+{Fire}
+{Branch} (2) [remove] [ground] '+as fuel to dry clay'
+{Wooden stake} (1) [remove]  [ground]'+as spinner shaft'
+{Small knife} [optional] '+for better shaping'
+[WEIGHT:2]
+[PRICE:.1]
+[TYPE:valuable]
+[TILEGFX:bc-shovelbl]
+// Arimon 3.7x: changed {*cord} to {Thin cordage}
+
+.Clay fish decoration. "Rock"   [effort:0] [phys:hands,one-armed] *COMMON*  %15%    /4h/ \3h\
+{Wooden stake} (1) [remove] '+as inner framework'
+{Clay lump}   (2)   [remove]
+{Water} #1.5# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Fire}
+{Firewood} (6) [remove] [ground] '+as fuel to dry clay'
+{Small knife} [optional] '+for better shaping'
+[PRICE:1]
+[WEIGHT:.5]
+[TYPE:valuable]
+[TILEGFX:fd-fish]
+
+
+.Clay playset. "Rock"   [effort:0] [phys:hands,one-armed] *COMMON*  %15%    /6h/ \3h\
+{Wooden stake} (4) [remove] '+as inner framework'
+{Clay lump}   (4)   [remove]
+{Water} #2# [remove] '+to soften clay during shaping'
+{*kiln}	 [noquality] [ground]	'+to dry shape in'
+{Fire}
+{Firewood} (8) [remove] [ground] '+as fuel to dry clay'
+{Small knife} [optional] '+for better shaping'
+[PRICE:1.5]
+[WEIGHT:5]
+[TYPE:valuable]
+[TILEGFX:ter-saustove]
+
+
+
+
+[SUBMENU_END:Earthen/Barkware]

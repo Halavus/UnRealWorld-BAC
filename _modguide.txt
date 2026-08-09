@@ -1,0 +1,370 @@
+Credits to xaidread on discord for the mod guide. 
+Not up to date v3.84
+
+.ItemName. "BaseItem" -Hotkey- (NumberProduced)	*SKILL*	/TimeToMake/ \TimeToComplete\ [patch] [effort:5] [assist:3] [phys:stance,arms,hands,one-armed] [noquality] |SkillAdvance| %SkillModifier%
+(Axe)<Preferred axe>
+{Ingredient}	(number)	[remove] [noquality] [ground]
+{Ingredient}	#weight#	[remove] [patchwise]
+{Ingredient}			[remove] [optional]
+{Ingredient}			[remove] [name:%s] [naming:]
+{Ingredient}	(maximum)	[remove] [ask_num] 'consumes single reagent; must be carried in inventory'
+{Tying equipment}	==	[remove] [nominlen] 'no minimum length; can combine segments'
+{Strong cordage}	==	'rope and withes'
+{Thin cordage}		==	'cords and yarns'
+[NAME:]
+[MATERIAL:]
+[ARMOUR_MATERIAL:]
+[LENGTH:]
+[WEIGHT:]
+[PRICE:]
+[CONT_CAPACITY:]
+[TYPE:]
+[SPOILAGE_DAYS:0]
+[TILEGFX:]
+[ARMOUR_COVERAGE:]
+[SKILL:]
+[AD_CLASS:]
+[1H_PENALTY:]
+[EDGE_ATTACK:]
+[POINT_ATTACK:]
+[BLUNT_ATTACK:]
+
+// https://www.tapatalk.com/groups/urwforum/item-modding-about-accomplished-t6394.html
+//
+// Properties of crafted items can be modded so that truly new items can be created.
+// This applies to do-it-yourself items (diy_*.*) and cookery recipes (cookery_*.*).
+// Modding item properties is simple. You just add item property tags and preferred values after the actual
+// crafting code. If you are creating completely new items it's still advisable to use similar vanilla item
+// as a base item. Item property tags allow you to mod majority of item properties, but vanilla items may
+// have some fixed values which is why it's important to choose the base item carefully.
+// Eg. to create a new kind of a rope, base it on a vanilla rope
+// to ensure it will be properly recognized as
+// tying equipment in the game.
+//
+// Notice that modding item properties doesn't start from a scratch. Every crafted item already has its'
+// properties initialized, and you just need to modify the ones you want to modify. When modding cooked item
+// properties notice that the food price and nutritional values are always automatically calculated upon cooking.
+//
+//
+
+// FIRST LINE PARAMETERS
+
+[effort:]
+//0	easy
+//1	light
+//2	moderate
+//3	hard
+//4	heavy
+//5	very heavy
+
+[phys:]
+//stance	standing
+//arm		1 arm
+//arms		2 arm
+//hand		1 hand
+//hands		2 hands
+//one-armed	penalty
+
+||
+//skill advance [-2,2]
+
+
+.ItemName. "BaseItem" -Hotkey- (NumberProduced)	*SKILL*	/TimeToMake/ \TimeToComplete\ [patch] [effort:5] [assist:3] [phys:stance,arms,hands,one-armed] [noquality] |SkillAdvance| %SkillModifier%
+(Axe) <Preferred axe>
+{Ingredient}	(count)		[remove] [noquality] [ground]
+{Ingredient}	#weight#	[remove] [patchwise]
+{Ingredient}			[remove] [optional]
+{Ingredient}			[remove] [name:%s] [naming:]
+{Ingredient}	(maximum)	[remove] [ask_num] 'consumes single reagent; must be carried in inventory'
+{Tying equipment}	==	[remove] [nominlen] 'no minimum length; can combine segments'
+{Strong cordage}	==	'rope and withes'
+{Thin cordage}		==	'cords and yarns'
+[NAME:]
+[MATERIAL:]
+[LENGTH:]
+[WEIGHT:]
+[PRICE:]
+[TYPE:]
+[TILEGFX:]
+
+[NAME:]
+//item name
+//	[name:This %s Thing]	This Cranberry Thing
+//	[name:Thing %s]		Thing Cranberry
+//	[name:%s Thing]		Cranberry Thing
+//	[naming:first word]	%s value of the first word of selected material/item name
+//	[naming:last word]	%s will get value of the last word of selected material/item name
+//	[naming:original]	%s will get value of original and complete selected material/item name
+[TYPE:]
+//inventory category
+[TYPE:weapon]
+[TYPE:armour]
+[TYPE:food]
+[TYPE:plant]
+[TYPE:tool]
+[TYPE:skin]
+[TYPE:container]
+[TYPE:timber]
+[TYPE:valuable]
+[TYPE:vehicle]
+[TYPE:carcass]
+
+//[TYPE:plant]	plants collected by [H]arvested but not threshed; "bundle of %s fibre"
+
+[LENGTH:]
+// always integer value provided in feet
+// [TYPE:tool]
+// max length joining	255 ft
+// max length spinning	240 ft
+
+[WEIGHT:]
+// weight in pounds (by default), or in grams if the value is followed by g abbreviation
+// Examples:
+// [WEIGHT:1.5]		the item weighs 1.5 pounds
+// [WEIGHT:100 g]	the item weighs 100 grams
+//REFERENCE
+//	1 lb	~ 453.6 g
+//	2.2 lb	~ 1000 g
+
+[CONT_CAPACITY:]
+// capacity of [TYPE:container] item in pounds
+// Example:
+// [CONT_CAPACITY:3]	the container can hold 3 lbs of food, liquid etc.
+
+[PRICE:]
+// price in squirrel hides per item (default) or per pound if the value is followed by 'per lb'
+// Examples:
+// [PRICE:1]		the item costs 1sqh	1 raha
+// [PRICE:10]		the item costs 10sqh	1 tikkuri
+// [PRICE:40]		the item costs 40sqh	1 kiihtelys = 1 sorok = 1 timmer
+// [PRICE:0.2]		the item costs 0.2 squirrel hides
+// [PRICE:1.5 per lb]	one pound of the item costs 1.5 squirrel hides
+//
+// Russian yasuk tribute
+// 1 sable = 1 fox = 1 glutton = 1 otter = 2 blue-fox = 16 arctic fox = 100 sqh
+
+[MATERIAL:]
+[MATERIAL:wood]
+[MATERIAL:birch-bark]
+[MATERIAL:cloth]
+[MATERIAL:wool]
+[MATERIAL:fur]
+[MATERIAL:leather]
+[MATERIAL:iron]
+[MATERIAL:rock]
+[MATERIAL:bone]
+[MATERIAL:antler]
+// of what raw-material the item is made of
+// This property is not fully functional yet and we'll be featured better in the future.
+// However, it's advisable to use this tag in your mods already.
+// possible values: wood / iron / leather / fur / birch-bark / cloth / wool / rock / bone / antler
+[ARMOUR_MATERIAL:]
+[ARMOUR_MATERIAL:birch-bark]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_MATERIAL:wool]
+[ARMOUR_MATERIAL:fur]
+[ARMOUR_MATERIAL:leather]
+[ARMOUR_MATERIAL:iron]
+[ARMOUR_MATERIAL:mail]
+[ARMOUR_MATERIAL:lamellar]
+// material of armour type items. This defines the protection values.
+// possible values: lamellar / iron / mail / leather / fur / cloth / birch-bark
+// Examples:
+// [ARMOUR_MATERIAL:iron] - the armour is made of iron
+[ARMOUR_COVERAGE:]
+[ARMOUR_COVERAGE:cloak]
+[ARMOUR_COVERAGE:hauberk]
+[ARMOUR_COVERAGE:long_hauberk]
+[ARMOUR_COVERAGE:habergeon]
+[ARMOUR_COVERAGE:cuirass]
+[ARMOUR_COVERAGE:overcoat]
+[ARMOUR_COVERAGE:greaves]
+[ARMOUR_COVERAGE:rerebraces]
+[ARMOUR_COVERAGE:vambraces]
+[ARMOUR_COVERAGE:shirt]
+[ARMOUR_COVERAGE:short_shirt]
+[ARMOUR_COVERAGE:long_shirt]
+[ARMOUR_COVERAGE:trousers]
+[ARMOUR_COVERAGE:tunic]
+// bodyparts covered by the armour
+// possible values:
+// one of these predefined coverage categories
+// or any combination of these bodyparts values:
+// skull / face / neck / shoulder / upper_arm / elbow / forearm / hand /
+// thorax / abdomen / hip / groin / thigh / knee / calf / foot
+// Examples:
+// [ARMOUR_COVERAGE:skull neck shoulder] - the armour covers skull, neck and shoulders
+[EDGE_ATTACK:]
+[POINT_ATTACK:]
+[BLUNT_ATTACK:]
+// damage values for weapon attack aspects
+// possible values: 0-9 or -
+// numbers define the damage, - means the aspect is not available for the weapon
+// Example:
+// [EDGE_ATTACK:0]
+// [POINT_ATTACK:2]
+// [BLUNT_ATTACK:-] - thie weapon has 0 edge damage, 2 point damage and doesn't have blunt attack aspect
+[SKILL:]
+// skill associated with the item. Only for weapons.
+// possible value: one of the skills in the game eg. sword,club,bow,crossbow etc.
+// Example:
+// [SKILL:sword] - the weapon uses SWORD skill
+[1H_PENALTY:]
+// skill penalty from using this weapon one-handed
+// possible value: 0-50, defaults to 0
+// Example:
+// [1H_PENALTY:15] - 15% penalty is added when this weapon is used one-handed
+[AD_CLASS:]
+// attack and defense class of the weapon. A/D classification adds related skill bonus
+// when the weapon is used in attack or defense.
+// possible value: 0-6/0-6 (both values must be entered at once separated by /)
+// Default is 0/0. The higher the value the better the weapon performs in attack/defense.
+// Example:
+// [AD_CLASS:5/0] - the weapon has attack class 5 and no bonus when used in defense
+// [AD_CLASS:1/4] - the weapon has attack class 1 and defense class 4
+
+SKILLS
+
+lore & craft
+*AGRICULTURE*
+*BUILDING*
+*COOKERY*
+*HERBLORE*
+*FISHING*
+*HIDEWORKING*
+*TIMBERCRAFT*
+*PHYSICIAN*
+*TRAPPING*
+*TRACKING*
+*WEATHERLORE*
+*TEXTILECRAFT*
+*CARPENTRY*
+
+physical
+*SKIING*
+*STEALTH*
+*CLIMBING*
+*SWIMMING*
+
+combat
+*DODGE*
+*SHIELD*
+*KNIFE*
+*SWORD*
+*CLUB*
+*AXE*
+*FLAIL*
+*SPEAR*
+*BOW*
+*CROSSBOW*
+*UNARMED*
+
+{[TERRAIN:barren]}
+{[TERRAIN:dryish]}
+{[TERRAIN:dry]}
+{[TERRAIN:fresh]}
+{[TERRAIN:wetland]}
+{[TERRAIN:clearing]}
+{[TERRAIN:meadow]}
+
+{[TERRAIN:cave]}
+{[TERRAIN:cliff]}
+{[TERRAIN:mountain]}
+{[TERRAIN:pond]}
+{[TERRAIN:lake]}
+{[TERRAIN:river]}
+{[TERRAIN:grove]}
+{[TERRAIN:open_mire]}
+{[TERRAIN:spruce_mire]}
+{[TERRAIN:pine_mire]}
+{[TERRAIN:settlement]}
+{[TERRAIN:field]}
+
+list of terrain tiles
+==BUILDINGS==
+{[NEARBY_TILE:Inside of a building]}
+{[NEARBY_TILE:Sleeping bunk]}
+{[NEARBY_TILE:Bench]}
+{[NEARBY_TILE:Table]}
+{[NEARBY_TILE:Fireplace]}
+{[NEARBY_TILE:Sauna stove]}
+{[NEARBY_TILE:Door]}
+{[NEARBY_TILE:Open door]}
+{[NEARBY_TILE:Shutter]}
+{[NEARBY_TILE:Eastern wall]}
+{[NEARBY_TILE:North-east corner]}
+{[NEARBY_TILE:South-west corner]}
+{[NEARBY_TILE:Northern wall]}
+{[NEARBY_TILE:Western wall]}
+{[NEARBY_TILE:Southern wall]}
+{[NEARBY_TILE:South-east corner]}
+{[NEARBY_TILE:North-west corner]}
+
+{[NEARBY_TILE:Framework]}
+{[NEARBY_TILE:Inside of a kota]}
+{[NEARBY_TILE:Western wall of a kota]}
+{[NEARBY_TILE:North-west corner of a kota]}
+{[NEARBY_TILE:North-east corner of a kota]}
+{[NEARBY_TILE:South-west corner of a kota]}
+{[NEARBY_TILE:South-east corner of a kota]}
+{[NEARBY_TILE:Northern wall of a kota]}
+{[NEARBY_TILE:Southern wall of a kota]}
+{[NEARBY_TILE:Eastern wall of a kota]}
+{[NEARBY_TILE:Kota doorway]}
+
+{[NEARBY_TILE:Fence]}
+{[NEARBY_TILE:Fence gate]}
+{[NEARBY_TILE:Shelter]}
+{[NEARBY_TILE:Cellar]}
+
+==MODDED IN=
+{[NEARBY_TILE:Big rock]}
+{[NEARBY_TILE:High cliff]}
+{[NEARBY_TILE:Cave floor]}
+{[NEARBY_TILE:Surface of the Earth]}
+{[NEARBY_TILE:pit]}
+{[NEARBY_TILE:Prepared soil]}
+{[NEARBY_TILE:Road]}
+
+==FEATURES==
+{[NEARBY_TILE:ant nest]}
+{[NEARBY_TILE:Rowan]}
+{[NEARBY_TILE:Birch]}
+{[NEARBY_TILE:Young spruce]}
+{[NEARBY_TILE:Spruce]}
+{[NEARBY_TILE:Young pine]}
+{[NEARBY_TILE:Pine]}
+{[NEARBY_TILE:Alder]}
+{[NEARBY_TILE:Thicket]}
+{[NEARBY_TILE:Bushes]}
+
+==CIVILIZATION==
+Camp
+Pasture
+Settlement
+Village
+Fortified village
+Field
+
+==BARREN==
+Cave
+Cliff
+Hill
+Mountain
+
+==WATER==
+Ford
+Rapids
+River
+Sea
+Water
+
+==TERRAIN==
+Ground
+Lichenous pine forest
+Heathland
+Coniferous forest
+Grove
+Open mire
+Spruce mire
+Pine mire

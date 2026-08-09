@@ -1,0 +1,86 @@
+// menudefinitions for Brygun and Community (BAC) mod
+//
+// Based on Signatus added items integration
+//
+// Updated by Arimon and Rudy up to 3.72
+// 3.80 changes done by Brygun
+// 3.80 modified by Shrike to split advanced boats out of Fishing.
+
+.Wool Processing and Garments. -O- *MAKE*
+.Cloth Garments.	-G- *MAKE*
+.Armors of Iron and Wood.		-I- *MAKE*
+.Armors of Leather and Fur. -J- *MAKE*
+.Carpentry.		-P- *MAKE*
+.Earthen/Barkware.	-E- *MAKE*
+.Hide and Bone.    	-N- *MAKE*
+.Mining & Iron.		-M- *MAKE*
+.Smithing.		-S- *MAKE*
+.Toolmaking.		-D- *MAKE*
+.Boats.			-B- *MAKE*
+.Utility recipes. 	-U- *COOKERY*
+.Hot smoke.	-H-	*COOKERY*
+.Tub cooking. -T- *COOKERY*
+.Cutting and bait. -C- *COOKERY* 
+
+
+// Removed Menus for reference
+//.Barkware.		-A- *MAKE*
+//.Boneworking.		-N- *MAKE*
+//.Bowying.		-O- *MAKE*
+//.Cloth Garments.	-G- *MAKE*
+//.Woollen Garments.	-Z- *MAKE*
+// Arimon 3.7x: removed .Weaving. -G- *MAKE*
+// .Fletching.		-F- *MAKE*
+// .Fletching and Bowying.	-Q- *MAKE* move to 3.8 A for arrows
+
+// Reference of vanilla entries
+//
+// A = Arrows (added in 3.80)
+// B = Building
+// C = Clothes
+// F = Fishing
+// H = Hafting
+// L = Lumber
+// T = Trapping
+// R = Transport
+// U = Utility articles *MAKE*
+// Y = Tying equipment
+// W = Weapons
+// X = Textilecraft
+
+
+
+// Available after vanilla defaults and the above
+// G
+// V
+// Note: AFAIK the menu will display 25 not 26 so one letter
+// at least must be vacant
+//
+// It is desirable to have 1-2 menus free for other major mods
+// like profession mods by Privateer
+
+
+// Changes (AFAIK by Rudy)
+//
+// .Mining. 		-M- *MAKE* 
+// AFAIK had only a few entries so to save space it was renamed
+// "Mining and more"
+// it may be needed for overflow of general items
+//
+// Added carpentry for growing amount of wood items under lumber
+// .Carpentry.	-P- *MAKE*
+//
+// Added armor group one intended for Lamellar
+// .Armor group one.	-J- *MAKE*
+//
+// .Addeditems. removed as contents moved onto other menus
+//
+
+
+
+// for 3.80
+// A is now vanilla for arrows and a harcoded non changeable
+// Fletching and bowying moved into arrows
+// J use for Armor of Leather and Furs to be close to I for iron armor
+
+

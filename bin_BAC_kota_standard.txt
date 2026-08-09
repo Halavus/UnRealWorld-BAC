@@ -1,0 +1,24 @@
+//BAC integration
+//
+// This file to hold recipes that do not conflict with others
+// and leave enough menu space for alternates
+
+[SUBMENU_START:kota]
+
+.Framework. [effort:3]	*BUILDING* 	 	-F-	/30/	[assist:3]	%20%	|-1|	 [GFX_X:2] [GFX_Y:1]
+{Slender trunk}(8) [remove] [ground]
+
+.North-west corner of a kota. [effort:2]  *BUILDING*  [GFX_X:5] [GFX_Y:0]   [assist:3]  |+1|  /15/   %10%  
+.Northern wall of a kota. [effort:2]      *BUILDING*  [GFX_X:6] [GFX_Y:0]   [assist:3]  |+1|	
+.North-east corner of a kota. [effort:2]  *BUILDING*	[GFX_X:7] [GFX_Y:0] [assist:3]  |+1|
+.Western wall of a kota. [effort:2]	  *BUILDING*	[GFX_X:5] [GFX_Y:1] [assist:3]  |+1|
+.Inside of a kota. [effort:2] 		  *BUILDING*	[GFX_X:6] [GFX_Y:1] [assist:3]  |+1|
+.Eastern wall of a kota. [effort:2]	  *BUILDING*	[GFX_X:7] [GFX_Y:1] [assist:3]  |+1|
+.South-west corner of a kota. [effort:2]  *BUILDING*	[GFX_X:5] [GFX_Y:2] [assist:3]  |+1|
+.Southern wall of a kota. [effort:2]	  *BUILDING*	[GFX_X:6] [GFX_Y:2] [assist:3]  |+1|
+.South-east corner of a kota. [effort:2]  *BUILDING*	[GFX_X:7] [GFX_Y:2] [assist:3]  |+1|
+.Kota doorway. -D- [effort:2] *BUILDING*	[GFX_X:9] [GFX_Y:1]
+{Cover for kota} [remove] 
+{Slender trunk}  [remove] [ground]
+
+[SUBMENU_END:kota]

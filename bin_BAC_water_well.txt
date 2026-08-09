@@ -1,0 +1,25 @@
+// BAC integration
+//
+// biy_BAC_alt_2.txt
+// storage of a set of potentially intermixing recipes
+
+
+[SUBMENU_START:building]
+
+
+
+.Water. "Well" *BUILDING* [effort:3] [phys:arms,stance,one-armed] /5h/ [assist:3]
+{Shovel} <Shovel> 
+{Stone} (50) [remove] [ground] '+for walls'
+{Rock} (30) [remove] [ground] '+for gravel packing'
+{*tub} [remove] '+for bailing water'
+{*rope} [remove] 
+// Well recipe configured to BAC naming conventions
+// TODO: Well graphic
+// I feel some terrarin wouldn't be so suitable for well
+// such as mountains or cliff. However, the recipe language
+// doesn't an exclude command.
+
+
+
+[SUBMENU_END:building]

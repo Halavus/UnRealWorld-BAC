@@ -1,0 +1,57 @@
+biy_glossary.txt in BAC files does not include buildings from vanilla. This appears to be because BAC moves these to separate files (eg biy_BAC_home_cabin.txt)
+--biy_BAC_home_cabin.txt verified to be identical to vanilla log cabin
+--bin_BAC_kota_standard.txt also identical to vanilla
+--biy_BAC_shelter_standard.txt also identical
+--remainder of biy_glossary.txt also matches
+
+Replaced BAC version of diy_glossary.txt with vanilla 3.88 version. Vanilla version includes changes to clothcrafts, required sewing needle, new clothcraft skill, as well as better sorting of containers.
+
+edited mod_diy_BAC_Clothing.txt to use new vanilla {Sewing needle} tag instead of modded, and all finished clothing recipes to use *CLOTHCRAFT* instead of *TEXTILECRAFT* to be in line with vanilla 3.88
+
+mod_diy_BAC_Armor_Leather_Fur.txt changed all 'vanilla'-clone recipes to their 3.88 vanilla counterparts. Changed *HIDEWORKING* to *CLOTHCRAFT* on all modded recipes (to match vanilla). Considered changing to require needle, but not sure if recipes are intended to represent more crude or sophisticated stitchworking, so left as-is for now.
+
+mod_diy_BAC_Barkware.txt changed birchbark shoes and cap to new vanilla versions. All modded recipes that made clothing items changed from *HIDEWORKING* to *CLOTHCRAFT* to match vanilla
+
+
+mod_diy_BAC_Boneworking.txt changed Animal headdress from *HIDEWORKING* to *CLOTHCRAFT*
+
+mod_diy_BAC_Wool.txt changed all equippable clothing items to *CLOTHCRAFT*, and replaced modded textile needle with {Sewing needle}
+
+/Experimenting with fixing no pause issues with modded items. Items with "hunting horn" base seem to have this issue. Probably because hunting horn is /not a craftable item, and therefore was never updated to be pausable properly like other items. I'm guessing horn was chosen as base because it's not /used for anything else (eg not a weapon or food, etc). I'm going to try replacing it with "staff" to see if a similar largely-non-functional (but /craftable) base item will work better. First try is with whetstone and anvil stone.
+/This did not work. Trying "sesta" instead due to similar properties and being "common" skill for crafting (same as whetstone and stone anvil).
+/No luck. Reverted to hunting horn, trying to change from "common" skill to "carpentry".
+/No change. Reverted to "common" skill.
+/Trying removing base item tag altogether, as other items are defined without one.
+/Results in item recipe not showing in menu: reverted.
+/Possibly an issue with modded menu itself? Trying moving it to main crafting menu 
+/Not it. Reverted.
+/The only thing that seems otherwise exceptional about these recipes is the inclusion of the "TILEGFX" tag. Perhaps them being marked exceptionally in /this way is preventing them from being resumed? Trying with tag removed
+/Still no change. Reverted.
+
+Whetstone and Anvil stone have menu options that do not match their name? Trying with names matched, no "NAME:" tag
+FIXED! The issue with resumability is caused by the recipe's name not matching the name of the item. 
+
+Updating all modded recipes to use item name as recipe name and removing "NAME:" tags accordingly.
+
+Recipes that use "[name]" in the body in order to update the name according to the ingredients used (eg cooking recipes that list "[name] soup") also have this problem, but wouldn't be easily converted. Since most are shorter duration tasks, I'm instead adding [NOPAUSE] to them.
+
+Hafting recipes ("haft a [X]") similarly don't really work with item and recipe name matched, and are relatively low time cost, so adding [NOPAUSE] to them as well.
+
+Transport recipes all got [NOPAUSE] tag, as the resulting name issues go beyond the pause issue alone (eg erasing wood types when loading/unloading logs)
+
+Fur and leather simple clothes (eg fur shoes) got [NOPAUSE] to retain ability to use fur types (they are also all shorter time cost)
+Bark equipment similarly given [NOPAUSE]. Note that some bark equipment have longer (4h) times, which may be an issue, but these are mostly more decorative/RP items than strict survival, so it should be okay for now
+Same for other decorative/RP items in boneworking, eg the various combs
+
+Commented out backstraps and sinew recipes as this is now a vanilla feature
+
+All other items with [NAME:] tag have been changed to have the same recipe name as the resulting item
+
+
+3.88.1
+Bloomery furnace (forge) now Bloomery furnace forge due to bug with parentheses in recipe names
+
+3.88.2
+Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)
+
+Changed mod shortbow and longbow in diy_BAC_Weapons to hardwood shortbow/longbow to fix issue of overlapping item names with vanilla bows

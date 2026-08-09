@@ -1,0 +1,444 @@
+//Cookery combined
+//
+// Now integrates the Nerjpezcookery mod
+// Fataal's hardtack is present
+// Bark-water from Bouidda is present in case its needed
+//
+// Brygun's additions include:
+// berry turnovers -> tasty dessert
+// long bread -> loaf sized bread
+//
+//
+////////////////////////
+// On cooking times
+//
+// There are 2 time commands available with the /#Active/ being 
+// time the character is involved and all recipes seem to have 
+// that. The other time is marked with the other slashes as 
+// \#Unavailable\. This is the unavailable time that an object 
+// exists but can't be interacted with. On checking the files 
+// and how they were written I can see in at least some cases 
+// there is the logic that after the time interacting,
+// /#Active/, that it would be ready for consumption without any 
+// /#Unavailable/ time alloted.
+//
+
+
+[SUBMENU_START:baking]
+
+.Flatbread. (5)	    *COOKERY*	/30/ 		%30%	|-1|	:148:  [NOPAUSE]
+{Flour}     #0.5#   [remove] [roast] [name]
+{Water}     #0.25#  [remove] 
+{Seasoning} #0.15#  [remove] [roast] [optional]
+{Seeds} #0.15#  [remove] 'seeds for crunch' [roast] [optional]
+[TILEGFX:it-flbread]
+//3.60 Bet vanilla recipe
+
+
+.Hardtack. (12)    *COOKERY* /13/ \240\ %-10% |-1|  [NOPAUSE]
+{Flour}     #2#   [remove] [roast] [name]
+{Water}    #1#  [remove] 
+{Seasoning} #.6#  [remove] [roast] [optional]
+[SPOILAGE_DAYS:0]
+[WATER:0]
+[TILEGFX:it-biscuit]
+//From Fataal
+// update to his urw 3.7 version
+
+.Berry Turnover. (6)  *COOKERY* /20/ \60\ |-1|  [NOPAUSE]
+{Stone} [ground] '+baking platform'
+{Flour}     #1#   [remove] [roast]
+{Berries} 	#1#     [remove] [roast] [naming: last word] [name:%s turnover]
+{Rock} [ground] '+to crush the berries'
+{Water}    #.5#  [remove]
+{Seasoning} #.15#  [remove] [roast] [optional]
+[COOK_WEIGHT_DIV:0.93]
+[WATER:0]
+[SPOILAGE_DAYS:60]
+[TILEGFX:vl-bbrooch]
+//From Brygun
+//Sample cooking on stone video 
+// https://www.youtube.com/watch?v=mkU1SJ4dNV0
+
+.Berry Turnover from dried berries. (6)  *COOKERY* /20/ \60\ |-1|  [NOPAUSE]
+{Stone} [ground] '+baking platform'
+{Flour}     #1#   [remove] [roast]
+{dried*berry} 	#0.25#     [remove] [roast] [naming: last word] [name:%s turnover]
+{Rock} [ground] '+to crush the berries'
+{Water}    #1#  [remove]
+{Seasoning} #.15#  [remove] [roast] [optional]
+//[COOK_WEIGHT_DIV:1]
+[WATER:0]
+[SPOILAGE_DAYS:60]
+[TILEGFX:vl-bbrooch]
+
+
+//A larger bread rather than a flat bread biscuit	[NOPAUSE]
+.Long Bread. [patch:5] *COOKERY* /13/ \60\ |0|  
+{Stone} [ground] '+for a baking platform'
+{Flour}     #1.0#   [remove] [roast] [naming: original] [name:%s long bread] [patchwise]
+{Water}    #0.5#  [remove] [patchwise]
+{Seasoning} #.15#  [remove] [roast] [optional] [patchwise]
+[COOK_WEIGHT_DIV:.7]
+[SPOILAGE_DAYS:60]
+//weight fix to counter roasting reducton
+
+
+.Korovai loaf.       *COOKERY*	/16/ 	\120\	%40%	|-1|	:148:  [effort:1] [NOPAUSE]
+{Flour}     #2#   [remove] [bake] [name]
+{Milk} 	#1#   '+for good dough'  [remove] [bake]
+{*grain*} #3#  '+as whole grains' [remove] [bake] [optional]
+[TILEGFX:it-bread]
+[WATER:0]
+[SPOILAGE_DAYS:24]
+
+.Salty biscuit.   (10)  *COOKERY*	/3/ \10d\  %50%	 :148:
+{*Korovai loaf}  #12#   'Korovai loaf' [remove] [roast] 
+{Salt} 	#1.5#	[remove] [roast]
+{Seeds} #4#  [remove] '+add seeds to taste' [roast] [optional]
+{Seasoning}	#0.50#	[remove]  [roast] [optional]
+{Board} [ground] '+to lay out the biscuits to dry'
+{Heated fireplace} [ground]
+[TILEGFX:it-biscuit]
+[SPOILAGE_DAYS:0]
+[COOK_WEIGHT_DIV:5] 
+[WATER:0]
+// The original recipe calls for 10 days. I believe the original
+// intent is it is being caked in salt to perserve. Which is
+// why it gets SPOILAGE_DAYS:0
+
+.Bean taco.	(4)	*COOKERY* /6/  \20\	%20%	:148:  [effort:1]
+{*broad beans} 	'Broad beans'	#5#	[remove] [roast]
+{*latbread} (4) 'flatbreads to wrap cooked beans in' [remove] [roast]
+{Salo*}    'Salo added to taste'	#1#	[remove] [roast] [optional]
+[TILEGFX:it-beancake]
+[COOK_WEIGHT_DIV:1.5] 
+[SPOILAGE_DAYS:14]
+
+.Stuffed bun. 	(6)	*COOKERY* /20/  \60\	%40%	:148:  [effort:1]
+{Roasted*}	#8#  '+as cooked meat fillings'	[remove] [roast]  [optional]
+{Flour}	#2#	[remove] [roast]
+{Water} 	#0.5#     [remove] 
+{Board} [ground] '+to knead the dough' 
+{Herbs}	#2#	[remove] [roast] [optional]
+{Heated fireplace} [ground]
+{Knife}	'+for chopping'
+[TILEGFX:it-biscuit]
+[COOK_WEIGHT_DIV:1.2] 
+[SPOILAGE_DAYS:14]
+
+.Goulash stew. 		*COOKERY* /10/  \120\	%30%	:148:  [effort:1]
+{Smoked*}	'+as smoked items'	#0.60#	[remove] [bake]
+{Vegetables}	#4#	[remove] [bake]
+{Flour}     #0.8#   [remove] [bake] [optional]
+{Water}		#1#	[remove] [bake]
+{Seasoning}	#0.20#	[remove]  [bake] [optional]
+{Knife}	'+for chopping'
+[WATER:33] 
+[SPOILAGE_DAYS:20]
+
+[SUBMENU_END:baking]
+
+
+[SUBMENU_START:porridge]
+
+//3.60 Beta porridges reverted to vanilla
+
+.Porridge. 		*COOKERY*	 /20/  	%50%	|-1|	:148:  [NOPAUSE]
+{Flour} 	#0.4# 	[remove] [boil] [name]
+{Water} 	#1# 	[remove] 
+
+.Oven porridge. 		*COOKERY* /3/   \320\ 	%50%	|-1|	:148:  [NOPAUSE]
+{Flour} 	#0.4# 	[remove] [bake] [name]
+{Water} 	#1# 	[remove] 
+
+.Seed porridge.		*COOKERY*	/20/    %50%	|-1|	:148:  [NOPAUSE]
+{Seeds} 	#0.4# 	[remove] [boil] [name]
+{Water} 	#1#     [remove] 
+
+.Berry porridge.	*COOKERY*	/10/  	\90\ 	%50%	|-1|	:148:  [NOPAUSE]
+{Berries} 	#0.5#     [remove] [boil] [name:%s porridge]
+{Water}	   	#1#  	[remove] 
+{Flour} 	#0.25#  	[remove] [boil] [optional] 
+// Arimon 3.7x: adjusted amount of ingredients needed to be in line with the vanilla recipe
+
+
+[SUBMENU_END:porridge]
+
+[SUBMENU_START:meat]
+
+.Shishkebab. 		*COOKERY* /12/  \30\	%40%	:148:  [effort:1] [patch:3] [NOPAUSE]
+{Raw meat}	#3# 	[remove] [roast] [patchwise] [name]
+{Kebab stick}  [remove] [patchwise]
+{Herbs}	#3#	[remove] [roast] [optional] [patchwise]
+{Seasoning}	#0.2#	[remove] [roast] [optional] [patchwise]
+{Knife}	'+for preparing the meat'
+{Wooden Bowl} '+to soak cuts & herb'  
+[COOK_WEIGHT_DIV:1.5] 
+[TILEGFX:it-kebab]
+
+.Hunter's Borsch. 		*COOKERY* /12/ \120\  %50%	:148:  [effort:1]
+{*ried*}	'+as Dried goods' #0.50# 	[remove] [boil] [optional]
+{Raw meat}	'+add any leftover cuts or fat' #4.3# 	[remove] [boil] [optional]
+{Vegetables}	#1.0#	[remove] [boil] [optional]
+{Seasoning}	#0.20#	[remove] [optional] [boil]
+{Water}		#2#	[remove] 
+{Knife}	'+for chopping and peeling' 
+[WATER:55] 
+[SPOILAGE_DAYS:5]
+
+.Meat pelmeni. 		*COOKERY* /16/  \10\	%40%	:148:  [effort:1]
+{Raw meat}	#4.5# 	[remove] [boil] 
+{Flour} 	#1.5#	[remove] [boil]
+{Water} 	#1#     [remove] 
+{Knife}	'+for preparing the meats' 
+{Board} [ground] '+to roll the dough' 
+[WATER:66] 
+[SPOILAGE_DAYS:7]
+
+.Salo slice.  (8)   *COOKERY*	/6/ \14d\  %40%	 :151:  
+{*Fat}    'Animal fat' #4#   [remove] [roast] 
+{Salt} 	#1.0#	[remove] [roast]
+{Seasoning}	#1.0#	[remove] [roast] [optional]
+{*berr*} '+add berries to taste' #1#	[remove] [roast] [optional]
+{Knife}	'+for slicing salo'
+[TILEGFX:it-salo]
+[SPOILAGE_DAYS:220]
+//Another salt treating recipe taking days for the salt to cake.
+
+.Meat soup. 		*COOKERY* /20/  \45\	%20%	:148:  [NOPAUSE]
+{Raw meat}	#2# 	[remove] [boil] [name]
+{Water}		#2.5#	[remove] [boil]
+{Vegetables}	#0.5#	[remove] [boil]
+{Mushrooms}	#0.5#	[remove] [boil] [optional]
+{Knife}	'+for chopping and peeling' 
+{Seasoning}	#0.25#	[remove] [optional] [boil]
+//3.60 Bet vanilla recipe
+
+.Dry meat soup. 		*COOKERY* /10/  \2h\	%20%	:148:  
+{Dried*cut}	#0.6# 	[remove] [boil] 'dried meat'
+{Water}		#2.5#	[remove] [boil]
+{Vegetables}	#0.5#	[remove] [boil] [optional]
+{Knife}	'+for chopping and peeling'
+{Seasoning}	#0.25#	[remove] [boil] [optional]
+//Dry meat soup is from Bouidda
+
+.Smoke meat soup. 		*COOKERY* /10/  \2h\	%20%	:148:  
+{Smoked*cut}	#0.6# 	[remove] [boil] 'smoked meat'
+{Water}		#2.5#	[remove] [boil]
+{Vegetables}	#0.5#	[remove] [boil] [optional]
+{Knife}	'+for chopping and peeling'
+{Seasoning}	#0.25#	[remove] [boil] [optional]
+//Smoke meat soup from Brygun as a logical step from dried meat soup
+//may need mass of meat used adjusted
+
+
+.Meat stew. 		*COOKERY* /20/  \240\	%20%	:148:  [NOPAUSE]
+{Raw meat}	#3#	[remove] [bake] [name]
+{Water}		#0.25#	[remove] 
+{Knife}	'+for chopping'
+{Vegetables}	#0.5#	[remove] [bake] [optional]
+{Mushrooms}	#0.5#	[remove] [bake] [optional]
+{Seasoning}	#0.25#	[remove] [bake] [optional]
+//3.60 Bet vanilla recipe
+
+[SUBMENU_END:meat]
+
+[SUBMENU_START:fish]
+
+.Whole-cooked fish. 	    *COOKERY*	/12/ 		%20%	:148:  [effort:0] [NOPAUSE]
+{Raw fish}      [remove] [roast] [name:whole-cooked %s]
+{Knife}	'+for cutting the fish' 
+{Herbs}     #2.0#  [remove] [roast] 
+
+
+.Fish soup. 		*COOKERY* /20/  \45\	%20%	:148:  [NOPAUSE]
+{Raw fish}      #2#     [remove] [boil] [name:%s soup]
+{Water}		#2.5#	[remove] [boil]
+{Vegetables}	#0.5#	[remove] [boil]
+{Mushrooms}	#0.5#	[remove] [boil] [optional]
+{Knife}	'+for chopping and peeling' 
+{Seasoning}	#0.25#	[remove] [optional] [boil]
+//3.60 Bet vanilla recipe
+
+.Fish pelmeni. 		*COOKERY* /16/  \10\	%40%	:148:  [effort:1]
+{Raw fish}	#4.5# 	[remove] [boil] 
+{Flour} 	#1.5#	[remove] [boil]
+{Water} 	#2#     [remove] 
+{Knife}	'+for preparing the fish' 
+{Board} [ground] '+to roll the dough' 
+[WATER:66] 
+[SPOILAGE_DAYS:10]
+
+.Roasted fish cuts.    [patchwise]   *COOKERY*  /10/  \35\    |-1|    :148:  [NOPAUSE]
+{Raw fish}      #1#     [remove] [roast] [patchwise] [name:Roasted %s cuts]
+{Berries}   #0.1#    [remove] [roast] [optional] [patchwise]
+{Vegetables} #0.1#  [remove] [roast] [optional] [patchwise]
+{Seasoning} #0.1#  [remove] [roast] [optional] [patchwise]
+{Knife}   '+for chopping and cleaning' 
+[COOK_WEIGHT_DIV:1.3]
+//Submitted by Iago.Hatch
+//Retains original fish nutrition but losses the raw status 
+
+[SUBMENU_END:fish]
+
+[SUBMENU_START:vegetable]
+
+.Roasted turnip. 		*COOKERY* /3/  \60\	%15%	:114:  [effort:0]
+{Turnip}	'Turnips to be cooked in coals' (10) 	[remove] [roast]
+{Knife} '+for peeling and cleaning'
+[SPOILAGE_DAYS:8]
+[COOK_WEIGHT_DIV:1.4] 
+
+
+.Roasted vegetables. 		*COOKERY* /3/ \60\ 	%15%	|-2| 	[patch:10] [NOPAUSE]
+{Vegetables} #1.0# [remove] [roast] [name:Roasted %s] [naming:original] [patchwise]
+{Seasoning} #0.1# [remove] [roast] [optional] [patchwise]
+{Knife} '+for peeling and cleaning'
+[COOK_WEIGHT_DIV:1.4]
+//From signatus
+
+.Roasted mash-turnip.	(3)	*COOKERY* /6/  	%40%	:148:  [effort:2]
+{Roasted turnip}  #5#	'Roasted turnip to mash' [remove] [roast]
+{Milk}	#2#	[remove] [roast]
+{Smoked*}	'+add smoked cuts for flavour'	#0.6#	[remove] [roast] [optional]
+{Herbs}	  	#2#	[remove] [roast] [optional]
+[SPOILAGE_DAYS:16]
+
+
+.Kvass drink. 		*COOKERY* /18/  \3d\	%40%	:148:  [effort:0]
+{Rye flatbread}  (2)	'Rye bread to ferment' [remove] [boil]
+{*wooden tub*}	'Tub to ferment kvass starter'
+{Herbs} 		#3.0#	[remove] [boil] [optional]
+{Berries}   #0.8#     [remove] [boil] [optional]
+{Water}		  	#6#	[remove] 
+{Seasoning}	  	#0.2#	[remove] [optional] [boil]
+[WATER:98] 
+[TILEGFX:it-kvass]
+[SPOILAGE_DAYS:0]
+
+.Okroshka soup. 		*COOKERY* /3/  	%70%	:148:  [effort:0]
+{Herbs} 		#3.0#	[remove] [boil] 
+{Kvass drink}		  	#2#	[remove] [boil]
+{Knife} '+for mincing'
+{Salt*}    'Salty toppings'	#0.8#	[remove] [boil] [optional]
+{Seasoning}	  	#0.2#	[remove] [optional] [boil]
+[WATER:90] 
+[SPOILAGE_DAYS:10]
+
+.Pea soup. 		*COOKERY* /6/  \120\	%20%	:148:  
+{Peas} 			#2# 	[remove] [boil]
+{Water}		  	#2.5#	[remove] [boil]
+{Raw meat}	  	#1#	[remove] [boil] [optional]
+{Seasoning}	  	#0.25#	[remove] [optional] [boil]
+//3.60 Bet vanilla recipe
+
+.Green soup. 		*COOKERY* /3/  \10\	%20%	:148: [NOPAUSE]
+{Herbs} 		#1#	[remove] [boil] [name:%s soup]
+{Water}		  	#0.5#	[remove] [boil]			
+{Flour}			#0.1#	[remove] [boil] [optional]	
+{Seasoning}	  	#0.1#	[remove] [optional] [boil]	
+//3.60 Bet vanilla recipe
+
+.Vegetable soup. 		*COOKERY* /20/  \45\	%20%	:148:  [NOPAUSE]
+{Vegetables} 		#2#	[remove] [boil] [name:%s soup]
+{Knife} '+for chopping and peeling'
+{Water}		  	#2#	[remove] [boil]
+{Seasoning}	  	#0.25#	[remove] [optional] [boil]
+//3.60 Bet vanilla recipe
+
+.Mushroom soup. 		*COOKERY* /6/  \20\	%20%	:148:  [NOPAUSE]
+{Mushrooms}		#2#     [remove] [boil] [name:%s soup]
+{Water}			#0.75#	[remove] [boil]
+{Flour}			#0.25#	[remove] [boil] [optional]
+{Seasoning}		#0.25#	[remove] [boil] [optional]
+//3.60 Bet vanilla recipe
+
+.Vegetable stew.		*COOKERY* /3/  \90\	%20%	:148:  [NOPAUSE]
+{Vegetables} 		#3#	[remove] [bake] [name:%s stew]
+{Water}			#0.25#	[remove] [bake]
+{Mushrooms}		#0.5#	[remove] [bake] [optional]
+{Knife} '+for chopping and peeling'
+{Seasoning}		#0.25#	[remove] [bake] [optional]
+//3.60 Bet vanilla recipe
+
+
+[SUBMENU_END:vegetable]
+
+
+[SUBMENU_START:Utility recipes]
+
+.Bark-water. 		*COOKERY* /3/  \1h\	:148: [NOPAUSE]
+{*bark} 		#3#	[remove] [boil] [name:%s-water] [naming:last word] 'bark'
+{Water}		  	#3#	[remove] [boil]
+[CARB:0]
+[FAT:0]
+[PROTEIN:0]
+[WATER:100]			
+
+.Dried berries.      *COOKERY*	/3/ \6d\  %30%	 :151:  [NOPAUSE]
+{Berries}   #4#     [remove] [roast] [name:dried %s]
+{Stone} [ground] '+to lay out the berries in the sun' 
+[COOK_WEIGHT_DIV:8] 
+[WATER:0] 
+[SPOILAGE_DAYS:0]
+[PRICE:0.1]
+
+.Dried mushrooms.     *COOKERY*	/6/ \10d\  %30%	 :151:  [NOPAUSE]
+{Mushrooms}   #4#     [remove] [roast] [name:dried %s]
+{Knife}	'+for cleaning the mushrooms'
+{Stone} [ground] '+to lay out the shrooms'
+[COOK_WEIGHT_DIV:8] 
+[WATER:0]  
+[SPOILAGE_DAYS:0]
+[PRICE:0.1]
+
+//Cheese mod by zhihao1
+// http://www.unrealworld.fi/forums/index.php?topic=2360.0
+
+.Sour Milk. *COOKERY* /12/  \1d\	%20%	:148:  
+{nettle leaves}   #1#  [boil] [remove] 
+{Milk}		#5#	  [remove] [boil]
+[SPOILAGE_DAYS:120]
+
+.Nettle Cheese. *COOKERY* /3/  \240\	%20%	:148:  
+{Sour Milk}   #6#   [roast] [remove] 
+[TILEGFX:it-cheese]
+[COOK_WEIGHT_DIV:6] 
+[SPOILAGE_DAYS:0]
+[PRICE:0.25]
+
+.Munajuusto. *COOKERY* /12/  \45\	%20%	:148:  
+{Milk} #3#   [remove] [bake]
+{Sour Milk} #1#   [remove] [bake]
+{*egg}	(4)	  [remove] [bake]
+[TILEGFX:it-cheesebaked]
+[COOK_WEIGHT_DIV:2] 
+[SPOILAGE_DAYS:14]
+
+
+.Juustoleipä. *COOKERY* /12/  \30\	%20%	:148:  
+{*Cheese} 	#1#   [remove] [bake]
+{Roasted*}	#2#  '+add cooked additions'	[remove] [bake]  [optional]
+{*Berries}	#2#  '+add berry toppings'	[remove] [bake]  [optional]
+[TILEGFX:it-cheesebaked]
+[SPOILAGE_DAYS:10]
+
+.Leipäjuustokeitto. *COOKERY* /12/  \90\	%20%	:148:  
+{*Cheese}	'+add cheese for taste' #0.50# 	[remove] [boil] [optional]
+{Roasted*}	#3#  '+add cooked additions'	[remove] [boil]  [optional]
+{Vegetables}	#1.0#	[remove] [boil] [optional]
+{Seasoning}	#0.20#	[remove] [optional] [boil]
+{Water}		#2#	[remove] 
+{Knife}	'+for chopping and peeling' 
+[WATER:55] 
+[SPOILAGE_DAYS:7]
+
+//end cheese mod
+
+[SUBMENU_END:Utility recipes]
+
+
+
+
+

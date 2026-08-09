@@ -1,0 +1,16 @@
+// Sibs: Updated vanilla to 3.84
+
+[SUBMENU_START:trapping]
+
+.Paw-board fox trap. [effort:2] [phys:arms,one-armed] *TRAPPING*	/3h/	%25%	|-1|	
+{Board}	[remove]
+{Axe}	<Carving axe> [wearpct:30]
+{Knife}	
+
+.Loop snare. [effort:0] [phys:hands,one-armed] *TRAPPING*	/20/	%15%	|-2|  [patch:10]				
+{Yarn} =6=   [remove] [patchwise]
+// 3.7x: used thin cordage to make recipe easier
+// 3.84: reverted to yarn
+
+[SUBMENU_END:trapping]
+

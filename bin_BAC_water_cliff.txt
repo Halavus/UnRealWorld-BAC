@@ -1,0 +1,25 @@
+// BAC integration
+//
+// biy_BAC_alt_2.txt
+// storage of a set of potentially intermixing recipes
+
+
+[SUBMENU_START:building]
+
+//Stand outside the cave next to the wall
+.Water. "Cliff water catcher" *BUILDING* [effort:4] [phys:arms,stance,arms,legs] /6h/ [assist:3]
+{[NEARBY_TILE:High cliff]}
+{Barrel} (1) [remove] [ground] '+to catch water'
+{Slender trunk} (4) [remove] [ground] '+as braces for barrel'
+{Staff} (6) [remove] [ground] '+to be split and hollowed for channel gutters'
+{Wooden stake} (12) [remove] [ground] '+as wedges to align gutters'
+{Stone} (8) [remove] [ground] '+to brace gutters'
+{Axe} <Adze axe> '+to hollow out gutters'
+{Rock} '+for hammering'
+
+// Due to lack of a roof slope the gutters are wedged to
+// create a flow path. Then braced with heavy stones to 
+// keep them in place.
+// Build time is increased 
+
+[SUBMENU_END:building]

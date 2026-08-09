@@ -1,0 +1,469 @@
+// BAC integration
+//
+// Many items from Bouidda
+// Brygun added auger, drill, iron nails, adze axe, draw knife,
+// pliers
+// Other items from respective modders
+//
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Tools
+//
+// Base tools are part of the ironworking files
+// this lists additional tools added to the menu
+//
+// Some items may require shaped wood like an "axe haft"
+// which are generally to be found under Carpentry
+//
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Added items:
+//
+// Iron nails (moved to iron working)
+// Adze axe based for working on better watercraft
+// Draw knife which works like a planar to make long smooths
+// Auger for making thick long holes
+// Drill for making thin long holes
+// Pliers for gripping at odd angles and later for making mail
+//
+// A possible metal anvil recipe is presented but not active
+//
+// Sanding tool from ptry987 Woodworking for Carpentry
+//
+// Other tools may be added over time. In general a menu space
+// here requires the tool be of use in other recipes.
+// Tools also provide a way of having a barrier to advanced
+// crafts as you must first build the extra tool.
+//
+//
+//>>>>>>>>>>>>>>>>>>>>>
+// How to code the different hammer technology
+//
+// {Rock} for very basic hit with anything, no leverage
+// {*hammer} for Stone hammer or better
+// {*iron hammer} when you need Flat iron hammer or better
+// {Ball iron hammer} for the best type of hammer only
+//
+/////////////////////
+// How to code for Adze axe technology
+//
+// {*adze axe} to allow the easy to make Stone adze axe
+// {Iron adze axe} to require the advanced metal adze
+//
+
+
+
+
+[SUBMENU_START:Toolmaking]
+
+
+
+//>>>>>>>>>>>>>>>>>>>>
+// Building a smithy
+//
+
+.Bellows. "Hunting horn"	[effort:2] [phys:arms,hands]		*CARPENTRY*	/4h/
+{Board}		(4)	[remove]
+{Slender trunk}		[remove] [noquality]
+{Leather}	#4#	[remove]
+{Axe}<Carving axe>		 [noquality] [wearpct:30]
+{Knife}<Small knife>
+[MATERIAL:wood]
+[WEIGHT:70]
+[PRICE:2]
+[TILEGFX:bc-bellows]
+
+.Whetstone. "Hunting horn"	[effort:2] [phys:hands]	*COMMON*			/2h/ [noquality]
+{[TERRAIN:barren]}				'+stand on Barren terrain'
+{Stone}			[remove]		'+as stone to shape'
+{Stone} 					'+another stone to grind with'
+[MATERIAL:stone]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-whetstone]
+
+.Anvil stone. "Hunting horn"	[effort:2] [phys:stance,arms,hands]	*COMMON* 	/8h/ 
+//{[TERRAIN:barren]}				'+stand on Barren terrain'
+//{[NEARBY_TILE:Big_rock]}			'+stand next to a Big rock'
+{Stone}			[remove]		'+as stone to shape'
+{Whetstone} '+grind smoothness of hitting areas'
+[MATERIAL:stone]
+[WEIGHT:120]
+[PRICE:0]
+[TILEGFX:bc-anvil]
+// [noquality] tag removed 
+// Whetstone added for smoothing the anvil stone to workable
+
+
+.Dip net. "Fishing rod" [effort:0] [phys:hands,one-armed] *CARPENTRY* /2h/
+{Slender trunk}		[remove] [noquality] 
+{Branch}	(2)	[remove] [noquality] '+as spreaders'
+{Cloth}		#4#	[remove]			'+to make catching net from cloth, fur or leather'
+{Thin cordage}		=15=	[remove] [nominlen] [patchwise]		
+'+for tying together'
+{Axe}<Carving axe>
+{Knife}<Small knife>
+[WEIGHT:8]
+[PRICE:0]
+[TILEGFX:bc-dipnet]
+//Dip net can scoop ores or fish
+// Arimon 3.7x:
+// - changed {*cord} to {Thin cordage}
+// - added [nominlen] to {Thin cordage}
+
+
+//>>>>>>>>>>>>>>>>>>
+// Hammers
+
+.Stone hammer. "Mace" [effort:2] [phys:arms,hands]	*CARPENTRY* %-30%	/6h/
+{Stone}[remove] [noquality]		'+for head'
+{Stone} [noquality]		'+for grinding'
+{Rock} [noquality]		'+for knapping'
+{Pitch glue}		[remove] [noquality]		
+{Fire} [noquality]		'+to apply glue'
+{Thin cordage} =5= [remove]		
+{Slender trunk} [remove]
+[BLUNT_ATTACK:5]
+[EDGE_ATTACK:-1]
+[POINT_ATTACK:-1]
+[AD_CLASS:1/0]
+[MATERIAL:stone]
+[WEIGHT:3]
+[PRICE:0.3]
+[TILEGFX:bc-hammer]
+// Has a skill penalty so hammer comes out as low quality
+// low quality means you will have limits on smithing
+// until making an iron hammer
+// Arimon 3.7x: changed {Cord} to {Thin cordage}
+
+
+///////////////////
+// Iron hammer
+// A primary smithing tool
+// First one assumed to be simple shape with smooth flat end
+// on one side. Other end unpolished.
+
+.Flat iron hammer head. "Hunting horn" [effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/6h/
+{*iron billet}	(4)	[remove]			'+as iron for the head'
+{*forge*}  			 [noquality]		'+Forge or furnace'
+{Charcoal} (6) 		[remove] [noquality]
+{Bellows}		[ground]
+{*anvil*} 		[ground]			'+as an anvil nearby'
+{*hammer}      			 [noquality]		
+{* tub of water}	[ground] [noquality] 		'+as water for quenching'
+
+
+
+//////////////////
+// Ball hammer
+//
+// An iron hammer with one side flat and the other having a ball 
+// aka ball-pen hammer.
+// https://en.wikipedia.org/wiki/Ball-peen_hammer
+// The ball shape is much better for some shapes and will be
+// manadatory for some recipes.
+// Require an existing iron hammer
+// The postive %#% will lead to fine or better quality
+// Which in turn may lead to better production quality
+
+.Ball steel hammer head. "Hunting horn" [effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/8h/ %25%
+{*Steel billet}	(4)	[remove]			'+as iron for the head'
+{*forge*}  			 [noquality]		'+Forge or furnace'
+{Charcoal} (6) 		[remove] [noquality]
+{Bellows}		[ground]
+{*anvil*} 		[ground]			'+as an anvil nearby'
+{*hammer}      			 [noquality]		
+{* tub of water}	[ground] [noquality] 		'+as water for quenching'
+[BLUNT_ATTACK:7]
+[EDGE_ATTACK:-1]
+[POINT_ATTACK:-1]
+[AD_CLASS:1/0]
+[MATERIAL:iron]
+[WEIGHT:3]
+[PRICE:18]
+[TILEGFX:bc-hammer]
+
+
+
+/////////////////
+// Main tools
+//
+
+
+.Handaxe head.   [effort:2] [phys:arms,hands]	*CARPENTRY*	/2h/ 
+{Small axehead shape} [remove]
+{File} '+ for grinding the shape'
+{Whetstone} '+ for sharpening'
+{Leather} #0.5# '+ for final deburring'
+
+.Woodsman's axe head.   [effort:2] [phys:arms,hands]	*CARPENTRY*	/2h/
+{Small axehead shape} [remove]
+{File} '+ for grinding the shape'
+{Whetstone} '+ for sharpening'
+{Leather} #0.5# '+ for final deburring'
+
+.Carving axe head.  [effort:2] [phys:arms,hands]	*CARPENTRY*	/2h/  
+{Small axehead shape} [remove]
+{File} '+ for grinding the shape'
+{Whetstone} '+ for sharpening'
+{Leather} #0.5# '+ for final deburring'
+
+.Broad axe head.   [effort:2] [phys:arms,hands]	*CARPENTRY*	/3h/ 
+{Large axehead shape} [remove]
+{File} '+ for grinding the shape'
+{Whetstone} '+ for sharpening'
+{Leather} #0.5# '+ for final deburring'
+
+.Splitting axe head.   [effort:2] [phys:arms,hands]	*CARPENTRY*	/3h/ 
+{Large axehead shape} [remove]
+{File} '+ for grinding the shape'
+{Whetstone} '+ for sharpening'
+{Leather} #0.5# '+ for final deburring'
+
+.Shovel blade.   [effort:2] [phys:arms,hands]	*CARPENTRY*	/1h/ 
+{Shovel blade shape} [remove]
+{File} '+ for grinding the shape'
+
+.Sickle blade. "Hunting horn"  [effort:2] [phys:arms,hands]	*CARPENTRY*	/1h/ 
+{Sickle blade shape} [remove]
+{File} '+ for grinding the shape'
+{Whetstone} '+ for sharpening'
+{Leather} #0.5# '+ for final deburring'
+
+.Small knife blade. "Hunting horn"  [effort:2] [phys:arms,hands]	*CARPENTRY*	/1h/ 
+{Small knife blade shape} [remove]
+{File} '+ for grinding the shape'
+{Whetstone} '+ for sharpening'
+{Leather} #0.5# '+ for final deburring'
+
+.Large knife blade. "Hunting horn"  [effort:2] [phys:arms,hands]	*CARPENTRY*	/2h/ 
+{Large knife blade shape} [remove]
+{File} '+ for grinding the shape'
+{Whetstone} '+ for sharpening'
+{Leather} #0.5# '+ for final deburring'
+
+
+
+.File. "Hunting horn" [effort:3] [phys:arms,hands] *CARPENTRY* /4h/
+{Iron shape} [remove] [ground] 
+{*forge*}			 [noquality]		'+Forge or furnace'
+{Charcoal} 	(6) 	[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*} 		[ground]			'+as an Anvil nearby'
+{*hammer}      	'+ for hammering and cutting'				
+{* tub of water}	[ground] [noquality] 		'+as water for quenching'
+{Whetstone} 		[ground] 			'+for refinement'
+[WEIGHT:2]
+[TILEGFX:bc-knifebla]
+
+
+////////////////////
+// Adze axe 
+// Has a blade turned 90 degrees to normal axe heads
+// Gives it a scooping action good for smoothing or in narrows
+// Example are going deeper inside a dug out log
+// and finer shaping of planks and thick woods in boat building
+// https://en.wikipedia.org/wiki/Adze
+//
+// Now with early tech Stone and later tech Iron versions
+//
+
+
+.Stone adze axe. "Stone-axe" [effort:4] [phys:arms,hands] *CARPENTRY* %-30%	/3h/
+{Stone}	[remove]
+{Slender trunk} [remove]
+{Thin cordage} =5= [remove]
+{Knife}
+[POINT_ATTACK:-1]
+[EDGE_ATTACK:2]
+[BLUNT_ATTACK:2]
+//Skill penalty to reduce quality of things it makes so you
+// will want to make an iron adze axe
+// Arimon 3.7x: changed {Cord} to {Thin cordage}
+// Soon: Make it pausable and take forever
+
+.Adze head.  [effort:4] [phys:arms,hands]	*CARPENTRY*	/2h/  
+{Small axehead shape} [remove]
+{File} '+ for grinding the shape'
+{Whetstone} '+ for sharpening'
+{Leather} #0.5# '+ for final deburring'
+
+
+////////////////////
+// Auger
+//
+// Used to pre-drill holes before using nails
+// or wooden pegs. Expected only for large construction
+// or joining thick pieces like in boat building
+//
+// Differs from drill in that the auger makes finger or thumb
+// diameter holes such as for structural wooden pegs
+//
+// A carving axe or knife would would do in for most boards
+// if you can access both sides. If the board is already in 
+// place you might use an auger to drill from the open side
+// all the way across and then into the other wood.
+// Presented as one recipe
+// 
+// Weblinks:
+// https://www.youtube.com/watch?v=N_hCWus3eoA
+// 
+
+.Crossbar Auger. "Sesta" [effort: 3] [phys:arms,hands] *CARPENTRY*  /6h/
+{*billet} (2) [ground] [remove] '+for rod length'
+{*steel billet} (1) [ground] [remove] '+for cutting tip of rod'
+{*billet} (1) [ground] [remove] '+for reinforcement band'
+{*forge*}			 [noquality]		'+Forge or furnace'
+{Charcoal} 	(8) 	[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*} 		[ground]			'+as an anvil nearby'
+{*hammer}      			 [noquality]		
+{* tub of water}	[ground] [noquality] 		'+as water for quenching'			
+{Staff} (1)		 [remove] [noquality]	'+to cut into shaft, crossbar and swivel head'
+{Axe} <Carving axe> '+cut staff, shape wood' [wearpct:50]
+{Knife} <Draw knife>		  '+for fine shaping'
+{Whetstone}			  [noquality]	'+for final sharpening'
+[WEIGHT:6]
+[PRICE: 4.7]
+[TYPE:tool]
+[TILEGFX:bc-dipnet]
+//Price is mostly for the iron
+
+
+//////////////////////
+// Medieval Bow drill
+//
+// For making tiny holes in hard or thick objects.
+// Example holes in steel plates to make lamellar
+// or pilot holes for nails in thick objects.
+//
+// Differs from auger in that this drill makes tiny holes
+//
+// Possible addition for a pump cord drill
+// it would use 1 iron billet for rod and 1 steel billet cutter
+// also use a {*cord} and {Staff} mabye {Block}
+// Makes thin holes like pre-drills for long iron nails
+// possible use in clinkered punt
+//
+// Weblink
+// https://www.youtube.com/watch?v=nCsC6q8l3_0
+//
+// Note: the name Medieval Drill is used so that it doesn't
+// get picked up in *bow *cord or other recipes
+
+
+.Medieval drill. "Sesta" [effort: 3] [phys:arms,hands] *CARPENTRY*  /4h/
+{Wooden stake} (1) '+for central shaft'
+{Block of wood} (1) '+for flywheel'
+{*iron billet} [remove] [ground] '+for drill shaft'
+{*steel billet} [remove] [ground] '+for drill cutting head'
+{Thin cordage} =6= [remove] 
+//'+for the twisting string'
+{Branch} {1} [noquality] '+for bow holding string'
+{*forge*}			 [noquality]		'+Forge or furnace'
+{Charcoal} 	(4) 	[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*} 		[ground]			'+as an Anvil nearby'
+{*hammer}      			 [noquality]		
+{* tub of water}	[ground] [noquality] 		'+as water for quenching'
+{Knife} <Small knife>		 		 '+for fine shaping'
+{Whetstone}			  [noquality]	'+for final sharpening'
+[WEIGHT:4]
+[PRICE: 60]
+[PRICE: 3]
+[TILEGFX:bc-dipnet]
+[TYPE:tool]
+//Price is mostly for the iron
+// {Cord} being attempted for 3.60 Beta, might need to be
+// {Tying equipment}
+// Arimon 3.7X: changed {Cord} to {Thin cordage}
+
+
+//>>>>>>>>>>>>>>
+// Pliers
+// 
+// Various possible uses. Expected to be needed for mail armor
+//
+// Pliers are built as a force multiplier to grip
+// Where as tongs are more just for reach or holding hot things
+
+.Pliers. "Sesta" [effort: 3] [phys:arms,hands] *CARPENTRY*  /4h/
+{Iron shape} (2) [remove] [ground] '+for two gripping rods'
+{*nails} #.05# [remove] [ground] '+Nail represents pivot cylinder'
+{Branch} (1) [remove] [ground] '+for handles'
+{*forge*}			 [noquality]		'+Forge or furnace'
+{Charcoal} 	(6) 	[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*} 		[ground]			'+as an Anvil nearby'
+{*hammer}      			 [noquality]		
+{* tub of water}	[ground] [noquality] 		'+as water for quenching'
+{Whetstone} 		[ground] 			'+to make grooves and smooths'
+{Knife} <Small knife> 					'+for whittling handles'
+[WEIGHT:2]
+[TYPE:tool]					
+[PRICE: 16]
+[TILEGFX:bc-forkbahd]
+
+
+
+///////////////////
+// Metal anvil
+//
+// Bouidda uses a large stone anvil which did exist historically.
+// It is should also be possible to use that to make better
+// equipment for a smithy.
+// Sample modern portable metal anvil
+// https://www.homedepot.com/p/OLYMPIA-9-lb-Cast-Iron-Hobby-Anvil-38-789/205149980
+//
+// To be of proper use all the bouidda anvil entries 
+// need [noquality] removed
+// That has not yet been done. 
+
+.Metal anvil.    "Hunting horn" [effort:4] [phys:arms,hands,stance] *CARPENTRY* /8h/ %45%
+{*iron billet}  #7# [remove] '+body and cone'
+{*steel billet} #2# [remove] '+hardened face and step'
+{Block of wood}  [remove] [noquality] '+mass for stability'
+{Axe} <Carving axe> '+shape wood to hold anvil' [wearpct:20]
+{Rock} (2) [noquality] '+aids for shaping and hole making'
+{*forge*}			 [noquality]		'+Forge or furnace'
+{Fire}      '+lit nearby'
+{Charcoal} 	(18) 	[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*} 		[ground] [noquality]			'+as an Anvil nearby'
+{*iron hammer}   		 [noquality]		'+as a better hammer'
+{* tub of water}	[ground] [noquality] 		'+as water for quenching'
+{Whetstone}			  [noquality]		 '+to grind impact surface smooth'
+[MATERIAL:stone]
+[WEIGHT:29]
+[PRICE:60]
+[TILEGFX:bc-anvil]
+[TYPE:tool]
+//
+// Alot of entries have [noquality] as our goal here is to use
+// the quality tag to improve later building
+//
+// Base price is a actually low because the fine or better
+// output should raise the value. Remember the anvil quality
+// is about the game system making better goods.
+//
+// The high % reflect the better quality of using metal over a
+// stone anvil. Then the anvil quality helps make other things
+// better (once their recipes are edited to remove [noquality])
+
+// Sanding tool
+// From ptry987 Woodworking for Carpentry uses
+//
+.Sanding tool. "Sesta" [effort:1] [phys:arms,one-armed]  *CARPENTRY*	/30/ |-2| %5% [noquality]
+{Stone}				 [remove] [ground]
+{Leather} #1# [remove] '+leather pieces'
+{Thin cordage}	=6=	 [remove] [ground] 
+//'+to tie pieces'
+{Knife}		<Small knife>				'Small knife'
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:15.0]
+[PRICE:0.3]
+[TILEGFX:bc-whetstone]
+//Query what is this supposed to look like in real life?
+// Arimon 3.7x: changed {*cord} to {Thin cordage}
+
+
+[SUBMENU_END:Toolmaking]

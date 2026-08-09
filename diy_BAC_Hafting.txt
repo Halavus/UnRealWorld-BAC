@@ -1,0 +1,122 @@
+// BAC version of vanilla hafting, no changes  
+
+
+[SUBMENU_START:hafting]
+
+.Elk hunting horn. "Hunting horn" [effort: 2] [phys:hands] *CARPENTRY*  %-15%  /5h/
+{*elk antler} (2) [remove] '+as left and right curves to be matched'
+{Knife} <Small knife>
+{Thin cordage} (1) [remove] 
+//'+as binding and strap'
+{*glue} #0.25# [remove] '+as glue together'
+{Fire} '+to soften glue'
+[MATERIAL:antler]
+
+.Small handle. "Hunting horn" [effort:1] [phys:arms,hands]  *CARPENTRY* 	/2h/	%30% 
+{Branch}	 [remove] [noquality]	
+{Knife} <Small knife>
+[TILEGFX:bc-axehaft]
+
+.Haft a small knife. "Small knife" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/30/	 [NOPAUSE]
+{Small knife blade}	 [remove] 	
+{Small handle} [remove]
+{Knife} <Small knife>
+{Hammering tool} [noquality]
+[NAME:Small knife]
+
+.Haft a broad knife. "Broad knife" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/30/	 [NOPAUSE]
+{Large knife blade}	 [remove] 	
+{Small handle} [remove]
+{Knife} <Small knife>
+{Hammering tool} [noquality]
+[NAME:Broad knife]
+
+.Haft a northern knife. "Northern knife" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/30/	 [NOPAUSE]
+{Large knife blade}	 [remove] 	
+{Small handle} [remove]
+{Knife} <Small knife>
+{Leather} #1# '+for the sheath'
+{Hammering tool} [noquality]
+[NAME:Broad knife]
+
+
+// Draw knife
+// https://en.wikipedia.org/wiki/Drawknife
+// Useful for advanced wood shaping such as the clinkered punt
+// In recipes can be used as the preferred type of knife
+// Used in many ways including when today we would use a planer
+.Haft a draw knife. "Knife" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/30/	 
+{Large knife blade}	 [remove] 	
+{Knife} <Small knife>
+{Hammering tool} [noquality]
+[NAME:Draw knife]
+[WEIGHT:1.5]
+[POINT_ATTACK:-1]
+[EDGE_ATTACK:3]
+[BLUNT_ATTACK:2]
+[TYPE:tool]
+[TILEGFX:bc-knifebla]
+
+
+.Haft a sickle. "Sickle" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/30/	 [NOPAUSE]
+{Sickle blade}	 [remove] 
+{Small handle} [remove]	
+{Knife} <Small knife>
+{Hammering tool} [noquality]
+[NAME:Sickle]
+
+.Haft an adze. "Carving axe" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/45/	[NOPAUSE]
+{Adze head}	 [remove] 	
+{Axe haft} [remove]
+{Knife} <Small knife>
+{Hammering tool} [noquality]
+[NAME:Iron adze axe]
+[POINT_ATTACK:-1]
+[EDGE_ATTACK:3]
+[BLUNT_ATTACK:3]
+
+.Haft a short spear. "Spear" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/45/	[NOPAUSE]
+{Short spear head}	[remove]
+{Spear handle} 		[remove]
+{Knife} <Small knife>
+{Hammering tool} [noquality]
+[NAME:Short spear]
+[AD_CLASS:3/1]
+[1HPENALTY:0]
+[MATERIAL:iron]
+[WEIGHT:3]
+// inherited accuracy 4 from spear, so better than wooden javelin (1)!
+
+.Haft a flat iron hammer. "Mace" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/45/	[NOPAUSE]
+{Flat iron hammer head}	 [remove] 	
+{Axe haft} [remove]
+{Knife} <Small knife>
+{Hammering tool} [noquality]
+{Whetstone}		 '+for final polishing'
+[NAME:Flat iron hammer]
+[BLUNT_ATTACK:5]
+[EDGE_ATTACK:-1]
+[POINT_ATTACK:-1]
+[AD_CLASS:1/0]
+[MATERIAL:iron]
+[WEIGHT:3]
+[PRICE:12]
+[TILEGFX:bc-hammer]
+
+.Haft a ball iron hammer. "Mace" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/45/	 [NOPAUSE]
+{Ball steel hammer head}	 [remove] 	
+{Axe haft} [remove]
+{Knife} <Small knife>
+{Hammering tool} [noquality]
+{Whetstone}		 '+for final polishing'
+[NAME:Ball iron hammer]
+[BLUNT_ATTACK:7]
+[EDGE_ATTACK:-1]
+[POINT_ATTACK:-1]
+[AD_CLASS:1/0]
+[MATERIAL:iron]
+[WEIGHT:3]
+[PRICE:18]
+[TILEGFX:bc-hammer]
+
+[SUBMENU_END:hafting]

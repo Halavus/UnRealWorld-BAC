@@ -1,0 +1,264 @@
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Brygun's watercraft overhaul
+//
+// Primary discussion at:
+// https://www.unrealworld.fi/forums/index.php?topic=4654
+//
+// Assumes Bouidda's mod or similiar already installed
+//
+// Raft tweaked to between vanilla and Jeb's thoughts
+// You can now dismantle a raft to get ropes back 
+//
+// Leather punt
+// A large tarp over a woven frame making an upside down bowl
+// Comes out as a very light punt
+//
+// Birch-bark punt is based on north american canoes
+// Come out as a reduced though still fair size punt
+// 
+// Finnish style punt based on what Erkka told us about
+// This is a punt as in the vanilla game
+// Low skill medium equipped characters should be 
+// able to attempt this
+//
+// Clinker style punt 
+// A very large punt comparable to small viking boat
+// Uses advanced building methods and tools
+// Not for starting or underequipped characters
+//
+// Dec 2020 Price increase, 
+// Game uses squirrel hides as internal pricing
+// reference (older 3.40 game version)
+// https://unrealworld.fandom.com/wiki/Prices_(v3.40)
+// 1 squirrel hide is worth 17 torches
+// In that a tub holding 8 lbs of liquid is price 1
+// larger containers less utility so ratio of hold to price goes down
+// the dug out canoe phase produces such large trough like conatiners
+// 
+//
+// The tarp for a punt is Price 12
+// mod tarp weave punt is Price: 13 for floation 480
+// baseline 1 Price per 40 float intended, plus a bit
+// 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// BAC needed
+//
+// Collecting large whole sections of birch-bark
+//
+// Adze axe based for working on better watercraft
+// Auger for holes on clinker style punt peg holes
+// Iron nails for the clinker style punt
+//
+//
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Bouidda needed items
+//
+// Leather cover from hideworking for punt
+// Pitch glue (or * glue) for all others
+// Clay pots can work for heating the glue
+// Bouidda iron working for iron and tool inputs
+//
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Programming note:
+// A note for a suggested "flotation" represents the weight the
+// craft can carry including its own weight and the operator
+// Currently this is not an option in the game though I have 
+// suggested it
+//
+//
+//
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//
+// Sibs: Many recipes have too many components to be displayed in the menu. I ain't touching these, but someone may want to. TODO
+
+[SUBMENU_START:transport]
+
+// MODDED:
+
+.Lumber pack frame. "Birch-bark basket" [phys:hands,one-armed] /2h/ [noquality] [assist:1]
+{Branch} (9) [remove] '+for framing'
+{Tying equipment} =12= [remove] '+as ties and shoulder straps'
+{Knife}
+[CONT_CAPACITY:0]
+[PRICE:0.5]
+[WEIGHT:4]
+[TYPE:tool]
+[MATERAL:wood]
+[TILEGFX:wdblk]
+// Currently more a decorative item or roleplaying a way to carry
+// Perhaps in later game versions can help carry
+// Current container capacity set to zero as its very open and things fall out
+// Meant more for hauling wood or tying on bags
+
+
+//Vanilla has 5 transport entries
+// One of which is raft
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Raft 2 entries
+//
+// The idea here is that Axe + Rope + Sesta/Paddle = river crossing you can carry
+// You would find or fell trees at each river
+// Recover the rope then you want to go inland
+// The recipe system only produces one type of good and the rope
+// is the one that makes this work. Trees to be found/felled again with the axe
+
+// As of 3.60 vanilla raft  uses weight 1200 anyway
+//.Raft.  [effort:3] [phys:stance,arms]	*COMMON* [assist:2]	/80/ \1\
+//{Tree trunk}	(3) 	[remove]	
+//{Strong cordage}		=12=    [remove] [nominlen]
+//{Cutting weapon} <Axe> 			
+// desired flotation 2400 lbs
+// fallen logs tend to float around the 50% line (simplified)
+// thus weight to flotation >remaining< is 1 to 1
+// thus weight to float >total< is 2 to 1
+// use >total< if weight of crat is included which is likely
+// Arimon 3.7x: 
+//	- changed {Rope} to {Strong cordage}
+//	- changed lenght of {Strong cordage} from 10 to 12 to match vanilla recipe
+//	- added [nominlen] to {Strong cordage}
+//2023-05-14-B 1 min cool time to force dropping
+//removed for vanilla raft
+
+
+
+.Free ropes from raft. "Rope" [Length:12] [noquality] [effort:3] [phys:stance,arms]	*COMMON*	/20/ |-2| [assist:3] [NOPAUSE]
+{Raft} [ground] [remove]
+[NAME:freed rope]
+[LENGTH:12]
+//Destroy raft to get ropes back
+//Note only one item type per recipe so can't get the trunks
+//Im under the impression you can find new trees later on
+//3.60 beta code update for length
+//
+//2023-05-03 reactivated, length set to match rope recipe
+//2023-05-14-B fix length to current build of 12, remove raft
+//2023-06-08-A The intention is that you are travelling a long
+//distance overland and would abandon the raft. If you were
+//to be coming back likely you would leae the raft assembled.
+//A sample to use is fleeing a slave start over multiple
+// rivers or an overland migration. The raft and trunks
+// are to heavy to carry but might be found again. The rope
+// might be the only one you have.
+//This recipe is meant for low resource situations as when you
+//have a lot of say hides to make rope you could just leave
+//rafts all over the place.
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Brygun's floating log
+//
+// Not valid until we have [FLOTATION:###] command
+// After all logs float
+//
+// .Floating log. "Punt" (1) /30m/ [effort:1] *CARPENTRY* |-2| [assist:2]
+// {Log} [remove] [ground] '+as a debranched tree'
+// {Branch} (20) [remove] [ground] '+as a weave for a seating platform'
+// {Knife} '+trim where necessary'
+// [PRICE:0]
+// [WEIGHT:405]
+// [FLOTATION: 800]
+// [TILEGFX:log]
+// Branches woven around stubs of branches to make a
+// safer sitting and cargo area.
+// The extra weight above 400 is for that woven area.
+// You push the log into the water. It floats itself plus
+// the character with moderate gear. Feet would dangle in 
+// the water or be carefully kept on seating area.
+
+// Sledwagon
+//
+// The idea is to use "A"pply to "P"lace the loaded items into the sled wagon.
+// The sled gives a 1:20 load efficiency is 1:20 original.
+// The sled will only hold one type of object at a time. 
+//
+// Known bug that the items need one clock tick after placing to be useable.
+// That is something to do with coding them as food which starts needing to be prepared.
+//
+// Integration of Galgana's Cethegus sledwagon reborn
+// Itself drawing on ideas from Privatter's quiver mod
+// from https://www.unrealworld.fi/forums/index.php?topic=5673.0
+// adapted to BAC with minor edits, wheels now madatory
+// Sled build time longer from 1h to 2h
+// Rope usage from =150= to =100= though listed as split between harness and securing
+//
+
+
+.Sledwagon. "Wooden tub"	*TIMBERCRAFT*	/2h/ [effort:3] [phys:arms,stance] [assist:3] |1| [noquality]
+{Board}		(8)	[remove] [ground] '+ for frame and skis'
+{Block of wood}	(4)	[remove] [ground] '+ for summertime wheels'
+{Axe} <Carving axe>	'+ for shaping' [wearpct:50]
+{Strong cordage}	=40=		[remove] '+ Rope for pulling harness'
+{Strong cordage}	=60=		[remove] '+ Rope for securing loads'
+[WEIGHT:25]
+[CONT_CAPACITY:240]
+[TILEGFX:gg-sledge]
+
+// Arimon 3.7x: 
+//	- changed {Rope} to {Strong cordage}
+//	- tweaked descriptive text (added 'Rope')
+
+
+.Load tree trunk. "Roach"	*COMMON*	/10/ [patch:9] [effort:3] [phys:arms,stance] [assist:3] [noquality] [SPOILAGE_DAYS:0] [NOPAUSE]
+{Sledwagon*}	[ground] '+ stand near sledwagon'
+{Tree trunk}		[remove] [ground] [patchwise]
+[NAME:Tree trunk on sled]
+[TILEGFX:Trunk]
+[MATERIAL:wood]
+[WEIGHT:25]
+
+.Offload tree trunk. "Tree trunk"	*COMMON*	/5/ \1\ [patch:12] [effort:3] [phys:arms,stance] [assist:3] [noquality] [NOPAUSE]
+{Sledwagon*}	[ground] '+ stand near sledwagon'
+{Tree trunk on sled}	#25#	[remove] [patchwise]
+[NAME:tree trunk]
+
+
+.Load log. "Roach"	*COMMON*	/10/ [patch:12] [effort:3] [phys:arms,stance] [assist:3] [noquality] [SPOILAGE_DAYS:0] [NOPAUSE]
+{Sledwagon*}	[ground] '+ stand near sledwagon'
+{Log}		[remove] [ground] [patchwise]
+[NAME:Log on sled]
+[TILEGFX:log]
+[MATERIAL:wood]
+[WEIGHT:20]
+
+.Offload log. "Log"	*COMMON*	/5/ \1\ [patch:12] [effort:3] [phys:arms,stance] [assist:3] [noquality] [NOPAUSE]
+{Sledwagon*}	[ground] '+ stand near sledwagon'
+{Log on sled}	#20#	[remove] [patchwise]
+[NAME:Log]
+
+.Load slender trunk. "Roach"	*COMMON*	/5/ [patch:12] [effort:3] [phys:arms,stance] [assist:3] [noquality] [SPOILAGE_DAYS:0] [NOPAUSE]
+{Sledwagon*}	[ground] '+ stand near sledwagon'
+{Slender trunk}		[remove] [ground] [patchwise]
+[NAME:Slender trunk on sled]
+[TILEGFX:sltrunk]
+[MATERIAL:wood]
+[WEIGHT:2.5]
+
+.Offload slender tree trunk. "Slender tree trunk"	*COMMON*	/2/ \1\ [patch:12] [effort:3] [phys:arms,stance] [assist:3] [noquality] [NOPAUSE]
+{Sledwagon*}	[ground] '+ stand near sledwagon'
+{Slender trunk on sled}	#2.5#	[remove] [patchwise]
+[NAME:Slender tree trunk]
+
+.Load clinkered punt. "Roach"	*COMMON*	/30/  [effort:3] [phys:arms,stance] [assist:3] [noquality] [NOPAUSE]
+{Sledwagon*}	[ground] '+ stand near sledwagon'
+{Clinkered punt}		[remove] [ground] 
+[NAME:clinkered punt on sled]
+[TILEGFX:it-punt]
+[MATERIAL:wood]
+[WEIGHT:13]
+
+.Offload clinkered punt. "Punt"	*COMMON*	/15/ \1\  [effort:3] [phys:arms,stance] [assist:3] [noquality] [NOPAUSE]
+{Sledwagon*}	[ground] '+ stand near sledwagon'
+{clinkered punt on sled}	#13#	[remove] 
+[NAME:Clinkered punt]
+[PRICE:31]
+[WEIGHT:260]
+[MATERIAL:wood]
+[TYPE:vehicle]
+
+.------------------------------------. "Rock" /1/
+{-} +'This is just a menu space'
+
+.See Boats For More Boat Options. "Rock" /1/
+{-} +'This is just a menu space'
+
+[SUBMENU_END:transport]

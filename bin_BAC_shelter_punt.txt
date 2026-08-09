@@ -1,0 +1,22 @@
+// BAC integration
+//
+// biy_BAC_Punt_shelter
+
+// Replaces normal shelter with one using a punt to make
+// the roof. Two X of wooden stakes, four total, keep it 
+// up enough for you to sleep underneath.
+// When ready dismantle to get the punt back.
+//
+// Note when this mod is active the normal shelter of 
+// 3 slender trunks and 20 spruce twigs is blocked.
+//
+// Use file rename adding or removing boff_ before the biy_XXX
+// to control if this is active.
+
+//Quick punt shelter
+.Shelter. "Punt shelter" *BUILDING* [effort:2] [phys:arms,stance,arms,legs] /10m/ [assist:2]
+{*punt} [remove] [ground]  '+to be tilted as main roof'
+{Wooden stake} (4) [remove] [ground] '+to be upright braces'
+
+
+-end

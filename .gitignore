@@ -1,0 +1,51 @@
+#.gitignore
+#From a devel game installation
+
+#Game files extensions
+*.arr
+*.BMP
+*.dat
+*.DAT
+*.dll
+*.exe
+*.FNT
+*.GFX
+*.ico
+*.ICO
+*.OBJ
+*.nfo
+*.NFO
+*.SAV
+
+#Non mod .txt
+audio.txt
+debug_*.txt
+flora_*.txt
+ini_skills.txt
+init_log.txt
+kasvio_debug.txt
+menudef_additional.txt
+mod_menudef_example.txt
+news.txt
+OLDNEWS.txt
+urw_ini*.txt
+
+#other game files
+RNDCAMP*
+urwicon-32.png
+
+#game directories
+audio/
+defaults/
+gameinfo/
+messages/
+truegfx/
+
+#Save directories
+NENULI/
+
+#Other files
+.gitignore2
+
+#OSX BS
+.DS_Store

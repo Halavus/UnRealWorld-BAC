@@ -1,0 +1,337 @@
+// BAC integration
+//
+// Creation of Armor group one
+// Intended to hold lamellar armors
+// and some metal locations like helm, elbow, knee
+// reflecting what a smith getting into armouring can make
+//
+// These are also what are commonly found on Nerjpez
+// giving access to make/tear down/mend
+//
+// More advanced armoring will need to go into the
+// the variable menudef slots
+//
+// Lamellar:
+// JEB included 2018-01-03
+//        for UrW 3.50
+// JEB's modifications noted below.
+// "Credit for this mod is not mine, it was found on the old forum."
+// Brygun: possibly traces to Rudy on the old forums
+// https://www.tapatalk.com/groups/urwforum/simple-lamellar-mod-t7728.html
+//
+// Fur and leather items here as byrgun couldn't find a way
+// to add to the vanilla "Clothes" crafting menu
+// This saved space to allow another unused menu spot
+//
+// Pricing overall to correct for wiki 17 torches to the current
+// 1 squirrel hide
+//
+// 2023-05 weight used reduced toward vanilla update
+// list reorganized around from head to feet
+//
+// 2023-12-05 Added leather knee and elbow but needed menu space
+// from another menu to do that. 
+
+
+[SUBMENU_START:Armors of Leather and Fur]
+
+/////////////////////////////
+// Leather clothes
+//
+
+
+.Leather belt.  [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  %35%  /60/ |-1|
+{Leather} #0.4# [remove]
+{Knife}
+ 
+.Leather cap.   [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  %15%  /5h/ |1|
+{Leather} #0.2# [remove]
+{Yarn}    =9=   [remove] [noquality]
+{Sewing needle}
+{Knife}
+
+.Leather shirt. [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  /18h/ |2|
+{Leather} #6.2# [remove]
+{Yarn}    =60=  [remove] [noquality]
+{Sewing needle}
+{Knife}
+
+.Leather leggings. [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  %25%  /3h/ |-1|
+{Leather} #6.5# [remove]
+{Yarn}    =18=  [remove] [noquality]
+{Sewing needle}
+{Cord}	  =4=   [remove] [noquality]
+{Knife}
+
+.Leather shoes. [effort:1] [phys:arms,hands]   *CLOTHCRAFT* /8h/ |1|
+{Leather} #2#   [remove]
+{Yarn}    =12=  [remove]
+{Sewing needle}
+{Cord}	  =4=   [remove] [noquality]
+{Knife}
+
+.Leather boots. [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  /20h/ |2|
+{Leather} #3#   [remove]
+{Yarn}    =20=  [remove] [noquality]
+{Sewing needle}
+{Cord}	  =3=   [remove] [noquality]
+{Knife}
+
+.Leather forearm guards. [effort:1] [phys:arms,hands]   *CLOTHCRAFT* %20%  /90/ |-1|
+{Leather} #1.7# [remove]
+{Thin cordage} =9= [remove]
+{Knife}
+
+.Leather shin guards. [effort:1] [phys:arms,hands]   *CLOTHCRAFT* %20%  /2h/ |-1|
+{Leather} #2.2# [remove]
+{Thin cordage} =9= [remove]
+{Knife}
+
+.Leather cuirass. [effort:1] [phys:arms,hands]   *CLOTHCRAFT* %10%     /4h/ |-1|
+{Leather} #5# [remove]
+{Thin cordage} =6= [remove]
+{Knife}
+
+//MODDED:
+
+.Leather chest cover. "Fur cap" [effort:2] [effort:2] [phys:hands]	*CLOTHCRAFT*	/30/ [NOPAUSE]
+{Leather}  #2.7# [remove] [name:%s Leather Chest Cover] '+leathers'
+{Knife} 'A knife for shaping the work'
+[TYPE:armour]
+[ARMOUR_MATERIAL:leather]
+[ARMOUR_COVERAGE:thorax]
+[WEIGHT:2.3]
+[PRICE:3.2]
+//By brygun
+// 2203-05 weight used from 2 to 2.7
+// Price 2.8 to 3.2
+
+.Leather paws. "Fur mittens"	[effort:2]	[phys:arms] *CLOTHCRAFT*	/90/ [NOPAUSE]
+{Leather}  #0.7# [remove] [name:%s Leather Paws]
+{Thin cordage} =3= [remove] 
+//'+for seams'
+{Knife} 'A knife for shaping the work'
+[ARMOUR_MATERIAL:leather]
+[ARMOUR_COVERAGE:hand]
+[PRICE:1]
+[WEIGHT:0.5]
+//By brygun
+//there is some debate whether iron age Finland had 5 or 3 fingered gloves
+//I use the term paw to represent a hand covering with a name the game
+//still lets you wear with mittens. This gives 2 layers for winter.
+//Increased time due to complexity of seams
+//Ideally instead of Tying equipment it could be thinner cord 
+//but that would miss the string and other BAC options
+//Arimon 3.7x: changed {Tying equipment} to {Thin cordage}
+//
+// 2203-05 weight used from 1.0 to 0.7
+// Price 1 to 1
+
+.Leather loincloth. "Fur cap" [effort:2] [effort:2] [phys:hands]	*CLOTHCRAFT*	/30/ [NOPAUSE]
+{Leather}  #.7# [remove] [name:%s Leather Loincloth] '+Leathers'
+{Knife} 'A knife for shaping the work'
+[TYPE:armour]
+[ARMOUR_MATERIAL:leather]
+[ARMOUR_COVERAGE:groin]
+[WEIGHT:0.6]
+[PRICE:1]
+// By brygun
+// Adjusted to just groin not hip + groin
+// 2203-05 weight used from 0.5 to 0.7
+// Price 1 to 1
+// Weight 1 to 0.6
+
+.Leather laced shoes. "Leather shoes" [effort:2] [phys:arms]	*CLOTHCRAFT*	/90/ %20% [NOPAUSE]
+{Leather}  #2.2# [remove] [name:%s Leather Laced Shoes] 
+{Thin cordage} =4= [remove] 
+//'+for laces'
+{Knife} 'A knife for shaping the work'
+[ARMOUR_MATERIAL:leather]
+[ARMOUR_COVERAGE:foot]
+[WEIGHT:1.5]
+//Skill bonus on account of being able to have a bigger hole closed by laces
+//By brygun
+//Arimon 3.7x: changed {*cord} to {Thin cordage}
+// 2203-05 weight used from 1 to 2.2
+// Weight 1 to 1.5
+
+[SUBMENU_END:Armors of Leather and Fur]
+
+//2023-12-05 Due to menu size limits using some space needed in another menu
+
+[SUBMENU_START:Armors of Iron and Wood]
+
+.Leather knee cups. "Leather shin guards" [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  /3h/
+{Leather} #1.2# [remove]
+{Thin cordage} =2= [remove]
+{Knife}
+[ARMOUR_COVERAGE:knee]
+[WEIGHT:0.8]
+[PRICE:1.1]
+// 2023-12-05 setup, use as a standalone or attached shin/boot
+
+.Leather elbow cups. "Leather shin guards" [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  /3h/
+{Leather} #1.2# [remove]
+{Thin cordage} =2= [remove]
+{Knife}
+[ARMOUR_COVERAGE:elbow]
+[WEIGHT:0.8]
+[PRICE:1.1]
+// 2023-12-05 setup, use as a standalone or attached to vambrace
+
+// Neck protection
+// 2023-12-09 added by Brygun
+// Historic name gorget
+// Addresses the need to protect the vital neck area
+//
+// Found a weight for one with half shoulders 1.5 lbs:
+// https://www.medievalarmour.com/dark-elf-leather-gorget
+// A simple neck only 1 lbs:
+// https://www.the-larp-store.com/p-9710-15th-century-leather-gorget.aspx
+// Thinking a neck only 1 lb and a neck and shoulders 2 lbs
+// With loses for shapping
+
+.Leather gorget. "Leather shin guards" [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  /3h/
+{Leather} #1.3# [remove] '+for neck ring with front and back flaps'
+{*leather cord} =2= [remove] '+ for closing ring and hanging front and back flaps'
+{Knife}
+[ARMOUR_COVERAGE:neck]
+[WEIGHT:1]
+[PRICE:1.5]
+// 2023-12-09 created by Brygun
+
+.Leather gorget and pauldrons. "Leather shin guards" [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  /6h/
+{Leather} #2.5# [remove] '+for neck with front, back and large side flaps'
+{*leather cord} =4= [remove] +' for closure, front flap back flap'
+{Knife}
+[ARMOUR_COVERAGE:neck shoulder]
+[WEIGHT:2]
+[PRICE:2.5]
+// 2023-12-09 created by Brygun
+ 
+//End use of the Iron and Wood menu to add items
+[SUBMENU_END:Armors of Iron and Wood]
+
+//2023-12-05 restart normal menu
+
+[SUBMENU_START:Armors of Leather and Fur]
+
+//////////////////////////
+// Fur clothes
+//
+
+.Fur cap.   [effort:1] [phys:arms,hands]   *CLOTHCRAFT*    /6h/   |1|
+{Animal hide} #1.2# [remove]
+{Yarn}        =15=  [remove] [noquality]
+{Sewing needle}
+{Knife}
+
+.Fur shirt. [effort:1] [phys:arms,hands]   *CLOTHCRAFT*    /22h/  |2|
+{Animal hide} #7.2# [remove]
+{Yarn}        =60=  [remove] [noquality]
+{Sewing needle}
+{Knife}
+
+.Fur mittens. [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  /6h/   |1|
+{Animal hide}   #1.2# [remove]
+{Yarn}          =9=   [remove] [noquality]
+{Sewing needle} 
+{Knife}
+
+.Fur leggings. [effort:1] [phys:arms,hands]   *CLOTHCRAFT* %15% /200/ |-1|
+{Animal hide} #7.6# [remove]
+{Yarn}        =18=  [remove] [noquality]
+{Sewing needle}
+{Cord}	      =4=   [remove] [noquality]
+{Knife}
+
+.Fur hood. [effort:1] [phys:arms,hands]   *CLOTHCRAFT* %10% /6h/  |2|
+{Animal hide} #1.5# [remove]
+{Thin cordage} =3=  [remove] [noquality]
+{Knife}
+
+.Fur footwear. [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  /25h/ |2|
+{Animal hide} #3.5#   [remove]
+{Yarn}        =30=  [remove] [noquality]
+{Sewing needle}
+{Knife}
+
+.Fur cloak. [effort:1] [phys:arms,hands]   *CLOTHCRAFT* %15% /4h/ |-1|
+{Animal hide}  #11.7# [remove]
+{Thin cordage} =3=    [remove] [noquality]  
+{Knife}
+
+.Fur overcoat. [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  /27h/ |2|
+{Animal hide}  #14# [remove]
+{Yarn}         =75= [remove] [noquality]
+{Sewing needle}
+{Knife}
+
+// MODDED:
+
+.Fur mask. "Fur cap" [effort:2] [effort:2]	[phys:hands]	*CLOTHCRAFT*	/30/ [NOPAUSE]
+{Animal hide}  #1.1# [remove] [name:%s Fur Mask]
+{Thin cordage} =2= [remove] 
+//'+to tie on cord'
+{Knife} <small knife> '+to shape eye and breathing holes'
+[TYPE:armour]
+[ARMOUR_MATERIAL:fur]
+[ARMOUR_COVERAGE:face]
+[WEIGHT:1]
+[PRICE:1.5]
+//By brygun
+//Arimon 3.7x: changed {Tying equipment} to {Thin cordage}
+// 2203-05 weight used from 1 to 1.1
+
+.Fur niska. "Fur cap" [effort:2] [effort:2]	[phys:hands]	*CLOTHCRAFT*	/30/ [NOPAUSE]
+{Animal hide}  #1.2# [remove] [name:%s Fur Niska]
+{Knife} <small knife> '+to shape eye and breathing holes'
+[TYPE:armour]
+[ARMOUR_MATERIAL:fur]
+[ARMOUR_COVERAGE:neck]
+[WEIGHT:1]
+[PRICE:1.4]
+//By brygun
+// 2203-05 weight used from 1 to 1.2
+
+.Fur chest cover. "Fur cap" [effort:2] [effort:2] [phys:hands]	*CLOTHCRAFT*	/30/ [NOPAUSE]
+{Animal hide}  #3# [remove] [name:%s Fur Chest Cover]
+{Knife} 'A knife for shaping the work'
+[TYPE:armour]
+[ARMOUR_MATERIAL:fur]
+[ARMOUR_COVERAGE:thorax]
+[WEIGHT:2.5]
+[PRICE:3.3]
+//By brygun
+// 2203-05 weight used from 2.7 to 3
+// price 2.8 to 3.3
+
+.Fur loincloth. "Fur cap" [effort:2] [effort:2]	[phys:hands]	*CLOTHCRAFT*	/30/ [NOPAUSE]
+{Animal hide}  #.8# [remove] [name:%s Fur Loincloth]
+{Knife} 'A knife for shaping the work'
+[TYPE:armour]
+[ARMOUR_MATERIAL:fur]
+[ARMOUR_COVERAGE:hip groin]
+[WEIGHT:0.7]
+[PRICE:1]
+// By brygun
+// Adjusted to just groin not hip + groin
+// 2203-05 weight used from 0.5 to 0.8
+
+.Fur footwrap. "Leather shoes" [effort:2] [phys:arms]	*CLOTHCRAFT*	/30/ [NOPAUSE]
+{Animal hide}  #1# [remove] [name:%s Fur Footwrap]
+{Thin cordage} =6= [remove] 
+//'+for tying down'
+{Knife} 'A knife for shaping the work'
+[ARMOUR_MATERIAL:fur]
+[ARMOUR_COVERAGE:foot]
+[WEIGHT:1]
+//Furs shapes tied down not sewn as survival foot coverings or put over other footwear.
+//By brygun
+//Was material leather, why?
+//Arimon 3.7x: changed {Tying equipment} to {Thin cordage}
+// 2203-05 weight used from 1 to 1
+// Weight set to 1
+
+
+[SUBMENU_END:Armors of Leather and Fur]

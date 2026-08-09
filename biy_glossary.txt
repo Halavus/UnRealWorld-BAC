@@ -1,0 +1,45 @@
+
+
+
+
+
+[SUBMENU_START:kota]
+
+.Framework. [effort:3]	*BUILDING* 	 	-F-	/30/	[assist:3]	%20%	|-1|	 [GFX_X:2] [GFX_Y:1]
+{Slender trunk} (8) [remove] [ground]
+
+.North-west corner of a kota. [effort:2]  *BUILDING*  [GFX_X:5] [GFX_Y:0]   [assist:3]  |+1|  /15/   %10%  
+.Northern wall of a kota. [effort:2]      *BUILDING*  [GFX_X:6] [GFX_Y:0]   [assist:3]  |+1|	
+.North-east corner of a kota. [effort:2]  *BUILDING*	[GFX_X:7] [GFX_Y:0] [assist:3]  |+1|
+.Western wall of a kota. [effort:2]	  *BUILDING*	[GFX_X:5] [GFX_Y:1] [assist:3]  |+1|
+.Inside of a kota. [effort:2] 		  *BUILDING*	[GFX_X:6] [GFX_Y:1] [assist:3]  |+1|
+.Eastern wall of a kota. [effort:2]	  *BUILDING*	[GFX_X:7] [GFX_Y:1] [assist:3]  |+1|
+.South-west corner of a kota. [effort:2]  *BUILDING*	[GFX_X:5] [GFX_Y:2] [assist:3]  |+1|
+.Southern wall of a kota. [effort:2]	  *BUILDING*	[GFX_X:6] [GFX_Y:2] [assist:3]  |+1|
+.South-east corner of a kota. [effort:2]  *BUILDING*	[GFX_X:7] [GFX_Y:2] [assist:3]  |+1|
+.Kota doorway. -D- [effort:2] *BUILDING*	[GFX_X:9] [GFX_Y:1]
+{Cover for kota} [remove] 
+{Slender trunk}  [remove] [ground]
+
+[SUBMENU_END:kota]
+
+// .Shelter. [effort:2] [phys:arms,stance,one-armed] -S- *BUILDING* /30/	[assist:2]	%30%
+// {Cutting weapon} <Axe> [wearpct:30]
+// {Slender trunk} (3) [remove] [ground]
+// {Spruce twig} (20) [remove] [ground]
+
+.Fence.	[effort:3] [phys:arms,stance,one-armed] -F- *BUILDING*   [assist:1]
+{Wooden stake}            (6)     [remove] 		/20/	%70%	|-1|
+{Tying equipment} <Withe> (2) =4= [remove]
+
+.Fence gate.	[effort:3] [phys:arms,stance,one-armed] -G- *BUILDING*   [assist:1]
+{Wooden stake}    (8) 	  [remove] 		/20/	%70%	|-1|
+{Tying equipment} <Withe> (4) =4= [remove]
+
+
+.Cellar. [effort:4] -C-	*BUILDING*	[assist:3]	/180/		|+1|
+{Slender trunk} (6) [remove] [ground]
+{Board} (6) [remove] [ground]
+{Stone} (10) [remove] [ground]
+{Shovel} 
+

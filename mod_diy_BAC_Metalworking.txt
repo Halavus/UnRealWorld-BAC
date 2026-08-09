@@ -1,0 +1,293 @@
+// BAC integration
+//
+// Many items from Buoidda's crafts 1.5+
+//
+// Salvage recipes moved to diy_BAC_Mining_and_more.txt
+//
+// [assist:#] based on whether it seems someone else can hammer
+// and/or pump bellows
+//
+
+[SUBMENU_START:Smithing]
+
+
+//////////////////////
+// Iron nails
+// Could be in various sizes of nails
+// Recommend consuming nails by weight
+// It is one of the simplest projects for any smith
+// Smith says you get good at making nails around 
+// your 1,000th nail.
+// For # nails per pound by length see
+// https://www.treeisland.com/sites/default/files/documents/brochures-spec-sheets/Average%20nails%20per%20pound.pdf
+// Iron nails at top of menu as when you need them 
+// you tend need to make lots
+// Iron nail recipe also counts for: rivet, pivots and other
+// small iron simple shaped pieces
+
+.Iron nails. "Hunting Horn" [effort:4] [phys:arms,hands,stance] *CARPENTRY* %10% /2h/ |-1| [assist:1]
+{*iron billet} #1# [ground] [remove] '+to make nails'
+{*forge*}			 [noquality] [ground]	'+as a forge or furnace'
+{Charcoal} 	(6) 	[remove] [noquality] [ground]
+{Bellows} 			 [ground]
+{*anvil*}			 [ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+[MATERIAL:iron]
+[WEIGHT:1]
+[PRICE: 4]
+[TILEGFX:bc-billet]
+//price simple worked iron at 4 x weight
+
+
+/////////////////
+// Iron shape 
+//
+// Represents various shapes done as preliminary to other work
+// Includes iron shield rims or could be decorations
+
+.Iron shape. "Hunting Horn" [effort:4] [phys:arms,hands,stance] *CARPENTRY* %10% /3h/ |-1| [assist:1]
+{*iron billet} (2) [ground] [remove] '+iron to bend twist and form'
+{*forge*}			 [noquality] [ground]	'+as a forge or furnace'
+{Charcoal} 	(3) 	[remove] [noquality] [ground]
+{Bellows} 			[ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+[MATERIAL:iron]
+[WEIGHT:1]
+[PRICE: 4]
+[TILEGFX:bc-billet]
+//price simple worked iron at 4 x weight
+
+.Iron arrowhead.  (10)  "Hunting Horn" [effort:2] [phys:arms,hands,stance] *CARPENTRY*	/4h/ [assist:1]
+{*iron billet}  		[remove] 	    		'+Iron billet'
+{Fire}		 		 [noquality]
+{Charcoal} (6) 		[remove] [noquality] [ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+{* tub of water}		 [noquality] [ground]	'+for water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.03]
+[PRICE:0]
+[TILEGFX:bc-arrowhead]
+
+.Iron broadhead.  (5)  "Broadhead" [effort:2] [phys:arms,hands,stance] *CARPENTRY* 	/4h/ [assist:1]
+{*iron billet}  		[remove] 	    		'+Iron billet'
+{Fire}		 		 [noquality]
+{Charcoal} (6) 		[remove] [noquality] [ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+{* tub of water}		 [noquality] [ground]	'+for water for quenching'
+[MATERIAL:iron]
+[CATEGORY:Weapon]
+//2023-06-09 made compatible with 3.80 arrow making
+//base object Broadhead is now a thing
+//Force to weapon category needed for vanilla Arrow making
+
+.Forked arrowhead. (5) "Hunting horn" [effort:2] [phys:arms,hands,stance]   *CARPENTRY*  %10% /4h/ [assist:1]
+{*iron billet}  		[remove] 	    		'+Iron billet'
+{Fire}		 		 [noquality]
+{Charcoal} (6) 		[remove] [noquality] [ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+{* tub of water}		 [noquality] [ground]	'+for water for quenching'
+[MATERIAL:iron]
+[WEIGHT: 0.05]
+[PRICE:0]
+[TILEGFX:bc-forkbahd]
+
+.Iron pot.    "Pot" 		[effort:3] [phys:arms,hands,stance] 	*CARPENTRY*	/3h/ [assist:2]
+{*iron billet}	(5)	[remove] [noquality]		'+Iron billet' 
+{*forge*}			 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} 	(10) 	[remove] [noquality] [ground]
+{Bellows} 		[ground]			'+for extra heat for welding and bending'
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+{* tub of water}		 [noquality] [ground]	'+for water for quenching'
+
+.Small knife blade shape.    "Hunting Horn" [effort:2] [phys:arms,hands,stance] *CARPENTRY*	/3h/ [assist:2]
+{*iron billet}  		[remove] 			'+Good billet for the edge'
+{*forge*}			 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} (3) 		[remove] [noquality]
+{Bellows}			 [noquality] [ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+{* tub of water}		 [noquality] [ground]	'+for water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.2]
+[PRICE:0]
+[TILEGFX:bc-knifebla]
+// BAX: [noquality] tags trimmed as we allow for better hammer
+// and anvils to be made
+//
+// Bouidda said
+// A lot of noquality tags to allow making of masterwork small knife
+// which is required to achieve masterwork hammer and perfect bellows
+// with which all other masterwork tools can be crafted
+
+.Large knife blade shape.    "Hunting Horn" [effort:3] [phys:arms,hands,stance] *CARPENTRY*	/4h/ [assist:2]
+{*iron billet}  		[remove]			'+use quality billet for the edge'
+{*iron billet}  		[remove] [noquality]		'+use any billet for back and tang'
+{*forge*}			 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} (4) 		[remove] [noquality] [ground]
+{Bellows} [ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+{* tub of water}		 [noquality] [ground]	'+for water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.3]
+[PRICE:0]
+[TILEGFX:bc-knifebla]
+
+.Small axehead shape.   "Hunting Horn" [effort:4] [phys:arms,hands,stance]	*CARPENTRY*	/8h/ [assist:2]
+{*Steel billet}	(1)	[remove]			'+Steel billet for the edge' 
+{*iron billet}	(6)	[remove] [noquality]		'+Iron billets for main shape' 
+{*forge*}			 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} (4) 		[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*}		[ground]			'+Anvil nearby'
+{*iron hammer}
+{* tub of water}		 [noquality] [ground]	'+Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:3.5]
+[PRICE:0]
+[TILEGFX:bc-axehead]
+
+.Large axehead shape.   "Hunting Horn" [effort:5] [phys:arms,hands,stance]	*CARPENTRY*	/10h/ [assist:2]
+{*Steel billet}	(2)	[remove]			'+Steel billet for the edge' 
+{*iron billet}  (7)	[remove] [noquality]  		'+Iron billets for main shape' 
+{*forge*}			 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} (20) 	[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*}		[ground]			'+Anvil nearby'
+{*iron hammer}
+{* tub of water}		 [noquality] [ground]	'+Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:4.5]
+[PRICE:0]
+[TILEGFX:bc-axehead]
+
+.Spearhead shape.    "Hunting Horn"  	[effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/6h/  [assist:2] 
+{*iron billet}  (3)		[remove]			'+use quality billet for the edge'
+{*iron billet}  (6)		[remove] [noquality]		'+use any billet for back and tang'
+{*forge*}			 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} (4) 		[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*}		[ground]			'+Anvil nearby'
+{*hammer}			 			'+Hammer'
+{* tub of water}		 [noquality] [ground]	'+Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:1]
+[PRICE:0]
+[TILEGFX:bc-spearhead]
+
+.Small spearhead shape.    "Hunting Horn"  	[effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/6h/  [assist:2] 
+{*iron billet}  (2)		[remove]			'+use quality billet for the edge'
+{*iron billet}  (4)		[remove] [noquality]		'+use any billet for back and tang'
+{*forge*}			 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} (4) 		[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*}		[ground]			'+Anvil nearby'
+{*hammer}			 			'+Hammer'
+{* tub of water}		 [noquality] [ground]	'+Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:1]
+[PRICE:0]
+[TILEGFX:bc-spearhead]
+
+.Sickle blade shape.    "Hunting Horn" [effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/3h/ [assist:2]
+{*iron billet}      	[remove]			'+use quality billet for the edge'
+{*iron billet}      	[remove] [noquality]		'+use any billet for back and tang'
+{*forge*}		    	[noquality] [ground]	'+Forge or furnace'
+{Charcoal} (4) 		    [remove] [noquality] [ground]
+{Bellows}		    	[ground]
+{*anvil*}			    [ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+{* tub of water}		 [noquality] [ground]	'+for water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:0]
+[TILEGFX:bc-sicklebla]
+
+.Shovel blade shape.    "Hunting Horn" [effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/3h/ [assist:2]
+{*iron billet} (2)  		[remove]			'+use quality billet for the edge'
+{*iron billet}  (4)		[remove] [noquality]		'+use any billet for back and tang'
+{*forge*}			 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} (4) 		[remove] [noquality] [ground]
+{Bellows}			 [ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+{* tub of water}		 [noquality] [ground]	'+for water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:0]
+[TILEGFX:bc-sicklebla]
+
+.Shortsword blade.   "Hunting Horn" [effort:4] [phys:arms,hands,stance] *CARPENTRY*	/10h/ [assist:2]
+{*Steel billet}  (5) 	[remove]			'+Steel billets throughout'
+{*forge*}			 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} (10) 	[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*}		[ground]			'+Anvil nearby'
+{*iron hammer}
+{* tub of water}		 [noquality] [ground]	'+Tub of water for quenching'
+[MATERIAL:iron]
+[WEIGHT:1.2]
+[PRICE:0]
+[TILEGFX:bc-swordbla]
+
+.Iron pommel.   "Hunting Horn" 	[effort:3] [phys:arms,hands,stance]	*CARPENTRY*	/2h/ [assist:2]
+{*iron billet}  		[remove] [noquality]		'+Iron or steel billet'
+{*forge*}			 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} (2) 		[remove] [noquality] [ground]
+{Bellows}		[ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+{* tub of water}		 [noquality] [ground]	'+for water for quenching'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:0]
+[TILEGFX:bc-pommel]
+
+
+/////////////
+// Steel dome
+// Used as a metal bowl like shape for the other recipes 
+//
+.Steel dome. "Hunting horn" *CARPENTRY* %0% /3h/ [effort:4] [phys:hands, arms] |1| [assist:2]
+{*Steel billet}	(2)	[remove] 		'+Steel structure'
+{Ball iron hammer} 				'+to hammer complex shapes'
+{Upper block tub} 	[ground] [noquality] 	'+to hammer curves into hollow'
+{*anvil}		[ground] 		'+to hammer on'
+{Pliers} 		[ground]		'+to hold while hammering at odd angles'
+{Medieval drill} 	[ground] 		'+to drill mounting holes'
+[PRICE:9]
+[TYPE:tool]
+[MATERIAL:iron]
+[WEIGHT:1]
+[TILEGFX:ar-cap]
+// In real life brygun made a shield center using what is
+// effectively an upper block tub. A block of wood with a hollow
+// carved into it to allow extra deep curves.
+
+
+//Steel shape
+//Representing various objects made of steel rather than iron
+//Simply using steel instead of iron. 
+//To have more over all build time in large projects like helmets.
+
+.Steel shape. "Hunting Horn" [effort:4] [phys:arms,hands,stance] *CARPENTRY* %10% /3h/ |-1| [assist:1]
+{*Steel billet} (2) [ground] [remove] '+iron to bend twist and form'
+{*forge*}			 [noquality] [ground]	'+as a forge or furnace'
+{Charcoal} 	(3) 	[remove] [noquality] [ground]
+{Bellows} 			[ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+[MATERIAL:iron]
+[WEIGHT:1]
+[PRICE: 4]
+[TILEGFX:bc-billet]
+//price simple worked iron at 4 x weight
+
+[SUBMENU_END:Smithing]
+
+

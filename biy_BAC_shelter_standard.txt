@@ -1,0 +1,24 @@
+// BAC integration
+//
+// biy_BAC_Punt_shelter
+
+// Replaces normal shelter with one using a punt to make
+// the roof. Two X of wooden stakes, four total, keep it 
+// up enough for you to sleep underneath.
+// When ready dismantle to get the punt back.
+//
+// Note when this mod is active the normal shelter of 
+// 3 slender trunks and 20 spruce twigs is blocked.
+//
+// Use file rename adding or removing boff_ before the biy_XXX
+// to control if this is active.
+
+
+
+.Shelter. [effort:2] [phys:arms,stance,one-armed] -S- *BUILDING* /30/	[assist:2]	%30%
+{Cutting weapon} <Axe> [wearpct:30]
+{Slender trunk} (3) [remove] [ground]
+{Spruce twig} (20) [remove] [ground]
+
+
+-end

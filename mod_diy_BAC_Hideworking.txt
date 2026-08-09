@@ -1,0 +1,142 @@
+// BAC integration
+//
+// Signatus v1.0
+//
+// v1.0
+// - Unchanged from original
+
+// Part of Buoidda's crafts 1.5+
+
+// Refernces (mostly from Brygun)
+// Density of leather 7-8 oz per sq foot
+// http://www.answers.com/Q/What_is_the_density_of_leather
+// https://www.tandyleather.com/en/leather-buying-guide.html
+// 
+// At 8 oz leather 1 lb = 2 sq ft, 8 lb cover = 16 sq ft (4x4ft)
+// at 6 oz leather = 24 sq ft (4x6 ft)
+// at 4 oz leather = 32 sq ft (5.3x6 ft)
+
+
+[SUBMENU_START:Hide and Bone]
+
+.Kota cover from single pelt. /5/ "Fur cloak" *HIDEWORKING* %50% [NOPAUSE]
+{Animal hide} #8# [remove] '+should ONLY come from a single large hide'
+{Knife}
+[NAME:Fur cover]
+[WEIGHT:8]
+[TYPE:skin]
+[SPOILAGE_DAYS:0]
+[TILEGFX:it-defpelt]
+
+.Kota cover from hide pieces. /4h/ "Fur cloak" *HIDEWORKING* [NOPAUSE]
+{Animal hide} #8# [remove] '+can be from smaller pieces'
+{Knife}<Small knife>
+[NAME:Fur cover]
+[WEIGHT:8]
+[TYPE:skin]
+[SPOILAGE_DAYS:0]
+[TILEGFX:it-defpelt]
+
+.Kota cover of leather. /4h/ "Leather shirt" *HIDEWORKING* [NOPAUSE]
+{Leather} #8# [remove] '+can be from leather pieces'
+{Knife}<Small knife>
+[NAME:Leather cover]
+[WEIGHT:8]
+[TYPE:skin]
+[SPOILAGE_DAYS:0]
+[TILEGFX:it-defpelt]
+
+.Kota cover of wool. /2h/ "Woollen overcoat" *HIDEWORKING* [NOPAUSE]
+{Woollen*} #8# [remove] '+can be from woollen pieces'
+{Knife}<Small knife>
+[NAME:Woollen cover]
+[WEIGHT:8]
+[TYPE:skin]
+[SPOILAGE_DAYS:0]
+[TILEGFX:it-defpelt]
+
+
+.De-haired skin cover. "Hunting horn" *HIDEWORKING* /5/ \7d\
+{*fur cover}	#8#	[remove]		
+{Water} 	#16#	[remove] [noquality]	'+for soaking'
+[TYPE:skin]
+[WEIGHT:8]
+[SPOILAGE_DAYS:3]
+[TILEGFX:it-defpelt]
+
+.Tanning skin cover. "Hunting horn" *HIDEWORKING* /30/ \1d\
+{De-haired skin cover}			[remove]
+{*bark-water} 	#2#			[remove] [noquality] 	'+as bark-water tanning solution'
+{Wooden tub of water}			[ground] [noquality]
+[TYPE:skin]
+[WEIGHT:8]
+[SPOILAGE_DAYS:3]
+[TILEGFX:it-defpelt]
+
+.Tanned skin cover. "Hunting horn" *HIDEWORKING* /45/ \1d\
+{Tanning skin cover}		[remove]
+{*bark-water} 	#6#		[remove] [noquality]	'+as bark-water tanning solution'
+{Fat}		#0.5#		[remove] [optional] [noquality]		
+{Wooden tub of water}		[ground] [noquality]
+[TYPE:skin]
+[WEIGHT:8]
+[SPOILAGE_DAYS:5]
+[TILEGFX:it-defpelt]
+
+.Rinsed skin cover. "Hunting horn" *HIDEWORKING* /15/ \6h\
+{Tanned skin cover}	[remove]
+{Water} 	#8#	[remove] [noquality]	'+as water for soaking'
+[TYPE:skin]
+[WEIGHT:8]
+[SPOILAGE_DAYS:0]
+[TILEGFX:it-defpelt]
+
+.Leather cover. "Hunting horn" *HIDEWORKING* /4h/
+{Rinsed skin cover}	[remove]
+//{Workbench or working surface} DOESN'T WORK
+{Beater}
+[TYPE:skin]
+[MATERIAL:leather]
+[WEIGHT:8]
+[SPOILAGE_DAYS:0]
+[TILEGFX:it-defpelt]
+
+///////////////////////
+// Tarp 
+// 
+// Intended for boating and shelter 
+// Has cords worked into it for quick building
+//
+
+
+.Leather tarp. "Sesta" *HIDEWORKING* /1h/
+{Leather cover} [remove] #8# '+from hideworking'
+{Thin cordage} [remove] [nominlen] =30= 
+//'+for sewing and tie points'
+{Cutting weapon} <Knife> 
+[MATERIAL:wood]
+[WEIGHT:10]
+[PRICE:12]
+[SPOILAGE_DAYS:0]
+[TYPE:tool]
+[TILEGFX:it-defpelt]
+//Material change to wood is to stop being used in clothing as a way to cheat on the weight
+//use of * cord preferred as you are likely to have furs and leather
+// Arimon 3.7x: 
+// - changed {*cord} to {Thin cordage}
+// - added [nominlen] to {Thin cordage}
+
+.Leather ball. "Sesta" *HIDEWORKING* /1h/ |-2|
+{Leather} #1# [remove] '+from hideworking'
+{Water} #0.5# [remove] '+to soften leather during shaping'
+{Branch} #2# [remove] [noquality] '+as leaves for stuffing'
+{Cutting weapon} <Knife> 
+[MATERIAL:wood]
+[WEIGHT:3]
+[PRICE:1.5]
+[TYPE:tool]
+[TILEGFX:it-bag]
+// reference leather rope price is 25 but 1/17th to squirrel hide applies
+// https://www.unrealworld.fi/wiki/index.php?title=Price_v3.40
+
+[SUBMENU_END:Hide and Bone]

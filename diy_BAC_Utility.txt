@@ -1,0 +1,254 @@
+
+// BAC integration
+//
+// = 3.60 Beta various cord and rope recipes moved 
+// into Tying equipment
+// = bag moved to here
+//
+// Assist based on helpers holding, turning or using own tool
+//
+// 2023-05
+// Added emergency bark as a disabled by comments item
+//
+// Sibs: reordered, upgraded vanilla to 3.84
+
+
+[SUBMENU_START:utility article]
+
+
+
+//MODDED:
+
+// Emergency bark
+//
+// Emergency bark is intended as an oh-crap fix
+// Such if you did de-hair before tanning thus lost the fat etc
+// 3.70 p1 birch-bark can be used for tanning (likely bug)
+// if that goes away maybe "adler-bark" will still work
+// To activate you need to remove the comment marks "//"
+// from the recipe, reopen the menu, use
+// recommend restoring menu marks afterward
+
+//.Emergency bark. "Branch" *COMMON* /1/
+//{Rock}
+//[WEIGHT:1]
+//[Material:birch-bark]
+
+// Testing recipes
+// for testing some functions need ingredients
+// Basically cheat code to drop an item
+//
+// test salt
+// .Salt. /1/ [noquality]
+// {Rock}                   
+
+.Canteen. "Wooden bowl" [effort:1] [phys:arms,two-armed] *CARPENTRY*   /30/ |-1|
+{Wooden cup} (2) [remove] "+halves to join together"
+{Knife} "+shaping and fitting"
+{Branch} (1) [remove] "+seams and stopper"
+{Thin cordage}	=4=	[remove] "+binding and lanyard"
+[WEIGHT:2]
+[CAPACITY:6]
+[PRICE:0.8]
+// price based on cup 0.3 x 2 + a bit
+// https://www.unrealworld.fi/wiki/index.php?title=Prices
+// while capacity same as bowl for more weight canteen presents
+// a better concept of not spilling while you travel
+// also represents making wood bottles for grain, berries etc
+
+.Bark bandage. "Bandage"  *HIDEWORKING* [effort:1] [phys:hands,one-armed] /30/ |-2| %-80% [assist:1] [NOPAUSE]
+{Knife} <Small knife>
+{Fibre from *bark*} #0.5# [remove] [NAME:%s bandage] [naming: last word]
+{Water} #2# '+to wash clean'
+[WEIGHT:0.5]
+[Material:birch-bark]
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>
+//
+// Bandage washing
+// Controversial but I stick to the idea that clothing
+// is often rare when hurt and you would be better off
+// washing old material to have something vs throwing them out
+// espically as some wounds may take weeks to heal
+// Without washing each day's treatment destroys material
+// to have a bandage. Multiple that by several wounds in a
+// a battle and you will shred your clothes... or start washing
+
+
+.Washed bandage. "Bandage"	[effort:1]	[noquality]	*COMMON*	/10/
+{Rock}  '+Use ONLY to return applied bandage'
+{Water} #0.5# '+as Washing water'
+// by brygun
+
+
+.Bag.		  			[noquality]		  	/30/  	[effort:1] [phys:hands] [assist:1]
+{Cloth}  			#1.0#  	[remove] 
+{Thin cordage}	=3=			[remove] 
+{Knife}
+// Arimon 3.7x: changed {*Cord} to {Thin cordage}
+
+// BAC fishing rod ceased as 3.70 adds vanilla fishing rod making
+//.Fishing rod.  [effort:0] [phys:hands,one-armed] *CARPENTRY* /2h/ [assist:1]
+//{Staff}			[remove]
+//{*fishhook}		[remove]	
+//{*cord} (2)		[remove]	
+//{Knife}<Small knife>
+
+
+// BAC Net moved to fishing gear
+
+
+.Quern-Grinder Piece. "Stone"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /8h/ [assist:1]
+{Stone} (1) [remove] [noquality]
+{*hammer} 'Hammer'
+{Whetstone} '+grind smoothness of hitting areas'
+[WEIGHT:12]
+
+// The phrase Quern-Stone is suspect to "stone" being consumed
+// in other recipes. This insta fix recipe is to restore it
+// adjust the % % number to aim for your correct quality
+//
+// Only one of the two recipes for Assemble or Lost should
+// be active at one time. Adjust the comment marks.
+
+// Normal Quern-Grinder recipe
+.Quern-Grinder. "Stone"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /6h/ [assist:1]
+{Quern-Grinder Piece} (2) [remove] [noquality]
+{Wooden stake} (1) [remove] [noquality]
+{Board} (2) [remove]
+{*hammer} 'Hammer'
+{Whetstone} '+grind smoothness of hitting areas'
+[WEIGHT:25]
+[TILEGFX:quern-stone]
+
+// Replacing accidentally lost Quern-Grinder
+//.Lost Quern-Grinder. "Stone"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /1m/ [assist:1] %15%
+//{Rock} 
+//[NAME:Quern-Grinder]
+//[WEIGHT:25]
+//[TILEGFX:quern-stone]
+
+
+.Grind Barley-Flour. "barley-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *COMMON*  /20/	[NOPAUSE]
+{Barley grains} #1# [remove] [patchwise]
+{Quern-Grinder} [ground]
+[NAME:barley-flour]
+
+.Grind Rye-Flour. "rye-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *COMMON*  /20/
+{Rye grains} #1# [remove] [patchwise]
+{Quern-Grinder} [ground]
+[NAME:rye-flour]
+
+// Rudy - Does not currently wor because 'clayweed-flour' is not a base item in the game.
+//.Grind Clayweed-Flour. "clayweed-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *COMMON*  /20/	[NOPAUSE]
+//{Clayweed seeds} #1# [remove] [patchwise]
+//{Quern-Grinder} [ground]
+//[NAME:clayweed-flour]
+
+// reference
+// [CARB:] [FAT:] [PROTEIN:] [WATER:]
+// https://www.unrealworld.fi/wiki/index.php?title=Food
+// hemp: [CARB:8] [FAT:10] [PROTEIN:24] 
+
+.Grind Hemp-Flour. "rye-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *COMMON*  /20/	[NOPAUSE]
+{Hemp seeds} #1# [remove] [patchwise]
+{Quern-Grinder} [ground]
+[NAME:hemp-flour]
+[CARB:8] [FAT:10] [PROTEIN:24] 
+
+//>>>>>>>>>>>>>>>>>>>>>>
+// Glues and lead ups
+//
+// Research found birch-bark needs burying
+// while pine doesn't. The extend of digging isn't much.
+//
+// Weblinks for birch-bark
+// https://www.youtube.com/watch?v=JU2QEgQKiA0
+// https://www.youtube.com/watch?v=rSk10RYnwCg
+//
+// Weblinks for Pine
+// https://www.youtube.com/watch?v=M-FksxvtyiQ
+// https://www.youtube.com/watch?v=uFRhSc6dtSw
+//
+// When working pitch glue it needs to be softened with
+// a fire, a pot and consume 1 firewood per #1# glue
+//
+// A sealing glue idea is #1# glue, #2# water boiled down to #2#
+// Takes 2 firewood per water. Also needs {Fire} and {*pot}
+// 3 sets of that painted a Finnish punt
+//
+
+.Fish-skin glue. "Hunting horn" [phys:hands] *COMMON* /5/ \1d\ [patch] [noquality]
+{Raw fish}      #1.5#     [remove] [patchwise]
+[TYPE:tool]
+[MATERIAL:bone]
+[WEIGHT:1]
+[PRICE:0]
+[TILEGFX:bc-fishskin]
+// Intended as once per large fish or group of small fish 
+// Afterall only part of a fish is skin
+
+.Gather pine tar. [effort:1] [phys:hands,one-armed] [patch:6] "Hunting Horn" [noquality] *COMMON*  /10/	[NOPAUSE]
+{[NEARBY_TILE:*Pine]}  'A nearby pine tree'
+{Cutting weapon} <Small knife>
+[NAME:Pine tar]
+[TILEGFX:vl-bbring]
+//[TILEGFX:fw-resin]
+[MATERIAL:wood]
+[TYPE:tool]
+[WEIGHT:0.5]
+[Price:0.01]
+
+.Pitch glue from pine tar.   "Hunting horn" [effort:2] [phys:arms,hands] *TIMBERCRAFT* /30/ \2h\ |-2| [noquality] [patch] [NOPAUSE]
+{*pot}                      '+to collect the glue'  
+{Pine tar}  #3#   [remove] [patchwise]      '+as initial cool and hard pine tar'
+{Firewood}  (9)   [remove] [patchwise][ground]   '+to be piled around it'
+{Fire}                         '+lit nearby'
+{Branch} (1) [remove] '+burn for charcoal to mix in'
+{Rock} (2) '+for digging hole and grinding charcoal'
+[WEIGHT:1]
+[TILEGFX:bc-pitchglue]
+[NAME:Pitch glue]
+[TYPE:tool]
+[Price:0.03]
+
+.Pitch glue from birch-bark.   "Hunting horn" [effort:2] [phys:arms,hands] *TIMBERCRAFT* /30/ \4h\ |-2| [noquality] [patch] [NOPAUSE]
+{*pot}                      '+to collect the glue'  
+{*birch-bark*}  #5#   [remove] [patchwise]      '+as birch-bark to boil'
+{Firewood}  (10)   [remove] [patchwise][ground]   '+to be piled around it'
+{Fire}                         '+lit nearby'
+{Rock} '+as a shallow digging and burying tool'
+[WEIGHT:1]
+[TILEGFX:bc-pitchglue]
+[NAME:Pitch glue]
+[TYPE:tool]
+[Price:0.03]
+
+// Caulking
+// Caulking is set as for #1# per length of tree ~3-4 meters as 
+// #0.5# pitch glue and #0.5# branches 50/50
+// While ideally hemp there are very many possibilities to get
+// at least a basic caulking. The branch represents some form of 
+// of plant matter.
+
+.Caulking. "Hunting horn" [patch:3] [noquality] [phys:arms] [effort:0] *CARPENTRY*    /15/ \30\  |-2|
+{*glue} (1) [remove] [ground] [patchwise]
+{*fibre from *} #1# [remove] [ground] [patchwise] [noquality]
+{*pot} (1) [ground] '+to hold hot caulking'
+{Fire}      '+to soften pitch'
+{Firewood} (1) [remove] [ground] [patchwise] '+to sustain fire'
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-pitchglue]
+// Patch limited to size of pot #6# contents
+// Time based largely on whittling/feathering/breaking plant 
+// material as it is is stirred into warm pitch glue
+// In later centuries caulking used fibers from worn out ropes
+// for better quality. Here bits of wood represented by branches
+// perform that role.
+//
+// 2023-05-04 as 3.70 has fibre change from branches to fibre
+
+
+
+[SUBMENU_END:utility article]

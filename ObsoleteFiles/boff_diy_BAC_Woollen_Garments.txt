@@ -1,0 +1,138 @@
+[SUBMENU_START:Woollen Garments]
+
+// Arimon 3.7x: moved submenu from diy_BAC_Weaving to diy_BAC_Woollen_Garments
+
+.Woollen apron.			/75/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}	=10= 	'+Yarn' [remove] [nominlen]
+{Woollen *}  '+Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:2.6]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+
+.Woollen cloak.			/90/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=10= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  '+Woollen Cloth'			#9# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:1.6]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Woollen cowl.			/25/	[effort:1] [phys:hands] [assist:1]
+{*Yarn}  	=10= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  '+Woollen Cloth'			#1.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.5]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Woollen dress.			/180/	[effort:1] [phys:hands] [assist:1]
+{*Yarn}	=40= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#6# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:3.8]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =40=
+//	- added [nominlen]
+
+.Woollen footrags.		/25/	[effort:1] [phys:hands,one-armed] [assist:1]
+{Woollen *}  	'+Woollen Cloth'		#.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.2]
+
+.Woollen leggings.		/120/	[effort:1] [phys:hands] %-15% [assist:2]
+{*Yarn}	=10= 	'+Yarn' [remove] [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:2.8]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Woollen mittens.		/25/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=10= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.5]
+//higher assist than normal as its 2 items
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Woollen overcoat.		/90/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=10= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#9# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:4.6]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+ 
+.Woollen shirt.			/75/	[effort:1] [phys:hands]	%-15% [assist:2]
+{*Yarn}  	=20= 	[remove] 'Yarn' [nominlen]
+{Woollen *}  	'Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:3.8]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+.Woollen socks.			/25/	[effort:1] [phys:hands]	%-15% [assist:2]
+{*Yarn}  	=10= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.5]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Woollen trousers.		/120/	[effort:1] [phys:hands]	%-15% [assist:2]
+{*Yarn}	=20= 	[remove] '++Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#7# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:3.8]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+.Woollen tunic.			/100/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=20= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#8# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:5]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+	
+.Woollen undergarment.		/180/	[effort:1] [phys:hands]	%-30% [assist:2]
+{*Yarn}  	=40= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#6# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:4.7]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =40=
+//	- added [nominlen]
+
+.Woollen undershirt.		/120/	[effort:1] [phys:hands]	%-30%
+{*Yarn}	=40= 	[remove] '+Yarn' [assist:2] [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:2.6]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =40=
+//	- added [nominlen]
+
+.Woollen veil.			/45/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=20= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.4]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+[SUBMENU_END:Woollen Garments]

@@ -1,0 +1,28 @@
+// BAC integration
+//
+// biy_BAC_alt_1.txt
+// storage of a set of potentially intermixing recipes
+
+
+
+
+//Only one rain catcher can be active at a time
+//Rain Catcher for placing on mountains with caves
+//27+ game squares (e.g. 5 x 6) could yield 
+//6000 gallons from 1 inch of rainfall
+
+
+//Stand outside a house corner
+.Water. *BUILDING* [effort:4] [phys:arms,stance,arms,legs] /3h/ [assist:3]
+{[TILE:ground]} '+needs an outdoor spot'
+{[NEARBY_TILE:*corner]} '+needs to have corner drainage'
+{Barrel} (1) [remove] [ground] '+to catch water'
+{Slender trunk} (4) [remove] [ground] '+as braces for barrel'
+{Staff} (4) [remove] [ground] '+for channel gutters'
+{Branch} (8) [remove] [ground] '+to make pegs to hold gutters'
+{Axe} <Adze axe> '+to hollow out gutters'
+{Knife} <Small knife> '+to make peg holes'
+
+
+
+-end

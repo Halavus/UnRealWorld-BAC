@@ -1,0 +1,20 @@
+//BAC integration
+//
+// This file to hold recipes that do not conflict with others
+// and leave enough menu space for alternates
+
+[SUBMENU_START:building]
+
+//.Road. *BUILDING* -R- [effort:3] [phys:arms,stance] /5h/
+//{Shovel} <Shovel>
+//{Stone} (5) [remove] [ground] + 'Stones for road surface'
+//{Rock} (5) [remove] [ground] + 'Rocks for gravel foundation'
+//[TILEGFX:ter-road]
+
+.Big Rock.  "Barrier Fence" [effort:3] [phys:stance,one-armed] *BUILDING* /4h/ |+2|
+{Stone} (10) [remove][ground]
+{Rock} (20) [remove][ground] '+for chinking'
+{Shovel}
+//From Frostbit
+
+[SUBMENU_END:building]

@@ -1,0 +1,112 @@
+// 3.70 adds textilecraft menu
+
+[SUBMENU_START:textilecraft]
+
+
+.Spindle. [effort:1] [phys:hands,one-armed] *CARPENTRY*	/2h/	%30%	|-1|  [noquality] -I-
+{Wooden stake} [remove] 
+{Axe or carving knife} [wearpct:30] '+for rough cutting'
+{Knife}
+
+// MODDED:
+
+
+.Primitive fiber yarn.  "Cord" [effort:1] [phys:hands,one-armed] *TEXTILECRAFT* /60/ %-20% |-1| [patch] [NOPAUSE]
+{*fibre from *} #0.1#	[remove] [patchwise] 'fibre'   [name:%s Yarn] [naming:last word]
+{Spindle} [optional]
+[WEIGHT:0.1]
+[PRICE:0.02]
+[LENGTH:15] 
+[TILEGFX:it-yarn]
+
+.Wooden textile needles.	"Branch"	/2h/	[phys:hands] *TEXTILECRAFT* [assist:1]
+{Branch}	(4) 	[remove] [noquality]
+{Knife} <Small knife>
+[WEIGHT:0.2]
+[PRICE:0.1]
+[TILEGFX:bc-kneedles]
+
+.Bone textile needles.		"Branch"	/2h/	[phys:hands] *TEXTILECRAFT* %10% [assist:1]
+{Bone}	#1# 	[remove] [noquality]
+{Knife} <Small knife>
+[WEIGHT:0.2]
+[PRICE:0.2]
+[TILEGFX:bc-kneedles]
+[MATERIAL:bone]
+
+.Loom.			"Hunting Horn"		*CARPENTRY*	|1|		/3h/	%-10%	[effort:2] [phys:arms,hands,stance] [assist:3]
+{Board} 	 		(3) 	[remove]
+{Wooden stake}			(1) 	[remove][noquality] '+for a heddle'
+{Thin cordage}				=90= 	[remove] [nominlen]
+{Rock}				(20) 	[remove][noquality] '+as weights for the warp'
+{Axe}				<Carving axe> [wearpct:20]
+{Knife}				<Small knife>
+[WEIGHT:100]
+[TYPE:tool]
+[TILEGFX:rc-loom]
+[MATERIAL:wood]
+[PRICE:3.5] 
+// Ico'n provided by Kaaven from the Urw Forums, modified
+// Arimon 3.7x: 
+//	- moved from Weaving to Textilecraft
+//	- changed {*Cord} to {Thin cordage}
+//	- added [nominlen] to {Thin cordage}
+
+.Nettle Cloth. 		"Hunting horn" 	/90/ 	[patch:4] *TEXTILECRAFT*	%25%	[effort:2] [phys:arms,hands,stance] [assist:1]
+{-} [optional] +'Use exact length, surplus is lost.'
+{Nettle Yarn} 	=225= 	[remove] [patchwise] [nominlen] 
+{Loom}			[ground]	
+[WEIGHT:1]
+[MATERIAL:cloth]
+[TYPE:armour]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:]
+[PRICE:3.6]
+[TILEGFX:rc-cloth]
+// Arimon 3.7x: 
+//	- moved from Weaving to Textilecraft
+//	- changed *COMMON* to *TEXTILECRAFT*
+//	- changed Yarn needed from (1) to =50=
+//	- added [nominlen] to {Nettle Yarn}
+
+.Weave Hemp Linen Cloth. 	"Hunting horn" 	/90/ [patch:4] *TEXTILECRAFT*	%25%	[effort:2] [phys:arms,hands,stance] [assist:1]	[NOPAUSE]
+{-} [optional] +'Use exact length, surplus is lost.'
+{Hemp Yarn} 	=225= 	[remove]  [patchwise] [nominlen] [name:Linen Cloth]
+{Loom}			[ground]
+[WEIGHT:1]
+[MATERIAL:cloth]
+[TYPE:armour]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:]
+[PRICE:5.1]
+[TILEGFX:rc-cloth] 
+// Arimon 3.7x: 
+//	- moved from Weaving to Textilecraft
+//	- changed *COMMON* to *TEXTILECRAFT*
+//	- changed Yarn needed from (1) to =50=
+//	- added [nominlen] to {Hemp Yarn}
+
+.Weave Flax Linen Cloth. 	"Hunting horn" 	/90/ [patch:4] *TEXTILECRAFT*	%25%	[effort:2] [phys:arms,hands,stance] [assist:1]	[NOPAUSE]
+{-} [optional] +'Use exact length, surplus is lost.'
+{Linen Yarn} 	=225= 	[remove] [patchwise] [nominlen] [name:Linen Cloth]
+{Loom}			[ground]	
+[WEIGHT:1]
+[MATERIAL:cloth]
+[TYPE:armour]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:]
+[PRICE:5.1]
+[TILEGFX:rc-cloth]
+// Arimon 3.7x: 
+//	- moved from Weaving to Textilecraft
+//	- changed *COMMON* to *TEXTILECRAFT*
+//	- changed Yarn needed from (1) to =50=
+//	- added [nominlen] to {Flax Yarn}
+
+
+
+
+
+
+
+[SUBMENU_END:textilecraft]

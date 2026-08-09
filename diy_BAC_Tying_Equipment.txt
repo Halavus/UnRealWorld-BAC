@@ -1,0 +1,195 @@
+// diy_BAC_Tying_Equipment.txt
+//
+// for easier tracking BAC moves the 
+// diy_glossary tying equipment entries
+// to diy_BAC_Tying_Equipment.txt
+//
+// =[assist:1] added to most cord and rope making to match
+// vanilla setting
+// =Pricing debated. Quality materials lost price code to go 
+// with default. Low quality ones set to low price values.
+// = List reordered to group quality from primitive
+// = Root rope from Brygun_Added_Items now using birch-bark rope
+// as base object
+// = Review of skills assigned
+// = Fix Untie loop snare to return 3 ft as used to make it
+//
+// 2020 Dec 07
+// Adjustments to have braided rope from cords as per Bouidda 2.1
+// twisted cord from Bouidda 2.a
+// Leather cord is an option
+// String now wastes some material for better quality output, skill bonus 15 -> 20
+//
+// 2023-05
+// Untie loop snare set to return new vanilla length of 6
+//
+// Sibs: Updated to 3.84
+
+
+[SUBMENU_START:tying equipment]
+
+// MODDED:
+
+
+.Birch cord.  "Cord"	%0%	*COMMON* 	/30/	 [effort:1] [phys:hands]  [assist:1]
+{*birch-bark strip} 		#0.5#	[remove]
+{Knife}
+{Stone} (1) [ground] '+as tension holder'
+[LENGTH:15]
+[MATERIAL:leather]
+
+.Twisted cord. 		"Cord"		[phys:hands,one-armed] *HIDEWORKING* /45/ [patch] [assist:1]	[NOPAUSE]
+{*fibre from *} #0.5#	[remove] [patchwise] 'fibre'   [name:%s cord] [naming:last word]
+[WEIGHT:0.5]
+[PRICE:0.02]
+[LENGTH:15] 
+
+.Refined cord.		"Cord"		[patch:5]	%20%	*HIDEWORKING* 	/60/	 [effort:1] [phys:hands]  [assist:1]
+{*fibre from *} 		#0.7#	[remove] [noquality] [patchwise] '+ use plant or bark fibres'
+{Knife} '+ to refine quality'
+[WEIGHT:0.5]
+[PRICE:0.03]
+[LENGTH:15]
+
+.Refine a cord.		"Cord"		%20%	*HIDEWORKING* 	/30/	 [effort:1] [phys:hands]  [assist:1] [NOPAUSE]
+{Cord} 	=16=	[remove] [noquality]
+{Knife} '+ to refine quality'
+{*comb}
+{Board}	[ground] [noquality]
+[NAME:Cord]
+[WEIGHT:0.5]
+[PRICE:0.03]
+[LENGTH:15]
+
+//.Hemp rope.		"Rope"	*HIDEWORKING*  /30/	[effort:1] [phys:hands]  [assist:1]
+//{*Fibre from Hemp}		#1#	[remove] [patchwise]
+//{Knife}
+//[LENGTH:15]
+// Arimon 3.7x: removed as BAC fibres are no longer a thing
+
+
+// From Bouidda v2.1
+// Rope is now made by braiding 3 cords together
+// "cord" will produce cord rope, which I don't like too much 
+// mixed cords will produce 'mixed braided rope'
+.Braided rope. "Rope"	-R-	[phys:hands,one-armed] *HIDEWORKING* /20/ [patch:5] [assist:1] |-2| [NOPAUSE]
+{*cord*} =9=	[remove] [patchwise] 'cord' [name:%s rope] [naming:last word]
+[LENGTH:3]
+[WEIGHT:0.3]
+[PRICE:0.7]
+
+.Birch root. "Cord" [effort:2] [phys:hands,one-handed] 	*CARPENTRY* /20/ [noquality] [patch] [assist:1]
+{[NEARBY_TILE:birch]}					'+have a birch nearby'
+{[NEARBY_TILE:*ground]} '+not to be done with snow or ice on ground'
+{Knife}
+[MATERIAL:wood]
+[WEIGHT:1]
+[PRICE:0.05]
+[TILEGFX:bc-birchroot]
+// Should only be usable when soil isn't frozen
+//
+// This is a readily available general tying equipment.
+// For any mod recipe that previously had {Tying equipment} requirement
+// I recommend assessing if {*cord} 'Cord' would be better:
+// Like bows, arrows, bags, nets, fishing rods etc.
+// To prevent roots being used in such recipes.
+
+.Split spruce twig. (2) "Cord" [effort:1] [phys:hands,one-handed] *CARPENTRY* /10/ %-45% [patch] [assist:1]
+{spruce twig}	[remove] [patchwise]
+{Knife}<Small knife>
+[PRICE:0.01]
+[MATERIAL:wood]
+[LENGTH:4] 
+// This is a readily available general tying equipment.
+// For any mod recipe that previously had {Tying equipment} requirement
+// I recommend assessing if {*cord} 'Cord' would be better:
+// Like bows, arrows, bags, nets, fishing rods etc.
+// Length assumes splitting a reasonable branch in two
+// Also results in shorter yields as a primitive method
+// Length set to 4 feet same as withe. I debate on this but that a different length might cause issues.
+// Arimon 3.7x: changed {Spruce twig} to {spruce twig} (as reported by Galgana in the 3.63 thread of the BAC mod on page 56 post #831 this recipe doesnt work with {Spruce twig} any more, for some reason it does with {spruce twig}, pls dont ask me why)
+
+.Root rope. "Birch-bark rope" [effort:2] [noquality][phys:hands] *CARPENTRY*  /2h/ |-1| [assist:1]
+{[NEARBY_TILE:Spruce]} '+have a spruce tree nearby'
+{[NEARBY_TILE:*ground]} '+not with snow or ice on the ground'
+{Rock} '+for digging out thin roots'
+{Stone} '+for tension when braiding roots together for strength'
+[PRICE:0.2]
+[LENGTH:9] 
+//Represents digging out surface roots which are semiflexible 
+//then braiding them up with a stone weight for tension
+//price reduced
+//length reduced from 15 to 9 simulating the lengths likely found
+
+
+.Untie Loop Snare.	"Cord"	*COMMON*	/5/ 	[effort:1] [phys:hands] [NOPAUSE]
+{Loop snare}	(1)			[remove] [name:Cord]
+[LENGTH:6]
+// Returns default generic cord which might be higher value then what made the snare in the first place
+
+// fibres updated based on discussions in Dec 2020 though not exact matches
+// see Bouidda 2.1 for the research notes. Alder not suitable for fibres.
+
+// BAC initial fibre recipe
+// Deactivated as now merging in new Bouidda 2.1 code
+//.Fibre from bark. "Hunting horn" (7) [phys:hands,one-armed] *HIDEWORKING* %-20% /45/ [patch:5]
+//{*bark*}   #1#   [remove] [noquality] [patchwise] [name:Fibre from %s] [naming:original] '+ willow or rowan bark'
+//{Knife}             [noquality]
+//[NAME:fibre from rowan-bast]
+//[TYPE:tool]
+//[MATERIAL:wood]
+//[WEIGHT:0.1]
+//[PRICE:0]
+//[TILEGFX:bc-fibre]
+
+
+// Adapted from Bouidda 2.1
+.Extract Rowan fibre. 	"Hunting horn" (3)	*CARPENTRY*	/15/ %-20%	[patch] 	[effort:1] 	[phys:arms,stance] [assist:1] [NOPAUSE]
+{Rowan bark} 	#1# [remove] [patchwise] [ground] [name:fibre of %s] 'rowan bark'
+{Beater} 			[noquality] '+for scutching'
+[NAME:fibre from rowan-bast]
+[TYPE:tool]
+[WEIGHT:0.1]
+[PRICE:0]
+[TILEGFX:bc-fibre]
+
+// Rudy
+//.Extract Alder fibre. 	"Hunting horn" (3)	*CARPENTRY*	/15/ %-20%	[patch] 	[effort:1] 	[phys:arms,stance] [assist:1]
+//{Alder bark} 	#1# [remove] [patchwise] [ground] [name:fibre of %s] 'alder bark'
+//{Beater} 			[noquality] '+for scutching'
+//[NAME:fibre from alder-bast]
+//[TYPE:tool]
+//[WEIGHT:0.1]
+//[PRICE:0]
+//[TILEGFX:bc-fibre]
+
+// Adapted from Bouidda 2.1
+.Extract Spruce fibre. 	"Hunting horn"	*CARPENTRY*	/45/ %-30%	[patch:5] 	[effort:0] 	[phys:arms,stance] [assist:1] [NOPAUSE]
+{Spruce twig} 	[remove] [patchwise] [ground] [noquality]
+{Fire}				[noquality] '+for softening inner sap'
+{Beater} 			[noquality] '+for scutching'
+[NAME:fibre from spruce-bast]
+[TYPE:tool]
+[WEIGHT:0.1]
+[PRICE:0]
+[TILEGFX:bc-fibre] 
+
+//.Fibre from birch-bark basket. "Hunting horn" (7) [phys:hands,one-armed] *HIDEWORKING* %-30% /1h/ [patch:5] 
+//{Birch-bark basket}  [remove] [noquality] [patchwise] [name:Fibre from birch-bark] 
+//{Knife}             [noquality]
+//[TYPE:tool]
+//[MATERIAL:birch-bark]
+//[WEIGHT:0.1]
+//[PRICE:0]
+//[TILEGFX:bc-fibre]
+
+.Fibre from raw birch-bark. "Hunting horn" (7) [phys:hands,one-armed] *HIDEWORKING* %-30% /1h/ [patch:5] [NOPAUSE]
+{*Birch-bark*}   #1#   [remove] [noquality] [patchwise] [name:Fibre from birch-bark] 
+{Knife}             [noquality]
+[TYPE:tool]
+[MATERIAL:birch-bark]
+[WEIGHT:0.1]
+[PRICE:0]
+[TILEGFX:bc-fibre]
+
+[SUBMENU_END:tying equipment]

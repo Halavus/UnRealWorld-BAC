@@ -1,0 +1,351 @@
+[SUBMENU_START:Cloth Garments]
+
+// Arimon 3.7x: moved submenu from diy_BAC_Weaving to diy_BAC_Cloth_Garments
+//
+// 2203-05 weight used reduced toward vanilla update
+
+// MODDED:
+
+.Nettle apron.			/60/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:2]
+{Yarn}	=10= 	'+Yarn' [remove] [nominlen]
+{Nettle *}  	'+Nettle Cloth'	#3.0# 	[remove]
+{Knife} <Small knife>		'+A knife good for fine work'
+{Sewing needle}
+[PRICE:2.4] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 4.0 to 3.0
+
+
+.Nettle skirt. "Nettle tunic" /60/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:2]
+{Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#2.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:1.5]
+[TYPE:armour]
+[WEIGHT:2.0] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hip groin thigh]
+[TILEGFX:ar-veil]  
+//by brygun 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 2.5 to 2.0
+
+.Nettle cloak.			/60/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:2]
+{Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#6.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:1.4] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 7.0 to 6.0
+
+.Nettle cowl.			/20/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:1]
+{Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#1.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:0.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 1.5 to 1.0
+
+.Nettle shirt.			/75/ *CLOTHCRAFT*	[effort:1] [phys:hands] %-15% [assist:2]
+{Yarn}  	=20= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#3.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:3.3] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 3.5 to 3.0
+
+.Nettle trousers.		/100/ *CLOTHCRAFT*	[effort:1] [phys:hands] %-15% [assist:2]
+{Yarn}	=20= 	'+Yarn' [remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#4.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:3.3] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 4.5 to 4.0
+
+.Nettle tunic.			/120/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:2]
+{Yarn}  	=20= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#6.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:4.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 7.0 to 6.0
+
+
+//.Nettle breast wrap. "Nettle trousers" /15/ *TEXTILECRAFT*	[effort:1] [phys:hands]	%-30% [assist:1]
+//{Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+//{Nettle *}  '+Nettle Cloth'		#0.7# 	[remove]
+//{Knife} <Small knife> '+A knife good for fine work'
+//[PRICE:0.5]
+//[TYPE:armour]
+//[WEIGHT:1] 
+//[MATERIAL:cloth]
+//[ARMOUR_MATERIAL:cloth]
+//[ARMOUR_COVERAGE:thorax]
+//[TILEGFX:ar-woollegg] 
+//by brygun 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 1.0 to 0.7
+
+//.Nettle privates wrap. "Nettle trousers" /15/ *TEXTILECRAFT* [effort:1] [phys:hands]	%-30% [assist:1]
+//{Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+//{Nettle *}  '+Nettle Cloth'		#0.7# 	[remove]
+//{Knife} <Small knife> '+A knife good for fine work'
+//[PRICE:0.5]
+//[TYPE:armour]
+//[WEIGHT:1] 
+//[MATERIAL:cloth]
+//[ARMOUR_MATERIAL:cloth]
+//[ARMOUR_COVERAGE:hip groin]
+//[TILEGFX:ar-woolsock]
+//by brygun 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 1.0 to 0.7
+
+.Nettle footrags.	"Linen footrags"	/20/ *CLOTHCRAFT*	[effort:1] [phys:hands]	%-15% 
+{Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#0.2# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+{Sewing needle}
+[PRICE:0.3]
+[TYPE:armour]
+[WEIGHT:0.5] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:foot]
+[TILEGFX:ar-woolsock]
+//by brygun
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 0.5 to 0.2
+
+.Nettle handwraps.  "Linen footrags"		/20/ *CLOTHCRAFT*	[effort:1] [phys:hands,one-armed]	
+{Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#0.2# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:0.2] [assist:1]
+[TYPE:armour]
+[WEIGHT:0.2] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hand]
+[TILEGFX:ar-footrags] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 0.5 to 0.2
+
+.Linen apron.			/60/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:2]
+{Yarn}	=10= 	'+Yarn' [remove] [nominlen]
+{Linen *}  '+Linen Cloth'		#3.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:2.6] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 4.0 to 3.0
+
+
+.Linen cowl.			/20/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:1]
+{Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Linen *}  '+Linen Cloth'		#1.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:0.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 1.5 to 1.0
+
+
+.Linen dress.			/120/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:2]
+{Yarn}	=40= 	[remove] [nominlen] '+Yarn' 
+{Linen *}  '+Linen Cloth'		#4.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:3.6] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 5.0 to 4.0
+
+
+.Linen skirt. "Linen dress" /60/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:2]
+{Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Linen *}  '+Linen Cloth'		#2.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:1.8]
+[TYPE:armour]
+[WEIGHT:2.5] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hip groin thigh]
+[TILEGFX:ar-veil]  
+//by brygun 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 2.5 to 2.0
+
+.Linen footrags.		/20/ *CLOTHCRAFT*	[effort:1] [phys:hands,one-armed] [assist:1]
+{Linen *}  '+Linen Cloth'		#.2# 	[remove] [nominlen]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.2] 
+[WEIGHT:0.5] 
+// 2203-05 weight used from 0.5 to 0.2
+
+.Linen shirt.			/75/ *CLOTHCRAFT*	[effort:1] [phys:hands]	%-15% [assist:2]
+{Yarn}  	=20= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#3.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:3.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 3.5 to 3.0
+
+.Linen trousers.		/100/ *CLOTHCRAFT*	[effort:1] [phys:hands]	%-15% [assist:2]
+{Yarn}	=20= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#4.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:3.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 4.5 to 4.0
+
+.Linen tunic.			/120/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:2]
+{Yarn}  	=20= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#6.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:4.7] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 7.0 to 6.0
+
+.Linen undergarment.		/150/ *CLOTHCRAFT*	[effort:1] [phys:hands]	%-30% [assist:2]
+{Yarn}  	=40= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#3.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:4.2]
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 4.0 to 3.0
+ 
+.Linen undershirt.		/80/ *CLOTHCRAFT*	[effort:1] [phys:hands]	%-30% [assist:2]
+{Yarn}	=30= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#3.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+{Sewing needle}
+[PRICE:3.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 3.5 to 3.0
+
+.Linen veil.			/30/ *CLOTHCRAFT*	[effort:1] [phys:hands] [assist:1]
+{Yarn}  	=20= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#.3# 	[remove]
+{Knife} <Small knife>	'+A knife good for fine work'
+{Sewing needle}
+[PRICE:0.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+// 2203-05 weight used from 0.5 to 0.3
+
+
+.Linen handwraps.  "Linen footrags"		/20/ *CLOTHCRAFT*	[effort:1] [phys:hands,one-armed]	
+{Linen *}  '+Linen Cloth'		#.2# 	[remove] [nominlen]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.2] [assist:1]
+[TYPE:armour]
+[WEIGHT:0.2] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hand]
+[TILEGFX:ar-footrags] 
+// 2203-05 weight used from 0.5 to 0.2
+
+.Linen breast wrap. "Linen trousers" /15/ *CLOTHCRAFT*	[effort:1] [phys:hands]	%-30% [assist:1]
+{Linen *}  '+Linen Cloth'		#0.7# 	[remove] [nominlen]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.6]
+[TYPE:armour]
+[WEIGHT:1] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:thorax]
+[TILEGFX:ar-woollegg] 
+//by brygun 
+// 2203-05 weight used from 1.0 to 0.7
+
+.Linen privates wrap. "Linen trousers" /15/ *CLOTHCRAFT*	[effort:1] [phys:hands]	%-30% [assist:1]
+{Linen *}  '+Linen Cloth'		#0.7# 	[remove] [nominlen]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.6]
+[TYPE:armour]
+[WEIGHT:1] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hip groin]
+[TILEGFX:ar-woolsock] 
+//by brygun 
+// 2203-05 weight used from 1.0 to 0.7
+
+[SUBMENU_END:Cloth Garments]

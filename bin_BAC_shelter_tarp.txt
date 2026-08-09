@@ -1,0 +1,31 @@
+// BAC integration
+//
+// biy_BAC_Tarp_shelter
+
+// Replaces normal shelter with one using a tarp to make
+// the roof. Which is much like a modern tent.
+//
+//
+//
+// Note when this mod is active the normal shelter of 
+// 3 slender trunks and 20 spruce twigs is blocked.
+//
+// Use file rename adding or removing boff_ before the biy_XXX
+// to control if this is active.
+//
+// The tarp is the same as the leather punt allowing it 
+// to be used in both rolls. However you will lose the woven
+// frame for the punt as only one item type is allowed to 
+// be produced from each recipe.
+
+//Quick tarp shelter
+.Shelter. "Tarp shelter" *BUILDING* [effort:1] [phys:arms,stance,arms,legs] /5m/ [assist:2]
+{Leather tarp} [remove] [ground] '+to become a sloping roof'
+{Wooden stake} (2) [remove] [ground] '+as upright braces'
+
+// Earlier components though looses parts when dismantled
+//{Slender trunk} (2) [remove] [ground] '+uprights'
+//{Branch} (4) [remove] [ground] '+corner pegs'
+
+
+-end

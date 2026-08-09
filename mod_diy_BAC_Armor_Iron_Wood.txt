@@ -1,0 +1,327 @@
+// BAC integration
+//
+// Creation of Armor group one
+// Intended to hold lamellar armors
+// and some metal locations like helm, elbow, knee
+// reflecting what a smith getting into armouring can make
+//
+// These are also what are commonly found on Nerjpez
+// giving access to make/tear down/mend
+//
+// More advanced armoring will need to go into the
+// the variable menudef slots
+//
+// Lamellar:
+// JEB included 2018-01-03
+//        for UrW 3.50
+// JEB's modifications noted below.
+// "Credit for this mod is not mine, it was found on the old forum."
+// Brygun: possibly traces to Rudy on the old forums
+// https://www.tapatalk.com/groups/urwforum/simple-lamellar-mod-t7728.html
+//
+// Fur and leather items here as byrgun couldn't find a way
+// to add to the vanilla "Clothes" crafting menu
+// This saved space to allow another unused menu spot
+//
+// Pricing overall to correct for wiki 17 torches to the current
+// 1 squirrel hide
+//
+// 2023-05 Adjusting to new weights listed on the wiki
+//
+// 2023-12 due to the leather menu being full a few of appear
+// within the Iron and Wood menu
+
+[SUBMENU_START:Armors of Iron and Wood]
+
+
+
+// new Lamellar Piece
+// Added by Brygun to allow new items to be made
+// Uses carpentry as the smith skill to make fresh plates
+// Note that assembling lamellar is done using hideworking
+// as you use leather and ties to connect the pieces
+
+.Steel Lamellar Piece. "Rock" [effort:0] *CARPENTRY* /20/ [patch:10] |2| %-15%
+{*steel billet} #0.2# [remove] [patchwise] '+as steel to flatten'
+{*forge*}			 [noquality]		'Forge or furnace'
+{Charcoal} 	(3) 	[remove] [noquality] [ground] [patchwise]
+{Bellows}			 
+{*anvil*}			 [ground]	'Anvil nearby'
+{*hammer}						'Hammer'
+{Medieval drill} [ground] {+to make holes in the steel}
+[WEIGHT:0.18]
+[MATERIAL:iron]
+[ARMOUR_MATERIAL:lamellar]
+[TYPE:valuable]
+[PRICE:0]
+[TILEGFX:bc-bone]
+// Brygun naming conventions for BAC, tilegfx to one BAC has
+// some reordering of pieces for a head to toe style listing
+
+
+//Dismounted Lamellar Piece
+.Dismount Lamellar.    "Rock" [effort:0] *COMMON* /2/ [noquality] [patch:10] |0| [NOPAUSE]
+{Knife} 
+{*lamellar*} #0.2# [remove] [patchwise]
+[NAME:Steel Lamellar Piece]
+[WEIGHT:0.18]
+[MATERIAL:iron]
+[ARMOUR_MATERIAL:lamellar]
+[TYPE:valuable]
+[PRICE:0]
+[TILEGFX:bc-bone]
+// JEB: added [PRICE:0], added [TYPE:valuable]
+
+
+.Lamellar Cuirass. "Lamellar Cuirass" *HIDEWORKING* [effort:1] [phys:hands] %-30% /240/ |1|
+{*Lamellar Piece} (75) [remove]
+{*cord} #1.5# [remove]
+{Knife}
+//based on final weight of 15
+//pieces from 75 to 75
+
+.Lamellar Hauberk. "Lamellar Hauberk" *HIDEWORKING* [effort:1] [phys:hands] %-30% /300/ |1|
+{*Lamellar Piece} (140) [remove]
+{*cord} #3.5# [remove]
+{Knife}
+//2023-05 checking to wiki
+//based on final weight of 29
+//pieces from 175 to 140
+
+.Long Lamellar Hauberk. "Lamellar Hauberk" *HIDEWORKING* [effort:1] [phys:hands] %-30% /360/ |1|
+{*Lamellar Piece} (146) [remove]
+{*cord} #3.6# [remove]
+{Knife}
+[WEIGHT:38]
+[ARMOUR_COVERAGE:long_hauberk]
+//2023-05 checking to wiki
+//based on final weight of 30
+//pieces from 190 to 146
+
+
+.Lamellar Forearm Guards. "Lamellar Forearm Guards" *HIDEWORKING* [effort:1] [phys:hands] %-30% /80/ |1|
+{*Lamellar Piece} (20) [remove]
+{*cord} #0.4# [remove]
+{Knife}
+// JEB: changed to %-30% like all the others, was %-15%
+//2023-05 checking to wiki
+//based on final weight of 4
+//pieces from 20 to 20
+
+.Lamellar Rerebraces. "Lamellar Rerebraces" *HIDEWORKING* [effort:1] [phys:hands] %-30% /60/ |1|
+{*Lamellar Piece} (25) [remove]
+{*cord} #0.5# [remove]
+{Knife}
+// JEB: changed to %-30% like all the others, was %-15%
+//2023-05 checking to wiki
+//based on final weight of 5
+//pieces from 25 to 25
+
+.Lamellar Shin Guards. "Lamellar Shin Guards" *HIDEWORKING* [effort:1] [phys:hands] %-30% /80/ |1|
+{*Lamellar Piece} (45) [remove]
+{*cord} #0.9# [remove]
+{Knife}
+// JEB: changed to %-30% like all the others, was %-15%
+//2023-05 checking to wiki
+//based on final weight of 9
+//pieces from 45 to 45
+
+
+///////////////////////////////
+// Shields and Bucklers
+
+
+.Wooden shield.  "Roundshield" [effort:2] [phys:hands, arms] *CARPENTRY*    /180/ %-20% |1|
+{Staff} [remove] [ground] '+for handle shaft'
+{Board} (2) [remove] [ground] 
+{*cord} =5= [remove] [noquality] '+for carrying strap'
+{Axe} <Carving axe>  [wearpct:30] 
+// From Brygun Addeditems
+// Norse style shield with no rim
+// Would prefer to lower the quality a step vs normal roundshield
+// Small skill penalty on account of no iron rim. Not a heavy penalty as this
+// style of shield still has combat uses. Enemy weapon might jam in the wood only edge.
+
+.Wooden buckler.  "Buckler" [effort:2] [phys:hands, arms] *CARPENTRY*    /90/ %-20% |1|
+{Staff} [remove] [ground] '+for handle shaft'
+{Board} (1) [remove] [ground] 
+{*cord} =2= [remove] [noquality] '+for carrying tie'
+{Axe} <Carving axe>
+// From Brygun Addeditems
+// Smaller wooden shield
+
+
+.Roundshield. [effort:2] [phys:hands, arms] *CARPENTRY*    /180/ |1|
+{Steel dome} [remove] [ground] '+for center boss'
+{Board} (2) [remove] [ground] '+for shield body'
+{Staff} [remove] [ground] '+for handle shaft'
+{Iron shape} #2# [remove] '+for shield rim'
+{Iron nails} #0.5# [remove] '+as rivets and nails'
+{*cord} =5= [remove] [noquality] '+for carrying strap'
+{*iron hammer} 
+{*anvil*} [ground] '+to hammer on'
+{Medieval drill} [ground] '+to drill rivet holes'
+{Axe} <Carving axe>
+
+.Buckler. [effort:2] [phys:hands, arms] *CARPENTRY*    /90/ |1|
+{Steel dome} [remove] [ground] '+for center boss'
+{Board} (1) [remove] [ground] '+for buckler body'
+{Staff} [remove] [ground] '+for handle shaft'
+{Iron nails} #0.25# [remove] '+as rivets and nails'
+{*cord} =2= [remove] [noquality] '+for carrying tie'
+{*iron hammer} 
+{*anvil*} [ground] '+to hammer on'
+{Medieval drill} [ground] '+to drill rivet holes'
+{Axe} <Carving axe>
+
+
+
+///////////////////////////////
+// Iron armors
+//
+// Iron armors have hefty skill penalties as they are advanced 
+// projects. They also give a big combat boost to the character.
+//
+// Prices of character made are closer to estimate of recipe
+// Iron nails are used as rivets
+//
+// Pricing references
+// http://www.unrealworld.fi/wiki/index.php?title=Item_list#Iron
+// >BUT< that is torches so 1/17 it get value in squirrel hide
+//
+// for example
+// https://www.unrealworld.fi/wiki/index.php?title=Iron_Helm
+// Shows value 400 torches which is 23.5 squirrel hides
+
+
+
+.Iron helm. *CARPENTRY* %-30% /6h/ [effort:3] [phys:hands, arms] |2|
+{Steel dome} [remove] [ground] '+for initial frame'
+{Steel shape} (2)[remove] '+add curved plates'
+{Iron nails} #0.25# [remove] '+as rivets'
+//{Leather} #0.25# [remove] '+as suspension and head band'
+{Ball iron hammer} '+needs advanced hammer for complex shapes'
+{Pliers} '+to hold while hammering at odd angles'
+{*anvil*} [ground] '+to hammer on'
+{Medieval drill} [ground] '+to drill rivet holes'
+[PRICE:23.5]
+[ARMOUR_MATERIAL:iron]
+[ARMOUR_COVERAGE:skull]
+[WEIGHT:3]
+//2023-05 no edits applied
+//2023-05-08 affirming protection properties
+//2023-05-11 leather commented out as was changing protection
+//2023-05-23 Change to using steel shapes not billets for more buid time 
+
+
+//Spectacle helm
+//now done as an expansion to the basic helm
+.Iron spectacle helm. *CARPENTRY* %-30% /8h/ [effort:3] [phys:hands, arms] |2|
+{Iron helm} [remove] [ground] '+usually one you made'
+{Steel shape} (2)[remove] '+add curved plates'
+{Iron nails} #0.25# [remove] [ground]	'+as rivets'
+//{Leather} #0.25# [remove] [ground]	'+as suspension and head band'
+{Ball iron hammer} 	[ground] '+needs advanced hammer for complex shapes'
+{Pliers} [ground]		'+to hold while hammering at odd angles'
+{*anvil*} [ground] 		'+to hammer on'
+{Medieval drill} [ground] 	'+to drill rivet holes'
+[PRICE:30.6]
+[ARMOUR_MATERIAL:iron]
+[ARMOUR_COVERAGE:skull face]
+[WEIGHT:3.5]
+// reference showed price 520 torches = 30.6 squirrel hide
+//2023-05 no edits applied
+//2023-05-08 restore tool name from tongs back to pliers
+//2023-05-08 affirming protection properties
+//2023-05-11 leather commented out as was changing protection 
+//2023-05-14-B testing finding protection okay now but leather
+// source gets added to item name like "tufted duck iron..."
+// so leather being left out for that anyway
+//2023-05-23 Change to using steel shapes not billets for more buid time 
+//2023-05-23 Uses iron helm as starting point
+
+
+
+//Iron elbows
+.Iron coudes. *CARPENTRY* %-30% /2h/ [effort:3] [phys:hands, arms] |2|
+{Steel dome} (2) [remove] '+for steel structure'
+{*cord} =3= [remove] '+as ties'
+{Ball iron hammer} '+needs advanced hammer for complex shapes'
+{Pliers} '+to hold while hammering at odd angles'
+{Upper block tub} [ground] [noquality] '+as hollow to hammer deep curves'
+{*anvil*} [ground] '+to hammer on'
+{Medieval drill} [ground] '+to drill tying holes'
+[PRICE:11.8]
+//2023-05 no edits applied
+
+//Iron knees
+.Iron kneecops. *CARPENTRY* %-30% /2h/ [effort:3] [phys:hands, arms] |2|
+{Steel dome} (2) [remove] '+for steel structure'
+{*cord} =3= [remove] '+as ties'
+{Ball iron hammer} '+needs advanced hammer for complex shapes'
+{Pliers} '+hold while hammering at odd angles'
+{Upper block tub} [ground] [noquality] '+as hollow to hammer deep curves'
+{*anvil*} [ground] '+to hammer on'
+{Medieval drill} [ground] '+to drill tying holes'
+[PRICE:17.4]
+//2023-05 no edits applied
+
+// Iron codpiece
+// <insert jokes here>
+.Iron codpiece. "Iron kneecops" *CARPENTRY* %-30% /2h/ [effort:3] [phys:hands, arms] |2|
+{Steel dome} (1) [remove] '+for steel structure'
+{*cord} =2= [remove] '+as ties'
+//{Leather} #0.25# [remove] '+as padding and insulation'
+{Ball iron hammer} '+needs advanced hammer for complex shapes'
+{Pliers} '+hold while hammering at odd angles'
+{Upper block tub} [ground] [noquality] '+as hollow to hammer deep curves'
+{*anvil*} [ground] '+to hammer on'
+{Medieval drill} [ground] '+to drill tying holes'
+[PRICE:11]
+[ARMOUR_COVERAGE:groin]
+//2023-05 no edits applied
+//2023-05-11 leather commented out as was changing protection 
+
+// Neck and shoulder pauldrons
+// 2023-12-09 Added by Brygun
+// Historical name gorget. Some could have shoulder guards.
+//
+// refernce: billet weighs 0.5 lb each
+// sample 2 lb
+// https://ageofcraft.com/armor/neck-protection/steel-gorget-for-cuirass
+// sample 2.5 lb
+// https://www.latiendadelarp.com/en/gorgets/41867-steel-gorget-15th-century.html
+// 
+// 
+.Iron gorget. "Iron kneecops" *CARPENTRY* %-30% /4h/ [effort:3] [phys:hands, arms] |2|
+{Steel billet} (4) [remove] '+for neck ring with front and back extension'
+{*leather cord} =5= [remove] '+as ties and minimal padding'
+//{Leather} #0.25# [remove] '+as padding and insulation'
+{*iron hammer} '+bending into curves'
+{Pliers} '+hold while hammering at odd angles'
+{*anvil*} [ground] '+to hammer on'
+{Medieval drill} [ground] '+to drill tying holes'
+[PRICE:9]
+[ARMOUR_COVERAGE:neck]
+[WEIGHT:2]
+//2023-12-09 added 
+//leather commented out as was changing protection 
+
+.Iron gorget with pauldrons. "Iron kneecops" *CARPENTRY* %-30% /8h/ [effort:3] [phys:hands, arms] |2|
+{Steel billet} (8) [remove] '+for neck ring with front and back extension'
+{*leather cord} =10= [remove] '+as ties and minimal padding'
+//{Leather} #0.25# [remove] '+as padding and insulation'
+{*iron hammer} '+bending into curves'
+{Pliers} '+hold while hammering at odd angles'
+{*anvil*} [ground] '+to hammer on'
+{Medieval drill} [ground] '+to drill tying holes'
+[PRICE:18]
+[ARMOUR_COVERAGE:neck shoulder]
+[WEIGHT:4]
+//2023-12-09 added 
+//leather commented out as was changing protection 
+
+
+
+
+[SUBMENU_END:Armors of Iron and Wood]

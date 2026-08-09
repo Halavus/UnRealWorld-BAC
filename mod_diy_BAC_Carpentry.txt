@@ -1,0 +1,473 @@
+// BAC integration
+//
+// Carpentry submenu added to make space on crowded lumber menu
+//
+// Meant to be moderate and above complexity wood working
+// other than boats (which are in transport)
+//
+// Caulking placed here
+// Caulked containers placed here
+//
+// Woodworking mod notes
+// Adjusted prices as they were too high in squirrel hides
+//
+// Sibs: Upgraded to 3.84
+
+
+[SUBMENU_START:Carpentry]
+
+.Wooden cup.  [effort:2] [phys:arms,one-armed]  *CARPENTRY*     /90/    %20%    |-1|   [patch:5]
+{Block of wood} <Birch> [remove] [yield:5] [patchwise]
+{Axe} 		<Carving axe> [wearpct:40]
+{Knife}	
+
+.Wooden bowl. [effort:2] [phys:arms,one-armed]  *CARPENTRY*   	/3h/ 	%20%  [patch:4]			
+{Block of wood} <Birch> [remove] [yield:2] [patchwise]
+{Axe} 		<Carving axe> [wearpct:40]
+{Knife}	
+
+.Wooden shovel.	[effort:2] [phys:arms,stance] *CARPENTRY*   /8h/	%10%  
+{Board} <Birch> [remove] 
+{Axe} <Handaxe> 'An axe for rough cutting' [wearpct:30]
+{Axe} <Carving axe> 'An axe for finishing the shape' [wearpct:30]
+{Knife} 
+// updated to 3.85
+
+
+.Shingle basket. [effort:1]  [phys:hands,one-armed] [assist:1]  *CARPENTRY*  /6h/          
+{Shingle} (50) [remove]
+{Tying equipment} =8= [remove] '+(for the handles)'
+{Knife}
+
+
+//.Axe haft. "Hunting horn" (4) [effort:2] [phys:arms,hands,stance]	*TIMBERCRAFT* %10% |0| /120/ [patch:4]
+//{Short quarter log}	 	[remove] [patchwise]
+//{Axe}<Carving axe>		 [noquality]
+//{Knife}<Small knife>
+//[MATERIAL:wood]
+//[WEIGHT:1]
+//[PRICE:0]
+//[TILEGFX:bc-axehaft]
+//was 30 min for 1
+//Now produces multiple with longer time
+//removed for vanilla hafting in 3.84
+
+
+// Simple wooden tub
+// adapted from Bouidda
+// Uses easily sourced materials
+// Represents a bushcraft or primitive construction
+// Takes a lot of time due to needing precise wood joints
+// Likely will get "leaky"
+// Price reduced based on materials and prone to wear
+
+
+.Wooden tub. "Wooden tub" [effort:2] [phys:arms,hands] *CARPENTRY* /240/ [noquality] |1|
+{Board}	(6)		[remove]
+{Split spruce twig} (8)	[remove] [noquality]
+{Axe}<Carving axe> [wearpct:20]
+{Knife}<Small knife>
+[PRICE:1]
+//Represents packing spruce and other small gatherings into 
+//the cracks when you don't have caulking to use
+
+// Caulked Tub
+// Size of existing wooden tub
+//
+// In researching sizes and weights good info was 
+// found for barrel with the smaller ones set from that
+// Approx 0.5 volume (capacity) is 0.35 surface area (weight)
+// By the square/cube law
+// 
+// Mortise and tenon joints packed with caulking for 
+// effecient and reliable construction
+//
+// Barrel research
+//
+// Research on volume and mass
+// https://en.wikipedia.org/wiki/Barrel
+// https://www.thebarrelmill.com/barrels
+// 32 gallons at 8.32 lbs per gal is 267 pounds 
+// 30 gal barrel weight 78 with sqr/cube law 
+// as 32 gal barrel weighs ~80 lbs
+// Total 347lbs most characters can't lift
+// Push on ground of a full tube is possible
+// Assumed to have a lid
+// Price estimates based on wooden bowl best wiki figures as 
+// weight 1.5 capacity 6.5 price 2 arrows at 8 each = 16 price
+// for price 2 to 3 per capacity at bowl size
+// likely diminishing price return as you get bigger
+//
+// Names end in *tub so as to be useable in recipes converted to
+// accept them as a possibility. Caulked wooden tub has full
+// "wooden tub" in name for recipe matches
+//
+// Table of weight/capacity/total of caulked builds and prices
+// wooden tub   2/10/12 p25 (usually no lid)
+// cask 10/66/77 p66
+// keg 28/133/161 p133
+// barrel 80/267/346 p178
+// reduced by game mechanic barrel 25.5 holding 174.5
+//
+// discussions:
+// Saami advised issues with containers over weight of 25.5
+// So a square-cube law rule is applied from the base tub
+// This is not correct as while the surface area rises in this
+// way the higher liquid volume has more pressure requiring
+// thicker walls to the container
+
+//.Caulked wooden tub. "Wooden tub" [effort:2] [phys:arms,hands] *CARPENTRY* /105/ \30\ %15% |1|
+//{Board} (2) [remove]
+//{*cord} =12= [remove] '+as banding'
+//{Caulking} #1# [remove] '+to caulk seams'
+//{*pot} (1) [ground] '+to hold hot caulking'
+//{Fire}      '+to soften caulking'
+//{Firewood} (1) [remove] [ground] '+to sustain fire'
+//{Axe} <Carving axe> '+for main shaping'
+//{Knife} <Small knife> '+for fine whittling'
+//[WEIGHT:2]
+//[CONT_CAPACITY:10]
+//[PRICE:2]
+
+.Cask. "Wooden tub" [effort:2] [phys:arms,hands] [noquality] *CARPENTRY* /150/ \30\ %15% |1|
+{Board} (4) [remove] [ground]
+{Cord} =24= [remove] [nominlen] '+as banding'
+{Caulking} #2# [remove] [noquality] '+caulk seams'
+{*pot} (1) [ground] [noquality] '+to hold hot caulking'
+{Fire}      '+to soften caulking'
+{Firewood} (2) [remove] [ground] [noquality] '+to sustain fire'
+{Axe} <Carving axe> '+for main shaping' [wearpct:40]
+{Knife} <Small knife> '+for fine whittling'
+[WEIGHT:10]
+[CONT_CAPACITY:66]
+[PRICE:4]
+
+.Keg. "Wooden tub" [effort:2] [phys:arms,hands] [noquality] *CARPENTRY* /180/ \30\ %15% |1|
+{Board} (6) [remove] [ground]
+{Cord} =36= [remove] [nominlen] '+as banding'
+{Caulking} #3# [remove] [noquality] '+caulk seams'
+{*pot} (1) [ground] [noquality] '+to hold hot caulking'
+{Fire}      '+to soften caulking'
+{Firewood} (3) [remove] [ground] [noquality] '+to sustain fire'
+{Axe} <Carving axe> '+for main shaping' [wearpct:40]
+{Knife} <Small knife> '+for fine whittling'
+[WEIGHT:16]
+[CONT_CAPACITY:133]
+[TILEGFX:ww-barrel]
+[PRICE:8]
+
+.Barrel Warning. "Rock" /0/
+{-} +'Warning: you must weigh 120lbs'
+{-} +'to lift a fully filled barrel,'
+{-} +'so take caution in overfilling'
+{-} +'or you will not be able to lift'
+{-} +'or interact with its contents.'
+
+
+
+.Barrel. "Wooden tub" [effort:2] [phys:arms,hands] [noquality] *CARPENTRY* /210/ \30\ %15% |1|
+{Board} (6) [remove] [ground]
+{Cord} =30= [remove] [nominlen]
+//'+as banding'
+{Caulking} #3# [remove] [noquality] '+caulk seams'
+{*pot} (1) [ground] [noquality] '+to hold hot caulking'
+{Fire}      '+to soften caulking'
+{Firewood} (4) [remove] [ground] [noquality] '+to sustain fire'
+{Axe} <Carving axe> [wearpct:40] '+for main shaping'
+{Knife} <Small knife> '+for fine whittling'
+[WEIGHT:25.5]
+[CONT_CAPACITY:174.5]
+[TILEGFX:ww-barrel]
+[PRICE:6.8]
+//Price adjustments closer to BAC original / 17 rather than
+//Woodworking suggestions mostly on I recall digging around
+//for pricing relative to the different container sizes
+//
+// 2023-05-11
+// with the bug on lifting meaning not accessing the contents
+// barrel load + own weight trimmed to total 200 lb
+// reduction is from 267 to 174.5 or 0.65
+// price value and materials adjusted to that
+// thus consider this a squat barrel
+
+////////////////////////
+// Wood furniture
+//
+// Was formerly "Outdoor furniture". Name change to better suit
+// RP if giving to NPCs and match Wood XXX of ptry987's mod
+//
+// Note: While I liked the idea of more wood tools and oil
+// Im reluctant to use up BAC menu spaces for them except
+// for sanding tool and add use of the drill/auger to some
+//
+// Access graphics for display and role play
+// Note does >not< count for hideworking code for a hard surface
+// due to how the current vanilla game works
+//
+
+// Wood stool 
+// adapted from ptry987 Woodworking
+// Take a board, use a knife to spin in 3 holes,
+// cut a staff into 3 and jam them in the holes
+// easy to do, little tools but crude 
+
+.Wood Stool. "Sesta" [effort:1] *CARPENTRY*		 /90/ %-10% |0|
+{Board}  [remove] [ground]
+{Staff} [remove] [ground]
+{Knife}		<Small knife>	'+for carving'
+[WEIGHT:12]
+[PRICE:0.25]
+[TYPE:valuable]
+[TILEGFX:ww-stool]
+
+// Wood bench
+// Based on original vanilla BIY
+// I assume some of the boards are cut off to make the flat legs
+
+.Wood bench.	"log" [effort:3] *CARPENTRY*		 /90/	|0|
+{Board} (2) [remove] [ground]
+{Axe} [wearpct:40]
+[WEIGHT:30]
+[PRICE:1]
+[TYPE:tool]
+[TILEGFX:ter-bench]
+
+// Wood Table
+// Based on original vanilla BIY
+//
+
+.Wood table. "log" [effort:3] *CARPENTRY*		 /120/	|1|
+{Board} (10) [remove] [ground]
+{Axe} [wearpct:40]
+[WEIGHT:150]
+[PRICE:5]
+[TYPE:tool]
+[TILEGFX:ter-table]
+
+.Wood table turned. "log" [effort:3] *CARPENTRY*		 /120/	|1|
+{Board} (10) [remove] [ground]
+{Axe} [wearpct:40]
+[WEIGHT:150]
+[PRICE:5]
+[TYPE:tool]
+[TILEGFX:ter-bunk]
+
+// Wood chair
+// Adapted from ptr987
+// Better than a bench by sanding
+
+
+.Wood Chair.	"Sesta" [effort:1] *CARPENTRY*	 /240/	|2|
+{Sanded board} (2) [remove] [ground] '+seat and back rest'
+{Staff} [remove] (2) [ground] '+cut for four legs'
+{Axe} 		<Carving axe> [wearpct:40] '+for big carving'
+{Knife}		<Small knife> '+for fine carving'
+{Sanding tool} [noquality] '+for smoothing'
+[WEIGHT:30]
+[PRICE:2]
+[TYPE:valuable]
+[TILEGFX:ww-chair]
+
+
+// Furniture section
+// adapted from ptr987 Furniture shell
+// Used as a way to spread work out over days
+
+.Furniture section.	"Sesta" [effort:1] *CARPENTRY*		 /6h/ \1d\	|2|
+{Sanded board} (5) [remove] [ground]
+{Branch} (5) [remove] [noquality] '+to make pegs'
+{Axe} 		<Carving axe> [wearpct:40] '+for big carving'
+{Knife}		<Small knife> '+for fine carving'
+{Sanding tool} [noquality] '+for smoothing'
+[WEIGHT:100]
+[PRICE:0]
+[TYPE:wood]
+[TILEGFX:ww-furnshell2]
+
+// Wood shelves
+// from ptr987
+// Large furniture project with no iron parts
+// Price @ 10 x Furniture shells plus 1 per hour
+
+.Wood Shelves. "Sesta" [effort:1] *CARPENTRY*		 /4h/ %-10%	|2|
+{Furniture section} (2) [remove] [ground]
+{Axe} 		<Carving axe> [wearpct:50] '+for big carving'
+{Knife}		<Small knife> '+for fine carving'
+{Sanding tool} [noquality] '+for smoothing'
+[WEIGHT:180]
+[PRICE:24]
+[TYPE:valuable]
+[TILEGFX:ww-shelves]
+
+
+// Wood Closest
+// from ptr987
+// Shelf with doors on iron hinges so you need smithing too
+// Price @ 10 x Furniture shells plus iron shapes plus a bit
+
+.Wood Closet. "Sesta" [effort:1] *CARPENTRY*	 /8h/	%-20%	|2|
+{Furniture section} (3) [remove] [ground]
+{Axe} 		<Carving axe> [wearpct:50] '+for big carving'
+{Knife}		<Small knife> '+for fine carving'
+{Sanding tool} [noquality] '+for smoothing'
+{Iron shape} (4) [remove] '+hinges'
+[WEIGHT:240]
+[PRICE:60]
+[TYPE:valuable]
+[TILEGFX:ww-closet]
+
+// Wood chest
+// Was wooden treasure chest
+// Adjusted to use furniture shell 
+// Price @ 10 x Furniture shells plus iron shapes plus a bit
+// plus a bit more for using better tools and sealing
+
+.Wood chest. "Sesta" [effort:1] [phys:arms,one-armed]  *CARPENTRY*	/6h/ 			%-15%  	|2|		
+{Furniture section} (1) [remove] [ground]'+as main body materials'
+{Iron shape} (3) [remove] '+as hinges and latch'
+{Iron nails} #0.5# [remove] '+as nails and latch pin'
+{Carving axe} [wearpct:50] '+to cut boards to size'
+{Medieval drill} '+to make holes'
+{Draw knife} '+to get excellent fitting boards'
+{Sanding tool} [noquality]'+to make tight seams'
+{*glue} #0.5# '+to waterproof seams'
+{Fire} '+to heat glue'
+{Firewood} (2) '+for glue heating'
+[TYPE:valuable]
+[MATERIAL:wood]
+[WEIGHT:50]
+[PRICE:50]
+[TILEGFX:it-kvass]
+
+
+// Wood bed
+// Wood bed from ptr987 not integrated due to risk of 
+// confusing new players as it doesnt count as a "bunk"
+// in vanilla sleeping code
+// Experienced players can delete the comment // markers
+// to activate the recipe if wanted
+// You might lose bottom menu item but once made
+// you can put the comment lines back in
+// bed code begins on the line below
+//
+//.Wood Bed. "Sesta" [effort:1] *CARPENTRY* /5h/ %-20% |2|
+//{Furniture section} (2) [remove] [ground]
+//{Axe} 		<Carving axe> [wearpct:50] '+for big carving'
+//{Knife}		<Small knife> '+for fine carving'
+//{Sanding tool} [noquality] '+for smoothing'
+//[WEIGHT:200]
+//[PRICE:25]
+//[TYPE:valuable]
+//[TILEGFX:ww-bed]
+// bed code ends on the line above
+
+
+
+////////////////////////////
+// Decorations, toys and valaubles
+//
+// "Sesta" used as base object to avoid accidental usage in 
+// other recipes burning the valuable items (e.g. if the 
+// recipe called for "Firewood")
+
+.Small whittled block. "Sesta" [effort:1] [phys:arms,one-armed]  *CARPENTRY*   /60/ 	%-10% |-1|  			
+{Small wooden block} [remove] [noquality]
+{Axe}<Carving axe>	 [wearpct:50]
+{Knife}	
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:2]
+[PRICE:0]
+//From whittling mod by Iago.Hach
+
+//.Shape a figurine. "Sesta" [effort:1] [phys:arms,one-armed]  *CARPENTRY*   /60/	%-10%  |-1|		
+//{Small whittled block} [remove] 
+//{Knife}	
+//[NAME:Partially shaped figurine]
+//[TYPE:tool]
+//[MATERIAL:wood]
+//[WEIGHT:1]
+//[PRICE:0]
+//From whittling mod by Iago.Hach
+
+.Wooden figurine. "Sesta" [effort:0] [phys:arms,one-armed]  *CARPENTRY*	/180/ %-10% |0|  
+{Small whittled block} [remove] 
+{Knife}	<Small knife>
+[TYPE:valuable]
+[MATERIAL:wood]
+[WEIGHT:0.3]
+[PRICE:.6]
+[TILEGFX:it-rantler]
+//From whittling mod by Iago.Hach
+
+.Set for gaming. "Sesta" [effort:0] [phys:arms,one-armed]  *CARPENTRY*	/240/	%-10%  |0|			
+{Small whittled block} (2) [remove] 
+{Knife}	<Small knife>
+[TYPE:valuable]
+[MATERIAL:wood]
+[WEIGHT:0.6]
+[PRICE:1.5]
+[TILEGFX:bc-antpieces]
+// Some games would be played on a "Carved board" (see lumber)
+
+
+.Wooden comb. "Sesta" [effort:1] [phys:arms,one-armed]  *CARPENTRY*   	/60/ 	%0% |0| 		
+{Small whittled block} [remove] 
+{Knife}	<Small knife>	
+[TYPE:valuable]
+[MATERIAL:wood]
+[TILEGFX:vl-bcomb]
+[WEIGHT:0.2]
+[PRICE:0.1]
+
+
+.Wooden dollhouse. "Sesta" [effort:1] [phys:arms,one-armed]  *CARPENTRY* /4h/ %-15%  	|1|		
+{Wooden stake} (24) [remove] 
+{Knife}	<Small knife>
+[TYPE:valuable]
+[MATERIAL:wood]
+[WEIGHT:12]
+[PRICE:1]
+[TILEGFX:ter-snghouse]
+
+
+.Wooden drum. "Hunting horn" [effort:1] [phys:arms,one-armed]  *CARPENTRY*   /4h/ %-15% |1|  		
+{Wooden stake} (3) [remove] '+as drum body'
+{Water} #3# [remove] '+to steam wood for bending'
+{Fire} '+lit nearby'
+{Firewood} (3) [remove] [noquality] '+to heat water to steam'
+{Branch} (2) [remove] '+as cross bars'
+{Leather} #2#  [remove] '+as drum skin'
+{Cord} =9= [remove] '+to sew on drum skin'
+{Knife}	<Small knife>	'+for shaping and cord holes'
+[TYPE:valuable]
+[MATERIAL:wood]
+[TILEGFX:it-wdbowl]
+[WEIGHT:4]
+[PRICE:8]
+// By using "hunting horn" as base object it should generate
+// messages for sounds. They are tricky to make right though.
+
+
+// Dinner Set
+// Adapted from ptry987 woodworking
+// Two bowls, plates and some spoons, meant for decoration 
+// Only one version in BAC to save menu space
+// BAC version actual uses bowls and cups
+// Board is assumed long enough for 2 plates and utensils
+
+.Dinner Set. "Sesta" [effort:1] [phys:arms,one-armed]  *CARPENTRY*	/2h/	%0%  |0|	
+{*cup} (2) [remove] [ground] '+for drinks'		
+{*bowl} (2) [remove] [ground] '+for soups'
+{Sanded board} (1) [remove] [ground] '+for plates and utensils'
+{Axe} 		<Carving axe> [wearpct:30]
+{Knife}<Small knife>	
+{Sanding tool} [noquality]
+[TYPE:valuable]
+[MATERIAL:wood]
+[WEIGHT:4]
+[PRICE:4]
+[TILEGFX:ww-diningset]
+
+
+[SUBMENU_END:Carpentry]

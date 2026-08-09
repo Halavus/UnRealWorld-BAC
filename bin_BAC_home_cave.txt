@@ -1,0 +1,22 @@
+//BAC building for caves enviroments
+//
+
+
+[SUBMENU_START:building]
+
+//Desconstructing in a cave might not restore cave floor status
+//This lets you return the floor
+.Cave floor. "Restore cave floor" *BUILDING* [effort:1] /1/
+{Rock} (1)  [ground] '+as a game mechanci placeholder'
+
+.Inside of a building. "Improve cave" [GFX_X:2] [GFX_Y:1] *BUILDING* [effort:4] [phys:arms,stance,arms,legs] /1h/ [assist:3]
+{[NEARBY_TILE:cave floor]}
+{Board} (4) [remove] [ground] '+as new floor'
+{Firewood} (4) [remove][ground]'+to fill low points'
+{Branch} (4) [remove] [ground] '+as smalls for balancing boards'
+{Axe} 
+{Knife}
+
+[SUBMENU_END:building]
+
+

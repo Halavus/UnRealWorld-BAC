@@ -1,0 +1,431 @@
+// BAC integration
+//
+// Based on Signatus integration
+//
+// Submenu renamed
+// Collected newer cliff ore recipe
+// moved honorary iron and steel fix to this submenu
+
+[SUBMENU_START:Mining & Iron]
+
+.Scoop lake ore. "Hunting Horn" [effort:3]  [phys:arms,hands,stance] 	*COMMON*	/20/ [noquality] [patch] [assist:1] [NOPAUSE]
+{-} [optional] '+You need to be zoomed in,'
+{-} [optional] '+at a lake, by water.'
+{-} [optional] '+For most immersive play, use'
+{-} [optional] '+next to deep water only.'
+{[TERRAIN:lake]}					
+{[NEARBY_TILE:water]}					
+{Sesta}							'+for trying the bottom'
+{*Dip net*}						'+for scooping ore'
+[NAME:ore piece]
+[MATERIAL:stone]
+[WEIGHT:1.2]
+[PRICE:0]
+[TILEGFX:bc-orepiece]
+// Can't force deep water.
+
+.Harvest mountain bog ore. "Hunting Horn" [effort:2] [phys:arms,hands,stance] 	*COMMON*	/40/ [noquality] [patch] [assist:1] [NOPAUSE]
+{-} [optional] '+You need to be zoomed out,'
+{-} [optional] '+in a mire, by a mountain.'
+{-} [optional] '+For most immersive play, do'
+{-} [optional] '+not use on frozen ground.'
+{[TERRAIN:pine_mire spruce_mire open_mire]}		 
+{[NEARBY_TILE:mountain]}			
+{Cutting weapon}	[wearpct:20]				'+to cut peat layer'
+{Shovel} [wearpct:80]
+[NAME:ore piece]
+[MATERIAL:stone]
+[WEIGHT:1.2]
+[PRICE:0]
+[TILEGFX:bc-orepiece]
+// Shouldn't be able to do when ground is frozen. Needs to be done on zoomed-out map.
+
+.Harvest cliff bog ore. "Hunting Horn" [effort:2] [phys:arms,hands,stance] 	*COMMON*	/40/ [noquality] [patch] [assist:1] [NOPAUSE]
+{-} [optional] '+You need to be zoomed out,'
+{-} [optional] '+in a mire, by a cliff.'
+{-} [optional] '+For most immersive play, do'
+{-} [optional] '+not use on frozen ground.'
+{[TERRAIN:pine_mire spruce_mire open_mire]}		 
+{[NEARBY_TILE:cliff]}					
+{Cutting weapon}	[wearpct:20]			'+to cut peat layer'
+{Shovel} [wearpct:80]
+[NAME:ore piece]
+[MATERIAL:stone]
+[WEIGHT:1.2]
+[PRICE:0]
+[TILEGFX:bc-orepiece]
+// Shouldn't be able to do when ground is frozen. Needs to be done on zoomed-out map.
+
+
+.Mine for stone. "Stone"	*COMMON* -S- [effort:4] [phys:stance,arms,hands]	/1h/ [noquality] [assist:1] [NOPAUSE]
+{[NEARBY_TILE:Big rock]} '+stand next to a big boulder'
+{*hammer} 'Hammer'
+[NAME:Stone]
+
+.Crush stone. "Rock" (5) *COMMON* -R- [effort:4] [phys:stance,arms,hands] /30/ [noquality] [assist:1] [NOPAUSE]
+{Stone} [ground] [remove]
+{*hammer} '+Hammer'
+[NAME:Rock]
+
+
+//>>>>>>>>>>>>>>>>>>
+// Processing ore into iron
+//
+
+.Roasted ore piece. 	(8) 	"Hunting horn" *COMMON* /1/ \3h\ [noquality] [patch]
+{Ore piece}	(8)  	[remove] [patchwise] [ground]	'+as Iron ore'
+{Firewood} 	(8) 	[remove] [patchwise] [ground]	[noquality]'+to pile with ore'
+{Branch} (3)  [remove] [ground] [noquality] '+as starting fire'
+[MATERIAL:stone]
+[WEIGHT:1]
+[PRICE:0]
+[TILEGFX:bc-orepiece]
+// To be lit
+
+
+
+////////////////////////
+// Bloomery
+//
+// A bloomery is a vertical intense heat chamber where raw ore
+// is heated to the point that the liquid can flow. 
+// Gravity and bouyancy principles seperate materials.
+// While the iron, being at welding heat, binds together.
+// It is an impure process and will need follow up work.
+//
+// Weblinks on bloomery
+// https://www.youtube.com/watch?v=gDy1jx6mLgs&t=436s
+// https://www.youtube.com/watch?v=FUhv2OnVVDU
+// https://www.youtube.com/watch?v=F3rjjpuhCLI&t=22s
+// https://www.youtube.com/watch?v=bajwZPebm-g&list=PL-vRsHsClLJ4yu4Vcs9nIhm5pGhxnJ5W6
+// 
+// The option for useing the game's fireplace as a forge 
+// exists. It has many qualities in terms of structure
+// similiar to a bloomery. It is possible to build
+// an extra fireplace as a smithy.
+//
+// In terms of later recipes the calls are for *forge
+// so both work equally well.
+
+
+.Bloomery furnace forge. "Hunting horn" [effort:3] [phys:arms,hands,stance]	*BUILDING* [noquality] /2h/ \3h\ [assist:3]
+{Shovel} [wearpct:50]
+{Stone}		(16)	[remove] [ground]
+{Rock}		(32)	[remove] [ground]
+{Clay lump}	(32)	[remove] [ground]	'+as clay insulation and vents'
+{Water} #16# 					'+to soften clay during shaping'
+{Slender trunk} (3) 	[remove] [ground] 	'+to support during hardening'
+{Wooden stake}  (4) 	[remove] [ground] 	'+to support entrance and vents'
+{Fire}						'+(Light a fire to dry it)'
+{Branch}	(64) 	[remove] [ground] 	'+as fuel for the fire'
+[MATERIAL:stone]
+[WEIGHT:320]
+[PRICE:0]
+[TILEGFX:bc-bloomery]
+// Light a fire to dry the clay
+// Brygun tweaked the recipe amounts, added water and stakes
+//
+
+.Charcoal.  (50) "Firewood" [effort:3] [phys:arms,hands,stance] *TIMBERCRAFT* /4h/ \7d\ |-1| [patch:5] [noquality]
+{Slender trunk} (3) 	[remove] 			'+for bracing a chimney hole'  
+{Firewood}  (50)	[remove] [ground][patchwise]	'+to piled around it'
+{Shovel}<Shovel> 	[wearpct:30]				'+to cover it all in soil'
+{Fire}       						'+lit nearby'
+{Torch}  						'+to transfer the flame'
+[WEIGHT:1]
+[TILEGFX:bc-coal]
+// From Rain's Ironworking mod v0.91
+
+.Iron bloom. "Hunting horn" [effort:2] [phys:arms,hands,stance]	*TIMBERCRAFT*	/4h/ [assist:2]
+{Bloomery*}			 [noquality] [ground]	'+as a bloomery furnace for max heat'
+{Fire}				 [noquality] 		'+fire lit nearby'
+{Roasted ore*}	(4)  	[remove] [noquality] [ground]	'+to go into max heat'
+{Charcoal} 	(8) 	[remove] [noquality] [ground]	'+as fuel amid the ore'
+{Bellows} [ground]					'+to max airflow for max heat'
+{Shovel} [wearpct:20]	 		 [noquality]		'+for tending the process'
+{*hammer}			[optional]			'+as any hammer'
+[MATERIAL:iron]
+[WEIGHT:1]
+[PRICE:1]
+[TILEGFX:bc-ironbloom]
+
+.Stone forge. "Hunting horn" [effort:3] [phys:arms,hands,stance]	*BUILDING* [noquality] /1h/ [assist:3]
+{Shovel} [wearpct:40]
+{Stone}		(10)	[remove] [ground]	'+as main body of forge'
+{Rock}		(10)	[remove] [ground]	'+to fill in gaps'
+[MATERIAL:stone]
+[WEIGHT:10000]
+[PRICE:0]
+[TILEGFX:bc-forge]
+// Light a fire and see what happens!
+
+
+
+.Assign a fireplace as a forge. "Hunting horn" [noquality] /1/ [ground] [NOPAUSE]
+{[NEARBY_TILE:Fireplace]}	'+(Once made push the token into the fireplace)'
+[NAME:Forge token]
+[MATERIAL:stone]
+[WEIGHT:1000]
+[PRICE:0]
+[TILEGFX:bc-invisible]
+// To be moved onto a fireplace square
+
+
+.Wrought iron billet. (3) "Hunting Horn" [effort:4] [phys:arms,hands,stance] *TIMBERCRAFT* /4h/ [assist:2]
+{*Iron bloom}	#2#	[remove]			'+as iron to work with'
+{*forge*}			 [noquality] [ground]	'+as a forge or furnace'
+{Charcoal} 	(8) 	[remove] [noquality] [ground]	'+as fuel amid the metal'
+{Bellows} 			 [ground]		'+to max airflow for max heat'
+{*anvil*}			 [ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:1]
+[TILEGFX:bc-billet]
+// {*Iron*} changed to {*Iron bloom} to avoid other items
+// References:
+// Reduction #2# gets #0.5# or 4 to 1
+// 2 charcoal per hour
+// price iron billet at 2 x weight
+
+.Refine iron billet. "Hunting Horn" [effort:3] [phys:arms,hands,stance] *TIMBERCRAFT* %20% /30/ [assist:2] [NOPAUSE]
+{wrought iron billet}		[remove] [noquality]		'+as iron to work with'
+{*forge*}			 [noquality] [ground]	'+as a forge or furnace'
+{Charcoal} 	(2) 	[remove] [noquality] [ground]	'+as fuel amid the metal'
+{Bellows} 			 [ground]		'+to max airflow for max heat'
+{*anvil*}			 [ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:1]
+[TILEGFX:bc-billet]
+[NAME:Wrought iron billet]
+
+
+//Recover of metals is based on the tradition of being able to
+//rework the iron including the smith being paid in rusty iron
+//which they could make useable as something else
+
+.Recover iron billet. "Hunting Horn" [effort:3] [phys:arms,hands,stance] *TIMBERCRAFT* %20% /30/ [assist:2] [NOPAUSE]
+{*iron*}	#0.5#	[remove] 	'+ Choose suitable iron to work with'
+{*forge*}			 [noquality] [ground]	'+as a forge or furnace'
+{Charcoal} 	(2) 	[remove] [noquality] [ground]	'+as fuel amid the metal'
+{Bellows} 			 [ground]		'+to max airflow for max heat'
+{*anvil*}			 [ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:1]
+[TILEGFX:bc-billet]
+[NAME:Wrought iron billet]
+
+
+/////////////
+// Turning iron into steel
+//
+// Steel is iron with a small amount, e.g. 1% or less, of carbon
+// distributed through the iron. Steel making is not something 
+// where you lose a large amount iron. Rather you put that small
+// amount of carbon all across the material to 'carburize' it.
+// The carbon could be charcoal or other sources though charcoal
+// is already available to the smith. The portion is so small as
+// to be not directly reprsented in the recipe.
+// There are key challenges:
+// 1) The amount of carbon in the iron for useful steel
+// 2) That it is all mixed together
+// Mixing takes alot of folding, twisting and repeating until
+// the mix is even. All the while the metal needs to be hot.
+// Actual historic work might build an item, like an axe head
+// then treat just the edges that need to be steel.
+// Our game recipes don't currently work that way.
+//
+// Weblinks: (modern and historic)
+// https://www.youtube.com/watch?v=gDy1jx6mLgs
+// https://www.youtube.com/watch?v=omGKUKwJPB8
+// https://www.youtube.com/watch?v=xs75yCmfTS4
+
+.Steel billet. "Hunting Horn" 	[effort:3] [phys:arms,hands,stance]	*CARPENTRY*		/3h/  
+{*iron billet}		[remove] 		'+Billet to carburize' 
+{*forge*}			 [noquality] [ground]	'+as a forge or furnace'
+{Charcoal} 	(6) 	[remove] [noquality] [ground]
+{Bellows}			 [ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:3]
+[TILEGFX:bc-billet]
+
+
+.Refine steel billet. "Hunting Horn" [effort:3] [phys:arms,hands,stance] *CARPENTRY* %20% /1h/ [assist:1] [NOPAUSE]
+{steel billet}		[remove] [noquality]		'+as steel to refine'
+{*forge*}			 [noquality] [ground]	'+as a forge or furnace'
+{Charcoal} 	(2) 	[remove] [noquality] [ground]	'+as fuel amid the metal'
+{Bellows} 			 [ground]		'+to max airflow for max heat'
+{*anvil*}			 [ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:3]
+[TILEGFX:bc-billet]
+[NAME:Steel billet]
+
+.Recover steel billet. "Hunting Horn" 	[effort:3] [phys:arms,hands,stance]	*CARPENTRY*		/3h/  [NOPAUSE]
+{*steel*}	#0.5#	[remove] 		'+ choose suitable steel source'
+{*forge*}			 [noquality] [ground]	'+as a forge or furnace'
+{Charcoal} 	(6) 	[remove] [noquality] [ground]
+{Bellows}			 [ground]
+{*anvil*}			[ground]		'+as an anvil nearby'
+{*hammer}						'+as any hammer'
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:3]
+[TILEGFX:bc-billet]
+[NAME:Steel billet]
+
+
+
+// /1h/ reheat and then cycles of heat, twist, fold, hammer.
+// Some game balance and adjustment for
+// historic equipment place it at the new chosen time.
+// Charcoal at 2 per hour due to high welding level heat
+// Steel price at 6 x weight
+
+// Dehafting axes
+// Meant for when building an axe you don't like the mounting
+// Use responsibly to make the same axe type
+// To make a new type of axe use the remove iron from axe method
+// One flaw is its hard to restore the same quality axehead you
+// started with
+// To limit the # recipe slots they are done in groups
+//
+// I feel a legitimate use is if you made a decent axehead
+// then went down to rough quality putting in the handle
+// you would remove the low cost wood handle to try again
+
+//.Dehafted iron small axehead.   "Hunting Horn" [effort:4] [phys:arms,hands,stance]	*TIMBERCRAFT*	/15/ [noquality]
+//{Rock} #1# [noquality] '+for Handaxe, Carving, Adze'
+//{* Axe} [remove] [noquality] '+to be disassembled'
+//{Fire}				 [noquality]		'+to start burn'
+//{Firewood}  (3)	[remove] [ground]	'+to maintain burn'
+//{*anvil*}			 [ground]	'+have an anvil nearby to brace'
+//{*hammer} '+to dislodge head'
+//[MATERIAL:iron]
+//[WEIGHT:2]
+//[PRICE:0]
+//[TILEGFX:bc-axehead]
+// [noquality] on salvage opreation outputs
+// removed for vanilla rehafting
+
+//.Dehafted iron large axehead.   "Hunting Horn" [effort:4] [phys:arms,hands,stance]	*TIMBERCRAFT*	/15/
+//{Rock} #1# [noquality] '+this is for big axes ONLY like Broad, Woodsman, Splitting'
+//{* Axe} [remove] [noquality] '+to be disassembled'
+//{Fire}				 [noquality]		'+to start burn'
+//{Firewood}  (3)	[remove] [ground]	'+to maintain burn'
+//{*anvil*}			 [ground]	'+have anvil nearby to brace'
+//{*hammer} '+to dislodge head'
+//[MATERIAL:iron]
+//[WEIGHT:2]
+//[PRICE:0]
+//[TILEGFX:bc-axehead]
+// [noquality] on salvage opreation outputs
+
+//.Dehafted iron Battleaxe-head.   "Hunting Horn" [effort:4] [phys:arms,hands,stance]	*TIMBERCRAFT*	/15/
+//{Rock} #1# [noquality] '+this is ONLY for battleaxe'
+//{Battleaxe} [remove] [noquality] '+to be disassembled'
+//{Fire}				 [noquality]		'+to start burn'
+//{Firewood}  (3)	[remove] [ground]	'+to maintain burn'
+//{*anvil*}			 [ground]	'+have anvil nearby to brace'
+//{*hammer} '+to dislodge head'
+//[MATERIAL:iron]
+//[WEIGHT:2]
+//[PRICE:0]
+//[TILEGFX:bc-axehead]
+// [noquality] on salvage opreation outputs
+
+
+
+.Salvage iron from an axe. "Hunting Horn"	[effort:1] [phys:arms]	*COMMON* %30%	/30/ [noquality] [assist:1] [NOPAUSE]
+{*axe}	#0.6#		[remove] 			'+as axe to destroy for iron'
+//rebalanced quantity so 3 lb handaxe takes and gives 5
+{*forge*}		 	 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} 	(2) 	[remove] [noquality] [ground]
+{*anvil*}   		[ground]	'+have anvil nearby'
+{*hammer}				
+[NAME:Iron billet]
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:2]
+[TILEGFX:bc-billet]
+//Salvage recipes given noquality recipe outputs
+
+.Salvage steel from a sword. "Hunting Horn"	[effort:1] [phys:arms]	*COMMON* %60%	/15/ [noquality] [assist:1] [NOPAUSE]
+{*sword}	#0.5#	[remove] 			'+as sword to destroy for steel'
+{*forge*}		 	 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} 	(2) 	[remove] [noquality] [ground]
+{*anvil*}   		[ground]	'+have anvil nearby'
+{*hammer}
+[NAME:Steel billet]
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:3]
+[TILEGFX:bc-billet]
+//Salvage recipes given noquality recipe outputs
+
+.Salvage steel from a scimitar. "Hunting Horn"	[effort:1] [phys:arms]	*COMMON* %20%  /15/ [noquality] [assist:1] [NOPAUSE]
+{*scimitar}	#0.5#	[remove] 			'+as scimitar to destroy for steel'
+{*forge*}		 	 [noquality] [ground]	'+Forge or furnace'
+{Charcoal} 	(2) 	[remove] [noquality] [ground]
+{*anvil*}   		[ground]	'+have anvil nearby'
+{*hammer}
+[NAME:Steel billet]
+[MATERIAL:iron]
+[WEIGHT:0.5]
+[PRICE:6]
+[TILEGFX:bc-billet]
+//Salvage recipes given noquality recipe outputs
+
+
+/////////////////////////
+// More stuff entries
+//
+
+//Leather fix
+//
+// Into 3.63 it is very frustrating to have ~2 week soaked 
+// large animal skins that rot if you miss a day or two.
+// Set the leather sheet weight to the size that is lost
+//
+// use the // comment tags to on-off the recipe
+
+//.Leather sheet. "Fur cap" 	*COMMON*	/1/
+//{Rock}  
+//[TYPE:armour]
+//[ARMOUR_MATERIAL:leather]
+//[ARMOUR_COVERAGE:thorax]
+//[WEIGHT:22]
+
+
+//Balancing iron if something was deleted early
+//.Game fix missing iron. "Hunting Horn"	[effort:1] [phys:arms]	*COMMON*	/1/
+//{Rock} '+as game mechanic ONLY if iron got lost in an error'
+//[NAME:Iron billet]
+//[MATERIAL:iron]
+//[WEIGHT:0.5]
+//[PRICE:2]
+//[TILEGFX:bc-billet]
+
+
+//Honorary trust fix when steel got used when it could use iron
+//.Game fix iron into steel. "Hunting Horn"	[effort:1] /1/ *COMMON*
+//{*iron billet} #0.5# [remove] [noquality] '+as game mechanic only if steel got lost in error' 
+//[NAME:Steel billet]
+//[MATERIAL:iron]
+//[WEIGHT:0.5]
+//[PRICE:2]
+//[TILEGFX:bc-billet]
+
+
+
+
+[SUBMENU_END:Mining & Iron]

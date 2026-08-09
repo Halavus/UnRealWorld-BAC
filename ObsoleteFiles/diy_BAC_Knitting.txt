@@ -1,0 +1,163 @@
+// BAC integration
+//
+// Signatus v1.0
+//
+// v1.0
+// - Unchanged from original
+
+// Part of Buoidda's crafts 1.5+
+// Based on parts of Rain's Clothing v3
+//
+// 2019-08-27 Price reduced for 17 torch for 1 squirrel hide
+
+[SUBMENU_START:Knitted & Bark Clothes]
+
+// From Rain's Clothing v3
+// Icon provided by Kaaven from the Urw Forums, modified
+// 'Plant Fibre' -> 'Fibre'
+// Arimon 3.7x: changed {*Spindle and Distaff} to {*Spindle}
+
+.Birch-bark shoes.   [phys:hands,one-armed]   *CARPENTRY*  %10% /2h/ |-1| [assist:1]
+{Birch-bark strip} 	=10= 	[remove]
+{Knife}	<Small knife>
+
+.Birch-bark cap.     [phys:hands,one-armed]   *CARPENTRY*  %20% /90/ |-1| [assist:1]
+{Birch-bark strip} 	=15= 	[remove]
+{Knife}	<Small knife>
+
+.Bark tassets. "Birch-bark cap" [phys:hands,arms]   *HIDEWORKING*  %10% /4h/ |-2| [assist:3]
+{*rope} =4= [remove] '+as belt'
+{*bark}   #4#   [remove] '+for hanging material'
+{Bone} (4) [remove] [optional] [name: Bark %s tassets] '+as decorative hangers'
+{Knife}                [noquality]
+[MATERIAL:birch-bark]
+[WEIGHT:4]
+[ARMOUR_COVERAGE: hip groin thigh]
+[TILEGFX:ar-woollegg]
+
+.Bark shin guards. "Leather shin guards" [phys:hands,arms]   *HIDEWORKING*  %10% /4h/ |-2| [assist:3]
+{Tying equipment} =2= [remove] '+for belt and ties'
+{*bark}   #2#   [remove] '+for hanging material'
+{Knife}                [noquality]
+[MATERIAL:birch-bark]
+[WEIGHT:2]
+[ARMOUR_COVERAGE: calf]
+
+.Bark headdress. "Birch-bark cap" [phys:hands,arms]   *HIDEWORKING*  %10% /4h/ |-1| [assist:2]
+{*bark} #2#   [remove] '+for outer material'
+{Thin cordage} =2= [remove] 
+//+'for support tie'
+{Branch} (2) [remove] '+for internal frame'
+{Feather} (16) [remove] [optional] [name: Bark %s headdress] '+for frills'
+{Knife}                [noquality]
+[MATERIAL:birch-bark]
+[WEIGHT:3]
+[ARMOUR_COVERAGE: face skull]
+[TILEGFX:ar-sphelm]
+// 3.60 Beta adjustment of input quantity and output weight
+// future change material to type of bark used if possible
+//Arimon 3.7x: changed {Tying equipment} to {Thin cordage}
+
+.Birch-bark necklace. [phys:hands,one-armed]   *HIDEWORKING*  %10% /3h/ |-2| [assist:2]
+{Thin cordage} =2= [remove] 
+//'+for support tie'
+{*Birch-bark*}   #1# [remove] '+for hanging material'
+{Bone} (4) [remove] [optional] [name: Birch-bark %s necklace] '+hangers'
+{Knife}
+//Arimon 3.7x: changed {Tying equipment} to {Thin cordage}
+
+.-----------------------------------. "Rock" /1/
+{-} +'This is just a menu space'
+
+.Knit Woollen apron.	"Woollen apron"		/5h/	[effort:1] [phys:hands] *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#5# 	[remove]
+[NAME:Woollen apron]
+[PRICE:2.6]
+
+.Knit Woollen cloak.		"Woollen cloak"	/9h/	[effort:1] [phys:hands] *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#9# 	[remove]
+[NAME:Woollen cloak]
+[PRICE:1.7]
+
+.Knit Woollen cowl.		"Woollen cowl"	/2h/	[effort:1] [phys:hands] *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#1.5# 	[remove]
+[NAME:Woollen cowl]
+[PRICE:0.5]
+
+.Knit Woollen dress.		"Woollen dress"	/6h/	[effort:1] [phys:hands] *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#6# 	[remove]
+[NAME:Woollen dress]
+[PRICE:3.8]
+
+.Knit Woollen footrags.	"Woollen footrags"	/90/	[effort:1] [phys:hands,one-armed] *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#0.5# 	[remove]
+[NAME:Woollen footrags]
+[PRICE:0.2]
+
+.Knit Woollen leggings.	"Woollen leggings"	/5h/	[effort:1] [phys:hands] %-15% *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#5# 	[remove]
+[NAME:Woollen leggings]
+[PRICE:2.8]
+
+.Knit Woollen mittens.	"Woollen mittens"	/2h/	[effort:1] [phys:hands] *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#0.5# 	[remove]
+[NAME:Woollen mittens]
+[PRICE:0.5]
+
+.Knit Woollen overcoat.	"Woollen overcoat"	/9h/	[effort:1] [phys:hands] *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#9# 	[remove]
+[NAME:Woollen overcoat]
+[PRICE:4.6]
+
+.Knit Woollen shirt.		"Woollen shirt"	/5h/	[effort:1] [phys:hands]	%-15% *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#5# 	[remove]
+[NAME:Woollen shirt]
+[PRICE:3.8]
+
+.Knit Woollen socks.		"Woollen socks"	/2h/	[effort:1] [phys:hands]	%-15% *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#0.5# 	[remove]
+[NAME:Woollen socks]
+[PRICE:0.5]
+
+.Knit Woollen trousers.	"Woollen trousers"	/7h/	[effort:1] [phys:hands]	%-15% *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#7# 	[remove]
+[NAME:Woollen trousers]
+[PRICE:3.8]
+
+.Knit Woollen tunic.		"Woollen tunic"	/8h/	[effort:1] [phys:hands] *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#8# 	[remove]
+[NAME:Woollen tunic]
+[PRICE:4.9]
+	
+.Knit Woollen undergarment.	"Woollen undergarment"	/6h/	[effort:1] [phys:hands]	%-15% *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#6# 	[remove]
+[NAME:Woollen undergarment]
+[PRICE:4.7]
+
+.Knit Woollen undershirt.	"Woollen undershirt"	/5h/	[effort:1] [phys:hands]	%-15% *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#5# 	[remove]
+[NAME:Woollen undershirt]
+[PRICE:2.6]
+
+.Knit Woollen veil.		"Woollen veil"	/2h/	[effort:1] [phys:hands] *TEXTILECRAFT*
+{Knitting needles}
+{Wool yarn}  		#0.5# 	[remove]
+[NAME:Woollen veil]
+[PRICE:0.5]
+
+[SUBMENU_END:Knitted & Bark Clothes]
+

@@ -1,0 +1,56 @@
+[SUBMENU_START:building]
+//updated to vanilla 3.84
+
+.North-west corner. [effort:4] *BUILDING* [GFX_X:0] [GFX_Y:0]	|+2|	[assist:3]	/320/
+.Northern wall.	    [effort:4] *BUILDING* [GFX_X:1] [GFX_Y:0]	|+2|	[assist:3]	/320/
+.North-east corner. [effort:4] *BUILDING* [GFX_X:3] [GFX_Y:0]  |+2|     [assist:3]     /320/
+.Western wall. 	    [effort:4] *BUILDING* [GFX_X:0] [GFX_Y:1]	|+2|	[assist:3]     /320/
+{Log} (6) [remove] [ground]
+{Axe} <Carving axe> '+for carving the logs'  [wearpct:50]
+{Axe} <Broad axe> '+for finishing the walls' [wearpct:30]
+
+.Inside of a building. [effort:3] *BUILDING* [GFX_X:2] [GFX_Y:1] "Ceiling and floor"  [assist:3]  |+2|    /180/
+{Board} 		(6) [remove] [ground]
+{Slender trunk}   	(2) [remove] [ground] 
+{Axe}                       [wearpct:30]
+
+.Eastern wall. 	    [effort:4] *BUILDING* [GFX_X:3] [GFX_Y:1]  |+2|   [assist:3]      /320/
+.South-west corner. [effort:4] *BUILDING* [GFX_X:0] [GFX_Y:2] 	|+2|  [assist:3]      /320/
+.Southern wall.     [effort:4] *BUILDING* [GFX_X:2] [GFX_Y:2]  |+2|   [assist:3]      /320/
+.South-east corner. [effort:4] *BUILDING* [GFX_X:3] [GFX_Y:2]  |+2|   [assist:3]      /320/
+{Log} (6) [remove] [ground]
+{Axe} <Carving axe> '+for carving the logs'  [wearpct:50]
+{Axe} <Broad axe> '+for finishing the walls' [wearpct:30]
+
+.Shutter. [effort:4] "Wall with a shutter"  -S-   [assist:1]  *BUILDING* [GFX_X:2] [GFX_Y:0]  /320/    |+2| 
+{Log}   (6) [remove] [ground]
+{Board} (2) [remove] [ground]
+{Axe} <Carving axe> '+for carving the logs'  [wearpct:50]
+{Axe} <Broad axe> '+for finishing the walls' [wearpct:30]
+
+.Fireplace. -F- [effort:3] [phys:arms,stance,one-armed] *BUILDING* [assist:3]  [GFX_X:1] [GFX_Y:1]     /240/                   %50%            [indoors]   
+{Stone} (35) [ground] [remove]
+
+.Door.  -D- [effort:3] *BUILDING* [GFX_X:1] [GFX_Y:2]      /120/ [assist:1]            %30%
+{Board} (8) [remove] [ground]
+{Axe}       [wearpct:40]
+
+
+.Bench.	-B- [effort:3] *BUILDING*	[GFX_X:4] [GFX_Y:2]	 /90/	[assist:1]	%50%		[indoors]   
+{Board} (2) [remove] [ground]
+{Axe}       [wearpct:30]
+
+.Table.	-T- [effort:3] *BUILDING*	[GFX_X:6] [GFX_Y:2]	/120/	[assist:1]     %30%		[indoors]
+{Board} (10) [remove] [ground]
+{Axe}        [wearpct:30]  
+
+.Sleeping bunk. -K- [effort:3] *BUILDING*	[GFX_X:8] [GFX_Y:2]	/45/	[assist:1]	%60%		[indoors]
+{Board} (6) [remove] [ground]
+{Axe}       [wearpct:30]
+
+.Sauna stove. -V- [effort:3] [phys:arms,stance,one-armed] *BUILDING* [assist:3]  [GFX_X:10] [GFX_Y:2]     /240/                   %50%            [indoors]   
+{Stone} (40) [ground] [remove]
+{Rock} (15) [ground] [remove]
+
+
+[SUBMENU_END:building]

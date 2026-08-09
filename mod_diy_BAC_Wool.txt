@@ -1,0 +1,442 @@
+// BAC integration
+//
+// Signatus v1.0
+//
+// v1.0
+// - Unchanged from original
+
+// Part of Buoidda's crafts 1.5+
+// Based on parts of Rain's Clothing v3
+//
+// 2019-08-27 Price reduced for 17 torch for 1 squirrel hide
+
+//Notes from Rudy (12-20-2022)
+//Wool was completely reworked.
+//each step adds value. 
+//From one sheep you can get five pounds of wool
+//as yarn, it is worth 1 per pound. As cloth, 2 per pound. As clothing, around 2.5 per pound.
+//This matches up with vanilla price values for the final items.
+//
+// 2203-05 weight used reduced toward vanilla update
+// for wool at times is an increase
+
+
+[SUBMENU_START:Wool Processing and Garments]
+
+.Shear a sheep. (50)	"Hunting horn"	[phys:stance,arms,hands] /30/ *TEXTILECRAFT* [noquality] [assist:1] [NOPAUSE]
+{[NEARBY_TILE:ground]} 			'You should only shear each sheep' 
+{[NEARBY_TILE:ground]} 			'once per year, in the first half'
+{[NEARBY_TILE:ground]} 			'of the summer, for realism.'
+{Knife}					
+[NAME:Greasy wool]
+[WEIGHT:0.1]
+[TILEGFX:bc-fibre]
+//Arimon 3.7x: changed *HIDEWORKING* to *TEXTILECRAFT*
+
+.Carding the wool. "Hunting horn"	[phys:stance,arms,hands] /5/ *TEXTILECRAFT* [patch] [noquality] [NOPAUSE]
+{Greasy wool}		[remove] [patchwise] 
+{*comb}					'+as comb for carding'
+[NAME:Fibre from wool]
+[WEIGHT:0.1]
+[TILEGFX:bc-fibre]
+//Arimon 3.7x: changed *HIDEWORKING* to *TEXTILECRAFT*
+
+.Wool yarn. 		"Cord" 	/1h/ 	[patch:5]	[effort:1] 	[phys:hands,one-armed]	*TEXTILECRAFT*
+{Fibre from wool} 		#0.5#	[remove] [patchwise] [noquality] '+should be wool fibre'
+{*Spindle}
+[TILEGFX:rc-yarn]
+[PRICE:0.5]
+[LENGTH:100]
+
+// A somewhat lossy process
+.Unravel woollen items into yarn. "Cord" 	/15/ [patch] [effort:1] [phys:hands,one-armed] [assist:1] *TEXTILECRAFT* [NOPAUSE]
+{Woollen *} 		#0.6#	[remove] [patchwise]  '+from woollen cloth to take apart'
+{Knife} <Small knife>
+[NAME:Wool yarn]
+[TILEGFX:rc-yarn]
+// Icon provided by Kaaven from the Urw Forums, modified
+[PRICE:0.5]
+[LENGTH:100]
+
+// Trade for yarn, because currently villages don't create wool yarn
+.Trade for wool yarn. (2) "Cord" 	/1/ [effort:0] *TEXTILECRAFT* %100% [noquality] [NOPAUSE]
+{Arrow} 		[remove] '+for the trade.'
+{-} +'This simulates trading with a' [optional]
+{-} +'village for their wool yarn.' [optional]
+{-} +'Should be used no more than' [optional]
+{-} +'five times per village per' [optional]
+{-} +'sheep per year. Should be done' [optional]
+{-} +'with a decent quality arrow.' [optional]
+[NAME:Wool yarn]
+[TILEGFX:rc-yarn]
+// Icon provided by Kaaven from the Urw Forums, modified
+[PRICE:0.5]
+[LENGTH:100]
+
+.Woollen cloth. 		"Hunting Horn" 	/2h/ *TEXTILECRAFT* [effort:1] [phys:arms,hands,stance] [assist:1]
+{-} [optional] +'Use exact length, surplus is lost.'
+{Wool Yarn} 	=200= [remove] [nominlen]
+{Loom}			[ground]
+[WEIGHT:1]
+[MATERIAL:cloth]
+[TYPE:armour]
+[ARMOUR_MATERIAL:wool]
+[ARMOUR_COVERAGE:]
+[PRICE:2]
+[TILEGFX:rc-cloth]
+// Buoidda's addition based on above
+// Arimon 3.7x: 
+//	- moved from Weaving to Textilecraft
+//	- changed *COMMON* to *TEXTILECRAFT*
+//	- added [nominlen] to {Wool Yarn}
+
+.---Wool Cloth Garments---. "Rock" /1/
+{-} 
+
+// 2.86 value/pound
+// 2.5 value/pound of wool.
+.Woollen apron.	"Hunting Horn"		/120/	[effort:1] [phys:hands] *CLOTHCRAFT*
+{Sewing needle}
+{Woollen cloth}  		#4# 	[remove]
+{Thin cordage}  		=20= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:hip groin thigh knee]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-woapron]
+[WEIGHT:3.5]
+[PRICE:10]
+// 2203-05 weight used from 4.0 to 4.0
+
+// 1.82 value/pound
+// 1.67 value/pound of wool.
+// The woollen cloak, among the vanilla items, is the noticeable outlier in terms of having low value for its weight.
+// I'm interpreting that to mean that it's relatively quicker and easier to make as compared to other woollen items.
+// Hence the 20% skill bonus.
+.Woollen cloak.		"Hunting Horn"	/120/	[effort:1] [phys:hands] *CLOTHCRAFT* %20%
+{Sewing needle}
+{Woollen cloth}  		#6# 	[remove]
+{Thin cordage}  		=30= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:shoulder thorax abdomen hip groin thigh knee]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-wocloak]
+[WEIGHT:5.5]
+[PRICE:12]
+// 2203-05 weight used from 6.0 to 7.0
+// price 10 to 12
+
+// 3 value/pound
+// 2.57 value/pound of wool.
+.Woollen dress.	"Hunting Horn"	/210/	[effort:1] [phys:hands] *CLOTHCRAFT*
+{Sewing needle} 
+{Woollen cloth}  		#6# 	[remove]
+{Thin cordage}  		=35= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:shoulder thorax abdomen hip groin thigh knee calf]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-wodress]
+[WEIGHT:6]
+[PRICE:18]
+// 2203-05 weight used from 7.0 to 5.0
+// price 18 to 18
+
+// 2.86 value/pound
+// 2.5 value/pound of wool.
+.Woollen sleeved dress.	"Hunting Horn"	/240/	[effort:1] [phys:hands] *CLOTHCRAFT*
+{Sewing needle}
+{Woollen cloth}  		#7# 	[remove]
+{Thin cordage}  		=40= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:shoulder upper_arm elbow forearm thorax abdomen hip groin thigh knee calf]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-wodress]
+[WEIGHT:7]
+[PRICE:20]
+// 2203-05 weight used from 8.0 to 7.0
+// price 20 to 20
+
+
+// 3.43 value/pound
+// 3 value/pound of wool.
+// Among vanilla items, Woollen leggings are a major outlier in terms of the value per weight of the final product. 
+// They are also strictly superior to trousers (see below). I'm interperting this to mean they are more time consuming 
+// to make properly, and harder to make, hence the skill penalty.
+.Woollen leggings.	"Hunting Horn"	/240/	[effort:1] [phys:hands] *CLOTHCRAFT* %-20%
+{Sewing needle}
+{Woollen cloth}  		#4.5# 	[remove]
+{Thin cordage}  		=20= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:hip groin thigh knee calf]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-woollegg]
+[WEIGHT:4]
+[PRICE:16]
+// 2203-05 weight used from 4.5 to 4
+// price 12 to 16
+
+
+// 2.91 value/pound
+// 2.67 value/pound of wool
+// Trousers are basically a worse version of leggings, numbers wise. Covers the same area but weighs more.
+// They *should* realistically offer more warmth due to more material, but since that is not a modding option
+// I have made them faster to make, treating the greater amount of material used as a short-cut for fine work.
+// And unlikely leggings there is no skill penalty here.
+// They still have a place in that you can wear both trousers AND leggings.
+.Woollen trousers.	"Hunting Horn"	/150/	[effort:1] [phys:hands]	*CLOTHCRAFT*
+{Sewing needle}
+{Woollen cloth}  		#6.5# 	[remove]
+{Thin cordage}  		=30= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:hip groin thigh knee calf]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-wotrous]
+[WEIGHT:6.0]
+[PRICE:19]
+// 2203-05 weight used from 6.0 to 6.5
+// price 16 to 19
+
+
+// 2.7 value/pound
+// 2.43 value/pound of wool.
+.Woollen overcoat.	"Hunting Horn"	/210/	[effort:1] [phys:hands] *CLOTHCRAFT*
+{Sewing needle}
+{Woollen cloth}  		#8.5# 	[remove]
+{Thin cordage}  		=35= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:shoulder upper_arm elbow forearm thorax abdomen hip groin thigh knee]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-wlnocoat]
+[WEIGHT:8]
+[PRICE:22]
+// 2203-05 weight used from 7.0 to 8.5
+// price 17 to 22
+
+
+// 2.75 value/pound
+// 2.44 value/pound of wool.
+.Woollen shirt.		"Hunting Horn"	/120/	[effort:1] [phys:hands]	*CLOTHCRAFT*
+{Sewing needle}
+{Woollen cloth}  		#4.5# 	[remove]
+{Thin cordage}  		=20= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:shirt]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-woshirt]
+[WEIGHT:4]
+[PRICE:11]
+// 2203-05 weight used from 4.5 to 4.5
+// price 11 to 11
+
+
+// 2.83 value/pound
+// 2.6 value/pound of wool.
+.Woollen tunic.	  "Hunting Horn"	/150/	[effort:1] [phys:hands] *CLOTHCRAFT*
+{Sewing needle}
+{Woollen cloth}  		#7.5# 	[remove]
+{Thin cordage}  		=25= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:tunic]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-wotunic]
+[WEIGHT:7]
+[PRICE:20]
+// 2203-05 weight used from 5.0 to 7.5
+// price 13 to 20
+
+	
+// 2.86 value/pound
+// 2.5 value/pound of wool.
+.Woollen undergarment.	"Hunting Horn"	/240/	[effort:1] [phys:hands]	*CLOTHCRAFT*
+{Sewing needle}
+{Woollen cloth}  		#8.5# 	[remove]
+{Thin cordage}  		=40= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:shoulder upper_arm elbow forearm thorax abdomen hip groin thigh knee calf]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-woungarm]
+[WEIGHT:8]
+[PRICE:23]
+// 2203-05 weight used from 8.0 to 8.5
+// price 20 to 23
+
+
+// 3 value/pound
+// 2.5 value/pound of wool.
+.Woollen undershirt.	"Hunting Horn"	/180/	[effort:1] [phys:hands]	*CLOTHCRAFT*
+{Sewing needle}
+{Woollen cloth}  		#6# 	[remove]
+{Thin cordage}  		=30= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:shoulder upper_arm elbow forearm thorax abdomen hip groin thigh]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-lngwoshi]
+[WEIGHT:5]
+[PRICE:15]
+// 2203-05 weight used from 6.0 to 6.0
+// price 15 to 15
+
+
+// This item is a compromise between the vanilla woollen cowl, and woollen veil. There is a discrepancy between the veil and the cowl
+// Which are identical, except that one weighs 0.3 and the other weighs 1. This item is a compromise between the two of them.
+// I interpret the vanilla veil to be more of a decorative piece that isn't balanced for the warmth that it grants, and so do not
+// have it as a craftable item.
+// 3 value/pound
+// 2.5 value/pound of wool.
+.Woollen heavy veil.		"Hunting Horn"	/60/	[effort:1] [phys:hands] *CLOTHCRAFT*
+{Sewing needle}
+{Woollen cloth}  		#0.8# 	[remove]
+{Thin cordage}  		=10= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:skull neck]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-woolveil]
+[WEIGHT:0.65]
+[PRICE:2]
+// 2203-05 weight used from 0.8 to 0.8
+// price 2 to 2
+
+
+// 3 value/pound
+// 2.4 value/pound of wool.
+// This is not a vanilla item, but copies the areas covered by the fur hood.
+.Woollen hood.		"Hunting Horn"	/75/	[effort:1] [phys:hands] *CLOTHCRAFT*
+{Sewing needle}
+{Woollen cloth}  		#1.3# 	[remove]
+{Thin cordage}  		=15= 	[remove] [nominlen]
+{Knife} <Small knife> 'A knife good for fine work'
+[TYPE:armour]
+[ARMOUR_COVERAGE:skull neck face]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-cowl]
+[WEIGHT:1.0]
+[PRICE:3]
+// 2203-05 weight used from 1.0 to 1.3
+// price 2.4 to 3
+
+
+.---Naalbinding---. "Rock" /1/
+{-} +'Naalbinding is a precursor to'
+{-} +'knitting using small lengths'
+{-} +'of wool to craft smaller items'
+{-} +'like hats, gloves, and socks.'
+{-} +'It uses wool yarn directly,'
+{-} +'rather than cloth from a loom.'
+{-} +'It is relatively slow, but'
+{-} +'efficient with materials.'
+
+// Mittens and socks are very valuable for the amount of wool used, but take time to make properly.
+.Woollen mittens.	"Hunting Horn"	/180/	[effort:1] [phys:hands] *CLOTHCRAFT*
+{Sewing needle}
+{Wool yarn}  		#0.2# 	[remove]
+[TYPE:armour]
+[ARMOUR_COVERAGE:hand]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-woolmit]
+[WEIGHT:0.2]
+[PRICE:2]
+// 2203-05 weight used from 0.2 to 0.2
+// price 2 to 2
+
+
+.Woollen socks.	"Hunting Horn" 	/180/	[effort:1] [phys:hands]	*CLOTHCRAFT*
+{Sewing needle}
+{Wool yarn}  		#0.2# 	[remove]
+[TYPE:armour]
+[ARMOUR_COVERAGE:foot]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-woolsock]
+[WEIGHT:0.2]
+[PRICE:2]
+// 2203-05 weight used from 0.2 to 0.2
+// price 2 to 2
+
+
+// Non-vanilla item. Added because of the large number of woollen garments that cut off above the calves.
+.Woollen longsocks.	"Hunting Horn" 	/300/	[effort:1] [phys:hands]	*CLOTHCRAFT*
+{Sewing needle}
+{Wool yarn}  		#0.5# 	[remove]
+[TYPE:armour]
+[ARMOUR_COVERAGE:foot calf]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-woolsock]
+[WEIGHT:0.5]
+[PRICE:3]
+// 2203-05 weight used from 0.5 to 0.5
+// price 3 to 3
+
+
+.Woollen cap.		"Hunting Horn"	/150/	[effort:1] [phys:hands] *CLOTHCRAFT*
+{Sewing needle}
+{Wool yarn}  		#0.3# 	[remove]
+[TYPE:armour]
+[ARMOUR_COVERAGE:skull]
+[MATERIAL:wool]
+[ARMOUR_MATERIAL:wool]
+[TILEGFX:ar-cap]
+[WEIGHT:0.3]
+[PRICE:2]
+// 2203-05 weight used from 0.3 to 0.3
+// price 2 to 2
+
+
+
+
+
+
+
+
+//.Woollen veil.		"Hunting Horn"	/2h/	[effort:1] [phys:hands] *CLOTHCRAFT*
+//{Sewing needle}
+//{Wool yarn}  		#0.4# 	[remove]
+//[TYPE:armour]
+//[ARMOUR_COVERAGE:skull neck]
+//[MATERIAL:wool]
+//[ARMOUR_MATERIAL:wool]
+//[TILEGFX:ar-woolveil]
+//[WEIGHT:0.3]
+//[PRICE:2]
+// Removed by Rudy. Cover the same area as the woollen cowl, but weighs much less.
+// alternate item offered balancing between the two
+
+
+//.Knit Woollen footrags.	"Woollen footrags"	/90/	[effort:1] [phys:hands,one-armed] *CLOTHCRAFT*
+//{Sewing needle}
+//{Wool yarn}  		#0.5# 	[remove]
+//[NAME:Woollen footrags]
+//[PRICE:0.2]
+// Removed by Rudy. Indistinguishable from woollen socks. Redundant.
+
+
+// Removed by Rudy. Covers same area as woollen leggings, but weighs more. Redundant.
+
+[SUBMENU_END:Wool Processing and Garments]
+
+

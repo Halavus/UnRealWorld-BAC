@@ -1,0 +1,21 @@
+Warning and instructions for biy
+
+biy_BAC_alt_#.txt
+
+The game only allows for one recipe for creation of an item. Due to this you will need to manually off/on the boff_biy_BAC_alt_#.txt file 
+
+You can just add boff_ at the front as is done for the download. This default is to block the issues. b is before the off_ to force file name sorting.
+
+To activate this mod remove the boff_ at the front
+
+
+
+Example issues:
+
+Thus currently .Water. is used for the creation of a well, cave rain catcher or water rain catcher. Only the last to load will display.
+
+Likewise the "improve cave floor" over writes the normal "cieling and floor"
+
+
+
+

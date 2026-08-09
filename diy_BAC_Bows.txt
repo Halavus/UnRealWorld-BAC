@@ -1,0 +1,29 @@
+// BAC integration
+//
+// Signatus v1.0
+//
+// v1.0
+// - Only slightly changed from Buoidda's, reorganized and removed sinew stuff
+// changed prices, that are in squirrel hides, changed bowstrings, changed a few things
+// Part of Buoidda's crafts 1.5+
+//
+// -- Woodworking Mod Additions --
+// Mod intended to meld with BAC
+// Added detail and steps to bow making
+// Making bows beyond a primitive bow requires a Tiller setup and a temporary bowstring to align and test with
+// Didn't add finishing bows with leather grips and tallow to seal, consider it under final steps
+//
+// Important! Boards were used for Dry Quarter Log so that timberworking quality matters
+//
+// Changes by ptr987 listed above accepted into BAC
+//
+// [LENGTH:4] added to bow strings to avoid default 15 ft cord lengths
+
+
+
+[SUBMENU_START:weapon]
+
+
+
+[SUBMENU_END:weapon]
+

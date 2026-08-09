@@ -1,0 +1,654 @@
+// BAC integration
+//
+// Signatus v1.0
+//
+// Based on raincloth mod for buoidda's
+//
+// v1.0
+// - Added .Soak Flax. from sufficiency mod
+// - Created weaving linen from flax
+
+// Part of Buoidda's crafts 1.5+
+// This is Rain's clothing mod v3 with Buoidda's modifications:
+// - many {Tying equipment} changed to {*Yarn} or {*Cord}
+// - added .Weave wool cloth.
+// - .Spin Yarn. : 'Plant Fibre' -> 'Fibre'
+//
+// Brygun added linen/nettle skirt, breast wrap, privates wrap
+//
+// Brygun fixed pricing from # torches to 1/17 squirrel hides
+//
+// 3.60 Beta adaptions due to the significant use of string/cord
+// [assist:1] on large tasks reflect working with you or errands
+// [assist:2] allowed on multi hour tasks as 
+// there is more they can do
+
+[SUBMENU_START:Weaving]
+
+//.Soak Nettles.	"Rock"		[noquality]	*AGRICULTURE*	/1/  \14d\	[patch:20]	|-2| 	[effort:1] [phys:arms,stance,one-armed]	
+//{Nettle}				[remove] [patchwise] [name:Retted %s] [naming:last word]
+//{Water}		(1000)	'+Be near water'
+//[TILE:Water River Rapids]
+//[TILEGFX:rc-retted]
+//[TYPE:tool]
+//[WEIGHT:2]
+// Arimon 3.7x: removed -> now vanilla
+			
+//.Soak Hemp.	"Rock"		[noquality]	*AGRICULTURE*	/1/  \14d\	[patch:20]	|-2|	[effort:1] [phys:arms,stance,one-armed]
+//{Hemp}					[remove] [patchwise]  [name:Retted %s] [naming:last word]			
+//{Water}		(1000)	'+Be near water'
+//[TILE:Water River Rapids]
+//[TILEGFX:rc-retted] 
+//[TYPE:tool]
+//[WEIGHT:2]
+// Arimon 3.7x: removed -> now vanilla
+
+// Note that flax produces twice as much raw weight in stalks, making it a better source for raw materials
+//.Soak Flax. "Hunting Horn" [noquality] *AGRICULTURE* /1/ \14d\ [patch:20] |-2| [effort:0] [phys:arms,stance,one-armed]	
+//{Flax} #0.5# [remove] [patchwise]
+//{Water}		(1000)	'+Be near water'
+//{[TILE:Water]} '+to soak thoroughly in water'
+//[TILE:Water River Rapids]
+//[NAME:Retted Flax]
+//[TILEGFX:rc-retted]
+//[TYPE:tool]
+//[MATERIAL:cloth]
+//[PRICE:0]
+//[WEIGHT:2]
+// From sufficiency
+// Arimon 3.7x: removed -> now vanilla
+
+//.Dry Retted Plants.  "Branch"	[noquality]	*AGRICULTURE*	/2/  \7d\	[patch:20]	|-2|	[effort:1] [phys:arms,stance,one-armed]
+//{Retted *} 				[remove] [patchwise] [name:Dried Retted %s] [naming:last word]	'+use retted hemp or nettle'	
+//[TILEGFX:rc-dried] 
+//[TYPE:tool]
+//[WEIGHT:0.25]
+// Arimon 3.7x: removed -> now vanilla
+
+//.Extract Fibre. 	"Rock"	*AGRICULTURE*	/15/ 	[patch:10] 	[effort:3] 	[phys:arms,stance] [assist:1]
+//{Dried Retted *} 	 		[remove] [patchwise] [ground] [name:Fibre from %s] [naming:last word] '+Dried, Retted Plants'
+//{Club} 			'+for scutching'
+//{Knife} <Small knife>
+//{*comb}			[optional]	
+//[TILEGFX:rc-fibre]
+// Icon provided by Kaaven from the Urw Forums, modified
+//[TYPE:tool]
+//[WEIGHT:0.1]
+// Arimon 3.7x: removed -> now vanilla
+
+//.Spin Yarn. 		"Cord" 	*AGRICULTURE*	/1h/ 	[patch:5]	[effort:1] 	[phys:hands,one-armed] [LENGTH:15]	 [assist:1]
+//{*ibre from *} 		#0.5#	[remove] [patchwise]  [name:%s Yarn] [naming:last word] 'Fibre'
+//{*Spindle and Distaff}
+//[TILEGFX:rc-yarn]
+// Icon provided by Kaaven from the Urw Forums, modified
+// 'Plant Fibre' -> 'Fibre'
+[PRICE:0.3]
+// Arimon 3.7x: removed -> now vanilla
+
+.Weave Nettle Cloth. 		"Bandage" 	/36m/ 	[patch:10] *TEXTILECRAFT*	%25%	[effort:2] [phys:arms,hands,stance] [assist:1]
+{Nettle Yarn} 	=50= 	[remove] [patchwise] [nominlen] [name:Nettle Cloth]
+{Loom}			[ground]	
+[WEIGHT:0.5]
+[MATERIAL:cloth]
+[PRICE:1.8]
+[TILEGFX:rc-cloth]
+// Arimon 3.7x: 
+//	- moved from Weaving to Textilecraft
+//	- changed *COMMON* to *TEXTILECRAFT*
+//	- changed Yarn needed from (1) to =50=
+//	- added [nominlen] to {Nettle Yarn}
+
+.Weave Hemp Linen Cloth. 	"Bandage" 	/36m/ [patch:10] *TEXTILECRAFT*	%25%	[effort:2] [phys:arms,hands,stance] [assist:1]
+{Hemp Yarn} 	=50= 	[remove]  [patchwise] [nominlen] [name:Linen Cloth]
+{Loom}			[ground]
+[WEIGHT:0.5]
+[MATERIAL:cloth]
+[PRICE:2.6]
+[TILEGFX:rc-cloth] 
+// Arimon 3.7x: 
+//	- moved from Weaving to Textilecraft
+//	- changed *COMMON* to *TEXTILECRAFT*
+//	- changed Yarn needed from (1) to =50=
+//	- added [nominlen] to {Hemp Yarn}
+
+.Weave Flax Linen Cloth. 	"Bandage" 	/36m/ [patch:10] *TEXTILECRAFT*	%25%	[effort:2] [phys:arms,hands,stance] [assist:1]
+{Flax Yarn} 	=50= 	[remove] [patchwise] [nominlen] [name:Linen Cloth]
+{Loom}			[ground]	
+[WEIGHT:0.5]
+[MATERIAL:cloth]
+[PRICE:2.6]
+[TILEGFX:rc-cloth]
+// Arimon 3.7x: 
+//	- moved from Weaving to Textilecraft
+//	- changed *COMMON* to *TEXTILECRAFT*
+//	- changed Yarn needed from (1) to =50=
+//	- added [nominlen] to {Flax Yarn}
+
+.Weave Wool Cloth. 		"Bandage" 	/36m/ [patch:10] *TEXTILECRAFT*	%25%	[effort:2] [phys:arms,hands,stance] [assist:1]
+{Wool Yarn} 	(1) [remove] [patchwise] [nominlen] [name:Woollen cloth]
+{Loom}			[ground]
+[WEIGHT:0.5]
+[MATERIAL:cloth]
+[PRICE:3.5]
+[TILEGFX:rc-cloth]
+// Buoidda's addition based on above
+// Arimon 3.7x: 
+//	- moved from Weaving to Textilecraft
+//	- changed *COMMON* to *TEXTILECRAFT*
+//	- added [nominlen] to {Wool Yarn}
+
+//.Primitive Spindle and Distaff.	"Wooden stake"	*CARPENTRY*	%-20%		/45/	[effort:1] [phys:hands] [assist:2]
+//{Staff}			(1) 	[remove] '+to hold the fibre'
+//{Rock}			(1) 	[remove] [noquality] '+for a spindle'
+//{*Cord}			=15= 	[remove] 
+//{Knife}
+//[WEIGHT:2]
+//[TYPE:tool]
+//[PRICE:0.25] 
+//[TILEGFX:rc-distaff]
+// Icon provided by Kaaven from the Urw Forums
+// Arimon 3.7x: removed -> vanilla Spindle is used
+
+//.Advanced Spindle and Distaff.	"Wooden stake"	*CARPENTRY*	%25%		/90/	[effort:1] [phys:hands] [assist:2]
+//{Staff}			(1) 	[remove] '+to hold the fibre'
+//{Wooden Stake}		(1) 	[remove] '+for a spindle'
+//{*Cord}			=15=	[remove] 
+//{Knife}
+//[WEIGHT:1.5]
+//[TYPE:tool]
+//[PRICE:0.6] 
+//[TILEGFX:rc-distaff]
+// Icon provided by Kaaven from the Urw Forums
+//added by signatus
+// Arimon 3.7x: removed -> vanilla Spindle is used
+
+.Loom.			"Hunting Horn"		*CARPENTRY*	|1|		/3h/	%-10%	[effort:2] [phys:arms,hands,stance] [assist:3]
+{Board} 	 		(3) 	[remove]
+{Wooden stake}			(1) 	[remove] '+for a heddle'
+{Thin cordage}				=90= 	[remove] [nominlen]
+{Rock}				(20) 	[remove][noquality] '+as weights for the warp'
+{Axe}				<Carving axe>
+{Knife}				<Small knife>
+[WEIGHT:100]
+[TYPE:tool]
+[TILEGFX:rc-loom]
+[MATERIAL:wood]
+[PRICE:3.5] 
+// Ico'n provided by Kaaven from the Urw Forums, modified
+// Arimon 3.7x: 
+//	- moved from Weaving to Textilecraft
+//	- changed {*Cord} to {Thin cordage}
+//	- added [nominlen] to {Thin cordage}
+
+			
+// Bag moved to Utility
+
+// Shredding linen presented as a way to make use of
+// wrecked clothes from those defeated in battle
+// Some loss of weight figured in.
+
+//.Shred Linen for Yarn. "Hunting Horn" *HIDEWORKING* /1h/ [patchwise:5] [effort:1] [phys:hands,one-armed] [assist:3]
+//{Linen *} #0.6# [remove] [patchwise]
+//{*Spindle and Distaff} [ground] '+to restore to thread'
+//{Knife} <Small knife> '+to cut and fray'
+//[NAME:Hemp Yarn]
+//[TYPE:tool]
+//[MATERIAL:cloth]
+//[PRICE:0.3]
+//[WEIGHT:0.5]
+//[TILEGFX:rc-yarn]
+// Icon provided by Kaaven from the Urw Forums, modified
+// 'Plant Fibre' -> 'Fibre'
+// Arimon 3.7x: removed to avoid confusion - I dont known how to generate an item of the base item Yarn right now as "Yarn" isnt working, so this would be a different kind of Yarn
+
+// String, hemp rope and untie loop snare moved to
+// diy_BAC_Tying_Equipment
+//
+// Bag moved to utility articles
+
+			
+
+[SUBMENU_END:Weaving]
+
+[SUBMENU_START:Cloth Garments]
+
+// Arimon 3.7x: moved submenu from diy_BAC_Weaving to diy_BAC_Cloth_Garments
+
+.Nettle apron.			/60/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:2]
+{*Yarn}	=10= 	'+Yarn' [remove] [nominlen]
+{Nettle *}  	'+Nettle Cloth'	#4.0# 	[remove]
+{Knife} <Small knife>		'+A knife good for fine work'
+[PRICE:2.4] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+
+.Nettle skirt. "Nettle tunic" /60/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#2.5# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:1.5]
+[TYPE:armour]
+[WEIGHT:2.5] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hig groin thigh]
+[TILEGFX:ar-veil]  
+//by brygun 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Nettle cloak.			/60/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#7.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:1.4] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Nettle cowl.			/20/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:1]
+{*Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#1.5# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Nettle shirt.			/75/ *TEXTILECRAFT*	[effort:1] [phys:hands] %-15% [assist:2]
+{*Yarn}  	=20= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#3.5# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:3.3] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+.Nettle trousers.		/100/ *TEXTILECRAFT*	[effort:1] [phys:hands] %-15% [assist:2]
+{*Yarn}	=20= 	'+Yarn' [remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#4.5# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:3.3] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+.Nettle tunic.			/120/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=20= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#7.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:4.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+.Nettle breast wrap. "Nettle trousers" /15/ *TEXTILECRAFT*	[effort:1] [phys:hands]	%-30% [assist:1]
+{*Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#1# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.5]
+[TYPE:armour]
+[WEIGHT:1] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:thorax]
+[TILEGFX:ar-woollegg] 
+//by brygun 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+
+.Nettle privates wrap. "Nettle trousers" /15/ *TEXTILECRAFT* [effort:1] [phys:hands]	%-30% [assist:1]
+{*Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#1# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.5]
+[TYPE:armour]
+[WEIGHT:1] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hip groin]
+[TILEGFX:ar-woolsock]
+//by brygun 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Nettle footrags.	"Linen footrags"	/20/ *TEXTILECRAFT*	[effort:1] [phys:hands]	%-15% 
+{*Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.3]
+[TYPE:armour]
+[WEIGHT:0.5] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:foot]
+[TILEGFX:ar-woolsock]
+//by brygun
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Nettle handwraps.  "Linen footrags"		/20/ *TEXTILECRAFT*	[effort:1] [phys:hands,one-armed]	
+{*Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Nettle *}  '+Nettle Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.2] [assist:1]
+[TYPE:armour]
+[WEIGHT:0.2] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hand]
+[TILEGFX:ar-footrags] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Linen apron.			/60/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:2]
+{*Yarn}	=10= 	'+Yarn' [remove] [nominlen]
+{Linen *}  '+Linen Cloth'		#4.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:2.6] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Linen cowl.			/20/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:1]
+{*Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Linen *}  '+Linen Cloth'		#1.5# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Linen dress.			/120/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:2]
+{*Yarn}	=40= 	[remove] [nominlen] '+Yarn' 
+{Linen *}  '+Linen Cloth'		#5.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:3.6] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =40=
+//	- added [nominlen]
+
+.Linen skirt. "Linen dress" /60/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=10= '+Yarn'	[remove] [nominlen]
+{Linen *}  '+Linen Cloth'		#2.5# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:1.8]
+[TYPE:armour]
+[WEIGHT:2.5] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hig groin thigh]
+[TILEGFX:ar-veil]  
+//by brygun 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Linen footrags.		/20/ *TEXTILECRAFT*	[effort:1] [phys:hands,one-armed] [assist:1]
+{Linen *}  '+Linen Cloth'		#.5# 	[remove] [nominlen]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.2] 
+[WEIGHT:0.5] 
+
+.Linen shirt.			/75/ *TEXTILECRAFT*	[effort:1] [phys:hands]	%-15% [assist:2]
+{*Yarn}  	=20= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#3.5# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:3.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+.Linen trousers.		/100/ *TEXTILECRAFT*	[effort:1] [phys:hands]	%-15% [assist:2]
+{*Yarn}	=20= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#4.5# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:3.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+.Linen tunic.			/120/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=20= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#7.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:4.7] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+.Linen undergarment.		/150/ *TEXTILECRAFT*	[effort:1] [phys:hands]	%-30% [assist:2]
+{*Yarn}  	=40= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#4.0# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:4.2]
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =40=
+//	- added [nominlen]
+ 
+.Linen undershirt.		/80/ *TEXTILECRAFT*	[effort:1] [phys:hands]	%-30% [assist:2]
+{*Yarn}	=30= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#3.5# 	[remove]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:3.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =30=
+//	- added [nominlen]
+
+.Linen veil.			/30/ *TEXTILECRAFT*	[effort:1] [phys:hands] [assist:1]
+{*Yarn}  	=20= 	[remove] '+Yarn' [nominlen]
+{Linen *}  '+Linen Cloth'		#.5# 	[remove]
+{Knife} <Small knife>	'+A knife good for fine work'
+[PRICE:0.5] 
+// Arimon 3.7x:
+//	- changed *HIDEWORKING* to *TEXTILECRAFT*
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+
+.Linen handwraps.  "Linen footrags"		/20/ *TEXTILECRAFT*	[effort:1] [phys:hands,one-armed]	
+{Linen *}  '+Linen Cloth'		#.5# 	[remove] [nominlen]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.2] [assist:1]
+[TYPE:armour]
+[WEIGHT:0.2] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hand]
+[TILEGFX:ar-footrags] 
+
+.Linen breast wrap. "Linen trousers" /15/ *TEXTILECRAFT*	[effort:1] [phys:hands]	%-30% [assist:1]
+{Linen *}  '+Linen Cloth'		#1# 	[remove] [nominlen]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.6]
+[TYPE:armour]
+[WEIGHT:1] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:thorax]
+[TILEGFX:ar-woollegg] 
+//by brygun 
+
+
+.Linen privates wrap. "Linen trousers" /15/ *TEXTILECRAFT*	[effort:1] [phys:hands]	%-30% [assist:1]
+{Linen *}  '+Linen Cloth'		#1# 	[remove] [nominlen]
+{Knife} <Small knife> '+A knife good for fine work'
+[PRICE:0.6]
+[TYPE:armour]
+[WEIGHT:1] 
+[MATERIAL:cloth]
+[ARMOUR_MATERIAL:cloth]
+[ARMOUR_COVERAGE:hip groin]
+[TILEGFX:ar-woolsock] 
+//by brygun 
+
+
+[SUBMENU_END:Cloth Garments]
+
+[SUBMENU_START:Woollen Garments]
+
+// Arimon 3.7x: moved submenu from diy_BAC_Weaving to diy_BAC_Woollen_Garments
+
+.Woollen apron.			/75/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}	=10= 	'+Yarn' [remove] [nominlen]
+{Woollen *}  '+Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:2.6]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+
+.Woollen cloak.			/90/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=10= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  '+Woollen Cloth'			#9# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:1.6]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Woollen cowl.			/25/	[effort:1] [phys:hands] [assist:1]
+{*Yarn}  	=10= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  '+Woollen Cloth'			#1.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.5]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Woollen dress.			/180/	[effort:1] [phys:hands] [assist:1]
+{*Yarn}	=40= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#6# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:3.8]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =40=
+//	- added [nominlen]
+
+.Woollen footrags.		/25/	[effort:1] [phys:hands,one-armed] [assist:1]
+{Woollen *}  	'+Woollen Cloth'		#.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.2]
+
+.Woollen leggings.		/120/	[effort:1] [phys:hands] %-15% [assist:2]
+{*Yarn}	=10= 	'+Yarn' [remove] [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:2.8]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Woollen mittens.		/25/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=10= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.5]
+//higher assist than normal as its 2 items
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Woollen overcoat.		/90/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=10= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#9# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:4.6]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+ 
+.Woollen shirt.			/75/	[effort:1] [phys:hands]	%-15% [assist:2]
+{*Yarn}  	=20= 	[remove] 'Yarn' [nominlen]
+{Woollen *}  	'Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:3.8]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+.Woollen socks.			/25/	[effort:1] [phys:hands]	%-15% [assist:2]
+{*Yarn}  	=10= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.5]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =10=
+//	- added [nominlen]
+
+.Woollen trousers.		/120/	[effort:1] [phys:hands]	%-15% [assist:2]
+{*Yarn}	=20= 	[remove] '++Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#7# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:3.8]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+.Woollen tunic.			/100/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=20= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#8# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:5]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+	
+.Woollen undergarment.		/180/	[effort:1] [phys:hands]	%-30% [assist:2]
+{*Yarn}  	=40= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#6# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:4.7]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =40=
+//	- added [nominlen]
+
+.Woollen undershirt.		/120/	[effort:1] [phys:hands]	%-30%
+{*Yarn}	=40= 	[remove] '+Yarn' [assist:2] [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:2.6]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =40=
+//	- added [nominlen]
+
+.Woollen veil.			/45/	[effort:1] [phys:hands] [assist:2]
+{*Yarn}  	=20= 	[remove] '+Yarn' [nominlen]
+{Woollen *}  	'+Woollen Cloth'		#0.5# 	[remove]
+{Knife} <Small knife> 'A knife good for fine work'
+[PRICE:0.4]
+// Arimon 3.7x:
+//	- changed changed Yarn needed from (1) to =20=
+//	- added [nominlen]
+
+[SUBMENU_END:Woollen Garments]
+

@@ -1,0 +1,159 @@
+// BAC integration
+// Includes moving in large rolls as used for birch-bark punt
+//
+// Signatus v1.0
+//
+// v1.0
+// - Added Buoidda's and brygun barkware
+// - Created Bark bandage from fibre
+//
+// 3.60 Beta integration
+// 3.60 beta Barkware cap and shoes moved to here
+// 3.60 beta birch-bark box, basket and rope moved to here
+// 3.60 Beta birch-bark rope remains in Tying Equipment menu
+//BAC: 3.60 Beta now has its own access to other barks
+// so mod bark getting deactivated.
+// 
+// Birch-bark sources
+//
+// 3.60 Beta, BAC is estimating weight of 1 ft birch-bark from
+// 67 ft as 0.9 lbs ~ 0.0135 lbs each
+// cap used 15 and came to 0.2 lbs ~ 0.0133
+// Which seems to match at 75 to 1 lb ~ 0.0133 each
+//
+// Sibs: updated vanilla to 3.84
+
+
+[SUBMENU_START:Earthen/Barkware]
+
+//VANILLA:
+
+.Birch-bark box. [effort:0] [phys:hands,one-armed]  [assist:1]     *CARPENTRY*  /2h/          |-1|  
+{Birch-bark strip}   =20=   [remove]
+{Knife}                   
+
+.Birch-bark basket. [effort:1]  [phys:hands,one-armed] [assist:1]  *CARPENTRY*  /5h/          
+{Birch-bark strip}   =60=   [remove]
+{Knife}            
+
+//>>>>>>>>>>>>>>>>>>>>>>
+// Barkware clothing and armor
+//
+// BAC:3.60 beta
+// Cap and shoes from the vanilla "clothes" menu relocated here
+
+.Birch-bark shoes.   [phys:hands,one-armed]   *CLOTHCRAFT*  %10% /4h/ |-1|
+{Birch-bark strip} 	=60= 	[remove]
+{Knife}	<Small knife>
+
+.Birch-bark cap.     [phys:hands,one-armed]   *CLOTHCRAFT*  %20% /3h/ |-1|
+{Birch-bark strip} 	=75= 	[remove]
+{Knife}	<Small knife>
+
+// MODDED:
+
+
+//testing code for needing spruce sapling
+//.Spruce sapling. "Hunting horn" /1m/
+//{Rock} '+ only for code tests'
+//[MATERIAL:wood]
+//[TYPE:timber]
+
+
+.Birch-bark cup. "Wooden cup" [phys:hands,one-armed] /1h/ [noquality] %-15% [assist:1]
+{Birch-bark strip}   =25=   [remove]
+{Knife}	<Small knife>
+[WEIGHT:0.3]
+[Price:0.2]
+
+.Birch-bark backpack. "Birch-bark basket" [phys:hands,one-armed] /5h/ [noquality] [assist:2]
+{Birch-bark strip}   =350= [nominlen]   [remove]
+[CONT_CAPACITY:20]
+[WEIGHT:3.5]
+{Knife}	<Small knife>
+[TILEGFX:bc-bbbpack]
+// This is more ruck sack size now. Could be higher by volume but its not a great material strength. 
+//
+// 2023-05 added WEIGHT line
+
+.Bark tassets. "Birch-bark cap" [phys:hands,arms]   *CLOTHCRAFT*  %10% /4h/ |-2| [assist:3] [NOPAUSE]
+{Rope} =4= [remove] '+as belt'
+{*bark*}   #4#   [remove] '+for hanging material'
+{Bone} (4) [remove] [optional] [name: Bark %s tassets] '+as decorative hangers'
+{Knife}	<Small knife>              [noquality]
+[ARMOUR_MATERIAL:birch-bark]
+[MATERIAL:birch-bark]
+[WEIGHT:4]
+[ARMOUR_COVERAGE: hip groin thigh]
+[TILEGFX:ar-woollegg]
+//2023-05-12 specific armor and material lines
+
+.Bark shin guards. "Leather shin guards" [phys:hands,arms]   *CLOTHCRAFT*  %10% /4h/ |-2| [assist:3]
+{Tying equipment} =2= [remove] '+for belt and ties'
+{*bark}   #2#   [remove] '+for hanging material'
+{Knife}	<Small knife>            [noquality]
+[ARMOUR_MATERIAL:birch-bark]
+[MATERIAL:birch-bark]
+[WEIGHT:2]
+[ARMOUR_COVERAGE: calf]
+//2023-05-12 specific armor and material lines
+
+
+.Bark headdress. "Birch-bark cap" [phys:hands,arms]   *CLOTHCRAFT*  %10% /4h/ |-1| [assist:2] [NOPAUSE]
+{*bark*} #2#   [remove] '+for outer material'
+{Thin cordage} =2= [remove] 
+//+'for support tie'
+{Branch} (2) [remove] '+for internal frame'
+{Feather} (16) [remove] [optional] [name: Bark %s headdress] '+for frills'
+{Knife}	<Small knife>               [noquality]
+[ARMOUR_MATERIAL:birch-bark]
+[MATERIAL:birch-bark]
+[WEIGHT:3]
+[ARMOUR_COVERAGE: face skull]
+[TILEGFX:ar-sphelm]
+// 3.60 Beta adjustment of input quantity and output weight
+// future change material to type of bark used if possible
+//Arimon 3.7x: changed {Tying equipment} to {Thin cordage}
+//2023-05-12 specific armor and material lines
+
+.Birch-bark necklace. [phys:hands,one-armed]   *CLOTHCRAFT*  %10% /3h/ |-2| [assist:2] [NOPAUSE]
+{Thin cordage} =2= [remove] 
+//'+for support tie'
+{Birch-bark strip}   =20= [remove] '+for hanging material'
+{Bone} (4) [remove] [optional] [name: Birch-bark %s necklace] '+hangers'
+{Knife}	<Small knife>
+[MATERIAL:birch-bark]
+//Arimon 3.7x: changed {Tying equipment} to {Thin cordage}
+//2023-05-12 specific armor and material lines
+
+.Birch-bark strip. "Birch-bark strip" [phys:hands,one-armed]   *CLOTHCRAFT* /15m/ |-2| [assist:1] [patch:10] 
+{*Birch-bark*}   #0.5# [remove][patchwise] '+source like a roll'
+{Knife}
+[LENGTH:75]
+[WEIGHT:0.4]
+[MATERIAL:birch-bark]
+[CATEGORY:Timber]
+// oddly default category is weapon
+//2023-05-12 specific armor and material lines
+//2023-05-12 Quantity used set to 0.5 to match 0.4 strip
+//Some wastage is applied from rapid harvest of whole bark
+//rather than on the tree detail strips at preferred spots
+
+// Reference older cold for game version 3.6
+// .Trim Birch-bark. "Cord" [effort:0] [phys:hands,one-armed]  [assist:1]     *CARPENTRY*  /15m/  |-1| [patch:5]  
+// {*Birch-bark*}   #0.2#   [remove] [noquality] [patchwise] 
+// {Knife}
+// [MATERIAL:birch-bark]
+// [NAME: Trimmed off birch-bark]
+//[TILEGFX:bc-birchlace]
+// 3.60 cut birch-bark off existing items for cordage
+// meant to help digest tree roll of birch
+
+
+
+
+//.-------------------------------------. "Rock" /1/
+//{-} +'This is just a menu space'
+
+[SUBMENU_END:Earthen/Barkware]
+

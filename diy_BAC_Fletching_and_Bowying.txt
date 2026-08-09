@@ -1,0 +1,271 @@
+// BAC integration
+//
+// Signatus v1.0
+//
+// Based on Buoidda's fletching
+//
+// v1.0
+// - Created .Fur-fletched Broadhead Arrow.
+// - Created .Branch arrow shaft. with high skill penalty
+// - Modified arrow shaft recipes to be able to use stored birch and rowan saplings
+// - Moved .Broadhead Arrow. here from Buoidda's ironworking
+// - Moved bone fletching items from Buoidda's boneworking
+//
+// For 3.8 having A for Arrows as a hardocded menu 
+// this is all moved under that letter
+// 
+// Sibs: updated vanilla to 3.84, tuned arrowmaking to be in line with vanilla
+
+[SUBMENU_START:arrow]
+
+//VANILLA:
+//(Thiebs: Included here in order to keep menu arrangements (commented out of diy_glossary)
+
+.Blunt arrow. [effort:0] [phys:hands,one-armed]  *CARPENTRY*   %15%  |1|  /2h/  [patch:12]
+{Slender trunk} [remove] [noquality] [yield:3] [patchwise]
+{Axe or carving knife}  '+(for rough shaping)' [wearpct:20]
+{Knife} <Small knife>
+
+.Arrow shaft. [effort:0] [phys:hands,one-armed]   *CARPENTRY*    |1|  /90/      [patch:10]
+{Arrow shaft blank} [patchwise]	[remove]
+{Knife} <Small knife>  
+
+.Stone arrowhead. [effort:2] [phys:hands]         *COMMON*  %-30%     /45/      [patch:10]  
+{Rock}  	  [remove] (1) [patchwise] [noquality] '+(for the head)'
+{Stone}	          (1) '+(for grinding)' [noquality]
+
+.Bone arrowhead.  [effort:1] [phys:hands,one-armed]   *COMMON*  %-30% /30/ 	[patch:10]
+{Bone}   #0.1#    [remove] [patchwise] [noquality]
+{Knife}  (1) <Small knife> '+(for initial shaping)'
+{Stone}  (1) '+(for sharpening)'  [noquality]
+
+//MODDED:
+
+.Forked bone arrowhead. "Hunting horn" [effort:1] [phys:hands]   *COMMON*  %-10% /45/ |-1|   [patch]
+{Bone}  #0.25# [remove] [patchwise] [noquality]	
+{Knife}<Small knife>
+[TYPE:weapon]
+[MATERIAL:bone]
+[WEIGHT: 0.05]
+[PRICE:0]
+[TILEGFX:bc-forkbahd]
+//2023-06-08 time increased to be above vanilla bone (non-forked) arrowhead
+//3.84 changed skill to common, changed type to weapon
+
+// .Arrow. 
+// BAC version disabled to avoid conflict with 3.80 vanilla arrow making
+
+.Fur-fletched arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*   %-20% /25/    [patch:5]
+{Arrow shaft}		[remove] [patchwise]
+{*Arrowhead}		[remove] [patchwise]			
+{*Fur} 		#0.05#	[remove] [patchwise] [noquality]	'+Fur'
+{Yarn} 	=2= [remove] [patchwise] [noquality] [nominlen]	
+//'+for thin tying'
+{Knife} <Small knife>
+[WEIGHT:0.13]
+// Arimon 3.7x: 
+//	- changed {Fibre from*} to {Thin cordage}
+//	- added [nominlen] to {Thin cordage}
+// 2023-06-08 needs tuning to match 3.80 arrow making
+
+.Broadhead arrow.	[effort:1] [phys:hands,one-armed]   	*CARPENTRY*	/30/    [patch:5]
+{Arrow shaft}		[remove] [patchwise] 
+{Iron broadhead}	[remove] [patchwise] 
+{Feather} (3)		[remove] [patchwise] [noquality] 
+{Yarn} 	=2=  [remove] [patchwise] [nominlen]			
+//'+for thin tying'
+{Knife} <Small knife>
+{Whetstone}			 [noquality]		'+for final sharpening'
+// Arimon 3.7x: 
+//	- changed {Fibre from*} to {Thin cordage}
+//	- added [nominlen] to {Thin cordage}
+// 2023-06-08 needs tuning to match 3.80 arrow making
+
+.Fur-fletched Broadhead arrow. "Broadhead arrow" [effort:1] [phys:hands,one-armed]   	*CARPENTRY*	%-20% /25/    [patch:5]
+{Arrow shaft}		[remove] [patchwise]
+{Iron broadhead}	[remove] [patchwise]
+{*Fur} 		#0.05#	[remove] [patchwise] [noquality]	'+for fur as fletching instead of feathers'
+{Yarn} 	=2= [remove] [patchwise] [nominlen]			
+//'+for thin tying'
+{Knife} <Small knife>
+{Whetstone}			 [noquality]		'+for final sharpening'
+// Created
+// Arimon 3.7x: 
+//	- changed {Fibre from*} to {Thin cordage}
+//	- added [nominlen] to {Thin cordage}
+// 2023-06-08 needs tuning to match 3.80 arrow making
+
+.Fowling arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*        /30/    [patch:5]
+{Arrow shaft}		[remove] [patchwise]
+{Forked*arrowhead}	[remove] [patchwise]			'+Forked arrowhead'
+{Feather} (3)		[remove] [patchwise] [noquality]
+{Yarn} 	=2= [remove] [patchwise] [nominlen]			
+//'+for thin tying'
+{Knife} <Small knife>
+[WEIGHT:0.15]
+[POINT_ATTACK:5]
+[TILEGFX:bc-fowlarrow]
+// Arimon 3.7x: 
+//	- changed {Fibre from*} to {Thin cordage}
+//	- added [nominlen] to {Thin cordage}
+// 2023-06-08 needs tuning to match 3.80 arrow making
+
+
+.Antler-tipped blunt arrow.  "Blunt arrow" [effort:1] [phys:hands,one-armed]  *CARPENTRY*   %20%    /70/ \1d\ [patch:5]
+{Arrow shaft}		[remove] [patchwise]
+{*antler}	#0.1#	[remove] [noquality]			'+to reinforce hitting end'
+{*glue}		#0.05# 	[remove] [noquality] 			
+{Fire} 								'+for applying glue'
+{Feather} (3)		[remove] [patchwise] [noquality]
+{Yarn} 	=2= [remove] [patchwise] [noquality] [nominlen]	
+//'+for thin tying'
+{Knife}<Small knife>
+[WEIGHT:0.35]
+[BLUNT_ATTACK:7]
+// Arimon 3.7x: 
+//	- changed {Fibre from*} to {Thin cordage}
+//	- added [nominlen] to {Thin cordage}
+// 2023-12-05 3.82 shifted from using stake to arrow shaft
+// 2023-12-05 Increased skills bonus on quality to balance materials needed from 10 to 20
+
+//.Repair arrow. 
+//disabled due to possible conflicts with 3.80 arrow making
+// maybe have it recover feathers?
+// but the head may be more valuable
+// type of head not yet recorded in "broken arrow"
+
+//.Branch arrow shaft. 
+// Disabled now there is a vanilla arrow shaft
+
+//.Birch Sapling arrow shaft. 
+// Disabled now there is a vanilla arrow shaft
+
+//.Rowan Sapling arrow shaft. 
+// Disabled now there is a vanilla arrow shaft
+
+// .Split arrow shaft. 
+// Disabled now there is a vanilla arrow shaft
+
+
+//.Braided bowstring. "Cord" [phys:hands] *HIDEWORKING* /70/ %-5% |1|
+//{Fibre from*}	#1.5# 	[remove]			'+fibre' 
+//{Knife}		 		 
+//[NAME:Bowstring]
+//[WEIGHT:0.3]
+//[LENGTH:6]
+// Uses fibres from Boneworking but also Rain's clothing Mod v3!
+//Arimon 3.7x: removed as there is now a vanilla Bowstring that simulates wearing
+
+//.Bowstring from Yarn. "Cord" [phys:hands] *HIDEWORKING*  /40/ %20% |1|
+//{*Yarn}	(2) 	[remove] '+Yarn'
+//{Knife}
+//[NAME:Bowstring]
+//[WEIGHT:0.3]
+//[LENGTH:6]
+//Arimon 3.7x: removed as there is now a vanilla Bowstring that simulates wearing
+
+//.Bowstring from hides. "Cord" [phys:hands] *HIDEWORKING*  /30/ %25% |1|
+//{Animal hide} #1# [remove]
+//{Knife}
+//[NAME:Bowstring]
+//[WEIGHT:0.3S]
+//[LENGTH:6]
+//Arimon 3.7x: removed as there is now a vanilla Bowstring that simulates wearing
+
+
+.----------------------------------------. "Rock" /1/
+{-} +'This is just a menu space'
+
+.Tiller. "Hunting Horn" [phys:hands] *CARPENTRY*  /60/ |1| [noquality]
+{Board} (2) [remove] [ground]
+{Wooden stake} (2) [remove] [noquality] '+to secure'
+{Axe} <Carving axe> [wearpct:50]
+{Knife}<Broad knife>	 			'+as a large knife'
+{Knife}<Small knife>				'+as a small knife'
+[WEIGHT:10]
+[TYPE:tool]
+[TILEGFX:ww-tiller]
+[MATERIAL:wood]
+[PRICE:1]
+
+.Unfinished bow. "firewood" [effort:2] [phys:arms,hands,one-armed] *BOWYER* |2| /2h/ \16h\
+{Short quarter log} 		[remove] [ground]		'+Birch cut to a short quarter log'	
+{Axe} <Carving axe> [wearpct:40]
+{Knife} <Broad knife>
+{Knife} <Small knife>
+{Fire} 							'+for treating the belly'
+{Bowstring} 		 [noquality] [ground] '+as a temporary bowstring'
+{Tiller}			 [noquality] [ground]
+[MATERIAL:wood]
+[WEIGHT:3]
+[TILEGFX:wp-ubow]
+
+
+// Woodworking mod notes
+//Added terrain to find and work appropriate leaning pine
+.Compression pine belly. "Firewood" [phys:hands] *CARPENTRY* %-10% /320/ |2|
+{[TERRAIN:mountain pine_mire]} 				'+be in a mountain or pine mire'
+{Tree trunk} 		 [remove] [ground] [noquality]	'+as finding a leaning pine tree' 
+{Axe} <Carving axe> [wearpct:60]
+{Knife}<Small knife>
+{Fire} 							'+for heat-treating'
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-pinebelly]
+
+.Birch backing. "Firewood" [phys:hands]   *CARPENTRY* /240/  |1|
+{Short quarter log} 		[remove] [ground]			'+core of a Birch tree'
+{Axe} <Carving axe> [wearpct:50]
+{Knife}
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-birchback]
+//simplified
+
+.Recurve ear. "Firewood"  [phys:hands,one-armed]   *BOWYER* /60/  |1|
+{Branch} 	[remove] [noquality]		'+as a birch branch' 
+{Knife}<Broad knife>	 			'+for a large knife'
+{Knife}<Small knife>				'+for a small knife'
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-bowear]
+
+.Unfinished two-wood longbow. "firewood" [effort:1] [phys:arms,hands] *BOWYER* /6h/ \5d\ |2| %+10%
+{Compression pine belly} [remove]
+{Birch backing}		 [remove]
+{*glue}  #0.8#   [remove] [noquality]	'+various glue to join parts'
+{*birch-bark*}  #1#   [remove] [noquality]     '+adding birch-bark for protection'
+{*Recurve ear} (2) 	 [remove]	'+as the two recurve ears'
+{Bowstring} 		 [noquality] [ground] '+as a temporary bowstring'
+{Fire} 						'+for heating glue and wrapping bark'
+{Knife} <Small knife>
+{Tiller}			 [noquality] [ground]
+[MATERIAL:wood]
+[WEIGHT:3]
+[TILEGFX:wp-ulongbow]
+
+// Woodworking Mod notes
+// Added here but could have gone on Lumber menu
+// BAC edit to access quarter log from lumber menu
+.Dry Quarter Log. "firewood" [effort:1] [phys:arms,hands,stance,one-armed] *TIMBERCRAFT* /5/ \30d\ |1| %20% 
+{Quarter log} (1)		[remove] [ground]	'+from the lumber menu'
+{Axe} <Carving axe> '+to trim flaws' [wearpct:20]
+[MATERIAL:wood]
+[WEIGHT:30]
+[TILEGFX:ww-dry_lb_wood]
+
+.Unfinished hardwood longbow. "firewood" [effort:1] [phys:arms,hands] *BOWYER* /6h/ \16h\ |2|
+{Dry Quarter Log} 	[remove] [ground] '+to be taken to a tiller, tune, and shape bow'
+{Axe} <Carving axe> [wearpct:40]
+{Knife} <Broad knife>
+{Knife} <Small knife>
+{Bowstring} 		 [noquality] [ground] '+as a temporary bowstring'
+{Tiller}			 [noquality] [ground] '+to brace and pull bow on for testing'
+[MATERIAL:wood]
+[WEIGHT:3]
+[TILEGFX:wp-ulongbow]
+
+[SUBMENU_END:arrow]

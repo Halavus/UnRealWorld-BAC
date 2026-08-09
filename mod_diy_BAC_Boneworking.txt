@@ -1,0 +1,186 @@
+// BAC integration
+//
+// Signatus v1.0
+//
+// Based on Buoidda's boneworking
+//
+// v1.0
+// - Added .Bone fishhook. and .Bear tooth necklace. from Buoidda's
+// - Created .Antler comb. and .Bone comb., now can be optionally used in clothing mod
+// - Created .Antler necklace. and .Bone necklace.
+
+[SUBMENU_START:Hide and Bone]
+
+//.Bone fishhook. "Hunting horn" [effort:0] [phys:hands,one-armed] *CARPENTRY* %-30% /60/
+//{*bone} #0.1# [remove] [noquality] '+as main material'
+//{Fibre from*} [remove] [noquality]	'+for initial ties'
+//{*glue} #0.1# [remove] [noquality]		
+//{Fire} [noquality] '+to apply glue'
+//{Knife}<Small knife>
+//[WEIGHT:0.05]
+//[MATERIAL:antler]
+//[NAME:Fishhook]
+//[PRICE:0]
+//[TILEGFX:bc-hook]
+//Arimon 3.7x: removed for now as there is a vanilla Bone fishhook
+
+.Antler comb.	"Hunting horn" [effort:1] [phys:hands,one-armed] *CARPENTRY* %-20% /3h/ [NOPAUSE]
+{*antler} #1# [remove] [noquality] [NAME:%s comb] [naming:original] 'antler'
+{Axe} <Carving axe> [wearpct:30]
+{Knife} <Small knife>
+[MATERIAL:antler]
+[PRICE:0.4]
+[TILEGFX:bc-acomb]
+
+.Bone comb. "Hunting Horn" *CARPENTRY* /2h/ [effort:1] [phys:hands] %-20% [NOPAUSE]
+{Bone} (1) [remove] [noquality] [NAME:%s comb]
+{Axe} <Carving axe> [wearpct:30]
+{Knife} <Small knife>
+[TYPE:tool]
+[MATERIAL:bone]
+[PRICE:0.2]
+[WEIGHT:0.5]
+[TILEGFX:vl-bcomb]
+
+
+.Bone artifact. "Rock" [effort:0]    [phys:arms,one-armed]   *CARPENTRY* %-20% /75/   
+{Bone} #1#	[remove] [noquality]	
+{Stone}  [noquality]	'+for grinding' 
+{Knife} <Small knife>
+[TYPE:tool]
+[PRICE:1]
+[WEIGHT:0.5]
+[MATERIAL:bone]
+[TILEGFX:bc-forkbahd]
+//From whittling mod by Iago.Hach
+
+// Tooth necklace
+// Partial integration of Bouidda 2.2 to allow any teeth to be used
+// 
+
+.Tooth necklace. "Birch-bark necklace" [effort:0] [phys:hands] *CARPENTRY* /2h/ [assist:1] [NOPAUSE]
+{*tooth} (12) [remove] 'Teeth' [name:%s necklace] [naming:original]
+{Thin cordage} =2= [remove] 
+//'+ as cord'
+{Knife} <Small knife>
+[MATERIAL:bone]
+[WEIGHT:0.2]
+[PRICE:2]
+[TILEGFX:bc-bearnlace]
+// Arimon 3.7x: changed {*cord*} to {Thin cordage}
+
+.Antler necklace. "Birch-bark necklace" [effort:0] [phys:hands] *CARPENTRY* /2h/ %-30% [assist:1] [NOPAUSE]
+{Antler} (1) [remove] [noquality] [NAME:%s necklace][naming:original] '+Antler'
+{Thin cordage} [remove] 
+//'+ as cord'
+{Knife} <Small knife>
+[MATERIAL:antler]
+[WEIGHT:0.2]
+[PRICE:0.7]
+[TILEGFX:bc-bearnlace]
+// Arimon 3.7x: changed {*cord} to {Thin cordage}
+
+// Bone necklace to bone decoration.
+// Idea here is that it doesnt have to be necklace but toys, displays or other
+// glue removed and it is now tied to bits of wood
+//
+
+.Bone decoration. "Birch-bark necklace" [effort:0] [phys:hands] *CARPENTRY* /2h/ %-30% [assist:1] [NOPAUSE]
+{Bone} (1)	[remove] [noquality] [NAME:%s decoration] [naming:original] 'Bone'
+{Branch} (2) [remove] [ground] [noquality] '+ as mounting base'
+{Tying equipment} =2= [remove] '+ as cord'
+{Knife}<Small knife>
+[MATERIAL:bone]
+[WEIGHT:0.2]
+[PRICE:0.5]
+
+.Animal headdress. "Fur cap" [effort:2] [effort:2]	[phys:hands]	*CLOTHCRAFT*	/3h/ %0% [NOPAUSE]
+{Animal hide}  #3# [remove] [name:%s Animal Headdress]
+{Bone} (4) [optional] [remove] '+optional bone'
+{Teeth} (4) [optional] [remove] '+optional teeth'
+{Antler} (2) [optional] [remove] '+optional antler'
+{Thin cordage} =6= [remove] 
+//'+to tie for head and parts'
+{Branch} (3) [remove] '+to build inner frame'
+{Knife} <small knife> '+for shaping and holes'
+[TYPE:armour]
+[ARMOUR_MATERIAL:fur]
+[ARMOUR_COVERAGE:skull face neck]
+[WEIGHT:3]
+[PRICE:3.5]
+// By brygun
+// for shamans, actors and those too long alone
+//Arimon 3.7x: changed {Tying equipment} to {Thin cordage}
+
+//.Knife handle pieces. "Hunting horn" [effort:1] [phys:hands]   *CARPENTRY*  %-10%  /5h/ 
+//{*reindeer antler} #0.5# [remove] [noquality] '+ reindeer antler'
+//{Leather} #0.1# [remove] [noquality] '+leather in between'
+//{Axe}	 [noquality] [wearpct:30]
+//{Knife} <Small knife>
+//[TILEGFX:bc-antpieces]
+//3.84 Removed for hafting integration
+
+.Elk hunting horn. "Hunting horn" [effort: 2] [phys:hands] *CARPENTRY*  %-15%  /5h/
+{*elk antler} (2) [remove] '+as left and right curves to be matched'
+{Knife} <Small knife>
+{Thin cordage} (1) [remove] 
+//'+as binding and strap'
+{*glue} #0.25# [remove] '+as glue together'
+{Fire} '+to soften glue'
+[MATERIAL:antler]
+//skill penalty due to being tricky to make to get right sound
+// Arimon 3.7x: changed {*cord} to {Thin cordage}
+
+///////////////////////
+// Backstrap
+//
+// The backstrap can refer to not just the meat but
+// to the long strong ligaments running along the spine
+// of large animals.
+// The backstrap concept and recipe traces to Bouidda's mod
+// It can be used to make sinew fibre
+
+
+//.Reindeer backstrap. "Hunting horn" [effort:1] [phys:arms] *COMMON*  /15/ [noquality]
+//{*reindeer* carcass*}	[ground]	'+Use each reindeer carcass once'
+//{Knife} 
+//[TYPE:tool]
+//[WEIGHT:1]
+//[PRICE:0.5]
+//[TILEGFX:bc-backstrap]
+
+//.Elk backstrap. "Hunting horn" [effort:1] [phys:arms] *COMMON*  /15/ [noquality]
+//{*elk* carcass*}	[ground]	'+Use each elk carcass once'
+//{Knife} 
+//[TYPE:tool]
+//[WEIGHT:2]
+//[PRICE:0]
+//[TILEGFX:bc-backstrap]
+
+
+//.Bear backstrap. "Hunting horn" [effort:1] [phys:arms] *COMMON*  /15/ [noquality]
+//{*bear* carcass*}	[ground]	'+Use each bear carcass once'
+//{Knife} 
+//[TYPE:tool]
+//[WEIGHT:2]
+//[PRICE:0]
+//[TILEGFX:bc-backstrap]
+//2023-05-14-A appears game as renamed stags to bull elk
+//2023-05-14-B As per Tinker's suggestion changed to bear as
+// bull elk, formerly stag, can be captured with elk backstrap
+
+///////////
+// Sinew
+//
+// From Bouidda
+// Sinew given a positive skill boost to make quality cord
+// Brygun increase skill boost form +20 to +30
+
+//.Dried sinew fibre. (5)	"Hunting horn"	[phys:hands,one-armed] /15/ \4h\ *HIDEWORKING* %30%
+//{*backstrap}	#1#	[remove]		'+as a deers back tendon'
+//{Knife}				[noquality]	'+for scraping clean'
+//[WEIGHT:0.1]
+//[TILEGFX:bc-fibre]
+
+
+[SUBMENU_END:Hide and Bone]
