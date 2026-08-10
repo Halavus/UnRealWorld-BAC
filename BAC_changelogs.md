@@ -10,8 +10,8 @@
 - \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
 - added BAC_changelogs.md
 - added BAC_contributors.md
-- added BAC_dev_notes folder (won't be added to future releases, but kept in the development directories)
-- moved \_modguide to a new "BAC_dev_notes" directory. This directory won't be part of the releases, but kept on GitHub for references.
+- added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for references.)
+- moved \_modguide to "BAC_dev_notes" directory. 
 - archived diy_BAC_Bows
 - cleaned up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
 - cleaned up comments and logs in [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt)
