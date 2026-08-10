@@ -113,7 +113,6 @@ Note that some bark equipment have longer (4h) times, which may be an issue, but
 	Compare to vanilla splittig boards, vanilla guess 4h (240 min) to split trunk into 20 boards  
 	Steps needed: +1 -> half log, +2 -> quarter logs, +4 -> radial boards x 16  
 	240/7 = about 34 minutes per step  
-	  
 	Inefficient on materials but breaks down production tasks so things like stone axes can make them.  
 	adjust time from 60 to 30 for more likely stone axe and low skill  
 	Testing in freezing conditions lead to a tweak to max 25 minutes as really the character could pause a few minutes to put more wood on the fire but current game mechanics don't allow restarting craft tasks only buildings  
