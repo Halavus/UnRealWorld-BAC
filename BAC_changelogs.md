@@ -78,5 +78,5 @@ Note that some bark equipment have longer (4h) times, which may be an issue, but
 	maybe have it recover feathers?  
 	but the head may be more valuable  
 	type of head not yet recorded in "broken arrow"  
-	- all modded arrow shafts
+	- all modded arrow shafts  
 	Disabled now there is a vanilla arrow shaft  

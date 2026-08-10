@@ -42,10 +42,6 @@
 //'+for thin tying'
 {Knife} <Small knife>
 [WEIGHT:0.13]
-// Arimon 3.7x: 
-//	- changed {Fibre from*} to {Thin cordage}
-//	- added [nominlen] to {Thin cordage}
-// 2023-06-08 needs tuning to match 3.80 arrow making
 
 .Broadhead arrow.	[effort:1] [phys:hands,one-armed]   	*CARPENTRY*	/30/    [patch:5]
 {Arrow shaft}		[remove] [patchwise] 
@@ -55,39 +51,24 @@
 //'+for thin tying'
 {Knife} <Small knife>
 {Whetstone}			 [noquality]		'+for final sharpening'
-// Arimon 3.7x: 
-//	- changed {Fibre from*} to {Thin cordage}
-//	- added [nominlen] to {Thin cordage}
-// 2023-06-08 needs tuning to match 3.80 arrow making
 
 .Fur-fletched Broadhead arrow. "Broadhead arrow" [effort:1] [phys:hands,one-armed]   	*CARPENTRY*	%-20% /25/    [patch:5]
 {Arrow shaft}		[remove] [patchwise]
 {Iron broadhead}	[remove] [patchwise]
 {*Fur} 		#0.05#	[remove] [patchwise] [noquality]	'+for fur as fletching instead of feathers'
 {Yarn} 	=2= [remove] [patchwise] [nominlen]			
-//'+for thin tying'
 {Knife} <Small knife>
 {Whetstone}			 [noquality]		'+for final sharpening'
-// Created
-// Arimon 3.7x: 
-//	- changed {Fibre from*} to {Thin cordage}
-//	- added [nominlen] to {Thin cordage}
-// 2023-06-08 needs tuning to match 3.80 arrow making
 
 .Fowling arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*        /30/    [patch:5]
 {Arrow shaft}		[remove] [patchwise]
 {Forked*arrowhead}	[remove] [patchwise]			'+Forked arrowhead'
 {Feather} (3)		[remove] [patchwise] [noquality]
 {Yarn} 	=2= [remove] [patchwise] [nominlen]			
-//'+for thin tying'
 {Knife} <Small knife>
 [WEIGHT:0.15]
 [POINT_ATTACK:5]
 [TILEGFX:bc-fowlarrow]
-// Arimon 3.7x: 
-//	- changed {Fibre from*} to {Thin cordage}
-//	- added [nominlen] to {Thin cordage}
-// 2023-06-08 needs tuning to match 3.80 arrow making
 
 
 .Antler-tipped blunt arrow.  "Blunt arrow" [effort:1] [phys:hands,one-armed]  *CARPENTRY*   %20%    /70/ \1d\ [patch:5]
@@ -97,34 +78,9 @@
 {Fire} 								'+for applying glue'
 {Feather} (3)		[remove] [patchwise] [noquality]
 {Yarn} 	=2= [remove] [patchwise] [noquality] [nominlen]	
-//'+for thin tying'
 {Knife}<Small knife>
 [WEIGHT:0.35]
 [BLUNT_ATTACK:7]
-// Arimon 3.7x: 
-//	- changed {Fibre from*} to {Thin cordage}
-//	- added [nominlen] to {Thin cordage}
-// 2023-12-05 3.82 shifted from using stake to arrow shaft
-// 2023-12-05 Increased skills bonus on quality to balance materials needed from 10 to 20
-
-//.Repair arrow. 
-//disabled due to possible conflicts with 3.80 arrow making
-// maybe have it recover feathers?
-// but the head may be more valuable
-// type of head not yet recorded in "broken arrow"
-
-//.Branch arrow shaft. 
-// Disabled now there is a vanilla arrow shaft
-
-//.Birch Sapling arrow shaft. 
-// Disabled now there is a vanilla arrow shaft
-
-//.Rowan Sapling arrow shaft. 
-// Disabled now there is a vanilla arrow shaft
-
-// .Split arrow shaft. 
-// Disabled now there is a vanilla arrow shaft
-
 
 //.Braided bowstring. "Cord" [phys:hands] *HIDEWORKING* /70/ %-5% |1|
 //{Fibre from*}	#1.5# 	[remove]			'+fibre' 
