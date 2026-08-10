@@ -1,6 +1,6 @@
 ## TODOs
 - merge changelogs & contributors (currently kept separate for ease of use)
-- clean up files from changelog & notes comments
+- clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
 
 ## unreleased changes
 - added BAC_changelogs.md
