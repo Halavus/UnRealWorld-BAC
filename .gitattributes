@@ -2,5 +2,5 @@
 * text=auto
 /.gitignore export-ignore
 /.gitattributes export-ignore
-/_modguide.txt export-ignore
+BAC_dev_notes/ export-ignore
 ObsoleteFiles/ export-ignore
