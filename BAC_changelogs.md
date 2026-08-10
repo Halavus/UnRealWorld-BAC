@@ -7,7 +7,7 @@
 - added BAC_changelogs.md
 - added BAC_contributors.md
 - added BAC_dev_notes folder (won't be added to future releases, but kept in the development directories)
-- clean up comments and logs in diy_BAC_Fishing.txt
+- clean up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
 - \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
 
 ## v3.88.2
