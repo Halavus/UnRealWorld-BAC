@@ -9,6 +9,7 @@
 - added BAC_contributors.md
 - added BAC_dev_notes folder (won't be added to future releases, but kept in the development directories)
 - moved \_modguide to a new "BAC_dev_notes" directory. This directory won't be part of the releases, but kept on GitHub for references.
+- archived diy_BAC_Bows
 - clean up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
 - \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
 
