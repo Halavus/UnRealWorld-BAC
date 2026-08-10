@@ -1,5 +1,6 @@
 ## TODOs
 - merge changelogs & contributors (currently kept separate for ease of use)
+- split new changelogs and archive changelogs (before GitHub, currently kept together for ease of copy/paste)
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
 
 ## unreleased changes
