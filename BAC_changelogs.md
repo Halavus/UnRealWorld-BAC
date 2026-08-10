@@ -1,10 +1,10 @@
 ## TODOs
 - create a readme
 - **keep diy_glossary as vanilla as possible**: if a file is not labelled "BAC", it should be changed the least possible. (although sometimes imperative for fixes) NB: some vanilla recipes have been updated by Sami but never updated in the BAC files (see Lumber below)
+- update [diy_BAC_Lumber](/diy_BAC_Lumber.txt) with the 3.86 added \[masterwoodtype] modding feature. Also vanilla recipes are **wrong**. As the game loads BAC files first, the feature gets removed by BAC.
 - merge changelogs & contributors (currently kept separate for ease of use)
 - split new changelogs and archive changelogs (before GitHub, currently kept together for ease of copy/paste)
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
-- update [diy_BAC_Lumber](/diy_BAC_Lumber.txt) with the 3.86 added \[masterwoodtype] modding feature. Also vanilla recipes are **wrong**. As the game loads BAC files first, the feature gets removed by BAC.
 
 ## unreleased changes
 - \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
@@ -38,7 +38,7 @@
 - mod_diy_BAC_Boneworking.txt changed Animal headdress from *HIDEWORKING* to *CLOTHCRAFT*
 - mod_diy_BAC_Wool.txt changed all equippable clothing items to *CLOTHCRAFT*, and replaced modded textile needle with {Sewing needle}
 - issue with resumability is caused by the recipe's name not matching the name of the item  
-	Updated all modded recipes to use item name as recipe name and removing "NAME:" tags accordingly.
+Updated all modded recipes to use item name as recipe name and removing "NAME:" tags accordingly.
 - added \[NOPAUSE] to recipes that use "\[name]" in the body
 - added \[NOPAUSE] to Hafting recipes
 - added \[NOPAUSE] to Transport recipes
