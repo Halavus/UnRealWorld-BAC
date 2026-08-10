@@ -44,14 +44,6 @@
 {Axe} <Carving axe> '+as an axe for finishing the shape' [wearpct:30]
 [WEIGHT:5]
 
-
-////////////////////////////
-// Sapling fix/restoratoin
-//
-// missing reported by cheeseallmight and fix from Signatus
-// modified rowan fix to look for a young rowan
-// Birch sapling removed as 3.62 has its own
-
 .Gather Rowan Sapling. "Branch" [phys:hands,one-armed]   [noquality]  /5/  |-2|  [patch:5]	[NOPAUSE]
 {[NEARBY_TILE:ROWAN]} 			     [noquality]	 +'Rowan (found in groves)'
 {Knife}
@@ -60,31 +52,12 @@
 [MATERIAL:wood]
 [WEIGHT:0.5]
 
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Log splitting, larger than boaards
-//
-// Set up so stone axe and low skills can still manage someting
-// Compare to vanilla splittig boards
-// vanilla guess 4h (240 min) to split trunk into 20 boards
-// Steps needed: +1 -> half log, +2 -> quarter logs, +4 -> radial boards x 16
-// 240/7 = about 34 minutes per step
-//
-// Inefficient on materials but breaks down production tasks
-// so things like stone axes can make them.
-// adjust time from 60 to 30 for more likely stone axe and low skill
-// Testing in freezing conditions lead to a tweak to max 25 minutes as really 
-// the character could pause a few minutes to put more wood on the fire 
-// but current game mechanics don't allow restarting craft tasks only buildings
-//
-
 .Half log. "Log" (2) [effort:4] [phys:stance,arms]  [noquality] *TIMBERCRAFT* %10% /25/ |0|
 {Log}		[remove] [ground] [noquality] 	'+to split from full round to half section' 
 {Axe}<Splitting axe> [wearpct:80]
 [MATERIAL:wood]
 [WEIGHT:200]
 [TILEGFX:bc-trunkhalf]
-// Desired flotation 200 (its own weight)
-// Former Bouidda "Split trunk" which gave 4 x 60 lbs
 
 .Quarter log. "Log" (2) [effort:4] [phys:stance,arms]  [noquality] *TIMBERCRAFT* %10% /25/ |0|
 {Half log}		[remove] [ground] [noquality] 	'+to split from half to quarter section' 
@@ -92,11 +65,6 @@
 [MATERIAL:wood]
 [WEIGHT:100]
 [TILEGFX:bc-trunkhalf]
-// Desired flotation 100 (its own weight)
-// Former Bouidda "Split trunk" which gave 4 x 60 lbs
-// Usable as boards, used as bowstaves
-// Brygun changed to 4 x 100 lbs as equal to a log
-
 
 .Short quarter log. "Block of wood" (2) [effort:4] [phys:stance,arms]  *TIMBERCRAFT* %10% /15/ |0| [patch:4]
 {Quarter log} (1) [remove] [ground][noquality] [patchwise]
@@ -105,12 +73,6 @@
 [MATERIAL:wood]
 [WEIGHT:50]
 [TILEGFX:bc-trunkhalf]
-// Desired flotation 0 (no longer suitable for towing)
-// Cut in across middle for more likely crafting lengths
-// Estimate length now 1 to 1.5 m 3 - 4 1/2 ft
-// No longer counts as boards once radial board was added
-// Quality affects now in
-
 
 .Radial board. (4) "Board" [effort:4] [phys:stance,arms]  *TIMBERCRAFT* %10% /25/ |0| [patc:4]
 {Quarter log} (1) [remove] [ground][noquality] [patchwise] '+to split off narrow triangular lengths'
@@ -118,11 +80,6 @@
 [MATERIAL:wood]
 [WEIGHT:25]
 
-
-
-
-//>>>>>>>>>>>>>>>>>>>>>>>>>>
-//
 // Hollowing out blocks for containers
 // or primitive cooking 
 
@@ -154,7 +111,7 @@
 [CONT_CAPACITY:20]
 //Dig out lower core. 
 //Hefty skill penalty to keep quality down to avoid selling exploint
-// If you want a container to store water stop at this step
+//If you want a container to store water stop at this step
 
 .Block pot. "Pot" [effort:1] [phys:arms] *COMMON* /1/ %-30%
 {Deep block tub} (1)  [remove] 

@@ -92,7 +92,7 @@ Note that some bark equipment have longer (4h) times, which may be an issue, but
 	- all modded arrow shafts  
 	Disabled now there is a vanilla arrow shaft  
 
-- diy_BAC_Lumber.txt
+- diy_BAC_Lumber.txt  
 	Gathered numerous lumber recipes  
 	Intention is for raw or close to raw materials without much wood to wood joining, which goes into carpentry
 	Adds Bryguns' wooden block pots
