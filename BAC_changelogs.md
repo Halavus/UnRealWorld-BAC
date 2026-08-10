@@ -5,13 +5,15 @@
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
 
 ## unreleased changes
+- \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
 - added BAC_changelogs.md
 - added BAC_contributors.md
 - added BAC_dev_notes folder (won't be added to future releases, but kept in the development directories)
 - moved \_modguide to a new "BAC_dev_notes" directory. This directory won't be part of the releases, but kept on GitHub for references.
 - archived diy_BAC_Bows
 - clean up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
-- \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
+- clean up comments and logs in [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt)
+- archived outdated Bowstrings from [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Fletching_and_Bowying.txt) 
 
 ## v3.88.2
 - Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)

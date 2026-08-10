@@ -1,0 +1,26 @@
+// BAC archive of Fletching and Bowying
+
+.Braided bowstring. "Cord" [phys:hands] *HIDEWORKING* /70/ %-5% |1|
+{Fibre from*}	#1.5# 	[remove]			'+fibre' 
+{Knife}		 		 
+[NAME:Bowstring]
+[WEIGHT:0.3]
+[LENGTH:6]
+ Uses fibres from Boneworking but also Rain's clothing Mod v3!
+Arimon 3.7x: removed as there is now a vanilla Bowstring that simulates wearing
+
+.Bowstring from Yarn. "Cord" [phys:hands] *HIDEWORKING*  /40/ %20% |1|
+{*Yarn}	(2) 	[remove] '+Yarn'
+{Knife}
+[NAME:Bowstring]
+[WEIGHT:0.3]
+[LENGTH:6]
+Arimon 3.7x: removed as there is now a vanilla Bowstring that simulates wearing
+
+.Bowstring from hides. "Cord" [phys:hands] *HIDEWORKING*  /30/ %25% |1|
+{Animal hide} #1# [remove]
+{Knife}
+[NAME:Bowstring]
+[WEIGHT:0.3S]
+[LENGTH:6]
+Arimon 3.7x: removed as there is now a vanilla Bowstring that simulates wearing
