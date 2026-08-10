@@ -1,0 +1,14 @@
+// BAC archive of Lumber
+
+[SUBMENU_START:lumber]
+
+//From Bouidda bowyery = Big spruce branch
+//
+.Big spruce branch. "Spruce twig" [phys:hands,one-armed]   *COMMON* /10/ [noquality]
+{[NEARBY_TILE:SPRUCE]}			'+stand beside a big spruce tree'
+{Cutting weapon}
+[MATERIAL:wood]
+[WEIGHT:4]
+
+[SUBMENU_END:lumber]
+

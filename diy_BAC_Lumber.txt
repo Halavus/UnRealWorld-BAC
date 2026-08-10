@@ -1,40 +1,17 @@
-// BAC integration
+// BAC integration of Lumber
 //
-// Gathered numerous lumber recipes
-// Intention is for raw or close to raw materials without
-// much wood to wood joining, which goes into carpentry
-//
-// Adds Bryguns' wooden block pots
-//
-// Brygun adapated alternat log splitting from Bouidda 
-//
-// From Nerjpez Cookery = kebab sticks 
-// for use in that cookery mod
-//
-// Iago.Hach whittling = Small wooden block
-//
-// Pricing adjustments based on ptr987 Woodworking which
-// found that old wiki prices were in torches but game
-// currently uses squirrel hide (which is 17 torches)
-//
-// Sanded board included as a way to integrate ptr987
-// in this menu rather than the crowded Carpentry
-
-//>>>>>>>>>>>>>>>>>>>>>
+// ----------
+// DISCLAIMER
+// ----------
 // Menu full or nearly full depending on BAC version
-// If menu has 0-9 then letters the last letter IIRC is O as in Orange
+// If menu has 0-9 then letters the last letter IIRC is letter 'O'
 //
-// There are vanilla/glossry recipes which load here
+// There are vanilla/glossary recipes which load here
 // the recipe for "staff" is prone to being lost
 // If you see "staff" in the menu you should be okay
-//
-// 2023-05
-// Wooden Stake (fix)
-// needs the [patchwise] as would staff
 
 
 [SUBMENU_START:lumber]
-
 
 .Wooden stake. 	[effort:1] [phys:arms,one-armed]  *TIMBERCRAFT* 	/6/	%40%	|-2|	[patch:50]
 {Cutting weapon} <Axe>		[wearpct:80]
@@ -66,17 +43,6 @@
 {Axe} <Handaxe> '+as an axe for rough cutting' [wearpct:50]
 {Axe} <Carving axe> '+as an axe for finishing the shape' [wearpct:30]
 [WEIGHT:5]
-// From whittling by Iago.Hach
-// Now replaces material for wooden cup
-
-
-//From Bouidda bowyery = Big spruce branch
-//
-.Big spruce branch. "Spruce twig" [phys:hands,one-armed]   *COMMON* /10/ [noquality]
-{[NEARBY_TILE:SPRUCE]}			'+stand beside a big spruce tree'
-{Cutting weapon}
-[MATERIAL:wood]
-[WEIGHT:4]
 
 
 ////////////////////////////

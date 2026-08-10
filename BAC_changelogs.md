@@ -16,7 +16,9 @@
 - archived diy_BAC_Bows
 - cleaned up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
 - cleaned up comments and logs in [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt)
-- archived outdated Bowstrings from [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Fletching_and_Bowying.txt) 
+- archived outdated Bowstrings from [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Fletching_and_Bowying.txt)
+- cleaned up comments and logs in [diy_BAC_Lumber](/diy_BAC_Lumber.txt)
+- archived outdated Big Spruce Branch from [diy_BAC_Lumber](/diy_BAC_Lumber.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Lumber.txt)
 
 ## v3.88.2
 - Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)
@@ -89,3 +91,30 @@ Note that some bark equipment have longer (4h) times, which may be an issue, but
 	type of head not yet recorded in "broken arrow"  
 	- all modded arrow shafts  
 	Disabled now there is a vanilla arrow shaft  
+
+- diy_BAC_Lumber.txt
+	Gathered numerous lumber recipes  
+	Intention is for raw or close to raw materials without much wood to wood joining, which goes into carpentry
+	Adds Bryguns' wooden block pots
+	Brygun adapated alternate log splitting from Bouidda 
+	From Nerjpez Cookery = kebab sticks for use in that cookery mod
+	Iago.Hach whittling = Small wooden block
+	Pricing adjustments based on ptr987 Woodworking which found that old wiki prices were in torches but game currently uses squirrel hide (which is 17 torches)
+	Sanded board included as a way to integrate ptr987 in this menu rather than the crowded Carpentry
+	- 2023-05 Wooden Stake (fix), needs the \[patchwise] as would staff
+	- .Small wooden block.  
+	From whittling by Iago.Hach, replaces material for wooden cup  
+	- Sapling fix/restoration  
+	missing reported by cheesealmighty and fix from Signatus  
+	modified rowan fix to look for a young rowan  
+	Birch sapling removed as 3.62 has its own  
+	- Log splitting, larger than boards  
+	Set up so stone axe and low skills can still manage someting  
+	Compare to vanilla splittig boards, vanilla guess 4h (240 min) to split trunk into 20 boards  
+	Steps needed: +1 -> half log, +2 -> quarter logs, +4 -> radial boards x 16  
+	240/7 = about 34 minutes per step  
+	  
+	Inefficient on materials but breaks down production tasks so things like stone axes can make them.  
+	adjust time from 60 to 30 for more likely stone axe and low skill  
+	Testing in freezing conditions lead to a tweak to max 25 minutes as really the character could pause a few minutes to put more wood on the fire but current game mechanics don't allow restarting craft tasks only buildings  
+	
