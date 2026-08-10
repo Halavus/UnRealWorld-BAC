@@ -12,6 +12,7 @@
 - added BAC_contributors.md
 - added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for references.)
 - moved \_modguide to "BAC_dev_notes" directory. 
+- moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs.
 - archived diy_BAC_Bows
 - cleaned up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
 - cleaned up comments and logs in [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt)
