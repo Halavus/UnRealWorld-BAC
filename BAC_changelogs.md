@@ -1,4 +1,5 @@
 ## TODOs
+- create a readme
 - merge changelogs & contributors (currently kept separate for ease of use)
 - split new changelogs and archive changelogs (before GitHub, currently kept together for ease of copy/paste)
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
@@ -7,6 +8,7 @@
 - added BAC_changelogs.md
 - added BAC_contributors.md
 - added BAC_dev_notes folder (won't be added to future releases, but kept in the development directories)
+- moved \_modguide to a new "BAC_dev_notes" directory. This directory won't be part of the releases, but kept on GitHub for references.
 - clean up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
 - \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
 
