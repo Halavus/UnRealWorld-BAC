@@ -23,6 +23,9 @@ Index of main topics:
    .SPELLS                 .TOOLS<br>
    .MOVING                 .VALUABLES<br>
 
+* BAC ITEMS             <br>
+   .BAC LUMBER
+
 In addition, you may want to browse our Wiki for more information:<br>
 http://www.unrealworld.fi/wiki
 ***
@@ -3446,3 +3449,53 @@ a new house and have a fresh start every thirty years or so.
 ***
 
 
+// BAC ITEMS
+//
+.BAC LUMBER.
+TILLER, DRIED BOARD, SANDED BOARD, CARVED BOARD, BLOCK POT, BRANCH BUNDLE, 
+***
+
+.TILLER.TILLERS.
+This is a Tiller.
+***
+
+.DRIED BOARD.SANDED BOARD.CARVED BOARD.
+Refined boards is an effort to improve board quality, should you have an adze axe.
+
+* Dried boards have been put out for Carpentry prep<br>
+* Sanded boards are a step further to Carpentry<br>
+* Carved boards need dried boards and are meant as an alternate selling item 
+and various RP uses like religion or signs or using them in other furniture 
+(though no price changes). A companion can help you out where it seems to be of 
+benefit to have a helper steady the board while work is underway.
+***
+
+.BLOCK POT.UPPER BLOCK TUB.HALF BLOCK TUB.DEEP BLOCK TUB.
+Block Pot or primitive cooking, hollowing out wooden blocks and put hot rocks in 
+them to cook.
+
+A block pot is being carved out step by step:<br>
+* Upper block tub: Fire used to weaken upper core of wood the cut out a hole.<br>
+* Half block tub: Dig out upper core then fire used to weaken lower core of 
+wood.<br>
+* Deep block tub: Dig out lower core.<br>
+Notes<br>
+If you want a container to store water: stop at this step.<br>
+Hefty skill penalty to keep quality down to avoid a selling exploit. 
+
+* Block pot: Add rocks for the heating process, heat the rocks in a fire then 
+put them inside.<br>
+Notes<br>
+Can not model needing to reheat the rocks =(. The base object changing to pot 
+for cooking seems to prevent using it as a simple water 
+container. Stop at a "tub" step for that, see above.<br>
+Hefty skill penalty to keep quality down. 
+***
+
+.BRANCH BUNDLE.UNBUNDLE BRANCH BUNDLE.
+Housekeeping for many branches. Make bundles of 100 branches.
+
+It is assumed a few branches are used to entrap the others. Making time is 
+short as this is mostly for game housekeeping... Desired flotation of own 
+weight. 
+***

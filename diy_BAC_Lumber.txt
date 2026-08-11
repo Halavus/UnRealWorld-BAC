@@ -80,9 +80,6 @@
 [MATERIAL:wood]
 [WEIGHT:25]
 
-// Hollowing out blocks for containers
-// Block Pot or primitive cooking 
-
 .Upper block tub. "Wooden tub" [effort:2] [phys:arms] *Carpentry* /30/ \180\ %-30%
 {Block of wood}	(1)  [remove]
 {Fire}      '+lit nearby'
@@ -90,7 +87,6 @@
 [PRICE:0.1]
 [TYPE:container]
 [CONT_CAPACITY:4]
-//Fire used to weaken upper core of wood the cut out a hole
 
 .Half block tub. "Wooden tub" [effort:3] [phys:arms] *Carpentry* /120/ \180\ %-30% [assist:1]
 {Upper block tub}	(1)  [remove]
@@ -100,7 +96,6 @@
 [PRICE:0.2]
 [TYPE:container]
 [CONT_CAPACITY:12]
-//Dig out upper core then fire used to weaken lower core of wood
 
 .Deep block tub. "Wooden tub" [effort:3] [phys:arms] *Carpentry* /120/ %-30% [assist:1]
 {Half block tub} (1)  [remove]
@@ -109,9 +104,6 @@
 [PRICE:0.3]
 [TYPE:container]
 [CONT_CAPACITY:20]
-//Dig out lower core. 
-//Hefty skill penalty to keep quality down to avoid selling exploit
-//If you want a container to store water stop at this step
 
 .Block pot. "Pot" [effort:1] [phys:arms] *COMMON* /1/ %-30%
 {Deep block tub} (1)  [remove] 
@@ -121,19 +113,9 @@
 [TYPE:container]
 [CONT_CAPACITY:16]
 [MATERIAL:wood]
-// Hefty skill penalty to keep quality down
-// Add rocks for the heating process. 
-// Heat the rocks in a fire then put them inside.
-// Can not model needing to reheat the rocks.
-// The base object changing to pot for cooking seems to prevent
-// using it as a simple water container. Stop at a "tub" step
-// for that.
 
-///////
-//Bundle branches
-//
-// Housekeeping for many branches
 
+// Bundle branches Housekeeping for many branches
 .Branch bundle. "Hunting Horn" *COMMON* [noquality] /2m/
 {Branch} (100) [remove] [ground]
 [PRICE:0]
