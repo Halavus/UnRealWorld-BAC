@@ -5,6 +5,7 @@
 - merge changelogs & contributors (currently kept separate for ease of use)
 - split new changelogs and archive changelogs (before GitHub, currently kept together for ease of copy/paste)
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
+- add informations about modded items to the encyclopedia (GAME.NFO)
 
 ## unreleased changes
 - \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
@@ -13,6 +14,8 @@
 - added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for references.)
 - moved \_modguide to "BAC_dev_notes" directory. 
 - moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs.
+### Mod files cleanup
+- Added GAME.NFO to the mod package to start documenting modded items in the encyclopedia instead of using comments in the code.
 - archived diy_BAC_Bows
 - cleaned up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
 - cleaned up comments and logs in [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt)
@@ -116,4 +119,17 @@ Note that some bark equipment have longer (4h) times, which may be an issue, but
 	Inefficient on materials but breaks down production tasks so things like stone axes can make them.  
 	adjust time from 60 to 30 for more likely stone axe and low skill  
 	Testing in freezing conditions lead to a tweak to max 25 minutes as really the character could pause a few minutes to put more wood on the fire but current game mechanics don't allow restarting craft tasks only buildings  
-	
+	- .Half log.  
+	Desired flotation 200 (its own weight)  
+	Former Bouidda "Split trunk" which gave 4 x 60 lbs  
+	- .Quarter log.  
+	Desired flotation 100 (its own weight)  
+	Former Bouidda "Split trunk" which gave 4 x 60 lbs  
+	Usable as boards, used as bowstaves  
+	Brygun changed to 4 x 100 lbs as equal to a log  
+	- .Short quarter log.  
+	Desired flotation 0 (no longer suitable for towing)
+	Cut in across middle for more likely crafting lengths
+	Estimate length now 1 to 1.5 m 3 - 4 1/2 ft
+	No longer counts as boards once radial board was added
+	Quality affects now in \[...] *note from halavus: remaining text is missing in the original file*

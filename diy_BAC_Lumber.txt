@@ -81,7 +81,7 @@
 [WEIGHT:25]
 
 // Hollowing out blocks for containers
-// or primitive cooking 
+// Block Pot or primitive cooking 
 
 .Upper block tub. "Wooden tub" [effort:2] [phys:arms] *Carpentry* /30/ \180\ %-30%
 {Block of wood}	(1)  [remove]
@@ -110,7 +110,7 @@
 [TYPE:container]
 [CONT_CAPACITY:20]
 //Dig out lower core. 
-//Hefty skill penalty to keep quality down to avoid selling exploint
+//Hefty skill penalty to keep quality down to avoid selling exploit
 //If you want a container to store water stop at this step
 
 .Block pot. "Pot" [effort:1] [phys:arms] *COMMON* /1/ %-30%

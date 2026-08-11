@@ -17,6 +17,9 @@
 *.NFO
 *.SAV
 
+#Encyclopedia
+!GAME.NFO
+
 #Non mod .txt
 audio.txt
 debug_*.txt
@@ -43,9 +46,6 @@ truegfx/
 
 #Save directories
 NENULI/
-
-#Other files
-.gitignore2
 
 #OSX BS
 .DS_Store
