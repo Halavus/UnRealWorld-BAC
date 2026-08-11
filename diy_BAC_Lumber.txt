@@ -114,7 +114,6 @@
 [CONT_CAPACITY:16]
 [MATERIAL:wood]
 
-
 .Branch bundle. "Hunting Horn" *COMMON* [noquality] /2m/
 {Branch} (100) [remove] [ground]
 [PRICE:0]
@@ -127,20 +126,6 @@
 {Branch bundle} (1) [remove] [ground]
 [NAME:Branch]
 
-///////////////
-// Spruce mat
-// Partly for RP and for storing spruce twigs.
-// Now acts as warmth layer for sleeping and two 
-// count for being wrappted in.
-// I decided against swapping the vanilla shelter to
-// use this as new players wouldn't know about it
-// brygun = original recipe at 20 twigs bundle (for shelter)
-// Signatus = figured out method for "fur" sleep benefits
-// experiments for wrap done at 20 twig/8lbs and 30/12 lbs
-// and 40/16lbs. The 40/16 was found to work
-// time adjust for dissamble reduced from 40 to 20, its just pulling them apart
-
-
 .Spruce mat fur. "Hunting Horn" *COMMON* [noquality] /4m/
 {*spruce twig} (40) [remove] [ground] '+to become a spruce alternate to sleeping on furs'
 [WEIGHT:16]
@@ -148,7 +133,6 @@
 [MATERAL:wood]
 [TYPE:timber]
 [TILEGFX:tr-pitcover]
-// tr-pitcover
 // As a dismantle item only one input is used, otherwise
 // a tying equipment (such as a split spruce twig) would be 
 // called for

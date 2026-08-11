@@ -3453,6 +3453,7 @@ a new house and have a fresh start every thirty years or so.
 //
 .BAC LUMBER.
 TILLER, DRIED BOARD, SANDED BOARD, CARVED BOARD, BLOCK POT, BRANCH BUNDLE, 
+SPRUCE MAT, 
 ***
 
 .TILLER.TILLERS.
@@ -3498,4 +3499,16 @@ Housekeeping for many branches. Make bundles of 100 branches.
 It is assumed a few branches are used to entrap the others. Making time is 
 short as this is mostly for game housekeeping... Desired flotation of own 
 weight. 
+***
+
+.SPRUCE MAT.SPRUCE MAT FUR.
+Partly for RP and for storing spruce twigs.<br>
+Acts as warmth layer for sleeping and counts for being wrappted in.
+I (Brygun?) decided against swapping the vanilla shelter to use this as new players wouldn't know about it.<br>
+Brygun: original recipe at 20 twigs bundle (for shelter)<br>
+Signatus: figured out method for "fur" sleep benefits. Experiments for wrap done at 20 twigs/8 lbs, 30/12 lbs, and 40/16 lbs. 
+The 40/16 was found to work. The word "fur" is needed in the result name to be seen by the "wrap in furs" 
+sleeping check.<br>
+
+Time is for disassemble has been reduced from 40 to 20, its just pulling them apart.
 ***
