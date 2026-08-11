@@ -115,7 +115,6 @@
 [MATERIAL:wood]
 
 
-// Bundle branches Housekeeping for many branches
 .Branch bundle. "Hunting Horn" *COMMON* [noquality] /2m/
 {Branch} (100) [remove] [ground]
 [PRICE:0]
@@ -123,9 +122,6 @@
 [MATERAL:wood]
 [TYPE:timber]
 [TILEGFX:wdblk]
-// Desired flotation of own weight
-// Assume a few branches are used to entrap the others
-// Time is short as this is mostly for game housekeeping
 
 .Unbundle branch bundle. (100) "Branch" /1m/ *COMMON* [noquality] [NOPAUSE]
 {Branch bundle} (1) [remove] [ground]
@@ -162,26 +158,6 @@
 {Spruce mat fur} (1) [remove] [ground]
 [NAME:Spruce twig] 
 
-
-///////////////////////////
-//
-// Boards
-//
-// Refined boards is an effort to improve board quality
-// should you have an adze axe
-//
-// Dried boards have been put out for Carpentry prep
-//
-// Sanded boards are a step furhter to Carpentry
-//
-// Carved boards are meant as an alternate selling item
-// and various RP uses like religion or signs 
-// or using them in other furniture (though no price changes)
-// Carved boards now need dried boards
-//
-// [assist:1] assigned where it seems to be of benefit to
-// have helper steady the board while work is underway
-
 .Dried board.	"Board" [effort:1] *TIMBERCRAFT*	%20% 	 /5/ \30d\	|1|
 {*board} (1) [remove] [ground] '+to place in a sheltered space'
 {Axe} <Carving axe> '+to trim flaws' [wearpct:30]
@@ -203,18 +179,6 @@
 // https://www.unrealworld.fi/wiki/index.php?title=Price_v3.40
 // build time for fox-trap ~ 2 hours
 // Base board price is 8 torches ~1/2 squirrel hide
-
-// 3.60 Beta Broken recipe pending fix.
-// Intention to assist players converting existing stock of
-// brich-bark to new code
-//.Trim Birch-bark. "Cord" [effort:0] [phys:hands,one-armed]  [assist:1]     *CARPENTRY*  /15m/  |-1| [patch:5]  
-//{*Birch-bark*}   #0.2#   [remove] [noquality] [patchwise] 
-//{Knife}
-//[MATERIAL:birch-bark]
-//[NAME:Trimmed off birch-bark]
-//[TILEGFX:bc-birchlace]
-// 3.60 cut birch-bark off existing items for cordage
-// meant to help digest tree roll of birch
 
 .Tall roll of Birch-bark. "Block of wood" *TIMBERCRAFT* [effort:3] [phys:arms legs stance] /3h/ 
 {Tree Trunk} [ground] [noquality] '+please choose what was a fresh birch'
