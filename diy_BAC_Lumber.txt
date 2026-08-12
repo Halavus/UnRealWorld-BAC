@@ -168,14 +168,11 @@
 // Base board price is 8 torches ~1/2 squirrel hide
 
 .Tall roll of Birch-bark. "Block of wood" *TIMBERCRAFT* [effort:3] [phys:arms legs stance] /3h/ 
-{Tree Trunk} [ground] [noquality] '+please choose what was a fresh birch'
+{Birch Tree Trunk} [ground] [noquality] '+please choose what was a fresh birch'
 {Knife} '+to cut and start peeling'
 {Branch} '+to push open bark gently'
 [MATERIAL:birch-bark]
 [WEIGHT: 30]
-//Represents a very big piece of birch bark
-//No longer destroys tree trunk
-//3.60 time increase from 2h to 3h to better fit longer times
 
 .Opened roll of Birch-bark. "Board" *TIMBERCRAFT* [effort:2] [phys:arms legs] /2h/ \18h\ 
 {Tall roll of Birch-bark} (1) [remove]
@@ -185,9 +182,6 @@
 [WEIGHT:30]
 [PRICE:.06]
 [MATERIAL:birch-bark]
-//put the stones in to open it and go do others things a while
-//waiting time is getting it stay in an open shape
-
 
 [SUBMENU_END:lumber]
 

@@ -14,7 +14,9 @@
 - added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for references.)
 - moved \_modguide to "BAC_dev_notes" directory. 
 - moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs.
+## unreleased fixes
 - corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
+- fixed "Tall roll of Birch-bark" with the correct {*Birch* Tree Trunk} ingredient
 ### Mod files cleanup
 - Added GAME.NFO to the mod package to start documenting modded items in the encyclopedia instead of using comments in the code.
 - archived diy_BAC_Bows

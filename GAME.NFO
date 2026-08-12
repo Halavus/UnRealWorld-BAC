@@ -3454,7 +3454,9 @@ a new house and have a fresh start every thirty years or so.
 //
 .BAC LUMBER.
 DRIED BOARD, SANDED BOARD, CARVED BOARD, BLOCK POT, BRANCH BUNDLE, 
-SPRUCE MAT, 
+SPRUCE MAT, TALL ROLL OF BIRCH-BARK, OPENED ROLL OF BIRCH-BARK, 
+//are longer names complicated to use?
+
 ***
 
 .BAC CARPENTRY.
@@ -3516,4 +3518,13 @@ The 40/16 was found to work. The word "fur" is needed in the result name to be s
 sleeping check.<br>
 
 Time is for disassemble has been reduced from 40 to 20, its just pulling them apart.
+***
+
+.TALL ROLL OF BIRCH-BARK.
+Represents a very big piece of birch bark.
+***
+
+.OPENED ROLL OF BIRCH-BARK.
+Put the stones in to open it and go do others things a while.
+Waiting time is getting it stay in an open shape.
 ***
