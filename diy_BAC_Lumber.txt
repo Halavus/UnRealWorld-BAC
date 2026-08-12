@@ -15,15 +15,15 @@
 
 .Wooden stake. 	[effort:1] [phys:arms,one-armed]  *TIMBERCRAFT* 	/6/	%40%	|-2|	[patch:50]
 {Cutting weapon} <Axe>		[wearpct:80]
-{Slender trunk}	 [yield:5] [remove] [patchwise]
+{Slender trunk}	[yield:5] [remove] [noquality] [patchwise] [masterwoodtype]
 
 .Staff.		[effort:1] [phys:arms,one-armed]  *TIMBERCRAFT*		/30/	%60%	|-2|	[patch]
 {Cutting weapon} <Axe>	   [wearpct:80]
-{Slender trunk}	 [yield:3] [remove] [patchwise]
+{Slender trunk}	 [yield:3] [remove] [patchwise] [masterwoodtype]
 
 .Wood slat.     [effort:1] [phys:arms,one-armed,stance]  *CARPENTRY* 	/200/   %10%   |-1|	(20)	[sucmodqty]
-{Board} <Pine> [remove]  
-{Axe}   <Carving axe>  [wearpct:50]
+{Board} <Pine, Birch>   [remove] [masterwoodtype] 
+{Axe}   <Carving axe>   [wearpct:50]
 
 .Shingle.	[effort:1] [phys:arms,hands]  *TIMBERCRAFT* 		/9h/	(500) [sucmodqty]
 {Block of pine wood} (1)   [remove]

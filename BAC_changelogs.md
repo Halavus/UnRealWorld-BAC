@@ -1,7 +1,7 @@
 ## TODOs
 - create a readme
 - **keep diy_glossary as vanilla as possible**: if a file is not labelled "BAC", it should be changed the least possible. (although sometimes imperative for fixes) NB: some vanilla recipes have been updated by Sami but never updated in the BAC files (see Lumber below)
-- update [diy_BAC_Lumber](/diy_BAC_Lumber.txt) with the 3.86 added \[masterwoodtype] modding feature. Also vanilla recipes are **wrong**. As the game loads BAC files first, the feature gets removed by BAC.
+- update [diy_BAC_Lumber](/diy_BAC_Lumber.txt) and [mod_diy_BAC_Carpentry](/mod_diy_BAC_Carpentry.txt) with the 3.86 added \[masterwoodtype] modding tag. 
 - merge changelogs & contributors (currently kept separate for ease of use)
 - split new changelogs and archive changelogs (before GitHub, currently kept together for ease of copy/paste)
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
@@ -14,6 +14,7 @@
 - added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for references.)
 - moved \_modguide to "BAC_dev_notes" directory. 
 - moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs.
+- corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
 ### Mod files cleanup
 - Added GAME.NFO to the mod package to start documenting modded items in the encyclopedia instead of using comments in the code.
 - archived diy_BAC_Bows
