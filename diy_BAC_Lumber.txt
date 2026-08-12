@@ -54,6 +54,7 @@
 
 .Half log. "Log" (2) [effort:4] [phys:stance,arms]  [noquality] *TIMBERCRAFT* %10% /25/ |0|
 {Log}		[remove] [ground] [noquality] 	'+to split from full round to half section' 
+// [masterwoodtype] which works well for naming, seems to be bugged: created item cannot be used from the ground
 {Axe}<Splitting axe> [wearpct:80]
 [MATERIAL:wood]
 [WEIGHT:200]
@@ -61,6 +62,7 @@
 
 .Quarter log. "Log" (2) [effort:4] [phys:stance,arms]  [noquality] *TIMBERCRAFT* %10% /25/ |0|
 {Half log}		[remove] [ground] [noquality] 	'+to split from half to quarter section' 
+// [masterwoodtype] which works well for naming, seems to be bugged: created item cannot be used from the ground
 {Axe}<Splitting axe> [wearpct:80]
 [MATERIAL:wood]
 [WEIGHT:100]
@@ -68,6 +70,7 @@
 
 .Short quarter log. "Block of wood" (2) [effort:4] [phys:stance,arms]  *TIMBERCRAFT* %10% /15/ |0| [patch:4]
 {Quarter log} (1) [remove] [ground][noquality] [patchwise]
+//[masterwoodtype] doesn't work anymore at this stage
 {Axe} <Woodsman's axe> [wearpct:80]
 //'+to cut across the quarter log'
 [MATERIAL:wood]
