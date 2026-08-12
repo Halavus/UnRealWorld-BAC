@@ -24,7 +24,8 @@ Index of main topics:
    .MOVING                 .VALUABLES<br>
 
 * BAC ITEMS             <br>
-   .BAC LUMBER
+   .BAC CARPENTRY<br>
+   .BAC LUMBER<br>
 
 In addition, you may want to browse our Wiki for more information:<br>
 http://www.unrealworld.fi/wiki
@@ -3452,8 +3453,12 @@ a new house and have a fresh start every thirty years or so.
 // BAC ITEMS
 //
 .BAC LUMBER.
-TILLER, DRIED BOARD, SANDED BOARD, CARVED BOARD, BLOCK POT, BRANCH BUNDLE, 
+DRIED BOARD, SANDED BOARD, CARVED BOARD, BLOCK POT, BRANCH BUNDLE, 
 SPRUCE MAT, 
+***
+
+.BAC CARPENTRY.
+TILLER, 
 ***
 
 .TILLER.TILLERS.
