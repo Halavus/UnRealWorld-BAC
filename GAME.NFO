@@ -26,6 +26,7 @@ Index of main topics:
 * BAC ITEMS             <br>
    .BAC CARPENTRY<br>
    .BAC LUMBER<br>
+   .BAC TOOLS<br>
 
 In addition, you may want to browse our Wiki for more information:<br>
 http://www.unrealworld.fi/wiki
@@ -3462,6 +3463,9 @@ SPRUCE MAT, TALL ROLL OF BIRCH-BARK, OPENED ROLL OF BIRCH-BARK,
 .BAC CARPENTRY.
 TILLER, 
 ***
+.BAC TOOLS.
+DRAW KNIFE, 
+***
 
 .TILLER.TILLERS.
 This is a Tiller.
@@ -3528,3 +3532,15 @@ Represents a very big piece of birch bark.
 Put the stones in to open it and go do others things a while.
 Waiting time is getting it stay in an open shape.
 ***
+
+.DRAW KNIFE.
+Used in many ways including when (today) we would use a planer to make long smooths.<br>
+Needs a LARGE KNIFE BLADE for making it. Useful for advanced wood shaping such as the clinkered punt. In recipes can be used as the 
+preferred type of knife.<br>
+
+A drawknife (drawing knife, draw shave, shaving knife) is a traditional woodworking hand tool used to shape wood by removing shavings. 
+It consists of a blade with a handle at each end. The blade is much longer (along the cutting edge) than it is deep (from cutting 
+edge to back edge). It is pulled or "drawn" (hence the name) toward the user.<br>
+(https://en.wikipedia.org/wiki/Drawknife)
+***
+
