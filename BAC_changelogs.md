@@ -21,6 +21,7 @@
 - fixed Ball steel hammer recipe that was making ball iron hammer
 - fixed short spear recipe with 'small spear head' instead of 'short spear head'
 - tweaked building menu and submenu for making the modded Kota work again
+- added some infos about what is a Tiller. [source](https://www.howtomakealongbow.co.uk/part-5-tillering)
 
 ### Mod files cleanup
 - Added GAME.NFO to the mod package to start documenting modded items in the encyclopedia instead of using comments in the code.
