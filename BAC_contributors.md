@@ -10,8 +10,10 @@ Contributors listed below have been found mentioned in the mod files:
 - [Iago.Hach](https://www.unrealworld.fi/forums/index.php?action=profile;u=895): [Whittling](https://www.unrealworld.fi/forums/index.php?topic=789.msg9080#msg9080)
 - [JEB Davis](https://www.unrealworld.fi/forums/index.php?action=profile;u=11): Lamellar armor
 - [JP_Finn](https://www.unrealworld.fi/forums/index.php?action=profile;u=3551): [Bait cutting](https://www.unrealworld.fi/forums/index.php?topic=7112.0)
+- [Kaaven](https://www.unrealworld.fi/forums/index.php?action=profile;u=439): Icons for the original "Rain's Clothing Mod V3", now in BAC Textilecraft
 - [Privateer](https://www.unrealworld.fi/forums/index.php?action=profile;u=10): Fish cuts
 - [ptr987](https://www.unrealworld.fi/forums/index.php?action=profile;u=2845): [Woodworking](https://www.unrealworld.fi/forums/index.php?topic=4712.msg10973#msg10973)
+- [Rain](https://www.tapatalk.com/groups/urwforum/memberlist.php?mode=viewprofile&u=301): "Rain's Clothing Mod", now in BAC Textilecraft
 - [rudy](https://www.unrealworld.fi/forums/index.php?action=profile;u=734): [lamellar armor](https://www.tapatalk.com/groups/urwforum/simple-lamellar-mod-t7728.html)
 - [Sibs](https://www.unrealworld.fi/forums/index.php?action=profile;u=4892): updates and fixes
 - [Signatus](https://www.unrealworld.fi/forums/index.php?action=profile;u=2489): Fletching and bowying, updates and fixes

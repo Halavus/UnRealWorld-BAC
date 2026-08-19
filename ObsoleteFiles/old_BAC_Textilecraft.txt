@@ -1,0 +1,21 @@
+// BAC integration of Textilecraft (added in Vanilla in v3.70)
+
+
+[SUBMENU_START:textilecraft]
+
+.Wooden textile needles.	"Branch"	/2h/	[phys:hands] *TEXTILECRAFT* [assist:1]
+{Branch}	(4) 	[remove] [noquality]
+{Knife} <Small knife>
+[WEIGHT:0.2]
+[PRICE:0.1]
+[TILEGFX:bc-kneedles]
+
+.Bone textile needles.		"Branch"	/2h/	[phys:hands] *TEXTILECRAFT* %10% [assist:1]
+{Bone}	#1# 	[remove] [noquality]
+{Knife} <Small knife>
+[WEIGHT:0.2]
+[PRICE:0.2]
+[TILEGFX:bc-kneedles]
+[MATERIAL:bone]
+
+[SUBMENU_END:textilecraft]

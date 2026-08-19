@@ -6,6 +6,7 @@
 - split new changelogs and archive changelogs (before GitHub, currently kept together for ease of copy/paste)
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
 - add informations about modded items to the encyclopedia (GAME.NFO)
+- Clarify if diy_BAC_Knitting (currently obsolete) should make a comeback: mod_diy_BAC_Wool has the recipes and both versions use Wool in separate ways. One with cloth, the other with Knitting needles. The TILEGFX of those needles seems to be missing and the process of Knitting shouldn't consume wool "Cloth" but wool yarn.
 
 ## unreleased changes
 - \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
@@ -33,6 +34,9 @@
 - cleaned up comments and logs in [diy_BAC_Lumber](/diy_BAC_Lumber.txt)
 - archived outdated Big Spruce Branch from [diy_BAC_Lumber](/diy_BAC_Lumber.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Lumber.txt)
 - cleaned up comments and logs in [diy_BAC_Hafting](/diy_BAC_Hafting.txt)
+- cleaned up comments and logs in [diy_BAC_Textilecraft](/diy_BAC_Textilecraft.txt)
+- removed Vanilla Spindle from the BAC files (still present in the Textilecraft menu)
+- archived "\[...] textile needles" (Knitting needles?) from [diy_BAC_Textilecraft](/diy_BAC_Textilecraft.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Textilecraft.txt) as Knitting currently is disabled. Their TILEGFX is missing too.
 
 ## v3.88.2
 - Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)
@@ -147,4 +151,25 @@ Note that some bark equipment have longer (4h) times, which may be an issue, but
 	- .Tall roll of Birch-bark.  
 	No longer destroys tree trunk  
 	3.60 time increase from 2h to 3h to better fit longer times  
-	
+
+- diy_BAC_Textilecraft.txt  
+	Arimon 3.7x:  
+	- .Loom.  
+	moved from Weaving to Textilecraft  
+	changed {\*Cord} to {Thin cordage}  
+	added \[nominlen] to {Thin cordage}  
+	- .Nettle Cloth.  
+	moved from Weaving to Textilecraft  
+	changed \*COMMON\* to \*TEXTILECRAFT*  
+	changed Yarn needed from (1) to =50=  
+	added \[nominlen] to {Nettle Yarn}  
+	- .Weave Hemp Linen Cloth.  
+	moved from Weaving to Textilecraft  
+	changed \*COMMON\* to \*TEXTILECRAFT*  
+	changed Yarn needed from (1) to =50=
+	added \[nominlen] to {Hemp Yarn}  
+	- .Weave Flax Linen Cloth.  
+	moved from Weaving to Textilecraft  
+	changed \*COMMON\* to \*TEXTILECRAFT*  
+	changed Yarn needed from (1) to =50=
+	added \[nominlen] to {Flax Yarn}  
