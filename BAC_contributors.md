@@ -18,3 +18,4 @@ Contributors listed below have been found mentioned in the mod files:
 - [TheyCallMeSibs](https://www.unrealworld.fi/forums/index.php?action=profile;u=4892): updates and fixes
 - [Thiebs](https://www.unrealworld.fi/forums/index.php?action=profile;u=5829): updates and fixes, BAC encyclopedia implementation
 - [Warslay](https://www.unrealworld.fi/forums/index.php?action=profile;u=5520): updates and fixes
+- test pr
