@@ -15,4 +15,6 @@ Contributors listed below have been found mentioned in the mod files:
 - [rudy](https://www.unrealworld.fi/forums/index.php?action=profile;u=734): [lamellar armor](https://www.tapatalk.com/groups/urwforum/simple-lamellar-mod-t7728.html)
 - [Sibs](https://www.unrealworld.fi/forums/index.php?action=profile;u=4892): updates and fixes
 - [Signatus](https://www.unrealworld.fi/forums/index.php?action=profile;u=2489): Fletching and bowying, updates and fixes
+- [TheyCallMeSibs](https://www.unrealworld.fi/forums/index.php?action=profile;u=4892): updates and fixes
 - [Thiebs](https://www.unrealworld.fi/forums/index.php?action=profile;u=5829): updates and fixes, BAC encyclopedia implementation
+- [Warslay](https://www.unrealworld.fi/forums/index.php?action=profile;u=5520): updates and fixes
