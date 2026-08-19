@@ -2,7 +2,7 @@
 //
 // Part of Buoidda's crafts 1.5+
 
-[SUBMENU_START:kota]
+[SUBMENU_START:hiddenkotarecipemenu]
 
 .Framework. [effort:3]	*BUILDING* 	 	-F-	/30/	[assist:3]	%20%	|-1|	 [GFX_X:2] [GFX_Y:1]
 {Slender trunk} (8) [remove] [ground]
@@ -22,4 +22,4 @@
 
 // doorway missing ']' fixed
 
-[SUBMENU_END:kota]
+[SUBMENU_END:hiddenkotarecipemenu]

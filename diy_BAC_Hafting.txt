@@ -76,7 +76,7 @@
 [BLUNT_ATTACK:3]
 
 .Haft a short spear. "Spear" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/45/	[NOPAUSE]
-{Short spear head}	[remove]
+{Small spear head}	[remove]
 {Spear handle} 		[remove]
 {Knife} <Small knife>
 {Hammering tool} [noquality]
@@ -103,18 +103,18 @@
 [PRICE:12]
 [TILEGFX:bc-hammer]
 
-.Haft a ball iron hammer. "Mace" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/45/	 [NOPAUSE]
+.Haft a ball steel hammer. "Mace" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/45/	 [NOPAUSE]
 {Ball steel hammer head}	 [remove] 	
 {Axe haft} [remove]
 {Knife} <Small knife>
 {Hammering tool} [noquality]
 {Whetstone}		 '+for final polishing'
-[NAME:Ball iron hammer]
+[NAME:Ball steel hammer]
 [BLUNT_ATTACK:7]
 [EDGE_ATTACK:-1]
 [POINT_ATTACK:-1]
 [AD_CLASS:1/0]
-[MATERIAL:iron]
+[MATERIAL:steel]
 [WEIGHT:3]
 [PRICE:18]
 [TILEGFX:bc-hammer]
