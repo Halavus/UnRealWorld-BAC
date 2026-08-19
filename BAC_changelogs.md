@@ -18,9 +18,14 @@
 - corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
 - fixed "Tall roll of Birch-bark" with the correct {*Birch* Tree Trunk} ingredient
 - added 2 small handles to the draw knife recipe
+- fixed Ball steel hammer recipe that was making ball iron hammer
+- fixed short spear recipe with 'small spear head' instead of 'short spear head'
+- tweaked building menu and submenu for making the modded Kota work again
+
 ### Mod files cleanup
 - Added GAME.NFO to the mod package to start documenting modded items in the encyclopedia instead of using comments in the code.
 - archived diy_BAC_Bows
+- archived bin_BAC_kota_standard
 - cleaned up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
 - cleaned up comments and logs in [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt)
 - archived outdated Bowstrings from [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Fletching_and_Bowying.txt)
