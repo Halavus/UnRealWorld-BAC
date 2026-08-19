@@ -191,7 +191,6 @@ You can now dismantle a raft to get ropes back
 Brygun's portable leather punt  
 A large tarp over a woven frame making an upside down bowl  
 Comes out as a very light punt   
-
 uses 3 entries  
 
 https:www.unrealworld.fi/wiki/index.php?title=Punt  
@@ -219,7 +218,7 @@ A little of an under performer due to rounded shape can still manage a game char
 Can't carry a tree trunk  
 Price = leather tarp + woven branches + a little for work  
 
-- Woven boating frame
+- Woven boating frame  
 Set to built by a knife only for early play  
 Branches woven form a "wicker"  
 This size adapted for a leather tarp  
@@ -228,7 +227,6 @@ Set to 2 slender trunks as that is compatible with the "Tarp shelter" biy if you
 #### Birch-bark punt
 Birch-bark punt is based on north american canoes also known as a Birch-bark Canoe
 Come out as a reduced though still fair size punt  
-
 uses 4 entries
 
 Being Canadian, canoes are a familiar item. There is no evidence that iron age finland used canoes. This alternate punt was also an early mod of brygun showing multi stage production  
@@ -239,29 +237,29 @@ I considered replacing the weight source of stones with wooden blocks those need
 
 2019-Jan-09 Rework what happens in each stage to better match new learnings on building canoes  
 
-Weight is based on https:www.canadianoutdoorequipment.com/13ft-traditional-algonquin-birchbark-canoe.html and http:www.barkcanoe.com/birchbark.htm 
+Weight is based on https://www.canadianoutdoorequipment.com/13ft-traditional-algonquin-birchbark-canoe.html and http://www.barkcanoe.com/birchbark.htm  
 Then adjusting for recipe weight likely length is 17ft  
 
-Load of a 17 ft canoe mentioned in https:www.mec.ca/en/product/5041-407/Prospector-17-Fibreglass-Aluminum-Canoe  
+Load of a 17 ft canoe mentioned in https://www.mec.ca/en/product/5041-407/Prospector-17-Fibreglass-Aluminum-Canoe  
 
 Canoe terms  
-http:canoeing.com/canoes/canoe-design/  
+http://www.canoeing.com/canoes/canoe-design/  
 Another excellent make a canoe video with Ray Mears  
-https:www.youtube.com/watch?v=XOM2s6y08PQ  
+https://www.youtube.com/watch?v=XOM2s6y08PQ  
 A crafter in Minnesota explaining the steps  
-https:www.youtube.com/watch?v=qFSjKRnUzVo&t  
+https://www.youtube.com/watch?v=qFSjKRnUzVo&t  
 Text based description of canoe building  
-http:www.native-art-in-canada.com/birchbarkcanoes.html  
+http://www.native-art-in-canada.com/birchbarkcanoes.html  
 Other weblinks  
-http:www.native-art-in-canada.com/birchbark-canoes.html  
-http:www.northwestjournal.ca/VIII4.htm  
+http://www.native-art-in-canada.com/birchbark-canoes.html  
+http://www.northwestjournal.ca/VIII4.htm  
 A website of a modern builder listing materials:  
-http:naturalbirchbarkcanoes.com/craftsmanship/  
+http://www.naturalbirchbarkcanoes.com/craftsmanship/  
 Along with an estimate of 350 man hours, barely a fraction of which we have in these recipes. Some may be the time preparing resources.  
 
 As seen in some of vidoes, like the Ray Mears one, they did use split spruce twigs (or very close) for sewing the birch bark. The amount they mention is 200 meters (600 ft) so I increased the total cordage calls to 10 unit summed across the different steps.
 
-- Braced bark hull
+- Braced bark hull  
 put main on ground, lay frame on it, then bend sheets up  
 exterior braces hold sheet upright  
 Sew extra sheet pices  
@@ -269,19 +267,19 @@ put the stones and braces in place to push on sheets
 needs to sit a long time to take shape  
 Arimon 3.7x: added \[nominlen] to {Tying equipment}
 
-- Sheathed bark hull
+- Sheathed bark hull  
 \#8# fits in one wooden tub  
 Bend and install two outer end posts  
 Split stakes into thin sheathing and lay in canoe  
 Replace weights, let it sit like this  
 Alot of the time is in splitting the wood  
 
-- Ribbed bark hull
+- Ribbed bark hull  
 \#8# fits in one wooden tub  
 Seal sewn sides, bow, stern and any defects  
 Let cool and to settle in shape the last time  
 
-- Birch Bark Punt
+- Birch Bark Punt  
 Good nautical shape with minimal wall structure means above averate flotation of cargo e.g. it's effiecient. Can manage a tree trunk if crew has light or medium gear.  
 
 Birch-punk firewood is used only to keep a small fire going to heat the pitch glue to apply it. So it wouldn't be 3 woods put on all at once but added 1 at a time over the time. Query on how long one added fire wood last. Secondly the glue being sticky to seal isnt the whole 6 hours either. Its a sealing step after the tying is done. So that slow fed fire need not be burning for the whole time. 
