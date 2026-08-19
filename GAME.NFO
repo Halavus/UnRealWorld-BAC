@@ -27,6 +27,7 @@ Index of main topics:
    .BAC CARPENTRY<br>
    .BAC LUMBER<br>
    .BAC TOOLS<br>
+   .BAC WEAPONS<br>
 
 In addition, you may want to browse our Wiki for more information:<br>
 http://www.unrealworld.fi/wiki
@@ -3463,9 +3464,13 @@ SPRUCE MAT, TALL ROLL OF BIRCH-BARK, OPENED ROLL OF BIRCH-BARK,
 .BAC CARPENTRY.
 TILLER, 
 ***
+
 .BAC TOOLS.
 DRAW KNIFE, 
 ***
+
+.BAC WEAPONS.
+SHORT SPEAR,
 
 .TILLER.TILLERS.
 This is a Tiller.
@@ -3544,3 +3549,6 @@ edge to back edge). It is pulled or "drawn" (hence the name) toward the user.<br
 (https://en.wikipedia.org/wiki/Drawknife)
 ***
 
+.SHORT SPEAR.
+Same accuracy than a spear (4), so better than wooden javelin (1)!
+***

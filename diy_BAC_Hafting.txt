@@ -39,7 +39,6 @@
 {Hammering tool} [noquality]
 [NAME:Broad knife]
 
-
 // Draw knife
 .Haft a draw knife. "Knife" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/30/	 
 {Large knife blade}	 [remove] 	
@@ -53,7 +52,6 @@
 [BLUNT_ATTACK:2]
 [TYPE:tool]
 [TILEGFX:bc-knifebla]
-
 
 .Haft a sickle. "Sickle" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/30/	 [NOPAUSE]
 {Sickle blade}	 [remove] 
@@ -82,7 +80,6 @@
 [1HPENALTY:0]
 [MATERIAL:iron]
 [WEIGHT:3]
-// inherited accuracy 4 from spear, so better than wooden javelin (1)!
 
 .Haft a flat iron hammer. "Mace" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/45/	[NOPAUSE]
 {Flat iron hammer head}	 [remove] 	
@@ -101,7 +98,7 @@
 [TILEGFX:bc-hammer]
 
 .Haft a ball steel hammer. "Mace" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/45/	 [NOPAUSE]
-{Ball steel hammer head}	 [remove] 	
+{Ball steel hammer head}	 [remove]
 {Axe haft} [remove]
 {Knife} <Small knife>
 {Hammering tool} [noquality]
