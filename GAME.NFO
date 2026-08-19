@@ -28,6 +28,7 @@ Index of main topics:
    .BAC LUMBER<br>
    .BAC TOOLS<br>
    .BAC WEAPONS<br>
+   .BAC TRANSPORT<br>
 
 In addition, you may want to browse our Wiki for more information:<br>
 http://www.unrealworld.fi/wiki
@@ -3471,6 +3472,11 @@ DRAW KNIFE,
 
 .BAC WEAPONS.
 SHORT SPEAR,
+***
+
+.BAC TRANSPORT.
+SLEDWAGON, TARP-WEAVE PUNT, BIRCH-BARK PUNT, FINNISH PUNT, CLINKERED PUNT
+***
 
 .TILLER.TILLERS.
 Tillering is a process of bending the bow a little bit at a time. This is the true measure of a Bowmaker, 
@@ -3559,3 +3565,55 @@ edge to back edge). It is pulled or "drawn" (hence the name) toward the user.<br
 .SHORT SPEAR.
 Same accuracy than a spear (4), so better than wooden javelin (1)!
 ***
+
+.SLEDWAGON.
+
+***
+
+.TARP-WEAVE PUNT.
+Leather punt.<br>
+A large tarp over a woven frame making an upside down bowl. Comes out as a very light punt. This variation of the punt uses simple woods and a section of sealed leather.<br>
+It is a light water craft option most useful in early play or as something you can make a few of to stock various camps or river crossings.<br>
+uses 3 entries:<br>
+- Woven boating frame, set to built by a knife only for early play<br>
+- Assemble the tarp on the weave<br>
+- Tarp-weave punt<br>
+***
+
+.BIRCH-BARK PUNT.
+Birch-bark punt is based on north american canoes.
+Come out as a reduced though still fair size punt.<br>
+Firewood in the final step is used only to keep a small fire going to heat the pitch glue to apply it. So it wouldn't be 3 woods put on all at once but added 1 at a time over the time. Query on how long one added fire wood last. Secondly the glue being sticky to seal isnt the whole 6 hours either. Its a sealing step after the tying is done. So that slow fed fire need not be burning for the whole time. 
+uses 4 entries:<br>
+- Braced bark hull<br>
+Put main on ground, lay frame on it, then bend sheets up. Exterior braces hold sheet upright. Sew extra sheet pieces. Put the stones and braces in place to push on sheets. Needs to sit a long time to take shape<br>
+- Sheathed bark hull<br>
+Bend and install two outer end posts. Split stakes into thin sheathing and lay in canoe. Replace weights, let it sit like this. Alot of the time is in splitting the wood.<br>
+- Ribbed bark hull<br>
+Seal sewn sides, bow, stern and any defects. Let cool and to settle in shape the last time.<br>
+- Birch-bark punt<br>
+***
+
+.FINNISH PUNT.
+Finnish dug out style punt. Requires a Stone adze axe or Iron adze axe.<br>
+It is based on what Erkka told us about. This is a punt as in the vanilla game. Low skill medium equipped characters should be able to attempt this. Can haul 1-2 tree trunks plus crewman and gear.<br>
+uses 6 steps:<br>
+- Pointed log. Start with "log" not trunk!<br>
+- Shallow log (first cuttings)<br>
+Here a handaxe can be used as you are at the open top.<br>
+- Medium dug hull<br>
+Here the adze axe is needed due to working in the confined space. This stage could also simulate a feeding trough for animals.<br>
+- Deep dug hull<br>
+Here the adze axe is needed due to working in the confined space. This stage could also be used as a trough for soaking leather<br>
+- Expanded log hull<br>
+- Finnish punt. Finish the Finnish Punt!<br>
+
+***
+
+.CLINKERED PUNT.
+Clinker style punt.
+A very large punt comparable to small viking boat
+Uses advanced building methods and tools
+Not for starting or underequipped characters
+***
+

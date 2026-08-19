@@ -15,6 +15,7 @@ Contributors listed below have been found mentioned in the mod files:
 - [ptr987](https://www.unrealworld.fi/forums/index.php?action=profile;u=2845): [Woodworking](https://www.unrealworld.fi/forums/index.php?topic=4712.msg10973#msg10973)
 - [Rain](https://www.tapatalk.com/groups/urwforum/memberlist.php?mode=viewprofile&u=301): "Rain's Clothing Mod", now in BAC Textilecraft
 - [rudy](https://www.unrealworld.fi/forums/index.php?action=profile;u=734): [lamellar armor](https://www.tapatalk.com/groups/urwforum/simple-lamellar-mod-t7728.html)
+- [Shrike](https://www.unrealworld.fi/forums/index.php?action=profile;u=5823): Menu decluttering; moved all of Brygun's boat overhaul over to "Boats". So as to let fishing be about fishing.
 - [Sibs](https://www.unrealworld.fi/forums/index.php?action=profile;u=4892): updates and fixes
 - [Signatus](https://www.unrealworld.fi/forums/index.php?action=profile;u=2489): Fletching and bowying, updates and fixes
 - [TheyCallMeSibs](https://www.unrealworld.fi/forums/index.php?action=profile;u=4892): updates and fixes

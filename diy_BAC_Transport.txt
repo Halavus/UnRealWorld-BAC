@@ -5,6 +5,7 @@
 // https://www.unrealworld.fi/forums/index.php?topic=4654
 //
 // Assumes Bouidda's mod or similiar already installed
+// (note: outdated comment, needed items have long been added to BAC)
 //
 // Raft tweaked to between vanilla and Jeb's thoughts
 // You can now dismantle a raft to get ropes back 
@@ -172,7 +173,7 @@
 // The sled will only hold one type of object at a time. 
 //
 // Known bug that the items need one clock tick after placing to be useable.
-// That is something to do with coding them as food which starts needing to be prepared.
+// That has something to do with coding them as food which starts needing to be prepared.
 //
 // Integration of Galgana's Cethegus sledwagon reborn
 // Itself drawing on ideas from Privatter's quiver mod
@@ -210,7 +211,6 @@
 {Sledwagon*}	[ground] '+ stand near sledwagon'
 {Tree trunk on sled}	#25#	[remove] [patchwise]
 [NAME:tree trunk]
-
 
 .Load log. "Roach"	*COMMON*	/10/ [patch:12] [effort:3] [phys:arms,stance] [assist:3] [noquality] [SPOILAGE_DAYS:0] [NOPAUSE]
 {Sledwagon*}	[ground] '+ stand near sledwagon'
