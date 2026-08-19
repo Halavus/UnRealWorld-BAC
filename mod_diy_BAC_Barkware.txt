@@ -77,7 +77,7 @@
 // 2023-05 added WEIGHT line
 
 .Bark tassets. "Birch-bark cap" [phys:hands,arms]   *CLOTHCRAFT*  %10% /4h/ |-2| [assist:3] [NOPAUSE]
-{Rope} =4= [remove] '+as belt'
+{Strong cordage} =4= [remove] '+Rope as belt'
 {*bark*}   #4#   [remove] '+for hanging material'
 {Bone} (4) [remove] [optional] [name: Bark %s tassets] '+as decorative hangers'
 {Knife}	<Small knife>              [noquality]
