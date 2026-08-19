@@ -10,5 +10,17 @@
 [MATERIAL:wood]
 [WEIGHT:4]
 
+// 3.60 Beta Broken recipe pending fix.
+// Intention to assist players converting existing stock of
+// brich-bark to new code
+//.Trim Birch-bark. "Cord" [effort:0] [phys:hands,one-armed]  [assist:1]     *CARPENTRY*  /15m/  |-1| [patch:5]  
+//{*Birch-bark*}   #0.2#   [remove] [noquality] [patchwise] 
+//{Knife}
+//[MATERIAL:birch-bark]
+//[NAME:Trimmed off birch-bark]
+//[TILEGFX:bc-birchlace]
+// 3.60 cut birch-bark off existing items for cordage
+// meant to help digest tree roll of birch
+
 [SUBMENU_END:lumber]
 

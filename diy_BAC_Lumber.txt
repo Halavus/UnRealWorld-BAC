@@ -15,15 +15,15 @@
 
 .Wooden stake. 	[effort:1] [phys:arms,one-armed]  *TIMBERCRAFT* 	/6/	%40%	|-2|	[patch:50]
 {Cutting weapon} <Axe>		[wearpct:80]
-{Slender trunk}	 [yield:5] [remove] [patchwise]
+{Slender trunk}	[yield:5] [remove] [noquality] [patchwise] [masterwoodtype]
 
 .Staff.		[effort:1] [phys:arms,one-armed]  *TIMBERCRAFT*		/30/	%60%	|-2|	[patch]
 {Cutting weapon} <Axe>	   [wearpct:80]
-{Slender trunk}	 [yield:3] [remove] [patchwise]
+{Slender trunk}	 [yield:3] [remove] [patchwise] [masterwoodtype]
 
 .Wood slat.     [effort:1] [phys:arms,one-armed,stance]  *CARPENTRY* 	/200/   %10%   |-1|	(20)	[sucmodqty]
-{Board} <Pine> [remove]  
-{Axe}   <Carving axe>  [wearpct:50]
+{Board} <Pine, Birch>   [remove] [masterwoodtype] 
+{Axe}   <Carving axe>   [wearpct:50]
 
 .Shingle.	[effort:1] [phys:arms,hands]  *TIMBERCRAFT* 		/9h/	(500) [sucmodqty]
 {Block of pine wood} (1)   [remove]
@@ -54,6 +54,7 @@
 
 .Half log. "Log" (2) [effort:4] [phys:stance,arms]  [noquality] *TIMBERCRAFT* %10% /25/ |0|
 {Log}		[remove] [ground] [noquality] 	'+to split from full round to half section' 
+// [masterwoodtype] which works well for naming, seems to be bugged: created item cannot be used from the ground
 {Axe}<Splitting axe> [wearpct:80]
 [MATERIAL:wood]
 [WEIGHT:200]
@@ -61,6 +62,7 @@
 
 .Quarter log. "Log" (2) [effort:4] [phys:stance,arms]  [noquality] *TIMBERCRAFT* %10% /25/ |0|
 {Half log}		[remove] [ground] [noquality] 	'+to split from half to quarter section' 
+// [masterwoodtype] which works well for naming, seems to be bugged: created item cannot be used from the ground
 {Axe}<Splitting axe> [wearpct:80]
 [MATERIAL:wood]
 [WEIGHT:100]
@@ -68,6 +70,7 @@
 
 .Short quarter log. "Block of wood" (2) [effort:4] [phys:stance,arms]  *TIMBERCRAFT* %10% /15/ |0| [patch:4]
 {Quarter log} (1) [remove] [ground][noquality] [patchwise]
+//[masterwoodtype] doesn't work anymore at this stage
 {Axe} <Woodsman's axe> [wearpct:80]
 //'+to cut across the quarter log'
 [MATERIAL:wood]
@@ -80,9 +83,6 @@
 [MATERIAL:wood]
 [WEIGHT:25]
 
-// Hollowing out blocks for containers
-// or primitive cooking 
-
 .Upper block tub. "Wooden tub" [effort:2] [phys:arms] *Carpentry* /30/ \180\ %-30%
 {Block of wood}	(1)  [remove]
 {Fire}      '+lit nearby'
@@ -90,7 +90,6 @@
 [PRICE:0.1]
 [TYPE:container]
 [CONT_CAPACITY:4]
-//Fire used to weaken upper core of wood the cut out a hole
 
 .Half block tub. "Wooden tub" [effort:3] [phys:arms] *Carpentry* /120/ \180\ %-30% [assist:1]
 {Upper block tub}	(1)  [remove]
@@ -100,7 +99,6 @@
 [PRICE:0.2]
 [TYPE:container]
 [CONT_CAPACITY:12]
-//Dig out upper core then fire used to weaken lower core of wood
 
 .Deep block tub. "Wooden tub" [effort:3] [phys:arms] *Carpentry* /120/ %-30% [assist:1]
 {Half block tub} (1)  [remove]
@@ -109,9 +107,6 @@
 [PRICE:0.3]
 [TYPE:container]
 [CONT_CAPACITY:20]
-//Dig out lower core. 
-//Hefty skill penalty to keep quality down to avoid selling exploint
-//If you want a container to store water stop at this step
 
 .Block pot. "Pot" [effort:1] [phys:arms] *COMMON* /1/ %-30%
 {Deep block tub} (1)  [remove] 
@@ -121,18 +116,6 @@
 [TYPE:container]
 [CONT_CAPACITY:16]
 [MATERIAL:wood]
-// Hefty skill penalty to keep quality down
-// Add rocks for the heating process. 
-// Heat the rocks in a fire then put them inside.
-// Can not model needing to reheat the rocks.
-// The base object changing to pot for cooking seems to prevent
-// using it as a simple water container. Stop at a "tub" step
-// for that.
-
-///////
-//Bundle branches
-//
-// Housekeeping for many branches
 
 .Branch bundle. "Hunting Horn" *COMMON* [noquality] /2m/
 {Branch} (100) [remove] [ground]
@@ -141,27 +124,10 @@
 [MATERAL:wood]
 [TYPE:timber]
 [TILEGFX:wdblk]
-// Desired flotation of own weight
-// Assume a few branches are used to entrap the others
-// Time is short as this is mostly for game housekeeping
 
 .Unbundle branch bundle. (100) "Branch" /1m/ *COMMON* [noquality] [NOPAUSE]
 {Branch bundle} (1) [remove] [ground]
 [NAME:Branch]
-
-///////////////
-// Spruce mat
-// Partly for RP and for storing spruce twigs.
-// Now acts as warmth layer for sleeping and two 
-// count for being wrappted in.
-// I decided against swapping the vanilla shelter to
-// use this as new players wouldn't know about it
-// brygun = original recipe at 20 twigs bundle (for shelter)
-// Signatus = figured out method for "fur" sleep benefits
-// experiments for wrap done at 20 twig/8lbs and 30/12 lbs
-// and 40/16lbs. The 40/16 was found to work
-// time adjust for dissamble reduced from 40 to 20, its just pulling them apart
-
 
 .Spruce mat fur. "Hunting Horn" *COMMON* [noquality] /4m/
 {*spruce twig} (40) [remove] [ground] '+to become a spruce alternate to sleeping on furs'
@@ -170,7 +136,6 @@
 [MATERAL:wood]
 [TYPE:timber]
 [TILEGFX:tr-pitcover]
-// tr-pitcover
 // As a dismantle item only one input is used, otherwise
 // a tying equipment (such as a split spruce twig) would be 
 // called for
@@ -179,26 +144,6 @@
 .Dismantle spruce mat. (40) "Spruce twig" *COMMON* [noquality] /2m/	[NOPAUSE]
 {Spruce mat fur} (1) [remove] [ground]
 [NAME:Spruce twig] 
-
-
-///////////////////////////
-//
-// Boards
-//
-// Refined boards is an effort to improve board quality
-// should you have an adze axe
-//
-// Dried boards have been put out for Carpentry prep
-//
-// Sanded boards are a step furhter to Carpentry
-//
-// Carved boards are meant as an alternate selling item
-// and various RP uses like religion or signs 
-// or using them in other furniture (though no price changes)
-// Carved boards now need dried boards
-//
-// [assist:1] assigned where it seems to be of benefit to
-// have helper steady the board while work is underway
 
 .Dried board.	"Board" [effort:1] *TIMBERCRAFT*	%20% 	 /5/ \30d\	|1|
 {*board} (1) [remove] [ground] '+to place in a sheltered space'
@@ -222,27 +167,12 @@
 // build time for fox-trap ~ 2 hours
 // Base board price is 8 torches ~1/2 squirrel hide
 
-// 3.60 Beta Broken recipe pending fix.
-// Intention to assist players converting existing stock of
-// brich-bark to new code
-//.Trim Birch-bark. "Cord" [effort:0] [phys:hands,one-armed]  [assist:1]     *CARPENTRY*  /15m/  |-1| [patch:5]  
-//{*Birch-bark*}   #0.2#   [remove] [noquality] [patchwise] 
-//{Knife}
-//[MATERIAL:birch-bark]
-//[NAME:Trimmed off birch-bark]
-//[TILEGFX:bc-birchlace]
-// 3.60 cut birch-bark off existing items for cordage
-// meant to help digest tree roll of birch
-
 .Tall roll of Birch-bark. "Block of wood" *TIMBERCRAFT* [effort:3] [phys:arms legs stance] /3h/ 
-{Tree Trunk} [ground] [noquality] '+please choose what was a fresh birch'
+{Birch Tree Trunk} [ground] [noquality] '+please choose what was a fresh birch'
 {Knife} '+to cut and start peeling'
 {Branch} '+to push open bark gently'
 [MATERIAL:birch-bark]
 [WEIGHT: 30]
-//Represents a very big piece of birch bark
-//No longer destroys tree trunk
-//3.60 time increase from 2h to 3h to better fit longer times
 
 .Opened roll of Birch-bark. "Board" *TIMBERCRAFT* [effort:2] [phys:arms legs] /2h/ \18h\ 
 {Tall roll of Birch-bark} (1) [remove]
@@ -252,9 +182,6 @@
 [WEIGHT:30]
 [PRICE:.06]
 [MATERIAL:birch-bark]
-//put the stones in to open it and go do others things a while
-//waiting time is getting it stay in an open shape
-
 
 [SUBMENU_END:lumber]
 

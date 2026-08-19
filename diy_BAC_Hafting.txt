@@ -41,12 +41,9 @@
 
 
 // Draw knife
-// https://en.wikipedia.org/wiki/Drawknife
-// Useful for advanced wood shaping such as the clinkered punt
-// In recipes can be used as the preferred type of knife
-// Used in many ways including when today we would use a planer
 .Haft a draw knife. "Knife" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/30/	 
 {Large knife blade}	 [remove] 	
+{Small handle} (2) [remove]
 {Knife} <Small knife>
 {Hammering tool} [noquality]
 [NAME:Draw knife]

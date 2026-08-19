@@ -1,10 +1,11 @@
 ## TODOs
 - create a readme
 - **keep diy_glossary as vanilla as possible**: if a file is not labelled "BAC", it should be changed the least possible. (although sometimes imperative for fixes) NB: some vanilla recipes have been updated by Sami but never updated in the BAC files (see Lumber below)
-- update [diy_BAC_Lumber](/diy_BAC_Lumber.txt) with the 3.86 added \[masterwoodtype] modding feature. Also vanilla recipes are **wrong**. As the game loads BAC files first, the feature gets removed by BAC.
+- update [diy_BAC_Lumber](/diy_BAC_Lumber.txt) and [mod_diy_BAC_Carpentry](/mod_diy_BAC_Carpentry.txt) with the 3.86 added \[masterwoodtype] modding tag. 
 - merge changelogs & contributors (currently kept separate for ease of use)
 - split new changelogs and archive changelogs (before GitHub, currently kept together for ease of copy/paste)
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
+- add informations about modded items to the encyclopedia (GAME.NFO)
 
 ## unreleased changes
 - \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
@@ -13,12 +14,19 @@
 - added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for references.)
 - moved \_modguide to "BAC_dev_notes" directory. 
 - moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs.
+### unreleased fixes/updates
+- corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
+- fixed "Tall roll of Birch-bark" with the correct {*Birch* Tree Trunk} ingredient
+- added 2 small handles to the draw knife recipe
+### Mod files cleanup
+- Added GAME.NFO to the mod package to start documenting modded items in the encyclopedia instead of using comments in the code.
 - archived diy_BAC_Bows
 - cleaned up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
 - cleaned up comments and logs in [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt)
 - archived outdated Bowstrings from [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Fletching_and_Bowying.txt)
 - cleaned up comments and logs in [diy_BAC_Lumber](/diy_BAC_Lumber.txt)
 - archived outdated Big Spruce Branch from [diy_BAC_Lumber](/diy_BAC_Lumber.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Lumber.txt)
+- started hafting
 
 ## v3.88.2
 - Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)
@@ -116,4 +124,21 @@ Note that some bark equipment have longer (4h) times, which may be an issue, but
 	Inefficient on materials but breaks down production tasks so things like stone axes can make them.  
 	adjust time from 60 to 30 for more likely stone axe and low skill  
 	Testing in freezing conditions lead to a tweak to max 25 minutes as really the character could pause a few minutes to put more wood on the fire but current game mechanics don't allow restarting craft tasks only buildings  
+	- .Half log.  
+	Desired flotation 200 (its own weight)  
+	Former Bouidda "Split trunk" which gave 4 x 60 lbs  
+	- .Quarter log.  
+	Desired flotation 100 (its own weight)  
+	Former Bouidda "Split trunk" which gave 4 x 60 lbs  
+	Usable as boards, used as bowstaves  
+	Brygun changed to 4 x 100 lbs as equal to a log  
+	- .Short quarter log.  
+	Desired flotation 0 (no longer suitable for towing)  
+	Cut in across middle for more likely crafting lengths  
+	Estimate length now 1 to 1.5 m 3 - 4 1/2 ft  
+	No longer counts as boards once radial board was added  
+	Quality affects now in \[...] *note from halavus: remaining text is missing in the original file*  
+	- .Tall roll of Birch-bark.  
+	No longer destroys tree trunk  
+	3.60 time increase from 2h to 3h to better fit longer times  
 	

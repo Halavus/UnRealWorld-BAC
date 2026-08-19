@@ -19,7 +19,6 @@
 //
 // Iron nails (moved to iron working)
 // Adze axe based for working on better watercraft
-// Draw knife which works like a planar to make long smooths
 // Auger for making thick long holes
 // Drill for making thin long holes
 // Pliers for gripping at odd angles and later for making mail
