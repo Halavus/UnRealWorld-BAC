@@ -74,7 +74,7 @@
 
 .Haft a short spear. "Spear" [effort:1] [phys:arms, hands]  *CARPENTRY* 	/45/	[NOPAUSE]
 {Small spear head}	[remove]
-{Spear handle} 		[remove]
+{Spear haft} 		[remove]
 {Knife} <Small knife>
 {Hammering tool} [noquality]
 [NAME:Short spear]
