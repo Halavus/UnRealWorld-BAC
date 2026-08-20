@@ -15,6 +15,8 @@
 - added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for references.)
 - moved \_modguide to "BAC_dev_notes" directory. 
 - moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs.
+- renamed Boats menu to Brigun's watercrafts
+
 ### unreleased fixes/updates
 - corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
 - fixed "Tall roll of Birch-bark" with the correct {*Birch* Tree Trunk} ingredient
@@ -179,14 +181,14 @@ Note that some bark equipment have longer (4h) times, which may be an issue, but
 - in diy_BAC_Transport.txt & mod_diy_BAC_Boats.txt  
 
 Primary discussion at:
-https:www.unrealworld.fi/forums/index.php?topic=4654
+https://www.unrealworld.fi/forums/index.php?topic=4654
 
-Assumes Bouidda's mod or similiar already installed (note: outdated comment, needed items have long been added to BAC)
+Assumes Bouidda's mod or similiar already installed
 
 Raft tweaked to between vanilla and Jeb's thoughts  
 You can now dismantle a raft to get ropes back 
 
-*(note: sections about every boat below, merged, slightly edited and informative descriptions added to the encyclopedia)
+*(note: merged sections about every watercraft below, slightly edited and all informative descriptions added to the encyclopedia)*
 #### Tarp-weave punt
 Brygun's portable leather punt  
 A large tarp over a woven frame making an upside down bowl  
@@ -322,8 +324,6 @@ Log had 800,
 expanding gets 2/3 more per side or 800 x .66 x 2 = 1056  
 ends got shaped -50,  
 can haul 1 - 2 tree trunks plus crewman and gear  
-
-
 
 #### Clinkered punt
 Clinker style punt  

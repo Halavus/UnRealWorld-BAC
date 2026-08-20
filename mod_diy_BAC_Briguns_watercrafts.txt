@@ -2,7 +2,7 @@
 //
 // Sibs: Many recipes have too many components to be displayed in the menu. I ain't touching these, but someone may want to. TODO
 
-[SUBMENU_START:Boats]
+[SUBMENU_START:Brigun's watercrafts]
 
 //Tarp-weave punt
 .Woven boating frame. "Sesta" *CARPENTRY* /60m/  |-1| [phys:arms, stance] [EFFORT:2] [assist:3]
@@ -392,4 +392,4 @@
 // On price bear in mind the iron nails alone are a huge expense
 
 
-[SUBMENU_END:Boats]
+[SUBMENU_END:Brigun's watercrafts]

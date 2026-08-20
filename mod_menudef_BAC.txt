@@ -16,7 +16,7 @@
 .Mining & Iron.		-M- *MAKE*
 .Smithing.		-S- *MAKE*
 .Toolmaking.		-D- *MAKE*
-.Boats.			-B- *MAKE*
+.Brigun's watercrafts.	-B- *MAKE*
 .Utility recipes. 	-U- *COOKERY*
 .Hot smoke.	-H-	*COOKERY*
 .Tub cooking. -T- *COOKERY*
