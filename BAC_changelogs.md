@@ -477,10 +477,10 @@ Arimon 3.7x:
 removed for vanilla raft  
 
 `.Raft.  \[effort:3] \[phys:stance,arms]	\*COMMON* [assist:2]	\/80/ \1\  
-{Tree trunk}	(3) 	\[remove]	  
-{Strong cordage}		=12=    \[remove] \[nominlen]  
-{Cutting weapon} \<Axe> 			  `
-//desired flotation 2400 lbs`  
+`{Tree trunk}	(3) 	\[remove]	  
+`{Strong cordage}		=12=    \[remove] \[nominlen]  
+`{Cutting weapon} \<Axe> 			  `
+`//desired flotation 2400 lbs  
 fallen logs tend to float around the 50% line (simplified)  
 thus weight to flotation \>remaining< is 1 to 1  
 thus weight to float \>total< is 2 to 1  
