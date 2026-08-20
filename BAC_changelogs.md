@@ -531,17 +531,14 @@ the water or be carefully kept on seating area.
 The idea is to use "A"pply to "P"lace the loaded items into the sled wagon.  
 The sled gives a 1:20 load efficiency is 1:20 original.  
 The sled will only hold one type of object at a time.  
-
 Known bug that the items need one clock tick after placing to be useable.  
 That has something to do with coding them as food which starts needing to be prepared.  
-
 Integration of Galgana's Cethegus sledwagon reborn  
 Itself drawing on ideas from Privatter's quiver mod  
 from https:www.unrealworld.fi/forums/index.php?topic=5673.0  
 adapted to BAC with minor edits, wheels now madatory  
 Sled build time longer from 1h to 2h  
 Rope usage from =150= to =100= though listed as split between harness and securing  
-
-Arimon 3.7x:   
+Arimon 3.7x:  
 - changed {Rope} to {Strong cordage}  
 - tweaked descriptive text (added 'Rope')  
