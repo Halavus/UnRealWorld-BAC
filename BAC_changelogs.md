@@ -20,7 +20,8 @@
 
 ### unreleased fixes/updates
 - corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
-- fixed "Tall roll of Birch-bark" with the correct {Birch Tree Trunk} ingredient
+- renamed "Tall roll of Birch-bark" to "Tall Birch-bark roll" to make its hyperlink work correctly in the encyclopedia
+- fixed "Tall Birch-bark roll" with the correct {Birch Tree Trunk} ingredient
 - added 2 small handles to the draw knife recipe
 - fixed "Ball steel hammer" recipe that was making ball iron hammer
 - fixed "Short spear" recipe with correct "small spear head"
@@ -533,3 +534,18 @@ The extra weight above 400 is for that woven area.
 You push the log into the water. It floats itself plus  
 the character with moderate gear. Feet would dangle in  
 the water or be carefully kept on seating area.  
+
+- Sledwagon  
+The idea is to use "A"pply to "P"lace the loaded items into the sled wagon.
+The sled gives a 1:20 load efficiency is 1:20 original.
+The sled will only hold one type of object at a time. 
+
+Known bug that the items need one clock tick after placing to be useable.
+That has something to do with coding them as food which starts needing to be prepared.
+
+Integration of Galgana's Cethegus sledwagon reborn  
+Itself drawing on ideas from Privatter's quiver mod  
+from https:www.unrealworld.fi/forums/index.php?topic=5673.0  
+adapted to BAC with minor edits, wheels now madatory  
+Sled build time longer from 1h to 2h  
+Rope usage from =150= to =100= though listed as split between harness and securing  

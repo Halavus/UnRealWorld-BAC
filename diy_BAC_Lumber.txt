@@ -167,7 +167,7 @@
 // build time for fox-trap ~ 2 hours
 // Base board price is 8 torches ~1/2 squirrel hide
 
-.Tall roll of Birch-bark. "Block of wood" *TIMBERCRAFT* [effort:3] [phys:arms legs stance] /3h/ 
+.Tall Birch-bark roll. "Block of wood" *TIMBERCRAFT* [effort:3] [phys:arms legs stance] /3h/ 
 {Birch Tree Trunk} [ground] [noquality] '+please choose what was a fresh birch'
 {Knife} '+to cut and start peeling'
 {Branch} '+to push open bark gently'
