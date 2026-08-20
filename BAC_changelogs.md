@@ -9,25 +9,25 @@
 - Clarify if diy_BAC_Knitting (currently obsolete) should make a comeback: mod_diy_BAC_Wool has the recipes and both versions use Wool in separate ways. One with cloth, the other with Knitting needles. The TILEGFX of those needles seems to be missing and the process of Knitting shouldn't consume wool "Cloth" but wool yarn.
 
 ## unreleased changes
-- Added GAME.NFO to the mod package to start documenting modded items in the **Encyclopedia (F1)** instead of leaving comments in the code hidden from the player.
+- Added GAME.NFO to the mod package to start documenting modded items in the **Encyclopedia (F1)** instead of leaving comments in the code hidden from the player
 - \[DEV] edited .gitattributes with export-ignore in order to generate a clean and user-friendly releases from GitHub
 - added BAC_changelogs.md
 - added BAC_contributors.md
 - added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for references.)
 - moved \_modguide to "BAC_dev_notes" directory. 
 - moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs.
-- renamed mod_diy_BAC_Boats.txt to [mod_diy_BAC_Briguns_watercrafts.txt](/mod_diy_BAC_Briguns_watercrafts.txt)
+- renamed mod_diy_BAC_Boats.txt to [mod_diy_BAC_Bryguns_watercrafts.txt](/mod_diy_BAC_Bryguns_watercrafts.txt)
 
 ### unreleased fixes/updates
 - corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
-- fixed "Tall roll of Birch-bark" with the correct {*Birch* Tree Trunk} ingredient
+- fixed "Tall roll of Birch-bark" with the correct {Birch Tree Trunk} ingredient
 - added 2 small handles to the draw knife recipe
-- fixed Ball steel hammer recipe that was making ball iron hammer
-- fixed short spear recipe with 'small spear head' instead of 'short spear head'
+- fixed "Ball steel hammer" recipe that was making ball iron hammer
+- fixed "Short spear" recipe with correct "small spear head"
 - tweaked building menu and submenu for making the modded Kota work again
 - added some infos about what is a Tiller. [source](https://www.howtomakealongbow.co.uk/part-5-tillering)
 - changed rope to strong cordage in the "Bark tassets" recipe (Barkware)
-- renamed Boats menu to Brigun's watercrafts
+- renamed Boats menu to Brygun's watercrafts, this man needs credits for the research and work he's done.
 - grouped every watercraft entry together in the game menu using alternating numbers and letters groups
 
 ### Mod files cleanup
@@ -42,7 +42,7 @@
 - cleaned up comments and logs in [diy_BAC_Textilecraft](/diy_BAC_Textilecraft.txt)
 - removed Vanilla Spindle from the BAC files (still present in the Textilecraft menu)
 - archived "\[...] textile needles" (Knitting needles?) from [diy_BAC_Textilecraft](/diy_BAC_Textilecraft.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Textilecraft.txt) as Knitting currently is disabled. Their TILEGFX is missing too.
-- cleaned up comments and logs in [mod_diy_BAC_Briguns_watercrafts](/mod_diy_BAC_Briguns_watercrafts.txt)
+- cleaned up comments and logs in [mod_diy_BAC_Bryguns_watercrafts](/mod_diy_BAC_Bryguns_watercrafts.txt)
 - all useful informations found in the cleaned comments above have been added to the encyclopedia
 
 ## v3.88.2

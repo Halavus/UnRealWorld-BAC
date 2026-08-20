@@ -2,7 +2,7 @@
 //
 // Sibs: Many recipes have too many components to be displayed in the menu. I ain't touching these, but someone may want to. TODO
 
-[SUBMENU_START:Brigun's watercrafts]
+[SUBMENU_START:Brygun's watercrafts]
 
 //Tarp-weave punt
 .Woven boating frame. "Sesta" *CARPENTRY* /60m/  |-1| [phys:arms, stance] [EFFORT:2] [assist:3] -1-
@@ -269,4 +269,4 @@
 [TYPE:vehicle]
 // Desired flotation 3000
 
-[SUBMENU_END:Brigun's watercrafts]
+[SUBMENU_END:Brygun's watercrafts]
