@@ -15,7 +15,6 @@
 - added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for references.)
 - moved \_modguide to "BAC_dev_notes" directory. 
 - moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs.
-- renamed Boats menu to Brigun's watercrafts
 
 ### unreleased fixes/updates
 - corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
@@ -24,8 +23,9 @@
 - fixed Ball steel hammer recipe that was making ball iron hammer
 - fixed short spear recipe with 'small spear head' instead of 'short spear head'
 - tweaked building menu and submenu for making the modded Kota work again
-- added some infos about what is a Tiller. [source](https:www.howtomakealongbow.co.uk/part-5-tillering)
+- added some infos about what is a Tiller. [source](https://www.howtomakealongbow.co.uk/part-5-tillering)
 - changed rope to strong cordage in the "Bark tassets" recipe (Barkware)
+- renamed Boats menu to Brigun's watercrafts
 
 ### Mod files cleanup
 - Added GAME.NFO to the mod package to start documenting modded items in the encyclopedia instead of using comments in the code.
@@ -76,7 +76,7 @@ Note that some bark equipment have longer (4h) times, which may be an issue, but
 2023-12-25 returned to make-fishing menu after attempts to put in cooking found it made them cooked no longer raw  
 
 - Bait cutting  
-2023-12-08 added bait cutting from JP Finn original forum thread: https:www.unrealworld.fi/forums/index.php?topic=7112.0  
+2023-12-08 added bait cutting from JP Finn original forum thread: https://www.unrealworld.fi/forums/index.php?topic=7112.0  
 2023-12-25 cooking menu failed on bait so moved to utility  
 3.84 relocated to fishing menu  
 
@@ -186,7 +186,38 @@ https://www.unrealworld.fi/forums/index.php?topic=4654
 Assumes Bouidda's mod or similiar already installed
 
 Raft tweaked to between vanilla and Jeb's thoughts  
-You can now dismantle a raft to get ropes back 
+You can now dismantle a raft to get ropes back  
+
+Dec 2020 Price increase,  
+Game uses squirrel hides as internal pricing reference (older 3.40 game version)  
+https:unrealworld.fandom.com/wiki/Prices_(v3.40)  
+1 squirrel hide is worth 17 torches  
+In that a tub holding 8 lbs of liquid is price 1  
+larger containers less utility so ratio of hold to price goes down  
+the dug out canoe phase produces such large trough like conatiners  
+
+The tarp for a punt is Price 12  
+mod tarp weave punt is Price: 13 for floation 480  
+baseline 1 Price per 40 float intended, plus a bit  
+
+BAC needed:  
+Collecting large whole sections of birch-bark  
+Adze axe based for working on better watercraft  
+Auger for holes on clinker style punt peg holes  
+Iron nails for the clinker style punt  
+
+Bouidda needed items:  
+Leather cover from hideworking for punt  
+Pitch glue (or * glue) for all others  
+Clay pots can work for heating the glue  
+Bouidda iron working for iron and tool inputs  
+
+Programming note:  
+A note for a suggested "flotation" represents the weight the  
+craft can carry including its own weight and the operator  
+Currently this is not an option in the game though I have  
+suggested it  
+
 
 *(note: merged sections about every watercraft below, slightly edited and all informative descriptions added to the encyclopedia)*
 #### Tarp-weave punt
@@ -195,7 +226,7 @@ A large tarp over a woven frame making an upside down bowl
 Comes out as a very light punt   
 uses 3 entries  
 
-https:www.unrealworld.fi/wiki/index.php?title=Punt  
+https://www.unrealworld.fi/wiki/index.php?title=Punt  
 This variation of the punt uses simple woods and a section of sealed leather  
 It is a light water craft option most useful in early play or as something you can make a few of to stock various camps or river crossings  
 Now uses entries from Bouidda's hideworking section to make the tarp
@@ -203,11 +234,11 @@ Now uses entries from Bouidda's hideworking section to make the tarp
 Reworked to use a leather sheet from hideworking
 
 Corracle weblinks  
-https:www.youtube.com/watch?v=FcAzWOBAfo8&t=209s  
-https:www.youtube.com/watch?v=V2WJeuA_iKY&t=574s  
-https:www.youtube.com/watch?v=bmY0vQmen2A  
-https:www.youtube.com/watch?v=8Q6NUsPymMQ  
-https:www.youtube.com/watch?v=sujYuLMjnH0&t=229s  
+https://www.youtube.com/watch?v=FcAzWOBAfo8&t=209s  
+https://www.youtube.com/watch?v=V2WJeuA_iKY&t=574s  
+https://www.youtube.com/watch?v=bmY0vQmen2A  
+https://www.youtube.com/watch?v=8Q6NUsPymMQ  
+https://www.youtube.com/watch?v=sujYuLMjnH0&t=229s  
 
 Floatation at only a portion of the half sphere from the tarp as it needs to deal with waves and motion.  
 Assume 6 oz leather for 24 sq ft tarp  
@@ -331,47 +362,93 @@ A very large punt comparable to small viking boat
 Uses advanced building methods and tools  
 Not for starting or underequipped characters  
 
-Dec 2020 Price increase, 
-Game uses squirrel hides as internal pricing
-reference (older 3.40 game version)
-https:unrealworld.fandom.com/wiki/Prices_(v3.40)
-1 squirrel hide is worth 17 torches
-In that a tub holding 8 lbs of liquid is price 1
-larger containers less utility so ratio of hold to price goes down
-the dug out canoe phase produces such large trough like conatiners
+6 entries
 
+The ultimate challenge of the BAC mod.  
+To make this you have made custom tools to make customs tools and gathered wood, iron, charcoal while feeding yourself through many weeks or months to do all those steps surely having to fight enemies, survive natural dangers and feed yourself. It is essentially an upside down portable house. It is so big its not practical for simple uses.  
+A clinkered punt is a small viking vessel that could cross to new lands or be used for large scale plundering of enemies. A Norse "viking" drakkar raider or knorr trader is the same technique just bigger.  
+So if you make a clinkered punt you have made a great thing!  
 
-The tarp for a punt is Price 12
-mod tarp weave punt is Price: 13 for floation 480
-baseline 1 Price per 40 float intended, plus a bit
+Maybe you should give it a name.  
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-BAC needed
+Will be the largest of the craft  
+Relies heavily on pre made components and iron tools, including iron nails, iron hammer and iron adze axe  
+Expect to take a rest day amid or after building  
 
-Collecting large whole sections of birch-bark
+Web information links  
+6 planks per side (what I sometimes call clinkers) would look like  
+https:upload.wikimedia.org/wikipedia/commons/d/d6/Clinker-carvel.svg  
 
-Adze axe based for working on better watercraft
-Auger for holes on clinker style punt peg holes
-Iron nails for the clinker style punt
+Wikipedia on clinker building  
+https:en.wikipedia.org/wiki/Clinker_(boat_building)  
 
+A 9m boat from Gokstad (three times this boat's length)  
+from the Gokstad burial and made by the museum  
+https://www.vikingeskibsmuseet.dk/en/professions/boatyard/building-projects/the-gokstad-boat/  
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Bouidda needed items
+Start construction of a Clinkered Punt  
 
-Leather cover from hideworking for punt
-Pitch glue (or * glue) for all others
-Clay pots can work for heating the glue
-Bouidda iron working for iron and tool inputs
+- Posts on keel  
+Keel and posts  
+Makes a |______| shape on the ground.  
+- Lower clinkered keel  
+Adding first boards as strakes onto the keel including bending them  
+Adds weight 48  
+Accumulated Build weight 109  
+Weight add 10 per board, plus nails as figured  
+plus glue #x#, plus #2# for caulking  
+2 pots is deliberate. As a board is steamed ready  
+it is best to caulk it as it is being put on.  
+At the same time one pot for steaming and one for caulking  
+Estimate on nails:  
+For # nails per pound by length see https://www.treeisland.com/sites/default/files/documents/brochures-spec-sheets/Average%20nails%20per%20pound.pdf  
+must pass through 2 boards with excess  
+so the excess can be turned down and around to double secure  
+Assume rough boards 2" thick worked down to 1 1/2" thick  
+Need a 4" nail for clinkering  
+4" common nails are 30 per pound  
+Estimate spacing at 10 cm on clinkering,  
+3 m board length takes 30 nails per side or #1#  
+2 boards x 2 side = #4# per step  
+FYI that is 120 nails per step  
+- Upper clinkered keel  
+Adding the upper boards as strakes to raise height of interior  
+Adds weight 48  
+Accumulated Build weight 157  
+Weight add 10 per board, plus nails as figured  
+plus glue #x#, plus #1# for caulking  
+- Painted ribbed keel  
+Fit ribs and paint boat  
+Attach internal ribs onto the strakes then apply water proofing paint  
+Adds weight 39  
+Accumulated Build weight 196  
+Weights 5 per rib, weight of nails,  
+1/2 weight of paint (sum glue and water)  
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Programming note:
-A note for a suggested "flotation" represents the weight the
-craft can carry including its own weight and the operator
-Currently this is not an option in the game though I have 
-suggested it
+For nailing the ribs the nails must be longer to go through  
+one or two board layers plus the thickness of the rib.  
+There is a shorter length of rib so #1/2# per rib is used  
 
+- Clinkered punt  
+Final finishes  
+Add various this and thats to make a working vessel  
+Adds weight 56+  
+Accumulated Build weight 260  
+Weights: 12 of 20 per board for shaping,  
+17 for anchor system  
+(#9#/shaped stone (not #14#), #2#/shaped stake, #1#/rope),  
+weight of nails, weight of bowl 2#,  
+round up a bit for incidentals  
 
+The anchor consists of a triangle of stakes with the rope tied to one point. A stone shaped/hollowed for this task provides weight. The other two triangle points tend to catch on lakebed below.  
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Discussion on clinkered punt:  
+Consider the final craft to be around 3 meters/yards long  
+desired flotation 3000 lbs including the boat's weight  
+It's hull has twice the material of the Finnish punt  
+With benefits from the cube/square law of volume/area  
+Plus a more ideal boat shape  
 
+The clinkered punt can manage a family with homestead goods or shipments of animals or mounds of furs or raiding party.  
 
+On price bear in mind the iron nails alone are a huge expense  

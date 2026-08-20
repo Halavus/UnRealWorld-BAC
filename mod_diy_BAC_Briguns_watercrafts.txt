@@ -5,7 +5,7 @@
 [SUBMENU_START:Brigun's watercrafts]
 
 //Tarp-weave punt
-.Woven boating frame. "Sesta" *CARPENTRY* /60m/  |-1| [phys:arms, stance] [EFFORT:2] [assist:3]
+.Woven boating frame. "Sesta" *CARPENTRY* /60m/  |-1| [phys:arms, stance] [EFFORT:2] [assist:3] -1-
 {Slender trunk} (2) [ground] [noquality] '+to tie start of weave onto'
 {Branch}(50) [ground] [remove] '+for weaving'
 {Cutting weapon} <Knife> '+for shaping tasks'
@@ -15,7 +15,7 @@
 [TYPE:tool]
 [TILEGFX:it_net]
 
-.Tarp-weave punt. "Punt" *CARPENTRY* /30m/  |-2| [phys:arms, stance] [EFFORT:2] [assist:3]
+.Tarp-weave punt. "Punt" *CARPENTRY* /30m/  |-2| [phys:arms, stance] [EFFORT:2] [assist:3] -2-
 {Woven boating frame} (1) [ground][remove]
 {Leather tarp} (1) [ground][remove]
 [PRICE:13]
@@ -24,7 +24,7 @@
 [TYPE:vehicle]
 // desired flotation 480 lbs
 
-.Recover tarp from punt. "Sesta" *HIDEWORKING* /5m/ |-2| [assist:3] [NOPAUSE]
+.Recover tarp from punt. "Sesta" *HIDEWORKING* /5m/ |-2| [assist:3] [NOPAUSE] -3-
 {Tarp-weave punt} '+will be destroyed'
 [NAME:Leather tarp]
 [MATERIAL:wood]
@@ -37,7 +37,7 @@
 
 
 //Birch-bark punt
-.Braced bark hull. "Log" *TIMBERCRAFT* [effort:3] [phys:arms legs stance] /6h/ \40h\ [assist:3]
+.Braced bark hull. "Log" *TIMBERCRAFT* [effort:3] [phys:arms legs stance] /6h/ \40h\ [assist:3] -A-
 {Opened roll of Birch-bark} (1) [remove] [ground] '+as intact sheet for bottom'
 {Opened roll of Birch-bark} (1) [remove] [ground] '+as extend center sides plus other bits'
 {Tying equipment} =45= [remove] [nominlen] '+to sew with split twigs or better'
@@ -51,7 +51,7 @@
 [PRICE:0]
 [MATERIAL:wood]
 
-.Sheathed bark hull. "Log" *TIMBERCRAFT* [effort:1] [phys:arms legs stance] /6h/ \12h\ [assist:3]
+.Sheathed bark hull. "Log" *TIMBERCRAFT* [effort:1] [phys:arms legs stance] /6h/ \12h\ [assist:3] -B-
 {Braced bark hull} (1) [remove] [ground]
 {Staff} (1) [remove] [ground] '+as two bent outer end posts'
 {Wooden stake} (6) [remove] '+to split for floor sheathing' 
@@ -63,7 +63,7 @@
 [PRICE:0]
 [MATERIAL:wood]
 
-.Ribbed bark hull. "Log" *TIMBERCRAFT* [effort:1] [phys:arms] /6h/ \12h\ [assist:3]
+.Ribbed bark hull. "Log" *TIMBERCRAFT* [effort:1] [phys:arms] /6h/ \12h\ [assist:3] -C-
 {Sheathed bark hull} (1) [remove] [ground]
 {Staff} (2) [ground] [remove] '+to be split for outer gunwale frame'
 {Wooden stake} (2) [ground] [noquality]  '+as inner end posts'
@@ -77,7 +77,7 @@
 [PRICE:0]
 [MATERIAL:wood]
 
-.Birch-bark punt. "Punt" *TIMBERCRAFT* [effort:3] [phys:arms legs stance] /6h/ [assist:3]
+.Birch-bark punt. "Punt" *TIMBERCRAFT* [effort:3] [phys:arms legs stance] /6h/ [assist:3] -D-
 {Ribbed bark hull} [remove] [ground]
 {Wooden stake} (4) [ground] [remove] '+as crossbar thrawts'
 {Tying equipment} =30= [remove] '+to lash woods on'
@@ -90,11 +90,11 @@
 [WEIGHT:60]
 [MATERIAL:wood]
 [TYPE:vehicle]
-// desired flotation 1200 lbs
+// desired [FLOTATION: 1200]
 
 
 // Finnish dug out punt
-.Pointed log. "Log" *TIMBERCRAFT* [effort:4] [phys:arms legs stance] /2.5h/ [assist:3]
+.Pointed log. "Log" *TIMBERCRAFT* [effort:4] [phys:arms legs stance] /2.5h/ [assist:3] -4-
 {Log}		[remove] [ground] [noquality] 	'+as a log smoothed on sides' 
 {Axe}<Broad axe> [wearpct:40]
 [TYPE:timber]
@@ -103,7 +103,7 @@
 [TILEGFX:bc-trunkhalf]
 // desired [FLOTATION: 700]
 
-.Shallow dug hull. "Log" *CARPENTRY* [effort:4] [phys:arms legs stance] /6h/ \4h\ [assist:3]
+.Shallow dug hull. "Log" *CARPENTRY* [effort:4] [phys:arms legs stance] /6h/ \4h\ [assist:3] -5-
 {Pointed log} (1) [ground] [remove]
 {Axe} <Hand axe> [wearpct:70]
 {Fire} '+to start a burn'
@@ -117,7 +117,7 @@
 // desired [FLOTATION: 850]  
 // desired [CONT_CAPACITY:150]  
 
-.Medium dug hull. "Log" *CARPENTRY* [effort:4] [phys:arms legs stance] /6h/ \4h\ [assist:3]
+.Medium dug hull. "Log" *CARPENTRY* [effort:4] [phys:arms legs stance] /6h/ \4h\ [assist:3] -6-
 {Shallow dug hull} (1) [remove] [ground]
 {*adze axe} [wearpct:70] '+to dig out deeper weakened burned material'
 {Fire} '+to continue the burn'
@@ -131,7 +131,7 @@
 // desired [FLOTATION: 900]
 // desired [CONT_CAPACITY:150] 
 
-.Deep dug hull. "Log" *CARPENTRY* [effort:4] [phys:arms legs stance] /6h/ [assist:3]
+.Deep dug hull. "Log" *CARPENTRY* [effort:4] [phys:arms legs stance] /6h/ [assist:3] -7-
 {Medium dug hull} (1) [remove] [ground]
 {*adze axe} [wearpct:70] '+to dig out deeper weakened burned material'
 [TYPE:timber]
@@ -143,7 +143,7 @@
 // desired [FLOTATION: 950]
 // desired [CONT_CAPACITY:250] 
 
-.Expanded log hull. "Wooden tub" *CARPENTRY* [effort:3] [phys:arms legs stance] /6h/ \6h\ [assist:3]
+.Expanded log hull. "Wooden tub" *CARPENTRY* [effort:3] [phys:arms legs stance] /6h/ \6h\ [assist:3] -8-
 {Deep dug hull} (1) [remove] [ground]
 {*glue} #3# [remove] [ground] '+to mix into steaming sealer'
 {Water} #12# [remove] [ground] '+to mix into steaming sealer'
@@ -163,7 +163,7 @@
 // desired [FLOTATION: 1800]
 // desired [CONT_CAPACITY:500] 
 
-.Finnish punt. "Punt" *CARPENTRY* [effort:2] [phys:arms legs stance] /6h/ \1m\ [assist:3]
+.Finnish punt. "Punt" *CARPENTRY* [effort:2] [phys:arms legs stance] /6h/ \1m\ [assist:3] -9-
 {Expanded log hull} (1) [remove] [ground]
 {Knife} <Small knife> '+for planing and smoothing'
 {Rock} (1) '+to hammer knife as a chisel' [noquality]
@@ -178,47 +178,7 @@
 
 
 // Clinkered punt
-// 6 entries
-//
-// The ultimate challenge of the BAC mod.
-// To make this you have made custom tools to make customs tools and
-// gathered wood, iron, charcoal while feeding yourself through
-// many weeks or months to do all those steps surely having to fight
-// enemies, survive natural dangers and feed yourself.
-// It is essentially an upside down portable house. 
-// It is so big its not practical for simple uses.
-// A clinkered punt is a small viking vessel that could cross to new lands
-// or be used for large scale plundering of enemies.
-// A Norse "viking" drakkar raider or knorr trader is the same technique
-// just bigger.
-// So if you make a clinkered punt you have made a great thing!
-//
-// Maybe you should give it a name.
-//
-//
-// Will be the largest of the craft
-// Relies heavily on pre made components and iron tools
-// including iron nails, iron hammer and iron adze axe
-// Expect to take a rest day amid or after building
-//
-// Web information links
-// 6 planks per side (what I sometimes call clinkers) would look like
-// https://upload.wikimedia.org/wikipedia/commons/d/d6/Clinker-carvel.svg
-// 
-// Wikipedia on clinker building
-// https://en.wikipedia.org/wiki/Clinker_(boat_building)
-//
-// A 9m boat from Gokstad (three times this boat's length)
-// from the Gokstad burial and made by the museum
-// https://www.vikingeskibsmuseet.dk/en/professions/boatyard/building-projects/the-gokstad-boat/
-//
-//
-// Start construction of a Clinkered Punt
-//
-// Keel and posts
-// Makes a |______| shape on the ground.
-
-.Posts on keel. "Log" *CARPENTRY* [effort:4] [phys:arms legs stance] /8h/ [assist:3]
+.Posts on keel. "Log" *CARPENTRY* [effort:4] [phys:arms legs stance] /8h/ [assist:3] -D-
 {Quarter log} (1) [remove] [ground] '+as keel'
 {Short quarter log} (2) [remove] [ground] '+as bow stem and stern post'
 {Block of wood} (2) [remove] [ground]  '+as knees at bow and stern'
@@ -233,19 +193,8 @@
 [WEIGHT: 9999]
 [TILEGFX:bc-trunkhalf]
 [PRICE:0]
-// Build weight: 61
-// Flotation equal to weight
-// Weights for assembly: Keel 30, bow stem 12, stern post 12
-// 2 x knees 3 ea, nails
-// The large weight reductions are about using only the ideal
-// portions of the wood. This gets maximum strength from the
-// grain of the wood though there is a lot of discard.
 
-
-// Lower Clinkering
-// Adding first boards as strakes onto the keel including bending them 
-//
-.Lower clinkered keel. "Log" *CARPENTRY* [effort:2] [phys:arms legs stance] /8h/ \4h\ |2| [assist:3]
+.Lower clinkered keel. "Log" *CARPENTRY* [effort:2] [phys:arms legs stance] /8h/ \4h\ |2| [assist:3] -E-
 {Posts on keel} (1) [remove] [ground]
 {Radial board} (4) [remove] [ground] '+split thin for strakes'
 {Water} #16# '+steam strakes for bending'
@@ -264,32 +213,8 @@
 [WEIGHT: 9999]
 [TILEGFX:bc-trunkhalf]
 [PRICE:0]
-// Adds weight 48
-// Accumulated Build weight 109
-// Weight add 10 per board, plus nails as figured
-// plus glue #x#, plus #2# for caulking
-// 2 pots is deliberate. As a board is steamed ready
-// it is best to caulk it as it is being put on.
-// At the same time one pot for steaming and one for caulking
 
-//Estimate on nails
-// For # nails per pound by length see
-// https://www.treeisland.com/sites/default/files/documents/brochures-spec-sheets/Average%20nails%20per%20pound.pdf
-// must pass through 2 boards with excess
-// so the excess can be turned down and around to double secure
-// Assume rough boards 2" thick worked down to 1 1/2" thick
-// Need a 4" nail for clinkering
-// 4" common nails are 30 per pound
-// Estimate spacing at 10 cm on clinkering, 
-// 3 m board length takes 30 nails per side or #1#
-// 2 boards x 2 side = #4# per step
-// FYI that is 120 nails per step
-
-
-// Upper Clinkering
-// Adding the upper boards as strakes to raise height of interior
-//
-.Upper clinkered keel. "Log" *CARPENTRY* [effort:2] [phys:arms legs stance] /8h/  \4h\ |2| [assist:3]
+.Upper clinkered keel. "Log" *CARPENTRY* [effort:2] [phys:arms legs stance] /8h/  \4h\ |2| [assist:3] -F-
 {Lower clinkered keel} (1) [remove] [ground]
 {Radial board} (4) [remove] [ground] '+to be split thin for strakes'
 {Water} #16# '+to steam strakes for bending'
@@ -308,16 +233,8 @@
 [WEIGHT: 9999]
 [TILEGFX:bc-trunkhalf]
 [PRICE:0]
-// Adds weight 48
-// Accumulated Build weight 157
-// Weight add 10 per board, plus nails as figured
-// plus glue #x#, plus #1# for caulking
 
-
-// Fit ribs and paint boat
-// Attach internal ribs onto the strakes then apply water proofing paint
-//
-.Painted ribbed keel. "Log" *CARPENTRY* [effort:2] [phys:arms legs stance] /8h/ \4h\ |2| [assist:3]
+.Painted ribbed keel. "Log" *CARPENTRY* [effort:2] [phys:arms legs stance] /8h/ \4h\ |2| [assist:3] -G-
 {Upper clinkered keel} (1) [remove] [ground]
 {Short quarter log} (3) [remove] [ground]  '+to make two ribs each'
 {*nails} #3# [remove] [ground] '+as long nails for ribs'
@@ -334,20 +251,8 @@
 [WEIGHT: 999]
 [TILEGFX:bc-trunkhalf]
 [PRICE:0]
-// Adds weight 39
-// Accumulated Build weight 196
-// Weights 5 per rib, weight of nails, 
-// 1/2 weight of paint (sum glue and water) 
-//
-// For nailing the ribs the nails must be longer to go through
-// one or two board layers plus the thickness of the rib.
-// There is a shorter length of rib so #1/2# per rib is used
 
-// Final finishes
-// Add various this and thats to make a working vessel
-//
-.Clinkered punt. "Punt" *CARPENTRY* [effort:2] [phys:arms legs stance] /8h/  |2| [assist:3]
-// {Rock} (1) '+ code line for testing'
+.Clinkered punt. "Punt" *CARPENTRY* [effort:2] [phys:arms legs stance] /8h/  |2| [assist:3] -H-
 {Painted ribbed keel} (1) [remove] [ground]
 {*board} (3) [remove] [ground] '+to become bench, deck boards and misc.'
 {*rope} (2) [remove] [ground] [noquality] '+as anchor line'
@@ -363,33 +268,5 @@
 [MATERIAL:wood]
 [TYPE:vehicle]
 // Desired flotation 3000
-// Adds weight 56+
-// Accumulated Build weight 260
-//
-// Weights: 12 of 20 per board for shaping, 
-// 17 for anchor system 
-// (#9#/shaped stone (not #14#), #2#/shaped stake, #1#/rope), 
-// weight of nails, weight of bowl 2#, 
-// round up a bit for incidentals
-// 
-// The anchor consists of a triangle of stakes with the rope
-// tied to one point. A stone shaped/hollowed for this task
-// provides weight. The other two triangle points tend to catch
-// on lakebed below.
-//
-// Discussion on clinkered punt
-//
-// Consider the final craft to be around 3 meters/yards long
-// desired flotation 3000 lbs including the boat's weight
-// It's hull has twice the material of the Finnish punt
-// With benefits from the cube/square law of volume/area
-// Plus a more ideal boat shape
-//
-// The clinkered punt can manage a family with homestead goods
-// or shipments of animals or mounds of furs
-// or raiding party
-//
-// On price bear in mind the iron nails alone are a huge expense
-
 
 [SUBMENU_END:Brigun's watercrafts]
