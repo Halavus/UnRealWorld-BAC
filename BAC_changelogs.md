@@ -307,22 +307,18 @@ Sew extra sheet pices
 put the stones and braces in place to push on sheets  
 needs to sit a long time to take shape  
 Arimon 3.7x: added \[nominlen] to {Tying equipment}
-
 - Sheathed bark hull  
 \#8# fits in one wooden tub  
 Bend and install two outer end posts  
 Split stakes into thin sheathing and lay in canoe  
 Replace weights, let it sit like this  
 Alot of the time is in splitting the wood  
-
 - Ribbed bark hull  
 \#8# fits in one wooden tub  
 Seal sewn sides, bow, stern and any defects  
 Let cool and to settle in shape the last time  
-
 - Birch Bark Punt  
 Good nautical shape with minimal wall structure means above averate flotation of cargo e.g. it's effiecient. Can manage a tree trunk if crew has light or medium gear.  
-
 Birch-punk firewood is used only to keep a small fire going to heat the pitch glue to apply it. So it wouldn't be 3 woods put on all at once but added 1 at a time over the time. Query on how long one added fire wood last. Secondly the glue being sticky to seal isnt the whole 6 hours either. Its a sealing step after the tying is done. So that slow fed fire need not be burning for the whole time. 
 
 #### Finnish punt  
@@ -335,26 +331,21 @@ Brygun's inspiraton based on discussions at https://www.unrealworld.fi/forums/in
 
 - Pointed log  
 Start with "log" not trunk  
-
 - Shallow log  
 Here a hand axe can be used as you are at the open top  
 2023-12-A as per Saami the max safe weight for containers is 25.5  
 2023-12-05 limited capacity put back in  
-
 - Deep dug hull  
 here the adze axe is needed due to working in the confined space  
 This stage could also be used as a trough for soaking leather  
 2023-12-A as per Saami the max safe weight for containers is 25.5  
-
 - Medium dug hull  
 Here the adze axe is needed due to working in the confined space. This stage could also simulate a feeding trough for animals.  
 2023-12-A as per Saami the max safe weight for containers is 25.5  
 2023-12-05 limited capacity put back in  
-
 - Expanded log hull  
 2023-12-A as per Saami the max safe weight for containers is 25.5
 2023-12-05 limited capacity put back in
-
 - Finnish punt  
 Final trimming  
 pun: Finish the Finnish Punt  
@@ -432,11 +423,9 @@ Adds weight 39
 Accumulated Build weight 196  
 Weights 5 per rib, weight of nails,  
 1/2 weight of paint (sum glue and water)  
-
 For nailing the ribs the nails must be longer to go through  
 one or two board layers plus the thickness of the rib.  
 There is a shorter length of rib so #1/2# per rib is used  
-
 - Clinkered punt  
 Final finishes  
 Add various this and thats to make a working vessel  
@@ -447,7 +436,6 @@ Weights: 12 of 20 per board for shaping,
 (#9#/shaped stone (not #14#), #2#/shaped stake, #1#/rope),  
 weight of nails, weight of bowl 2#,  
 round up a bit for incidentals  
-
 The anchor consists of a triangle of stakes with the rope tied to one point. A stone shaped/hollowed for this task provides weight. The other two triangle points tend to catch on lakebed below.  
 
 Discussion on clinkered punt:  
