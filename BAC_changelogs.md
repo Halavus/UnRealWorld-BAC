@@ -475,12 +475,13 @@ Arimon 3.7x:
 	- added \[nominlen] to {Strong cordage}  
 2023-05-14-B 1 min cool time to force dropping  
 removed for vanilla raft  
-
-`.Raft.  \[effort:3] \[phys:stance,arms]	\*COMMON* [assist:2]	\/80/ \1\  
-`{Tree trunk}	(3) 	\[remove]	  
-`{Strong cordage}		=12=    \[remove] \[nominlen]  
-`{Cutting weapon} \<Axe> 			  `
-`//desired flotation 2400 lbs  
+```
+.Raft.  [effort:3] [phys:stance,arms]	*COMMON* [assist:2]	/80/ \1\  
+{Tree trunk}	(3) 	[remove]	  
+{Strong cordage}		=12=    [remove] [nominlen]  
+{Cutting weapon} <Axe> 			  `
+//desired flotation 2400 lbs
+```
 fallen logs tend to float around the 50% line (simplified)  
 thus weight to flotation \>remaining< is 1 to 1  
 thus weight to float \>total< is 2 to 1  
@@ -509,14 +510,16 @@ rafts all over the place.
 Not valid until we have \[FLOTATION:###] command
 After all logs float  
 
-.Floating log. "Punt" (1) \/30m/ \[effort:1] *CARPENTRY* |-2| \[assist:2]  
-{Log} \[remove] \[ground] '+as a debranched tree'  
-{Branch} (20) \[remove] \[ground] '+as a weave for a seating platform'  
-{Knife} '+trim where necessary'  
-\[PRICE:0]  
-\[WEIGHT:405]  
-\[FLOTATION: 800]  
-\[TILEGFX:log]  
+```
+.Floating log. "Punt" (1) /30m/ [effort:1] *CARPENTRY* |-2| [assist:2]
+{Log} [remove] [ground] '+as a debranched tree'
+{Branch} (20) [remove] [ground] '+as a weave for a seating platform'
+{Knife} '+trim where necessary'
+[PRICE:0]
+[WEIGHT:405]
+[FLOTATION: 800]
+[TILEGFX:log]
+```
 Branches woven around stubs of branches to make a  
 safer sitting and cargo area.  
 The extra weight above 400 is for that woven area.  
