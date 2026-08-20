@@ -2,9 +2,7 @@
 
 [SUBMENU_START:transport]
 
-// MODDED:
-
-.Lumber pack frame. "Birch-bark basket" [phys:hands,one-armed] /2h/ [noquality] [assist:1]
+.Lumberpack frame. "Birch-bark basket" [phys:hands,one-armed] /2h/ [noquality] [assist:1]
 {Branch} (9) [remove] '+for framing'
 {Tying equipment} =12= [remove] '+as ties and shoulder straps'
 {Knife}
@@ -14,64 +12,11 @@
 [TYPE:tool]
 [MATERAL:wood]
 [TILEGFX:wdblk]
-// Currently more a decorative item or roleplaying a way to carry
-// Perhaps in later game versions can help carry
-// Current container capacity set to zero as its very open and things fall out
-// Meant more for hauling wood or tying on bags
-
-
-//Vanilla has 5 transport entries
-// One of which is raft
-
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Raft 2 entries
-//
-// The idea here is that Axe + Rope + Sesta/Paddle = river crossing you can carry
-// You would find or fell trees at each river
-// Recover the rope then you want to go inland
-// The recipe system only produces one type of good and the rope
-// is the one that makes this work. Trees to be found/felled again with the axe
-
-// As of 3.60 vanilla raft  uses weight 1200 anyway
-//.Raft.  [effort:3] [phys:stance,arms]	*COMMON* [assist:2]	/80/ \1\
-//{Tree trunk}	(3) 	[remove]	
-//{Strong cordage}		=12=    [remove] [nominlen]
-//{Cutting weapon} <Axe> 			
-// desired flotation 2400 lbs
-// fallen logs tend to float around the 50% line (simplified)
-// thus weight to flotation >remaining< is 1 to 1
-// thus weight to float >total< is 2 to 1
-// use >total< if weight of crat is included which is likely
-// Arimon 3.7x: 
-//	- changed {Rope} to {Strong cordage}
-//	- changed lenght of {Strong cordage} from 10 to 12 to match vanilla recipe
-//	- added [nominlen] to {Strong cordage}
-//2023-05-14-B 1 min cool time to force dropping
-//removed for vanilla raft
-
-
 
 .Free ropes from raft. "Rope" [Length:12] [noquality] [effort:3] [phys:stance,arms]	*COMMON*	/20/ |-2| [assist:3] [NOPAUSE]
 {Raft} [ground] [remove]
 [NAME:freed rope]
 [LENGTH:12]
-//Destroy raft to get ropes back
-//Note only one item type per recipe so can't get the trunks
-//Im under the impression you can find new trees later on
-//3.60 beta code update for length
-//
-//2023-05-03 reactivated, length set to match rope recipe
-//2023-05-14-B fix length to current build of 12, remove raft
-//2023-06-08-A The intention is that you are travelling a long
-//distance overland and would abandon the raft. If you were
-//to be coming back likely you would leae the raft assembled.
-//A sample to use is fleeing a slave start over multiple
-// rivers or an overland migration. The raft and trunks
-// are to heavy to carry but might be found again. The rope
-// might be the only one you have.
-//This recipe is meant for low resource situations as when you
-//have a lot of say hides to make rope you could just leave
-//rafts all over the place.
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Brygun's floating log

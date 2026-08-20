@@ -29,6 +29,7 @@
 - changed rope to strong cordage in the "Bark tassets" recipe (Barkware)
 - renamed Boats menu to Brygun's watercrafts, this man needs credits for the research and work he's done.
 - grouped every watercraft entry together in the game menu using alternating numbers and letters groups
+- renamed "Lumber pack frame" to "Lumberpack frame" for it to show in the encyclopedia
 
 ### Mod files cleanup
 - archived diy_BAC_Bows
@@ -456,3 +457,79 @@ Plus a more ideal boat shape
 The clinkered punt can manage a family with homestead goods or shipments of animals or mounds of furs or raiding party.  
 
 On price bear in mind the iron nails alone are a huge expense  
+
+---
+
+- diy_BAC_Transport.txt  
+	- Lumberpack frame  
+	Currently more a decorative item or roleplaying a way to carry  
+	Perhaps in later game versions can help carry  
+	Current container capacity set to zero as its very open and things fall out  
+	Meant more for hauling wood or tying on bags  
+	
+Vanilla has 5 transport entries
+One of which is raft
+
+- Raft  
+Raft 2 entries
+
+The idea here is that Axe + Rope + Sesta/Paddle = river crossing you can carry  
+You would find or fell trees at each river  
+Recover the rope then you want to go inland  
+The recipe system only produces one type of good and the rope  
+is the one that makes this work. Trees to be found/felled again with the axe  
+
+As of 3.60 vanilla raft uses weight 1200 anyway  
+.Raft.  \[effort:3] \[phys:stance,arms]	\*COMMON* [assist:2]	\/80/ \1\  
+{Tree trunk}	(3) 	\[remove]	  
+{Strong cordage}		=12=    \[remove] \[nominlen]  
+{Cutting weapon} \<Axe> 			  
+desired flotation 2400 lbs  
+fallen logs tend to float around the 50% line (simplified)  
+thus weight to flotation \>remaining< is 1 to 1  
+thus weight to float \>total< is 2 to 1  
+use \>total< if weight of crat is included which is likely  
+Arimon 3.7x:  
+	- changed {Rope} to {Strong cordage}  
+	- changed lenght of {Strong cordage} from 10 to 12 to match vanilla recipe  
+	- added \[nominlen] to {Strong cordage}  
+2023-05-14-B 1 min cool time to force dropping  
+removed for vanilla raft  
+
+- Free ropes from raft  
+Destroy raft to get ropes back  
+Note only one item type per recipe so can't get the trunks  
+Im under the impression you can find new trees later on  
+3.60 beta code update for length  
+
+2023-05-03 reactivated, length set to match rope recipe  
+2023-05-14-B fix length to current build of 12, remove raft  
+2023-06-08-A The intention is that you are travelling a long  
+distance overland and would abandon the raft. If you were  
+to be coming back likely you would leae the raft assembled.  
+A sample to use is fleeing a slave start over multiple  
+ rivers or an overland migration. The raft and trunks  
+ are to heavy to carry but might be found again. The rope  
+ might be the only one you have.  
+This recipe is meant for low resource situations as when you  
+have a lot of say hides to make rope you could just leave  
+rafts all over the place.  
+
+- Brygun's floating log  
+Not valid until we have \[FLOTATION:###] command
+After all logs float  
+
+.Floating log. "Punt" (1) \/30m/ \[effort:1] *CARPENTRY* |-2| \[assist:2]  
+{Log} \[remove] \[ground] '+as a debranched tree'  
+{Branch} (20) \[remove] \[ground] '+as a weave for a seating platform'  
+{Knife} '+trim where necessary'  
+\[PRICE:0]  
+\[WEIGHT:405]  
+\[FLOTATION: 800]  
+\[TILEGFX:log]  
+Branches woven around stubs of branches to make a  
+safer sitting and cargo area.  
+The extra weight above 400 is for that woven area.  
+You push the log into the water. It floats itself plus  
+the character with moderate gear. Feet would dangle in  
+the water or be carefully kept on seating area.  

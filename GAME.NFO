@@ -3457,7 +3457,7 @@ a new house and have a fresh start every thirty years or so.
 //
 .BAC LUMBER.
 DRIED BOARD, SANDED BOARD, CARVED BOARD, BLOCK POT, BRANCH BUNDLE, 
-SPRUCE MAT, TALL ROLL OF BIRCH-BARK, OPENED ROLL OF BIRCH-BARK, 
+SPRUCE MAT, TALL BIRCH-BARK ROLL, OPENED ROLL OF BIRCH-BARK, 
 //are longer names complicated to use?
 
 ***
@@ -3475,7 +3475,7 @@ SHORT SPEAR,
 ***
 
 .BAC TRANSPORT.
-SLEDWAGON, TARP-WEAVE PUNT, BIRCH-BARK PUNT, FINNISH PUNT, CLINKERED PUNT
+LUMBERPACK FRAME, FREE ROPES FROM RAFT, SLEDWAGON, TARP-WEAVE PUNT, [BIRCH-BARK PUNT], FINNISH PUNT, CLINKERED PUNT
 ***
 
 .TILLER.TILLERS.
@@ -3542,7 +3542,7 @@ sleeping check.<br>
 Time is for disassemble has been reduced from 40 to 20, its just pulling them apart.
 ***
 
-.TALL ROLL OF BIRCH-BARK.
+.TALL BIRCH-BARK ROLL.
 Represents a very big piece of birch bark.
 ***
 
@@ -3566,8 +3566,32 @@ edge to back edge). It is pulled or "drawn" (hence the name) toward the user.<br
 Same accuracy than a spear (4), so better than wooden javelin (1)!
 ***
 
-.SLEDWAGON.
+.LUMBERPACK FRAME.
+Meant more for hauling wood or tying on bags. Currently more a decorative item or roleplaying a way to carry.
 
+Perhaps in later game versions can help carry. Current container capacity set to zero as its very open and things fall out.
+***
+
+.FREE ROPES FROM RAFT.
+Destroy a raft to get ropes back.
+
+The intention is that you are travelling a long distance overland and would abandon the raft. If you were to be 
+coming back likely you would leave the raft assembled.<br>
+A sample to use is a "fleeing slave" start over multiple rivers or an overland migration. The raft and trunks 
+are to heavy to carry but might be found again. The ropes might be the only one you have. 
+
+This recipe is meant for low resource situations. When you have a lot of say hides to make rope you could 
+just leave rafts all over the place... 
+***
+
+.SLEDWAGON.
+For loading and unloading tree trunks, logs, slender trunks and clinkered punt.
+
+The sled will only hold one type of object at a time!
+
+The idea is to use 'A'pply to 'P'lace the loaded items into the sledwagon.<br>
+The sled gives a 1:20 load efficiency.<br>
+Known bug that the items need one clock tick after placing to be useable. That has something to do with coding them as food which starts needing to be prepared.
 ***
 
 .TARP-WEAVE PUNT.
