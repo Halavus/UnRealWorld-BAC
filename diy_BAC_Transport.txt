@@ -18,45 +18,6 @@
 [NAME:freed rope]
 [LENGTH:12]
 
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Brygun's floating log
-//
-// Not valid until we have [FLOTATION:###] command
-// After all logs float
-//
-// .Floating log. "Punt" (1) /30m/ [effort:1] *CARPENTRY* |-2| [assist:2]
-// {Log} [remove] [ground] '+as a debranched tree'
-// {Branch} (20) [remove] [ground] '+as a weave for a seating platform'
-// {Knife} '+trim where necessary'
-// [PRICE:0]
-// [WEIGHT:405]
-// [FLOTATION: 800]
-// [TILEGFX:log]
-// Branches woven around stubs of branches to make a
-// safer sitting and cargo area.
-// The extra weight above 400 is for that woven area.
-// You push the log into the water. It floats itself plus
-// the character with moderate gear. Feet would dangle in 
-// the water or be carefully kept on seating area.
-
-// Sledwagon
-//
-// The idea is to use "A"pply to "P"lace the loaded items into the sled wagon.
-// The sled gives a 1:20 load efficiency is 1:20 original.
-// The sled will only hold one type of object at a time. 
-//
-// Known bug that the items need one clock tick after placing to be useable.
-// That has something to do with coding them as food which starts needing to be prepared.
-//
-// Integration of Galgana's Cethegus sledwagon reborn
-// Itself drawing on ideas from Privatter's quiver mod
-// from https://www.unrealworld.fi/forums/index.php?topic=5673.0
-// adapted to BAC with minor edits, wheels now madatory
-// Sled build time longer from 1h to 2h
-// Rope usage from =150= to =100= though listed as split between harness and securing
-//
-
-
 .Sledwagon. "Wooden tub"	*TIMBERCRAFT*	/2h/ [effort:3] [phys:arms,stance] [assist:3] |1| [noquality]
 {Board}		(8)	[remove] [ground] '+ for frame and skis'
 {Block of wood}	(4)	[remove] [ground] '+ for summertime wheels'
@@ -66,11 +27,6 @@
 [WEIGHT:25]
 [CONT_CAPACITY:240]
 [TILEGFX:gg-sledge]
-
-// Arimon 3.7x: 
-//	- changed {Rope} to {Strong cordage}
-//	- tweaked descriptive text (added 'Rope')
-
 
 .Load tree trunk. "Roach"	*COMMON*	/10/ [patch:9] [effort:3] [phys:arms,stance] [assist:3] [noquality] [SPOILAGE_DAYS:0] [NOPAUSE]
 {Sledwagon*}	[ground] '+ stand near sledwagon'
@@ -128,10 +84,10 @@
 [MATERIAL:wood]
 [TYPE:vehicle]
 
-.------------------------------------. "Rock" /1/
+.--- See Brygun's watercrafts ---. "Rock" /1/ ---
 {-} +'This is just a menu space'
 
-.See Boats For More Boat Options. "Rock" /1/
+.--- For more boat options ------. "Rock" /1/ ---
 {-} +'This is just a menu space'
 
 [SUBMENU_END:transport]
