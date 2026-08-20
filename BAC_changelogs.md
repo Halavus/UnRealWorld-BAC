@@ -9,12 +9,14 @@
 - Clarify if diy_BAC_Knitting (currently obsolete) should make a comeback: mod_diy_BAC_Wool has the recipes and both versions use Wool in separate ways. One with cloth, the other with Knitting needles. The TILEGFX of those needles seems to be missing and the process of Knitting shouldn't consume wool "Cloth" but wool yarn.
 
 ## unreleased changes
-- \[DEV] edited .gitattributes with export-ignore in order to generate clean and user-friendly releases from GitHub
+- Added GAME.NFO to the mod package to start documenting modded items in the **Encyclopedia (F1)** instead of leaving comments in the code hidden from the player.
+- \[DEV] edited .gitattributes with export-ignore in order to generate a clean and user-friendly releases from GitHub
 - added BAC_changelogs.md
 - added BAC_contributors.md
 - added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for references.)
 - moved \_modguide to "BAC_dev_notes" directory. 
 - moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs.
+- renamed mod_diy_BAC_Boats.txt to [mod_diy_BAC_Briguns_watercrafts.txt](/mod_diy_BAC_Briguns_watercrafts.txt)
 
 ### unreleased fixes/updates
 - corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
@@ -26,9 +28,9 @@
 - added some infos about what is a Tiller. [source](https://www.howtomakealongbow.co.uk/part-5-tillering)
 - changed rope to strong cordage in the "Bark tassets" recipe (Barkware)
 - renamed Boats menu to Brigun's watercrafts
+- grouped every watercraft entry together in the game menu using alternating numbers and letters groups
 
 ### Mod files cleanup
-- Added GAME.NFO to the mod package to start documenting modded items in the encyclopedia instead of using comments in the code.
 - archived diy_BAC_Bows
 - archived bin_BAC_kota_standard
 - cleaned up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
@@ -40,6 +42,8 @@
 - cleaned up comments and logs in [diy_BAC_Textilecraft](/diy_BAC_Textilecraft.txt)
 - removed Vanilla Spindle from the BAC files (still present in the Textilecraft menu)
 - archived "\[...] textile needles" (Knitting needles?) from [diy_BAC_Textilecraft](/diy_BAC_Textilecraft.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Textilecraft.txt) as Knitting currently is disabled. Their TILEGFX is missing too.
+- cleaned up comments and logs in [mod_diy_BAC_Briguns_watercrafts](/mod_diy_BAC_Briguns_watercrafts.txt)
+- all useful informations found in the cleaned comments above have been added to the encyclopedia
 
 ## v3.88.2
 - Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)
