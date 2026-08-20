@@ -463,29 +463,28 @@ One of which is raft
 
 - Raft  
 Raft 2 entries
-
 The idea here is that Axe + Rope + Sesta/Paddle = river crossing you can carry  
 You would find or fell trees at each river  
 Recover the rope then you want to go inland  
 The recipe system only produces one type of good and the rope  
 is the one that makes this work. Trees to be found/felled again with the axe  
-
 As of 3.60 vanilla raft uses weight 1200 anyway  
-.Raft.  \[effort:3] \[phys:stance,arms]	\*COMMON* [assist:2]	\/80/ \1\  
-{Tree trunk}	(3) 	\[remove]	  
-{Strong cordage}		=12=    \[remove] \[nominlen]  
-{Cutting weapon} \<Axe> 			  
-desired flotation 2400 lbs  
-fallen logs tend to float around the 50% line (simplified)  
-thus weight to flotation \>remaining< is 1 to 1  
-thus weight to float \>total< is 2 to 1  
-use \>total< if weight of crat is included which is likely  
 Arimon 3.7x:  
 	- changed {Rope} to {Strong cordage}  
 	- changed lenght of {Strong cordage} from 10 to 12 to match vanilla recipe  
 	- added \[nominlen] to {Strong cordage}  
 2023-05-14-B 1 min cool time to force dropping  
 removed for vanilla raft  
+
+`.Raft.  \[effort:3] \[phys:stance,arms]	\*COMMON* [assist:2]	\/80/ \1\  
+{Tree trunk}	(3) 	\[remove]	  
+{Strong cordage}		=12=    \[remove] \[nominlen]  
+{Cutting weapon} \<Axe> 			  `
+//desired flotation 2400 lbs`  
+fallen logs tend to float around the 50% line (simplified)  
+thus weight to flotation \>remaining< is 1 to 1  
+thus weight to float \>total< is 2 to 1  
+use \>total< if weight of crat is included which is likely  
 
 - Free ropes from raft  
 Destroy raft to get ropes back  
