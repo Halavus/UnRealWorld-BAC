@@ -468,6 +468,10 @@ You would find or fell trees at each river
 Recover the rope then you want to go inland  
 The recipe system only produces one type of good and the rope  
 is the one that makes this work. Trees to be found/felled again with the axe  
+fallen logs tend to float around the 50% line (simplified)  
+thus weight to flotation \>remaining< is 1 to 1  
+thus weight to float \>total< is 2 to 1  
+use \>total< if weight of crat is included which is likely  
 As of 3.60 vanilla raft uses weight 1200 anyway  
 Arimon 3.7x:  
 	- changed {Rope} to {Strong cordage}  
@@ -482,10 +486,6 @@ removed for vanilla raft
 {Cutting weapon} <Axe> 			  `
 //desired flotation 2400 lbs
 ```
-fallen logs tend to float around the 50% line (simplified)  
-thus weight to flotation \>remaining< is 1 to 1  
-thus weight to float \>total< is 2 to 1  
-use \>total< if weight of crat is included which is likely  
 
 - Free ropes from raft  
 Destroy raft to get ropes back  
@@ -509,6 +509,12 @@ rafts all over the place.
 - Brygun's floating log  
 Not valid until we have \[FLOTATION:###] command
 After all logs float  
+Branches woven around stubs of branches to make a  
+safer sitting and cargo area.  
+The extra weight above 400 is for that woven area.  
+You push the log into the water. It floats itself plus  
+the character with moderate gear. Feet would dangle in  
+the water or be carefully kept on seating area.  
 
 ```
 .Floating log. "Punt" (1) /30m/ [effort:1] *CARPENTRY* |-2| [assist:2]
@@ -520,12 +526,6 @@ After all logs float
 [FLOTATION: 800]
 [TILEGFX:log]
 ```
-Branches woven around stubs of branches to make a  
-safer sitting and cargo area.  
-The extra weight above 400 is for that woven area.  
-You push the log into the water. It floats itself plus  
-the character with moderate gear. Feet would dangle in  
-the water or be carefully kept on seating area.  
 
 - Sledwagon  
 The idea is to use "A"pply to "P"lace the loaded items into the sled wagon.  
