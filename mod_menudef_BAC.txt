@@ -43,10 +43,12 @@
 // L = Lumber
 // T = Trapping
 // R = Transport
+// O = Containers
 // U = Utility articles *MAKE*
 // Y = Tying equipment
 // W = Weapons
 // X = Textilecraft
+// + = Modded handcraft options
 
 
 
