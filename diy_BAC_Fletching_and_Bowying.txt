@@ -160,7 +160,7 @@
 // Added here but could have gone on Lumber menu
 // BAC edit to access quarter log from lumber menu
 .Dry Quarter Log. "firewood" [effort:1] [phys:arms,hands,stance,one-armed] *TIMBERCRAFT* /5/ \30d\ |1| %20% 
-{Quarter log} (1)		[remove] [ground]	'+from the lumber menu'
+{* quarter log} (1)		[remove] [ground]	'+from the lumber menu'
 {Axe} <Carving axe> '+to trim flaws' [wearpct:20]
 [MATERIAL:wood]
 [WEIGHT:30]

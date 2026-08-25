@@ -32,6 +32,7 @@
 - grouped every watercraft entry together in the game menu using alternating numbers and letters groups
 - renamed "Lumber pack frame" to "Lumberpack frame" for it to show in the encyclopedia
 - reworked the Transport menu
+- added \[masterwoodtype] tag to half and quarter logs [a wildcard is needed when used as ingredients](https://www.unrealworld.fi/forums/index.php?topic=7699.msg24992#msg24992) (*) in the subsequent recipes
 
 ### Mod files cleanup
 - archived diy_BAC_Bows
@@ -539,6 +540,6 @@ from https:www.unrealworld.fi/forums/index.php?topic=5673.0
 adapted to BAC with minor edits, wheels now madatory  
 Sled build time longer from 1h to 2h  
 Rope usage from =150= to =100= though listed as split between harness and securing  
-Arimon 3.7x:  
-- changed {Rope} to {Strong cordage}  
-- tweaked descriptive text (added 'Rope')  
+	- Arimon 3.7x:  
+	changed {Rope} to {Strong cordage}  
+	tweaked descriptive text (added 'Rope')  

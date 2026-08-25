@@ -179,7 +179,7 @@
 
 // Clinkered punt
 .Posts on keel. "Log" *CARPENTRY* [effort:4] [phys:arms legs stance] /8h/ [assist:3] -D-
-{Quarter log} (1) [remove] [ground] '+as keel'
+{* quarter log} (1) [remove] [ground] '+as keel'
 {Short quarter log} (2) [remove] [ground] '+as bow stem and stern post'
 {Block of wood} (2) [remove] [ground]  '+as knees at bow and stern'
 {Branch} (2) [remove] [ground] '+for pegs as main joining'
