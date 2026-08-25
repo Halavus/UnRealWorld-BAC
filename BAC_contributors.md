@@ -1,10 +1,10 @@
 # BAC creator
-[Brygun](https://www.unrealworld.fi/forums/index.php?action=profile;u=9): first maintainer & creator of the mod. Many personnal implmentations and minor adaptations of other's mods.
+**[Brygun](https://www.unrealworld.fi/forums/index.php?action=profile;u=9): first maintainer & creator of the mod. Many personnal implmentations and minor adaptations of other's mods.**
 ## BAC contributors in alphabetical order
 Contributors listed below have been found mentioned in the mod files:  
 - [Arimon](https://www.unrealworld.fi/forums/index.php?action=profile;u=5158): updates and fixes
 - [Bedlam](https://www.unrealworld.fi/forums/index.php?action=profile;u=233): [Njerpez Cookery](https://www.unrealworld.fi/forums/index.php?topic=1106.0)
-- [Buoidda](https://www.unrealworld.fi/forums/index.php?action=profile;u=4335): bowyery, ironworking, boneworking, alternate log splitting
+- [Buoidda](https://www.unrealworld.fi/forums/index.php?action=profile;u=4335): bowyery, ironworking, boneworking, alternate log splitting, various tying equipments
 - [Cethegus](https://www.tapatalk.com/groups/urwforum/memberlist.php?mode=viewprofile&u=2813): [Sledwagon] (https://www.tapatalk.com/groups/urwforum/use-cooking-armor-repair-proposition-brainfarts-t4838.html)
 - [cheesealmighty](https://www.unrealworld.fi/forums/index.php?action=profile;u=2419): bug reporting
 - [Galgana](https://www.unrealworld.fi/forums/index.php?action=profile;u=170): [Cethegus Sledwagon reborn](https://www.unrealworld.fi/forums/index.php?topic=5673.0)

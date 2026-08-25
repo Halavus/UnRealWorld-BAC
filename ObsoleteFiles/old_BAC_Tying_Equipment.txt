@@ -1,0 +1,46 @@
+// BAC integration of Tying Equipment
+
+
+[SUBMENU_START:tying equipment]
+
+// MODDED:
+
+.Hemp rope.		"Rope"	*HIDEWORKING*  /30/	[effort:1] [phys:hands]  [assist:1]
+{*Fibre from Hemp}		#1#	[remove] [patchwise]
+{Knife}
+[LENGTH:15]
+// Arimon 3.7x: removed as BAC fibres are no longer a thing
+
+// BAC initial fibre recipe
+// Deactivated as now merging in new Bouidda 2.1 code
+.Fibre from bark. "Hunting horn" (7) [phys:hands,one-armed] *HIDEWORKING* %-20% /45/ [patch:5]
+{*bark*}   #1#   [remove] [noquality] [patchwise] [name:Fibre from %s] [naming:original] '+ willow or rowan bark'
+{Knife}             [noquality]
+[NAME:fibre from rowan-bast]
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:0.1]
+[PRICE:0]
+[TILEGFX:bc-fibre]
+
+// Rudy
+.Extract Alder fibre. 	"Hunting horn" (3)	*CARPENTRY*	/15/ %-20%	[patch] 	[effort:1] 	[phys:arms,stance] [assist:1]
+{Alder bark} 	#1# [remove] [patchwise] [ground] [name:fibre of %s] 'alder bark'
+{Beater} 			[noquality] '+for scutching'
+[NAME:fibre from alder-bast]
+[TYPE:tool]
+[WEIGHT:0.1]
+[PRICE:0]
+[TILEGFX:bc-fibre]
+
+.Fibre from birch-bark basket. "Hunting horn" (7) [phys:hands,one-armed] *HIDEWORKING* %-30% /1h/ [patch:5] 
+{Birch-bark basket}  [remove] [noquality] [patchwise] [name:Fibre from birch-bark] 
+{Knife}             [noquality]
+[TYPE:tool]
+[MATERIAL:birch-bark]
+[WEIGHT:0.1]
+[PRICE:0]
+[TILEGFX:bc-fibre]
+
+
+[SUBMENU_END:tying equipment]

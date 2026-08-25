@@ -9,7 +9,7 @@
 - Clarify if diy_BAC_Knitting (currently obsolete) should make a comeback: mod_diy_BAC_Wool has the recipes and both versions use Wool in separate ways. One with cloth, the other with Knitting needles. The TILEGFX of those needles seems to be missing and the process of Knitting shouldn't consume wool "Cloth" but wool yarn.
 
 ## unreleased changes
-- Added GAME.NFO to the mod package to start documenting modded items in the **Encyclopedia (F1)** instead of leaving comments in the code hidden from the player
+- Added GAME.NFO to the mod package to start documenting modded items in the **Encyclopedia (F1)** instead of leaving comments in the code, hidden from the player
 - \[DEV] edited .gitattributes with export-ignore in order to generate a clean and user-friendly releases from GitHub
 - added BAC_changelogs.md
 - added BAC_contributors.md
@@ -50,6 +50,8 @@
 - all useful informations found in the cleaned comments above have been added to the encyclopedia
 - archived diy_BAC_Trapping as it only contains vanilla items
 - removed outdated bigsprite.png references (:148:, etc.) in [cookery_glossary](/cookery_glossary.txt)
+- archived inactive recipes from [diy_BAC_Tying_Equipment](/diy_BAC_Tying_Equipment.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Tying_Equipment.txt)
+- cleaned up comments and logs in [diy_BAC_Tying_Equipment](/diy_BAC_Tying_Equipment.txt)
 
 ## v3.88.2
 - Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)
@@ -544,3 +546,65 @@ Rope usage from =150= to =100= though listed as split between harness and securi
 	- Arimon 3.7x:  
 	changed {Rope} to {Strong cordage}  
 	tweaked descriptive text (added 'Rope')  
+
+- diy_BAC_Tying_Equipment.txt  
+	for easier tracking BAC moves the  
+	diy_glossary tying equipment entries  
+	to diy_BAC_Tying_Equipment.txt  
+	
+	=\[assist:1] added to most cord and rope making to match  
+	vanilla setting  
+	=Pricing debated. Quality materials lost price code to go  
+	with default. Low quality ones set to low price values.  
+	= List reordered to group quality from primitive  
+	= Root rope from Brygun_Added_Items now using birch-bark rope  
+	as base object  
+	= Review of skills assigned  
+	= Fix Untie loop snare to return 3 ft as used to make it  
+	
+	2020 Dec 07  
+	Adjustments to have braided rope from cords as per Bouidda 2.1  
+	twisted cord from Bouidda 2.a  
+	Leather cord is an option  
+	String now wastes some material for better quality output, skill bonus 15 -> 20  
+	
+	fibres updated based on discussions in Dec 2020 though not exact matches
+	see Bouidda 2.1 for the research notes. Alder not suitable for fibres.
+	
+	2023-05  
+	Untie loop snare set to return new vanilla length of 6  
+	
+	Sibs: Updated to 3.84  
+	- .Braided rope.  
+	From Buoidda v2.1  
+	Rope is now made by braiding 3 cords together  
+	"cord" will produce cord rope, which I don't like too much  
+	mixed cords will produce 'mixed braided rope'  
+	- .Birch root.  
+	Should only be usable when soil isn't frozen  
+	This is a readily available general tying equipment.  
+	For any mod recipe that previously had {Tying equipment} requirement  
+	I recommend assessing if {\*cord} 'Cord' would be better:  
+	Like bows, arrows, bags, nets, fishing rods etc.  
+	To prevent roots being used in such recipes.  
+	- .Split spruce twig.  
+	This is a readily available general tying equipment.  
+	For any mod recipe that previously had {Tying equipment} requirement  
+	I recommend assessing if {\*cord} 'Cord' would be better:  
+	Like bows, arrows, bags, nets, fishing rods etc.  
+	Length assumes splitting a reasonable branch in two  
+	Also results in shorter yields as a primitive method  
+	Length set to 4 feet same as withe. I debate on this but that a different length might cause issues.  
+	Arimon 3.7x: changed {Spruce twig} to {spruce twig} (as reported by Galgana in the 3.63 thread of the BAC mod on page 56 post #831 this recipe doesnt work with {Spruce twig} any more, for some reason it does with {spruce twig}, pls dont ask me why)  
+	- .Root rope.  
+	Represents digging out surface roots which are semiflexible  
+	then braiding them up with a stone weight for tension  
+	price reduced  
+	length reduced from 15 to 9 simulating the lengths likely found  
+	- .Untie Loop Snare.  
+	Returns default generic cord which might be higher value then what made the snare in the first place  
+	- .Extract Rowan fibre.  
+	Adapted from Bouidda 2.1  
+	- .Extract Spruce fibre.  
+	Adapted from Bouidda 2.1  
+	
