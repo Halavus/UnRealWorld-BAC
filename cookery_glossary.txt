@@ -26,6 +26,7 @@
 // /#Unavailable/ time alloted.
 //
 // TODO: update OFF_EASIER_cookery_glossary.txt after cleaning up here
+// double check or make a diff with vanilla
 
 [SUBMENU_START:baking]
 
