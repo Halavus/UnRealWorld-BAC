@@ -1,0 +1,10 @@
+First idea, to be tested:
+
+Save outdated modded version somewhere
+
+Copy new vanilla version into repo
+
+-Paste BAC Menu into
+-Paste all BAC items at the end of the file
+
+Playtest
