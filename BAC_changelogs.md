@@ -7,6 +7,9 @@
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
 - add informations about modded items to the encyclopedia (GAME.NFO)
 - Clarify if diy_BAC_Knitting (currently obsolete) should make a comeback: mod_diy_BAC_Wool has the recipes and both versions use Wool in separate ways. One with cloth, the other with Knitting needles. The TILEGFX of those needles seems to be missing and the process of Knitting shouldn't consume wool "Cloth" but wool yarn.
+## Known issues
+- [issue with resumability](https://www.unrealworld.fi/forums/index.php?topic=7678.msg24897#msg24897) of modded items is caused by the recipe's >$\[name] tag not matching the '.name.' of the item.  
+	Many, many BAC items and tweaks use this naming trick to work (e.g. "Offload a tree trunk") or use this naming convention for simply... good naming. \[NOPAUSE] tag has been added to them.
 
 ## unreleased changes
 - Added GAME.NFO to the mod package to start documenting modded items in the **Encyclopedia (F1)** instead of leaving comments in the code, hidden from the player
@@ -28,11 +31,14 @@
 - tweaked building menu and submenu for making the modded Kota work again
 - added some infos about what is a Tiller. [source](https://www.howtomakealongbow.co.uk/part-5-tillering)
 - changed rope to strong cordage in the "Bark tassets" recipe (Barkware)
-- renamed Boats menu to Brygun's watercrafts, this man needs credits for the research and work he's done.
+- renamed Boats menu to 'Brygun's watercrafts', this person needs credit for the research and work he's done for all BAC enjoyers.
 - grouped every watercraft entry together in the game menu using alternating numbers and letters groups
 - renamed "Lumber pack frame" to "Lumberpack frame" for it to show in the encyclopedia
 - reworked the Transport menu
 - added \[masterwoodtype] tag to half and quarter logs [a wildcard is needed when used as ingredients](https://www.unrealworld.fi/forums/index.php?topic=7699.msg24992#msg24992) (*) in the subsequent recipes
+- temporarly disabled the custom naming of certain items (e.g. <ins>Elk</ins> antler comb -> Antler comb) for allowing them to be pausable again
+- removed nopause where unnecessary in boneworking recipes
+- removed unnecessary descriptive text in boneworking recipes
 
 ### Mod files cleanup
 - archived diy_BAC_Bows
@@ -52,6 +58,9 @@
 - removed outdated bigsprite.png references (:148:, etc.) in [cookery_glossary](/cookery_glossary.txt)
 - archived inactive recipes from [diy_BAC_Tying_Equipment](/diy_BAC_Tying_Equipment.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Tying_Equipment.txt)
 - cleaned up comments and logs in [diy_BAC_Tying_Equipment](/diy_BAC_Tying_Equipment.txt)
+- started [mod_diy_BAC_Boneworking.txt](/mod_diy_BAC_Boneworking.txt)
+- archived inactive recipes from [mod_diy_BAC_Boneworking.txt](/mod_diy_BAC_Boneworking.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Boneworking.txt)
+
 
 ## v3.88.2
 - Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)

@@ -1,0 +1,79 @@
+// BAC archive of Boneworking
+
+
+[SUBMENU_START:Hide and Bone]
+
+.Bone fishhook. "Hunting horn" [effort:0] [phys:hands,one-armed] *CARPENTRY* %-30% /60/
+{*bone} #0.1# [remove] [noquality] '+as main material'
+{Fibre from*} [remove] [noquality]	'+for initial ties'
+{*glue} #0.1# [remove] [noquality]		
+{Fire} [noquality] '+to apply glue'
+{Knife}<Small knife>
+[WEIGHT:0.05]
+[MATERIAL:antler]
+[NAME:Fishhook]
+[PRICE:0]
+[TILEGFX:bc-hook]
+//Arimon 3.7x: removed for now as there is a vanilla Bone fishhook
+
+.Knife handle pieces. "Hunting horn" [effort:1] [phys:hands]   *CARPENTRY*  %-10%  /5h/ 
+{*reindeer antler} #0.5# [remove] [noquality] '+ reindeer antler'
+{Leather} #0.1# [remove] [noquality] '+leather in between'
+{Axe}	 [noquality] [wearpct:30]
+{Knife} <Small knife>
+[TILEGFX:bc-antpieces]
+//3.84 Removed for hafting integration
+
+///////////////////////
+// Backstrap
+//
+// The backstrap can refer to not just the meat but
+// to the long strong ligaments running along the spine
+// of large animals.
+// The backstrap concept and recipe traces to Bouidda's mod
+// It can be used to make sinew fibre
+
+
+.Reindeer backstrap. "Hunting horn" [effort:1] [phys:arms] *COMMON*  /15/ [noquality]
+{*reindeer* carcass*}	[ground]	'+Use each reindeer carcass once'
+{Knife} 
+[TYPE:tool]
+[WEIGHT:1]
+[PRICE:0.5]
+[TILEGFX:bc-backstrap]
+
+.Elk backstrap. "Hunting horn" [effort:1] [phys:arms] *COMMON*  /15/ [noquality]
+{*elk* carcass*}	[ground]	'+Use each elk carcass once'
+{Knife} 
+[TYPE:tool]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-backstrap]
+
+
+.Bear backstrap. "Hunting horn" [effort:1] [phys:arms] *COMMON*  /15/ [noquality]
+{*bear* carcass*}	[ground]	'+Use each bear carcass once'
+{Knife} 
+[TYPE:tool]
+[WEIGHT:2]
+[PRICE:0]
+[TILEGFX:bc-backstrap]
+//2023-05-14-A appears game as renamed stags to bull elk
+//2023-05-14-B As per Tinker's suggestion changed to bear as
+// bull elk, formerly stag, can be captured with elk backstrap
+
+///////////
+// Sinew
+//
+// From Bouidda
+// Sinew given a positive skill boost to make quality cord
+// Brygun increase skill boost form +20 to +30
+
+.Dried sinew fibre. (5)	"Hunting horn"	[phys:hands,one-armed] /15/ \4h\ *HIDEWORKING* %30%
+{*backstrap}	#1#	[remove]		'+as a deers back tendon'
+{Knife}				[noquality]	'+for scraping clean'
+[WEIGHT:0.1]
+[TILEGFX:bc-fibre]
+
+
+[SUBMENU_END:Hide and Bone]
