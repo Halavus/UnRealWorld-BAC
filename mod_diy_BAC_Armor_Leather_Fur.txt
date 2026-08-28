@@ -218,7 +218,8 @@
 
 //////////////////////////
 // Fur clothes
-//
+
+//VANILLA:
 
 .Fur cap.   [effort:1] [phys:arms,hands]   *CLOTHCRAFT*    /6h/   |1|
 {Animal hide} #1.2# [remove]
