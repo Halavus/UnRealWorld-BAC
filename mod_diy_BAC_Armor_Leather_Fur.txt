@@ -37,8 +37,8 @@
 
 /////////////////////////////
 // Leather clothes
-//
 
+//VANILLA:
 
 .Leather belt.  [effort:1] [phys:arms,hands]   *CLOTHCRAFT*  %35%  /60/ |-1|
 {Leather} #0.4# [remove]
