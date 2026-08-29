@@ -31,7 +31,7 @@
 - tweaked building menu and submenu for making the modded Kota work again
 - added some infos about what is a Tiller. [source](https://www.howtomakealongbow.co.uk/part-5-tillering)
 - changed rope to strong cordage in the "Bark tassets" recipe (Barkware)
-- renamed Boats menu to 'Brygun's watercrafts', this person needs credit for the research and work he's done for all BAC enjoyers.
+- renamed Boats menu to 'Brygun's watercrafts', this person needs credit for the research and work they've done for all BAC enjoyers.
 - grouped every watercraft entry together in the game menu using alternating numbers and letters groups
 - renamed "Lumber pack frame" to "Lumberpack frame" for it to show in the encyclopedia
 - reworked the Transport menu
