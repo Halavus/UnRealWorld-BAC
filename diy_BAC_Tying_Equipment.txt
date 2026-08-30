@@ -10,20 +10,20 @@
 [LENGTH:15]
 [MATERIAL:leather]
 
-.Twisted cord. 		"Cord"		[phys:hands,one-armed] *HIDEWORKING* /45/ [patch] [assist:1]	[NOPAUSE]
-{*fibre from *} #0.5#	[remove] [patchwise] 'fibre'   [name:%s cord] [naming:last word]
+.Twisted cord. 		"Cord"		[phys:hands,one-armed] *TEXTILECRAFT* /45/ [patch] [assist:1] [NOQUALITY]	[NOPAUSE]
+{*fibre from *} #0.5#	[remove] [patchwise] 'bast or birch fibre'   [name:%s cord] [naming:last word]
 [WEIGHT:0.5]
 [PRICE:0.02]
 [LENGTH:15] 
 
-.Refined cord.		"Cord"		[patch:5]	%20%	*HIDEWORKING* 	/60/	 [effort:1] [phys:hands]  [assist:1]
-{*fibre from *} 		#0.7#	[remove] [noquality] [patchwise] '+ use plant or bark fibres'
+.Refined cord.		"Cord"		[patch:5]	%20%	*TEXTILECRAFT* 	/60/	 [effort:1] [phys:hands]  [assist:1]
+{*fibre from *} 		#0.7#	[remove] [noquality] [patchwise] 'bast or birch fibre'
 {Knife} '+ to refine quality'
 [WEIGHT:0.5]
 [PRICE:0.03]
 [LENGTH:15]
 
-.Refine a cord.		"Cord"		%20%	*HIDEWORKING* 	/30/	 [effort:1] [phys:hands]  [assist:1] [NOPAUSE]
+.Refine a cord.		"Cord"		%20%	*TEXTILECRAFT* 	/30/	 [effort:1] [phys:hands]  [assist:1] [NOPAUSE]
 {Cord} 	=16=	[remove] [noquality]
 {Knife} '+ to refine quality'
 {*comb}
@@ -33,15 +33,15 @@
 [PRICE:0.03]
 [LENGTH:15]
 
-.Braided rope. "Rope"	-R-	[phys:hands,one-armed] *HIDEWORKING* /20/ [patch:5] [assist:1] |-2| [NOPAUSE]
+.Braided rope. "Rope"	-R-	[phys:hands,one-armed] *TEXTILECRAFT* /20/ [patch:5] [assist:1] |-2| [NOPAUSE]
 {*cord*} =9=	[remove] [patchwise] 'cord' [name:%s rope] [naming:last word]
 [LENGTH:3]
 [WEIGHT:0.3]
 [PRICE:0.7]
 
 .Birch root. "Cord" [effort:2] [phys:hands,one-handed] 	*CARPENTRY* /20/ [noquality] [patch] [assist:1]
-{[NEARBY_TILE:birch]}					'+have a birch nearby'
-{[NEARBY_TILE:*ground]} '+not to be done with snow or ice on ground'
+{[NEARBY_TILE:birch]}		'Have a birch nearby'
+{[NEARBY_TILE:*ground]} 	'Not in snowy or icy conditions'
 {Knife}
 [MATERIAL:wood]
 [WEIGHT:1]
@@ -50,14 +50,15 @@
 
 .Split spruce twig. (2) "Cord" [effort:1] [phys:hands,one-handed] *CARPENTRY* /10/ %-45% [patch] [assist:1]
 {spruce twig}	[remove] [patchwise]
+//do not capitalize spruce twig otherwise the recipe fails
 {Knife}<Small knife>
 [PRICE:0.01]
 [MATERIAL:wood]
 [LENGTH:4] 
 
 .Root rope. "Birch-bark rope" [effort:2] [noquality][phys:hands] *CARPENTRY*  /2h/ |-1| [assist:1]
-{[NEARBY_TILE:Spruce]} '+have a spruce tree nearby'
-{[NEARBY_TILE:*ground]} '+not with snow or ice on the ground'
+{[NEARBY_TILE:Spruce]} 		'Have a spruce tree nearby'
+{[NEARBY_TILE:*ground]} 	'Not in snowy or icy conditions'
 {Rock} '+for digging out thin roots'
 {Stone} '+for tension when braiding roots together for strength'
 [PRICE:0.2]
@@ -67,8 +68,8 @@
 {Loop snare}	(1)			[remove] [name:Cord]
 [LENGTH:6]
 
-.Extract Rowan fibre. 	"Hunting horn" (3)	*CARPENTRY*	/15/ %-20%	[patch] 	[effort:1] 	[phys:arms,stance] [assist:1] [NOPAUSE]
-{Rowan bark} 	#1# [remove] [patchwise] [ground] [name:fibre of %s] 'rowan bark'
+.Extract Rowan fibre. 	"Hunting horn" (3)	*TEXTILECRAFT*	/15/ %-20%	[patch] 	[effort:1] 	[phys:arms,stance] [assist:1] [NOPAUSE]
+{Rowan bark} 	#1# [remove] [patchwise] [ground] 'rowan bark'
 {Beater} 			[noquality] '+for scutching'
 [NAME:fibre from rowan-bast]
 [TYPE:tool]
@@ -76,7 +77,7 @@
 [PRICE:0]
 [TILEGFX:bc-fibre]
 
-.Extract Spruce fibre. 	"Hunting horn"	*CARPENTRY*	/45/ %-30%	[patch:5] 	[effort:0] 	[phys:arms,stance] [assist:1] [NOPAUSE]
+.Extract Spruce fibre. 	"Hunting horn"	*TEXTILECRAFT*	/45/ %-30%	[patch:5] 	[effort:0] 	[phys:arms,stance] [assist:1] [NOPAUSE]
 {Spruce twig} 	[remove] [patchwise] [ground] [noquality]
 {Fire}				[noquality] '+for softening inner sap'
 {Beater} 			[noquality] '+for scutching'
@@ -86,9 +87,10 @@
 [PRICE:0]
 [TILEGFX:bc-fibre] 
 
-.Fibre from raw birch-bark. "Hunting horn" (7) [phys:hands,one-armed] *HIDEWORKING* %-30% /1h/ [patch:5] [NOPAUSE]
-{*Birch-bark*}   #1#   [remove] [noquality] [patchwise] [name:Fibre from birch-bark] 
+.Fibre from raw birch-bark. "Hunting horn" (7) [phys:hands,one-armed] *TEXTILECRAFT* %-30% /1h/ [patch:5] [NOPAUSE]
+{*Birch-bark*}   #1#   [remove] [noquality] [patchwise]
 {Knife}             [noquality]
+[NAME:Fibre from birch-bark] 
 [TYPE:tool]
 [MATERIAL:birch-bark]
 [WEIGHT:0.1]

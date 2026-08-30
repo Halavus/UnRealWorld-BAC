@@ -7,6 +7,8 @@
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
 - add informations about modded items to the encyclopedia (GAME.NFO)
 - Clarify if diy_BAC_Knitting (currently obsolete) should make a comeback: mod_diy_BAC_Wool has the recipes and both versions use Wool in separate ways. One with cloth, the other with Knitting needles. The TILEGFX of those needles seems to be missing and the process of Knitting shouldn't consume wool "Cloth" but wool yarn.
+- Review Tying Equipment recipes to ensure ingredients' required lengths and weights are consistent with vanilla Textilecraft options
+
 ## Known issues
 - [issue with resumability](https://www.unrealworld.fi/forums/index.php?topic=7678.msg24897#msg24897) of modded items is caused by the recipe's >$\[name] tag not matching the '.name.' of the item.  
 	Many, many BAC items and tweaks use this naming trick to work (e.g. "Offload a tree trunk") or use this naming convention for simply... good naming. \[NOPAUSE] tag has been added to them.
@@ -39,6 +41,8 @@
 - temporarly disabled the custom naming of certain items (e.g. <ins>Elk</ins> antler comb -> Antler comb) for allowing them to be pausable again
 - removed nopause where unnecessary in boneworking recipes
 - removed unnecessary descriptive text in boneworking recipes
+- updated Tying Equipment recipes with TEXTILECRAFT skill instead of Hideworking
+- clarified Tying Equipment recipes' text descriptions
 
 ### Mod files cleanup
 - archived diy_BAC_Bows

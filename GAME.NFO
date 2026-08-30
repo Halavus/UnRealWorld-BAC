@@ -3480,7 +3480,7 @@ LUMBERPACK FRAME, FREE ROPES FROM RAFT, SLEDWAGON, TARP-WEAVE PUNT, [BIRCH-BARK 
 ***
 
 .BAC TYING EQUIPMENT.
-BRAIDED ROPE, BIRCH ROOT, ROOT ROPE
+BIRCH CORD, TWISTED CORD, REFINED CORD, REFINE A CORD, BRAIDED ROPE, BIRCH ROOT, SPLIT SPRUCE TWIG, ROOT ROPE, UNTIE LOOP SNARE, EXTRACT ROWAN FIBRE, EXTRACT SPRUCE FIBRE, FIBRE FROM RAW BIRCH-BARK
 ***
 
 .TILLER.TILLERS.
@@ -3686,16 +3686,67 @@ stakes with the rope tied to one point. A stone shaped/hollowed for this task pr
 triangle points tend to catch on lakebed below.
 ***
 
+.BIRCH CORD.
+A cord from birch-bark strip.
+***
+
+.TWISTED CORD.
+Make a cord from Rowan, Spruce or Birch fibres.
+No quality.
+
+To be used after:<br>
+-Extract Rowan fibre<br>
+-Extract Spruce fibre<br>
+-Fibre from raw birch-bark
+***
+
+.REFINED CORD.
+Make a refined cord from Rowan, Spruce or Birch fibres, needs a knife.<br>
+Potentially of higher quality.
+
+To be used after:<br>
+-Extract Rowan fibre<br>
+-Extract Spruce fibre<br>
+-Fibre from raw birch-bark
+***
+
+.REFINE A CORD.
+Trim and comb a cord's fibres, potentially improving its quality at the cost of some length.
+***
+
 .BRAIDED ROPE.
 Rope is now made by braiding 3 cords together, 'cord' will produce 'cord rope', which Buoidda didn't like too much.
 ***
 
 .BIRCH ROOT.
-A rope from a birch's roots. Is only be usable when soil isn't frozen.
+A cord from a birch's roots. Can only be made when the ground isn't frozen.
 ***
 
-.Root rope.
-A rope from a spruce's roots. Is only be usable when soil isn't frozen.
+.SPLIT SPRUCE TWIG.
+Small cords made of a Spruce Twig.
+***
+
+.ROOT ROPE.
+A rope from a spruce's roots. Can only be made when the ground isn't frozen.
 
 Represents digging out surface roots which are semiflexible, then braiding them up with a stone weight for tension.
 ***
+
+.UNTIE LOOP SNARE.
+Get the used cord back. 
+***
+
+.EXTRACT ROWAN FIBRE.
+Extract fibres from rowan bark.
+***
+
+.EXTRACT SPRUCE FIBRE.
+Extract fibres from a spruce twig.
+
+***
+
+.FIBRE FROM RAW BIRCH-BARK.
+Extract fibres from birch-bark.
+***
+
+
