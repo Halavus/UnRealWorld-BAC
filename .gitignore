@@ -46,5 +46,7 @@ gameinfo/
 messages/
 truegfx/
 
+#Ignore your save directories locally in .git/info/exclude
+
 #OSX BS
 .DS_Store
