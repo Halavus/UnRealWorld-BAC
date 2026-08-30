@@ -12,7 +12,7 @@
 - [issue with resumability](https://www.unrealworld.fi/forums/index.php?topic=7678.msg24897#msg24897) of modded items is caused by the recipe's >$\[name] tag not matching the '.name.' of the item.  
 	Many, many BAC items and tweaks use this naming trick to work (e.g. "Offload a tree trunk") or use this naming convention for simply... good naming. \[NOPAUSE] tag has been added to them.
 
-## v3.88.3 - Encyclopedia release (notable changes in bold)
+## v3.88.3 - Encyclopedia release
 - **Added GAME.NFO to the mod package to document modded items in the **Encyclopedia (F1)** instead of leaving comments in the code, hidden from the player**
 - added BAC_changelogs.md
 - **added BAC_contributors.md**
