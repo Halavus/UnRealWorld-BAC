@@ -9,37 +9,41 @@
 - Review Tying Equipment recipes to ensure ingredients' required lengths and weights are consistent with vanilla Textilecraft options
 
 ## Known issues
-- [issue with resumability](https://www.unrealworld.fi/forums/index.php?topic=7678.msg24897#msg24897) of modded items is caused by the recipe's >$\[name] tag not matching the '.name.' of the item.  
+- [issue with resumability](https://www.unrealworld.fi/forums/index.php?topic=7678.msg24897#msg24897) of modded items is caused by the recipe's \[name] tag not matching the '.name.' of the item.  
 	Many, many BAC items and tweaks use this naming trick to work (e.g. "Offload a tree trunk") or use this naming convention for simply... good naming. \[NOPAUSE] tag has been added to them.
+- a few lengthier encyclopedia hyperlinks don't get (automatically) linked properly
 
 ## v3.88.3 - Encyclopedia release
+### Notable changes
 - **Added GAME.NFO to the mod package to document modded items in the **Encyclopedia (F1)** instead of leaving comments in the code, hidden from the player**
-- added BAC_changelogs.md
 - **added BAC_contributors.md**
-- added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for reference)
-- moved \_modguide to "BAC_dev_notes" directory
-- moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs
-- corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
+- **tweaked building menu and submenu for making the modded Kota work again**
+- **renamed Boats menu to 'Brygun's watercrafts', this person needs credit for the research and work they've done for all BAC enjoyers.**
+- **reworked the Transport menu**
+- **temporarly disabled the custom naming of certain items (e.g. <ins>Elk</ins> antler comb -> Antler comb) for allowing them to be pausable again**
+- **updated Tying Equipment recipes with TEXTILECRAFT skill instead of Hideworking**
+
+### Other fixes
 - renamed "Tall roll of Birch-bark" to "Tall Birch-bark roll" to make its hyperlink work correctly in the encyclopedia
 - fixed "Tall Birch-bark roll" with the correct {Birch Tree Trunk} ingredient
 - added 2 small handles to the draw knife recipe
 - fixed "Ball steel hammer" recipe that was making ball iron hammer
 - fixed "Short spear" recipe with correct "small spear head"
-- **tweaked building menu and submenu for making the modded Kota work again**
 - added some infos about what is a Tiller. [source](https://www.howtomakealongbow.co.uk/part-5-tillering)
 - changed rope to strong cordage in the "Bark tassets" recipe (Barkware)
-- **renamed Boats menu to 'Brygun's watercrafts', this person needs credit for the research and work they've done for all BAC enjoyers.**
 - grouped every watercraft entry together in the game menu using alternating numbers and letters groups
 - renamed "Lumber pack frame" to "Lumberpack frame" for it to show in the encyclopedia
-- **reworked the Transport menu**
 - added \[masterwoodtype] tag to half and quarter logs [a wildcard is needed when used as ingredients](https://www.unrealworld.fi/forums/index.php?topic=7699.msg24992#msg24992) (*) in the subsequent recipes
-- **temporarly disabled the custom naming of certain items (e.g. <ins>Elk</ins> antler comb -> Antler comb) for allowing them to be pausable again**
 - removed nopause where unnecessary in boneworking recipes
 - removed unnecessary descriptive text in boneworking recipes
-- **updated Tying Equipment recipes with TEXTILECRAFT skill instead of Hideworking**
 - clarified Tying Equipment recipes' text descriptions
 
 ### v3.88.3 Mod files cleanup
+- added BAC_changelogs.md
+- added BAC_dev_notes folder (This directory won't be part of the releases, but kept on GitHub for reference)
+- moved \_modguide to "BAC_dev_notes" directory
+- moved and renamed "Thiebs 3.87 to 3.88 changelog.txt" to "BAC_dev_notes" as it contains experimentation testing logs
+- corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
 - archived diy_BAC_Bows
 - archived bin_BAC_kota_standard
 - cleaned up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
