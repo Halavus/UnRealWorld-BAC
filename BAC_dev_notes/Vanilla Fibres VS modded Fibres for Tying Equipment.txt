@@ -1,0 +1,24 @@
+Theoretical:
+Vanilla 1lb of bundle of Nettle fibres makes for 686 feet of yarn
+Vanilla 135 feet of yarn makes for 15 feet cord
+So 0.5 lb of nettle fibres makes 38.1 ft of cord.
+
+VS
+
+.Twisted cord. 		"Cord"		[phys:hands,one-armed] *TEXTILECRAFT* /45/ [patch] [assist:1] [NOQUALITY]	[NOPAUSE]
+{*fibre from *} #0.5#	[remove] [patchwise] 'bast or birch fibre'   [name:%s cord] [naming:last word]
+[WEIGHT:0.5]
+[PRICE:0.02]
+[LENGTH:15] 
+
+AND
+
+.Refined cord.		"Cord"		[patch:5]	%20%	*TEXTILECRAFT* 	/60/	 [effort:1] [phys:hands]  [assist:1]
+{*fibre from *} 		#0.7#	[remove] [noquality] [patchwise] 'bast or birch fibre'
+{Knife} '+ to refine quality'
+[WEIGHT:0.5]
+[PRICE:0.03]
+[LENGTH:15]
+
+--
+
