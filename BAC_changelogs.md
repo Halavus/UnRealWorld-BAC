@@ -1,7 +1,7 @@
 ## TODOs
 - create a readme
 - **keep diy_glossary as vanilla as possible**: if a file is not labelled "BAC", it should be changed the least possible. (although sometimes imperative for fixes) NB: some vanilla recipes have been updated by Sami but never updated in the BAC files (see Lumber below)
-- update [diy_BAC_Lumber](/diy_BAC_Lumber.txt) and [mod_diy_BAC_Carpentry](/mod_diy_BAC_Carpentry.txt) with the 3.86 added \[masterwoodtype] modding tag. 
+- update diy_BAC_Lumber and mod_diy_BAC_Carpentry with the 3.86 added \[masterwoodtype] modding tag. 
 - evt. merge changelogs & contributors (currently kept separate for ease of use)
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
 - add informations about modded items to the encyclopedia (GAME.NFO)
@@ -54,23 +54,23 @@
 - corrected Vanilla Lumber recipes with their missing \[masterwoodtype] tag from 3.86
 - archived diy_BAC_Bows
 - archived bin_BAC_kota_standard
-- cleaned up comments and logs in [diy_BAC_Fishing](/diy_BAC_Fishing.txt)
-- cleaned up comments and logs in [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt)
-- archived outdated Bowstrings from [diy_BAC_Fletching_and_Bowying](/diy_BAC_Fletching_and_Bowying.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Fletching_and_Bowying.txt)
-- cleaned up comments and logs in [diy_BAC_Lumber](/diy_BAC_Lumber.txt)
-- archived outdated Big Spruce Branch from [diy_BAC_Lumber](/diy_BAC_Lumber.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Lumber.txt)
-- cleaned up comments and logs in [diy_BAC_Hafting](/diy_BAC_Hafting.txt)
-- cleaned up comments and logs in [diy_BAC_Textilecraft](/diy_BAC_Textilecraft.txt)
+- cleaned up comments and logs in diy_BAC_Fishing
+- cleaned up comments and logs in diy_BAC_Fletching_and_Bowying
+- archived outdated Bowstrings from diy_BAC_Fletching_and_Bowying to [ObsoleteFiles](https://github.com/Halavus/UnRealWorld-BAC/tree/main/ObsoleteFiles)
+- cleaned up comments and logs in diy_BAC_Lumber
+- archived outdated Big Spruce Branch from diy_BAC_Lumber to [ObsoleteFiles](https://github.com/Halavus/UnRealWorld-BAC/tree/main/ObsoleteFiles)
+- cleaned up comments and logs in diy_BAC_Hafting
+- cleaned up comments and logs in diy_BAC_Textilecraft
 - removed Vanilla Spindle from the BAC files (still present in the Textilecraft menu)
-- archived "\[...] textile needles" (Knitting needles?) from [diy_BAC_Textilecraft](/diy_BAC_Textilecraft.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Textilecraft.txt) as Knitting currently is disabled. Their TILEGFX is missing too.
-- cleaned up comments and logs in [mod_diy_BAC_Bryguns_watercrafts](/mod_diy_BAC_Bryguns_watercrafts.txt)
+- archived "\[...] textile needles" (Knitting needles?) from diy_BAC_Textilecraft to [ObsoleteFiles](https://github.com/Halavus/UnRealWorld-BAC/tree/main/ObsoleteFiles) as Knitting currently is disabled. Their TILEGFX is missing too.
+- cleaned up comments and logs in mod_diy_BAC_Bryguns_watercrafts
 - all useful informations found in the cleaned comments above have been added to the encyclopedia
 - archived diy_BAC_Trapping as it only contains vanilla items
-- removed outdated bigsprite.png references (:148:, etc.) in [cookery_glossary](/cookery_glossary.txt)
-- archived inactive recipes from [diy_BAC_Tying_Equipment](/diy_BAC_Tying_Equipment.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Tying_Equipment.txt)
-- cleaned up comments and logs in [diy_BAC_Tying_Equipment](/diy_BAC_Tying_Equipment.txt)
-- started [mod_diy_BAC_Boneworking.txt](/mod_diy_BAC_Boneworking.txt)
-- archived inactive recipes from [mod_diy_BAC_Boneworking.txt](/mod_diy_BAC_Boneworking.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Boneworking.txt)
+- removed outdated bigsprite.png references (:148:, etc.) in cookery_glossary
+- archived inactive recipes from diy_BAC_Tying_Equipment to [ObsoleteFiles](https://github.com/Halavus/UnRealWorld-BAC/tree/main/ObsoleteFiles)
+- cleaned up comments and logs in diy_BAC_Tying_Equipment
+- started mod_diy_BAC_Boneworking.txt
+- archived inactive recipes from mod_diy_BAC_Boneworking.txt to [ObsoleteFiles](https://github.com/Halavus/UnRealWorld-BAC/tree/main/ObsoleteFiles)
 - started cleaning up comments and logs in diy_BAC_Utility
 - changed base item of the craftable canteen to Wooden canteen
 
