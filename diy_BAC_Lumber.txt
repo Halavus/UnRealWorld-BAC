@@ -3,33 +3,15 @@
 // ----------
 // DISCLAIMER
 // ----------
-// Menu full or nearly full depending on BAC version
-// If menu has 0-9 then letters the last letter IIRC is letter 'O'
+// Menu full (at 3.88) or nearly full depending on BAC version
+// If menu has 0-9 then letters the last letter is letter 'M'
 //
-// There are vanilla/glossary recipes which load here
-// the recipe for "staff" is prone to being lost
-// If you see "staff" in the menu you should be okay
+// There are vanilla/glossary recipes which load after the modded ones
+// the recipe for "shingle" is prone to being lost
+// If you see "shingle" in the menu you should be okay
 
 
 [SUBMENU_START:lumber]
-
-.Wooden stake. 	[effort:1] [phys:arms,one-armed]  *TIMBERCRAFT* 	/6/	%40%	|-2|	[patch:50]
-{Cutting weapon} <Axe>		[wearpct:80]
-{Slender trunk}	[yield:5] [remove] [noquality] [patchwise] [masterwoodtype]
-
-.Staff.		[effort:1] [phys:arms,one-armed]  *TIMBERCRAFT*		/30/	%60%	|-2|	[patch]
-{Cutting weapon} <Axe>	   [wearpct:80]
-{Slender trunk}	 [yield:3] [remove] [patchwise] [masterwoodtype]
-
-.Wood slat.     [effort:1] [phys:arms,one-armed,stance]  *CARPENTRY* 	/200/   %10%   |-1|	(20)	[sucmodqty]
-{Board} <Pine, Birch>   [remove] [masterwoodtype] 
-{Axe}   <Carving axe>   [wearpct:50]
-
-.Shingle.	[effort:1] [phys:arms,hands]  *TIMBERCRAFT* 		/9h/	(500) [sucmodqty]
-{Block of pine wood} (1)   [remove]
-{Axe or carving knife}     <Splitting axe> [wearpct:10]
-{Hammering tool}        
-{Knife} <Small knife>      [wearpct:50]
 
 // MODDED:
 
@@ -166,4 +148,3 @@
 [MATERIAL:birch-bark]
 
 [SUBMENU_END:lumber]
-
