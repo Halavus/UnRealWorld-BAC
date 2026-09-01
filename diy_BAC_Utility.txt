@@ -1,156 +1,62 @@
-
-// BAC integration
-//
-// = 3.60 Beta various cord and rope recipes moved 
-// into Tying equipment
-// = bag moved to here
-//
-// Assist based on helpers holding, turning or using own tool
-//
-// 2023-05
-// Added emergency bark as a disabled by comments item
-//
-// Sibs: reordered, upgraded vanilla to 3.84
+// BAC integration of Utility
 
 
 [SUBMENU_START:utility article]
 
 
-
 //MODDED:
 
-// Emergency bark
-//
-// Emergency bark is intended as an oh-crap fix
-// Such if you did de-hair before tanning thus lost the fat etc
-// 3.70 p1 birch-bark can be used for tanning (likely bug)
-// if that goes away maybe "adler-bark" will still work
-// To activate you need to remove the comment marks "//"
-// from the recipe, reopen the menu, use
-// recommend restoring menu marks afterward
-
-//.Emergency bark. "Branch" *COMMON* /1/
-//{Rock}
-//[WEIGHT:1]
-//[Material:birch-bark]
-
-// Testing recipes
-// for testing some functions need ingredients
-// Basically cheat code to drop an item
-//
-// test salt
-// .Salt. /1/ [noquality]
-// {Rock}                   
-
-.Canteen. "Wooden bowl" [effort:1] [phys:arms,two-armed] *CARPENTRY*   /30/ |-1|
+.Canteen. "Wooden canteen" [effort:1] [phys:arms,two-armed] *CARPENTRY*   /30/ |-1|
 {Wooden cup} (2) [remove] "+halves to join together"
 {Knife} "+shaping and fitting"
 {Branch} (1) [remove] "+seams and stopper"
-{Thin cordage}	=4=	[remove] "+binding and lanyard"
+{* cord}	=4=	[remove] "Cord for binding and lanyard"
 [WEIGHT:2]
 [CAPACITY:6]
-[PRICE:0.8]
-// price based on cup 0.3 x 2 + a bit
-// https://www.unrealworld.fi/wiki/index.php?title=Prices
-// while capacity same as bowl for more weight canteen presents
-// a better concept of not spilling while you travel
-// also represents making wood bottles for grain, berries etc
+[PRICE:1]
 
 .Bark bandage. "Bandage"  *HIDEWORKING* [effort:1] [phys:hands,one-armed] /30/ |-2| %-80% [assist:1] [NOPAUSE]
 {Knife} <Small knife>
-{Fibre from *bark*} #0.5# [remove] [NAME:%s bandage] [naming: last word]
+{Fibre from *bark*} #0.5# [remove] [NAME:%s bandage] [naming: last word] 'Fibre from birch-bark'
 {Water} #2# '+to wash clean'
 [WEIGHT:0.5]
 [Material:birch-bark]
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>
-//
-// Bandage washing
-// Controversial but I stick to the idea that clothing
-// is often rare when hurt and you would be better off
-// washing old material to have something vs throwing them out
-// espically as some wounds may take weeks to heal
-// Without washing each day's treatment destroys material
-// to have a bandage. Multiple that by several wounds in a
-// a battle and you will shred your clothes... or start washing
-
-
 .Washed bandage. "Bandage"	[effort:1]	[noquality]	*COMMON*	/10/
-{Rock}  '+Use ONLY to return applied bandage'
+{Knife}  '+ONLY return applied bandage'
 {Water} #0.5# '+as Washing water'
-// by brygun
-
 
 .Bag.		  			[noquality]		  	/30/  	[effort:1] [phys:hands] [assist:1]
 {Cloth}  			#1.0#  	[remove] 
 {Thin cordage}	=3=			[remove] 
 {Knife}
-// Arimon 3.7x: changed {*Cord} to {Thin cordage}
 
-// BAC fishing rod ceased as 3.70 adds vanilla fishing rod making
-//.Fishing rod.  [effort:0] [phys:hands,one-armed] *CARPENTRY* /2h/ [assist:1]
-//{Staff}			[remove]
-//{*fishhook}		[remove]	
-//{*cord} (2)		[remove]	
-//{Knife}<Small knife>
-
-
-// BAC Net moved to fishing gear
-
-
-.Quern-Grinder Piece. "Stone"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /8h/ [assist:1]
+.Quern-Grinder Piece. "Hunting horn"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /8h/ [assist:1]
 {Stone} (1) [remove] [noquality]
 {*hammer} 'Hammer'
-{Whetstone} '+grind smoothness of hitting areas'
+{Whetstone} '+smooth grinding faces'
 [WEIGHT:12]
 
-// The phrase Quern-Stone is suspect to "stone" being consumed
-// in other recipes. This insta fix recipe is to restore it
-// adjust the % % number to aim for your correct quality
-//
-// Only one of the two recipes for Assemble or Lost should
-// be active at one time. Adjust the comment marks.
-
-// Normal Quern-Grinder recipe
-.Quern-Grinder. "Stone"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /6h/ [assist:1]
+.Quern-Grinder. "Hunting horn"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /6h/ [assist:1]
 {Quern-Grinder Piece} (2) [remove] [noquality]
 {Wooden stake} (1) [remove] [noquality]
 {Board} (2) [remove]
 {*hammer} 'Hammer'
-{Whetstone} '+grind smoothness of hitting areas'
+{Whetstone} '+smooth grinding faces'
 [WEIGHT:25]
 [TILEGFX:quern-stone]
 
-// Replacing accidentally lost Quern-Grinder
-//.Lost Quern-Grinder. "Stone"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /1m/ [assist:1] %15%
-//{Rock} 
-//[NAME:Quern-Grinder]
-//[WEIGHT:25]
-//[TILEGFX:quern-stone]
-
-
-.Grind Barley-Flour. "barley-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *COMMON*  /20/	[NOPAUSE]
+.Barley-flour. "barley-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *AGRICULTURE*  /20/
 {Barley grains} #1# [remove] [patchwise]
 {Quern-Grinder} [ground]
 [NAME:barley-flour]
 
-.Grind Rye-Flour. "rye-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *COMMON*  /20/
+.Rye-flour. "rye-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *AGRICULTURE*  /20/
 {Rye grains} #1# [remove] [patchwise]
 {Quern-Grinder} [ground]
 [NAME:rye-flour]
 
-// Rudy - Does not currently wor because 'clayweed-flour' is not a base item in the game.
-//.Grind Clayweed-Flour. "clayweed-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *COMMON*  /20/	[NOPAUSE]
-//{Clayweed seeds} #1# [remove] [patchwise]
-//{Quern-Grinder} [ground]
-//[NAME:clayweed-flour]
-
-// reference
-// [CARB:] [FAT:] [PROTEIN:] [WATER:]
-// https://www.unrealworld.fi/wiki/index.php?title=Food
-// hemp: [CARB:8] [FAT:10] [PROTEIN:24] 
-
-.Grind Hemp-Flour. "rye-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *COMMON*  /20/	[NOPAUSE]
+.Hemp-flour. "rye-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *AGRICULTURE*  /20/
 {Hemp seeds} #1# [remove] [patchwise]
 {Quern-Grinder} [ground]
 [NAME:hemp-flour]
@@ -200,7 +106,7 @@
 [Price:0.01]
 
 .Pitch glue from pine tar.   "Hunting horn" [effort:2] [phys:arms,hands] *TIMBERCRAFT* /30/ \2h\ |-2| [noquality] [patch] [NOPAUSE]
-{*pot}                      '+to collect the glue'  
+{*pot}                      'Pot to collect the glue'  
 {Pine tar}  #3#   [remove] [patchwise]      '+as initial cool and hard pine tar'
 {Firewood}  (9)   [remove] [patchwise][ground]   '+to be piled around it'
 {Fire}                         '+lit nearby'
@@ -213,8 +119,8 @@
 [Price:0.03]
 
 .Pitch glue from birch-bark.   "Hunting horn" [effort:2] [phys:arms,hands] *TIMBERCRAFT* /30/ \4h\ |-2| [noquality] [patch] [NOPAUSE]
-{*pot}                      '+to collect the glue'  
-{*birch-bark*}  #5#   [remove] [patchwise]      '+as birch-bark to boil'
+{*pot}                      'Pot to collect the glue'  
+{*birch-bark*}  #5#   [remove] [patchwise]      'birch-bark to boil'
 {Firewood}  (10)   [remove] [patchwise][ground]   '+to be piled around it'
 {Fire}                         '+lit nearby'
 {Rock} '+as a shallow digging and burying tool'
@@ -234,7 +140,7 @@
 .Caulking. "Hunting horn" [patch:3] [noquality] [phys:arms] [effort:0] *CARPENTRY*    /15/ \30\  |-2|
 {*glue} (1) [remove] [ground] [patchwise]
 {*fibre from *} #1# [remove] [ground] [patchwise] [noquality]
-{*pot} (1) [ground] '+to hold hot caulking'
+{*pot} (1) [ground] 'Pot to hold hot caulking'
 {Fire}      '+to soften pitch'
 {Firewood} (1) [remove] [ground] [patchwise] '+to sustain fire'
 [WEIGHT:2]

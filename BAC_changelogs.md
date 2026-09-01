@@ -37,6 +37,14 @@
 - removed nopause where unnecessary in boneworking recipes
 - removed unnecessary descriptive text in boneworking recipes
 - clarified Tying Equipment recipes' text descriptions
+- clarified Utilities recipes' text descriptions
+- changed the canteen's needed tying equipment to cord (who wants to carry liquid around with yarn?) and upped the price accordingly
+- reduced capacity of the canteen to 5 without changing its weight to match it to its lower price VS vanilla wooden canteen
+- made the washed bandage less controversial by requiring a knife
+- changed base item of the quern's recipes to huning horn to avoid them being consumed as stones by other recipes
+- renamed "Grind xyz-flour" to "xyz-flour" to make them pausable
+- changed COMMON to AGRICULTURE for grinding flours
+
 
 ### v3.88.3 Mod files cleanup
 - added BAC_changelogs.md
@@ -63,6 +71,8 @@
 - cleaned up comments and logs in [diy_BAC_Tying_Equipment](/diy_BAC_Tying_Equipment.txt)
 - started [mod_diy_BAC_Boneworking.txt](/mod_diy_BAC_Boneworking.txt)
 - archived inactive recipes from [mod_diy_BAC_Boneworking.txt](/mod_diy_BAC_Boneworking.txt) to [ObsoleteFiles](ObsoleteFiles/old_BAC_Boneworking.txt)
+- started cleaning up comments and logs in diy_BAC_Utility
+- changed base item of the craftable canteen to Wooden canteen
 
 ## v3.88.2
 - Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)

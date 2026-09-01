@@ -24,12 +24,12 @@ Index of main topics:
    .MOVING                 .VALUABLES<br>
 
 * BAC ITEMS             <br>
-   .BAC CARPENTRY          ...more BAC categories<br>
-   .BAC LUMBER                will come here...<br>
-   .BAC TOOLS<br>
-   .BAC WEAPONS<br>
-   .BAC TRANSPORT<br>
-   .BAC TYING EQUIPMENT<br>
+   .BAC CARPENTRY          .BAC UTILITY<br>
+   .BAC LUMBER             <br>
+   .BAC TOOLS              <br>
+   .BAC WEAPONS            <br>
+   .BAC TRANSPORT          ...more BAC categories<br>
+   .BAC TYING EQUIPMENT       will come here...<br>
 
 In addition, you may want to browse our Wiki for more information:<br>
 http://www.unrealworld.fi/wiki
@@ -3483,6 +3483,10 @@ LUMBERPACK FRAME, FREE ROPES FROM RAFT, SLEDWAGON, TARP-WEAVE PUNT, [BIRCH-BARK 
 BIRCH CORD, TWISTED CORD, REFINED CORD, REFINE A CORD, BRAIDED ROPE, BIRCH ROOT, SPLIT SPRUCE TWIG, ROOT ROPE, UNTIE LOOP SNARE, EXTRACT ROWAN FIBRE, EXTRACT SPRUCE FIBRE, FIBRE FROM RAW BIRCH-BARK
 ***
 
+.BAC UTILITY.
+CANTEEN, BARK BANDAGE, WASHED BANDAGE, BAG, QUERN-GRINDER PIECE, QUERN-GRINDER, GRIND BARLEY-FLOUR, GRIND RYE-FLOUR, GRIND HEMP-FLOUR, FISH-SKIN GLUE, GATHER PINE TAR, PITCH GLUE FROM PINE TAR, PITCH GLUE FROM BIRCH-BARK, CAULKING
+***
+
 .TILLER.TILLERS.
 Tillering is a process of bending the bow a little bit at a time. This is the true measure of a Bowmaker, 
 slowly looking at the limbs and seeing them evenly develop into the correct shape, a well balanced spring 
@@ -3749,4 +3753,50 @@ Extract fibres from a spruce twig.
 Extract fibres from birch-bark.
 ***
 
+.CANTEEN.
+***
+
+.BARK BANDAGE.
+***
+
+.WASHED BANDAGE.
+***
+
+.BAG.
+***
+
+.QUERN-GRINDER PIECE.
+2 pieces are needed for making a Quern-Grinder.
+***
+
+.QUERN-GRINDER.
+Faster method for grinding flour. Use the modded recipes in the utility menu.
+***
+
+.BARLEY-FLOUR.
+Vanilla flour, but modded recipe, you need a Quern-Grinder for this recipe.
+***
+
+.RYE-FLOUR.
+Vanilla flour, but modded recipe, you need a Quern-Grinder for this recipe.
+***
+
+.HEMP-FLOUR.
+BAC-made flour, you need a Quern-Grinder for this recipe.
+***
+
+.FISH-SKIN GLUE.
+***
+
+.GATHER PINE TAR.
+***
+
+.PITCH GLUE FROM PINE TAR.
+***
+
+.PITCH GLUE FROM BIRCH-BARK.
+***
+
+.CAULKING.
+***
 

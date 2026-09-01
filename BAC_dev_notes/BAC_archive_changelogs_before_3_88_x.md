@@ -523,3 +523,39 @@ Rope usage from =150= to =100= though listed as split between harness and securi
 	- .Extract Spruce fibre.  
 	Adapted from Bouidda 2.1  
 	
+- diy_BAC_Utilitytxt  
+	//
+	// = 3.60 Beta various cord and rope recipes moved 
+	// into Tying equipment
+	// = bag moved to here
+	//
+	// Assist based on helpers holding, turning or using own tool
+	//
+	// 2023-05
+	// Added emergency bark as a disabled by comments item
+	//
+	// Sibs: reordered, upgraded vanilla to 3.84
+	// Emergency bark
+	//
+	// Emergency bark is intended as an oh-crap fix
+	// Such if you did de-hair before tanning thus lost the fat etc
+	// 3.70 p1 birch-bark can be used for tanning (likely bug)
+	// if that goes away maybe "adler-bark" will still work
+	// To activate you need to remove the comment marks "//"
+	// from the recipe, reopen the menu, use
+	// recommend restoring menu marks afterward
+
+	//.Emergency bark. "Branch" *COMMON* /1/
+	//{Rock}
+	//[WEIGHT:1]
+	//[Material:birch-bark]
+
+	// Testing recipes
+	// for testing some functions need ingredients
+	// Basically cheat code to drop an item
+	//
+	'''
+	// test salt
+	// .Salt. /1/ [noquality]
+	// {Rock}                   
+	'''

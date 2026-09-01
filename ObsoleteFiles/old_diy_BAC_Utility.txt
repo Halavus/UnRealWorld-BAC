@@ -1,0 +1,41 @@
+// BAC archive of Utility
+
+
+[SUBMENU_START:utility article]
+
+
+MODDED:
+
+//BAC fishing rod ceased as 3.70 adds vanilla fishing rod making
+.Fishing rod.  [effort:0] [phys:hands,one-armed] *CARPENTRY* /2h/ [assist:1]
+{Staff}			[remove]
+{*fishhook}		[remove]	
+{*cord} (2)		[remove]	
+{Knife}<Small knife>
+
+// The phrase Quern-Stone is suspect to "stone" being consumed
+// in other recipes. This insta fix recipe is to restore it
+// adjust the % % number to aim for your correct quality
+//
+// Only one of the two recipes for Assemble or Lost should
+// be active at one time. Adjust the comment marks.
+
+//Replacing accidentally lost Quern-Grinder
+.Lost Quern-Grinder. "Stone"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /1m/ [assist:1] %15%
+{Rock} 
+[NAME:Quern-Grinder]
+[WEIGHT:25]
+[TILEGFX:quern-stone]
+
+// Rudy - Does not currently wor because 'clayweed-flour' is not a base item in the game.
+//.Grind Clayweed-Flour. "clayweed-flour" [effort:1] [noquality] [phys:arms,one-armed] [patch:10] *COMMON*  /20/	[NOPAUSE]
+//{Clayweed seeds} #1# [remove] [patchwise]
+//{Quern-Grinder} [ground]
+//[NAME:clayweed-flour]
+
+//reference
+//[CARB:] [FAT:] [PROTEIN:] [WATER:]
+//https:www.unrealworld.fi/wiki/index.php?title=Food
+//hemp: [CARB:8] [FAT:10] [PROTEIN:24] 
+
+[SUBMENU_END:utility article]
