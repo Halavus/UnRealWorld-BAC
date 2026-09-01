@@ -26,7 +26,7 @@ Index of main topics:
 * BAC ITEMS             <br>
    .BAC CARPENTRY          .BAC UTILITY<br>
    .BAC LUMBER             .BAC BONEWORKING<br>
-   .BAC TOOLS              .BAC WEAPONS<br>
+   .BAC TOOLS              <br>
    .BAC WEAPONS            <br>
    .BAC TRANSPORT          ...more BAC categories<br>
    .BAC TYING EQUIPMENT       will come here...<br>
@@ -3455,11 +3455,11 @@ a new house and have a fresh start every thirty years or so.
 
 
 // BAC ITEMS
-//
 .BAC LUMBER.
-DRIED BOARD, SANDED BOARD, CARVED BOARD, BLOCK POT, BRANCH BUNDLE, 
-SPRUCE MAT, TALL BIRCH-BARK ROLL, OPENED ROLL OF BIRCH-BARK, 
+FIREWOOD FROM SLENDER TRUNK, SMALL WOODEN BLOCK, HALF LOG, QUARTER LOG, SHORT QUARTER LOG, RADIAL BOARD, UPPER BLOCK TUB, HALF BLOCK TUB, DEEP BLOCK TUB, BLOCK POT, BRANCH BUNDLE, UNBUNDLE BRANCH BUNDLE, SPRUCE MAT FUR, DISMANTLE SPRUCE MAT, DRIED BOARD, SANDED BOARD, CARVED BOARD, TALL BIRCH-BARK ROLL, OPENED ROLL OF BIRCH-BARK
 //are longer names complicated to use?
+***
+
 
 ***
 
@@ -3472,23 +3472,32 @@ DRAW KNIFE,
 ***
 
 .BAC TRANSPORT.
-LUMBERPACK FRAME, FREE ROPES FROM RAFT, SLEDWAGON, TARP-WEAVE PUNT, [BIRCH-BARK PUNT], FINNISH PUNT, CLINKERED PUNT
+LUMBERPACK FRAME, FREE ROPES FROM RAFT, SLEDWAGON, TARP-WEAVE PUNT, 
+[BIRCH-BARK PUNT], FINNISH PUNT, CLINKERED PUNT
 ***
 
 .BAC TYING EQUIPMENT.
-BIRCH CORD, TWISTED CORD, REFINED CORD, REFINE A CORD, BRAIDED ROPE, BIRCH ROOT, SPLIT SPRUCE TWIG, ROOT ROPE, UNTIE LOOP SNARE, EXTRACT ROWAN FIBRE, EXTRACT SPRUCE FIBRE, FIBRE FROM RAW BIRCH-BARK
+BIRCH CORD, TWISTED CORD, REFINED CORD, REFINE A CORD, BRAIDED ROPE, BIRCH ROOT, 
+SPLIT SPRUCE TWIG, ROOT ROPE, UNTIE LOOP SNARE, EXTRACT ROWAN FIBRE, 
+EXTRACT SPRUCE FIBRE, FIBRE FROM RAW BIRCH-BARK
 ***
 
 .BAC UTILITY.
-CANTEEN, BARK BANDAGE, WASHED BANDAGE, BAG, QUERN-GRINDER PIECE, QUERN-GRINDER, GRIND BARLEY-FLOUR, GRIND RYE-FLOUR, GRIND HEMP-FLOUR, FISH-SKIN GLUE, GATHER PINE TAR, PITCH GLUE FROM PINE TAR, PITCH GLUE FROM BIRCH-BARK, CAULKING
+CANTEEN, BARK BANDAGE, WASHED BANDAGE, BAG, QUERN-GRINDER PIECE, QUERN-GRINDER, 
+GRIND BARLEY-FLOUR, GRIND RYE-FLOUR, GRIND HEMP-FLOUR, FISH-SKIN GLUE, GATHER PINE TAR, 
+PITCH GLUE FROM PINE TAR, PITCH GLUE FROM BIRCH-BARK, CAULKING
 ***
 
 .BAC BONEWORKING.
-ANTLER COMB, BONE COMB, BONE ARTIFACT, TOOTH NECKLACE, ANTLER NECKLACE, BONE DECORATION, ANIMAL HEADDRESS, ELK HUNTING HORN
+ANTLER COMB, BONE COMB, BONE ARTIFACT, TOOTH NECKLACE, ANTLER NECKLACE, 
+BONE DECORATION, ANIMAL HEADDRESS, ELK HUNTING HORN
 ***
 
 .BAC WEAPONS.
-BATTLEAXE HEAD, SPEAR HEAD, NORTHERN SPEAR HEAD, SMALL SPEAR HEAD, BONE SPEAR, SHORTSWORD, PRIMITIVE HUNTING BOW, HARDWOOD SHORTBOW, TWO-WOOD LONGBOW, HARDWOOD LONGBOW, RECURVED NORTHERN BOW, RETILLER NORTHERN BOW, NORTHERN STAFF-BOW, SHORT SPEAR
+BATTLEAXE HEAD, SPEAR HEAD, NORTHERN SPEAR HEAD, SMALL SPEAR HEAD, 
+BONE SPEAR, SHORTSWORD, PRIMITIVE HUNTING BOW, HARDWOOD SHORTBOW, 
+TWO-WOOD LONGBOW, HARDWOOD LONGBOW, RECURVED NORTHERN BOW, RETILLER NORTHERN BOW, 
+NORTHERN STAFF-BOW, SHORT SPEAR
 ***
 
 .TILLER.TILLERS.
@@ -3502,15 +3511,29 @@ A Tiller is the thing you attach the bow to so you can see the bend.<br>
 source: www.howtomakealongbow.co.uk/part-5-tillering
 ***
 
-.DRIED BOARD.SANDED BOARD.CARVED BOARD.
-Refined boards is an effort to improve board quality, should you have an adze axe.
+//BAC LUMBER
+.FIREWOOD FROM SLENDER TRUNK.
+Make Firewood from slender trunks.
+***
 
-* Dried boards have been put out for Carpentry prep<br>
-* Sanded boards are a step further to Carpentry<br>
-* Carved boards need dried boards and are meant as an alternate selling item 
-and various RP uses like religion or signs or using them in other furniture 
-(though no price changes). A companion can help you out where it seems to be of 
-benefit to have a helper steady the board while work is underway.
+.SMALL WOODEN BLOCK.SMALL WOODEN BLOCKS.
+Used for Small whittled block (BAC CARPENTRY)
+***
+
+.HALF LOG.HALF LOGS.
+Used to make quarter log.
+***
+
+.QUARTER LOG.QUARTER LOGS.
+Used to make short quarter log and radial board.
+***
+
+.SHORT QUARTER LOG.SHORT QUARTER LOGS.
+Used in the making of bows and Brygun's watercrafts.
+***
+
+.RADIAL BOARD.RADIAL BOARDS
+Used in the making of Brygun's watercrafts.
 ***
 
 .BLOCK POT.UPPER BLOCK TUB.HALF BLOCK TUB.DEEP BLOCK TUB.
@@ -3543,7 +3566,7 @@ short as this is mostly for game housekeeping... Desired flotation of own
 weight. 
 ***
 
-.SPRUCE MAT.SPRUCE MAT FUR.
+.SPRUCE MAT.SPRUCE MAT FUR.DISMANTLE SPRUCE MAT.
 Partly for RP and for storing spruce twigs.<br>
 Acts as warmth layer for sleeping and counts for being wrappted in.
 I (Brygun?) decided against swapping the vanilla shelter to use this as new players wouldn't know about it.<br>
@@ -3553,6 +3576,17 @@ The 40/16 was found to work. The word "fur" is needed in the result name to be s
 sleeping check.<br>
 
 Time is for disassemble has been reduced from 40 to 20, its just pulling them apart.
+***
+
+.DRIED BOARD.SANDED BOARD.CARVED BOARD.
+Refined boards is an effort to improve board quality, should you have an adze axe.
+
+* Dried boards have been put out for Carpentry prep<br>
+* Sanded boards are a step further to Carpentry<br>
+* Carved boards need dried boards and are meant as an alternate selling item 
+and various RP uses like religion or signs or using them in other furniture 
+(though no price changes). A companion can help you out where it seems to be of 
+benefit to have a helper steady the board while work is underway.
 ***
 
 .TALL BIRCH-BARK ROLL.
@@ -3840,16 +3874,13 @@ BAC-made flour, you need a Quern-Grinder for this recipe.
 ***
 
 //BAC WEAPONS
+//commented out weapons are Vanilla weapons - for the sake of clarity/comparison with the mod files - will be removed
 
 //.BATTLEAXE HEAD.
 //***
 
 //.SPEAR HEAD.
 //***
-
-.SHORT SPEAR.
-Same accuracy than a spear (4), so better than wooden javelin (1)!
-***
 
 .NORTHERN SPEAR HEAD.
 ***
@@ -3882,4 +3913,9 @@ Same accuracy than a spear (4), so better than wooden javelin (1)!
 ***
 
 .NORTHERN STAFF-BOW.
+***
+
+//found in BAC Hafting
+.SHORT SPEAR.
+Same accuracy than a spear (4), so better than wooden javelin (1)!
 ***
