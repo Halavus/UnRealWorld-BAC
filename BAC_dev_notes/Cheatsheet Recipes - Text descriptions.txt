@@ -1,0 +1,24 @@
+~31-32 chars allowed, depending on which chars (m takes more space than n
+
+Those fit very well in:
+nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn-
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm-
+
+^ test your string above
+
+----------------------------------------
+
+Note, for a recipe like below, the in-game desciption of the needed item will show in full:
+{*hammer}					<- ☐ *hammer
+{*hammer} 'Hammer'			<- ☐ Hammer
+{*hammer} '+Hammer'			<- ☐ *hammer Hammer
+{Hammer} '+for hammering'	<- ☐ Hammer for hammering
+{*hammer} '+for hammering'	<- ☐ *hammer for hammering
+
+-> thus it is very important to rewrite a complete sentences for item that use a wildcard.
+
+Other examples:
+
+{*birch-bark strip}	#0.5#	[remove]					<-	☐ 0.5 lbs of *birch-bark strip
+{*birch-bark strip}	#0.5#	[remove] 'Birch-bark strip' <- 	☐ 0.5 lbs of birch-bark strip
+Note that 'Birch' gets de-capitalized in the 2nd example
