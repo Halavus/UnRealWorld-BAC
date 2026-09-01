@@ -81,6 +81,16 @@
 	- .Tall roll of Birch-bark.  
 	No longer destroys tree trunk  
 	3.60 time increase from 2h to 3h to better fit longer times  
+	- .Spruce mat fur. & .Dismantle spruce mat.  
+	As a dismantle item only one input is used, otherwise  
+	a tying equipment (such as a split spruce twig) would be  
+	called for  
+	the word "fur" is needed in the result name to be seen by the "wrap in furs" sleeping check  
+	- .Carved board.  
+	A fox-trap board has a price of ~16.25 torches shown in  
+	https://www.unrealworld.fi/wiki/index.php?title=Price_v3.40  
+	build time for fox-trap ~ 2 hours  
+	Base board price is 8 torches ~1/2 squirrel hide  
 
 - diy_BAC_Textilecraft.txt  
 	Arimon 3.7x:  

@@ -44,14 +44,6 @@
 {Axe} <Carving axe> '+as an axe for finishing the shape' [wearpct:30]
 [WEIGHT:5]
 
-.Gather Rowan Sapling. "Branch" [phys:hands,one-armed]   [noquality]  /5/  |-2|  [patch:5]	[NOPAUSE]
-{[NEARBY_TILE:ROWAN]} 			     [noquality]	 +'Rowan (found in groves)'
-{Knife}
-[NAME:Rowan Sapling]
-[TYPE:lumber]
-[MATERIAL:wood]
-[WEIGHT:0.5]
-
 .Half log. "Log" (2) [effort:4] [phys:stance,arms] [noquality] *TIMBERCRAFT* %10% /25/ |0|
 {Log}		[remove] [ground] [noquality] [masterwoodtype]	'+to split from full round to half section' 
 {Axe}<Splitting axe> [wearpct:80]
@@ -134,10 +126,6 @@
 [MATERAL:wood]
 [TYPE:timber]
 [TILEGFX:tr-pitcover]
-// As a dismantle item only one input is used, otherwise
-// a tying equipment (such as a split spruce twig) would be 
-// called for
-// the word "fur" is needed in the result name to be seen by the "wrap in furs" sleeping check
 
 .Dismantle spruce mat. (40) "Spruce twig" *COMMON* [noquality] /2m/	[NOPAUSE]
 {Spruce mat fur} (1) [remove] [ground]
@@ -160,10 +148,6 @@
 {Carving axe} '+for large shapings' [wearpct:30]
 {Knife} <Small knife> '+for fine shapings'
 [PRICE:1]
-// A fox-trap board has a price of ~16.25 torches shown in
-// https://www.unrealworld.fi/wiki/index.php?title=Price_v3.40
-// build time for fox-trap ~ 2 hours
-// Base board price is 8 torches ~1/2 squirrel hide
 
 .Tall Birch-bark roll. "Block of wood" *TIMBERCRAFT* [effort:3] [phys:arms legs stance] /3h/ 
 {Birch Tree Trunk} [ground] [noquality] '+please choose what was a fresh birch'
