@@ -73,6 +73,7 @@
 - archived inactive recipes from mod_diy_BAC_Boneworking.txt to [ObsoleteFiles](https://github.com/Halavus/UnRealWorld-BAC/tree/main/ObsoleteFiles)
 - started cleaning up comments and logs in diy_BAC_Utility (does glue need special treatment for clarity?)
 - changed base item of the craftable canteen to Wooden canteen
+- removed Elk hunting horn duplicate from hafting 
 
 ## v3.88.2
 - Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)

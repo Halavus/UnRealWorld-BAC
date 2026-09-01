@@ -3,15 +3,6 @@
 
 [SUBMENU_START:hafting]
 
-.Elk hunting horn. "Hunting horn" [effort: 2] [phys:hands] *CARPENTRY*  %-15%  /5h/
-{*elk antler} (2) [remove] '+as left and right curves to be matched'
-{Knife} <Small knife>
-{Thin cordage} (1) [remove] 
-//'+as binding and strap'
-{*glue} #0.25# [remove] '+as glue together'
-{Fire} '+to soften glue'
-[MATERIAL:antler]
-
 .Small handle. "Hunting horn" [effort:1] [phys:arms,hands]  *CARPENTRY* 	/2h/	%30% 
 {Branch}	 [remove] [noquality]	
 {Knife} <Small knife>
