@@ -4,7 +4,7 @@
 // DISCLAIMER
 // ----------
 // Menu full (at 3.88) or nearly full depending on BAC version
-// If menu has 0-9 then letters the last letter is letter 'M'
+// If menu has 0-9 then letters the last letter is letter 'N'
 //
 // There are vanilla/glossary recipes which load after the modded ones
 // the recipe for "shingle" is prone to being lost
