@@ -33,7 +33,8 @@
 - changed rope to strong cordage in the "Bark tassets" recipe (Barkware)
 - grouped every watercraft entry together in the game menu using alternating numbers and letters groups
 - renamed "Lumber pack frame" to "Lumberpack frame" for it to show in the encyclopedia
-- added \[masterwoodtype] tag to half and quarter logs [a wildcard is needed when used as ingredients](https://www.unrealworld.fi/forums/index.php?topic=7699.msg24992#msg24992) (*) in the subsequent recipes
+- removed "Gather Rowan Sapling" as it was used for the already removed BAC Arrowshaft making
+- added \[masterwoodtype] tag to half and quarter logs [a wildcard is needed when used as ingredients](https://www.unrealworld.fi/forums/index.php?topic=7699.msg24992#msg24992) (\*) in the subsequent recipes
 - removed nopause where unnecessary in boneworking recipes
 - removed unnecessary descriptive text in boneworking recipes
 - clarified Tying Equipment recipes' text descriptions

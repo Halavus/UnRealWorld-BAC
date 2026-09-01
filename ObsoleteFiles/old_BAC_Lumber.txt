@@ -22,5 +22,13 @@
 // 3.60 cut birch-bark off existing items for cordage
 // meant to help digest tree roll of birch
 
+.Gather Rowan Sapling. "Branch" [phys:hands,one-armed]   [noquality]  /5/  |-2|  [patch:5]	[NOPAUSE]
+{[NEARBY_TILE:ROWAN]} 			     [noquality]	 +'Rowan (found in groves)'
+{Knife}
+[NAME:Rowan Sapling]
+[TYPE:lumber]
+[MATERIAL:wood]
+[WEIGHT:0.5]
+
 [SUBMENU_END:lumber]
 
