@@ -3746,7 +3746,6 @@ Extract fibres from rowan bark.
 
 .EXTRACT SPRUCE FIBRE.
 Extract fibres from a spruce twig.
-
 ***
 
 .FIBRE FROM RAW BIRCH-BARK.
@@ -3754,15 +3753,29 @@ Extract fibres from birch-bark.
 ***
 
 .CANTEEN.
+Less valuable than the wooden canteen, but you made it yourself.
+
+Needs a cord to make and not some 'thin cordage'. Who wants to haul water around with a thread of yarn?
 ***
 
 .BARK BANDAGE.
+Treeees help meeeeee.
+
+Needs fibres from birch-bark to make. see .BAC TYING EQUIPMENT
 ***
 
 .WASHED BANDAGE.
+Controversial Bandage washing. Explanations:<br>
+
+I stick to the idea that clothing is often rare when hurt and you would be better off washing old material to 
+have something vs throwing them out. Especially as some wounds may take weeks to heal.<br>
+Without washing, each day's treatment destroys material to have a bandage. Multiple that by several wounds 
+in a a battle and you will shred your clothes... or start washing.<br>
+by Brygun
 ***
 
 .BAG.
+A craftable version of the vanilla Bag container.
 ***
 
 .QUERN-GRINDER PIECE.
@@ -3770,7 +3783,7 @@ Extract fibres from birch-bark.
 ***
 
 .QUERN-GRINDER.
-Faster method for grinding flour. Use the modded recipes in the utility menu.
+Faster method for grinding flour, uses the modded flour recipes in the utility menu.
 ***
 
 .BARLEY-FLOUR.

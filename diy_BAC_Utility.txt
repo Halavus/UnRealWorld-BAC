@@ -26,9 +26,9 @@
 {Knife}  '+ONLY return applied bandage'
 {Water} #0.5# '+as Washing water'
 
-.Bag.		  			[noquality]		  	/30/  	[effort:1] [phys:hands] [assist:1]
-{Cloth}  			#1.0#  	[remove] 
-{Thin cordage}	=3=			[remove] 
+.Bag.					[noquality]		  	/30/  	[effort:1] [phys:hands] [assist:1]
+{Cloth}			#1.0#  	[remove] 
+{Thin cordage}	=3=		[remove] 
 {Knife}
 
 .Quern-Grinder Piece. "Hunting horn"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /8h/ [assist:1]
