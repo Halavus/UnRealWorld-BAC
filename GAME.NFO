@@ -3472,8 +3472,10 @@ DRAW KNIFE,
 ***
 
 .BAC TRANSPORT.
-LUMBERPACK FRAME, FREE ROPES FROM RAFT, SLEDWAGON, TARP-WEAVE PUNT, 
-[BIRCH-BARK PUNT], FINNISH PUNT, CLINKERED PUNT
+LUMBERPACK FRAME, FREE ROPES FROM RAFT, SLEDWAGON, LOAD TREE TRUNK, OFFLOAD TREE TRUNK, 
+LOAD LOG, OFFLOAD LOG, LOAD SLENDER TRUNK, OFFLOAD SLENDER TREE TRUNK, 
+LOAD CLINKERED PUNT, OFFLOAD CLINKERED PUNT,  
+TARP-WEAVE PUNT, [BIRCH-BARK PUNT], FINNISH PUNT, CLINKERED PUNT
 ***
 
 .BAC TYING EQUIPMENT.
@@ -3613,11 +3615,7 @@ edge to back edge). It is pulled or "drawn" (hence the name) toward the user.<br
 (https://en.wikipedia.org/wiki/Drawknife)
 ***
 
-.LUMBERPACK FRAME.
-Meant more for hauling wood or tying on bags. Currently more a decorative item or roleplaying a way to carry.
-
-Perhaps in later game versions can help carry. Current container capacity set to zero as its very open and things fall out.
-***
+//BAC TRANSPORT
 
 .FREE ROPES FROM RAFT.
 Destroy a raft to get ropes back.
@@ -3639,6 +3637,18 @@ The sled will only hold one type of object at a time!
 The idea is to use 'A'pply to 'P'lace the loaded items into the sledwagon.<br>
 The sled gives a 1:20 load efficiency.<br>
 Known bug that the items need one clock tick after placing to be useable. That has something to do with coding them as food which starts needing to be prepared.
+***
+
+.LOAD TREE TRUNK.OFFLOAD TREE TRUNK.LOAD LOG.OFFLOAD LOG.LOAD SLENDER TRUNK.OFFLOAD SLENDER TREE TRUNK.LOAD CLINKERED PUNT.OFFLOAD CLINKERED PUNT.
+Load or unload those items on a sledwagon, only one item type at a time - CANNOT BE PAUSED.
+
+If you abord or take a break doing that, your game will end up with an unfinished an unremovable item on the ground!
+***
+
+.LUMBERPACK FRAME.
+Meant more for hauling wood or tying on bags. Currently more a decorative item or roleplaying a way to carry.
+
+Perhaps in later game versions can help carry. Current container capacity set to zero as its very open and things fall out.
 ***
 
 .TARP-WEAVE PUNT.
