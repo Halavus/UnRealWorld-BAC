@@ -25,8 +25,8 @@ Index of main topics:
 
 * BAC ITEMS             <br>
    .BAC CARPENTRY          .BAC UTILITY<br>
-   .BAC LUMBER             <br>
-   .BAC TOOLS              <br>
+   .BAC LUMBER             .BAC BONEWORKING<br>
+   .BAC TOOLS              .BAC WEAPONS<br>
    .BAC WEAPONS            <br>
    .BAC TRANSPORT          ...more BAC categories<br>
    .BAC TYING EQUIPMENT       will come here...<br>
@@ -3471,10 +3471,6 @@ TILLER,
 DRAW KNIFE, 
 ***
 
-.BAC WEAPONS.
-SHORT SPEAR,
-***
-
 .BAC TRANSPORT.
 LUMBERPACK FRAME, FREE ROPES FROM RAFT, SLEDWAGON, TARP-WEAVE PUNT, [BIRCH-BARK PUNT], FINNISH PUNT, CLINKERED PUNT
 ***
@@ -3485,6 +3481,14 @@ BIRCH CORD, TWISTED CORD, REFINED CORD, REFINE A CORD, BRAIDED ROPE, BIRCH ROOT,
 
 .BAC UTILITY.
 CANTEEN, BARK BANDAGE, WASHED BANDAGE, BAG, QUERN-GRINDER PIECE, QUERN-GRINDER, GRIND BARLEY-FLOUR, GRIND RYE-FLOUR, GRIND HEMP-FLOUR, FISH-SKIN GLUE, GATHER PINE TAR, PITCH GLUE FROM PINE TAR, PITCH GLUE FROM BIRCH-BARK, CAULKING
+***
+
+.BAC BONEWORKING.
+ANTLER COMB, BONE COMB, BONE ARTIFACT, TOOTH NECKLACE, ANTLER NECKLACE, BONE DECORATION, ANIMAL HEADDRESS, ELK HUNTING HORN
+***
+
+.BAC WEAPONS.
+BATTLEAXE HEAD, SPEAR HEAD, NORTHERN SPEAR HEAD, SMALL SPEAR HEAD, BONE SPEAR, SHORTSWORD, PRIMITIVE HUNTING BOW, HARDWOOD SHORTBOW, TWO-WOOD LONGBOW, HARDWOOD LONGBOW, RECURVED NORTHERN BOW, RETILLER NORTHERN BOW, NORTHERN STAFF-BOW, SHORT SPEAR
 ***
 
 .TILLER.TILLERS.
@@ -3571,9 +3575,7 @@ edge to back edge). It is pulled or "drawn" (hence the name) toward the user.<br
 (https://en.wikipedia.org/wiki/Drawknife)
 ***
 
-.SHORT SPEAR.
-Same accuracy than a spear (4), so better than wooden javelin (1)!
-***
+
 
 .LUMBERPACK FRAME.
 Meant more for hauling wood or tying on bags. Currently more a decorative item or roleplaying a way to carry.
@@ -3752,6 +3754,8 @@ Extract fibres from a spruce twig.
 Extract fibres from birch-bark.
 ***
 
+//BAC Utility
+
 .CANTEEN.
 Less valuable than the wooden canteen, but you made it yourself.
 
@@ -3809,3 +3813,73 @@ BAC-made flour, you need a Quern-Grinder for this recipe.
 .CAULKING.
 ***
 
+//BAC BONEWORKING
+
+.ANTLER COMB.
+***
+
+.BONE COMB.
+***
+
+.BONE ARTIFACT.
+***
+
+.TOOTH NECKLACE.
+***
+
+.ANTLER NECKLACE.
+***
+
+.BONE DECORATION.
+***
+
+.ANIMAL HEADDRESS.
+***
+
+.ELK HUNTING HORN.
+***
+
+//BAC WEAPONS
+
+//.BATTLEAXE HEAD.
+//***
+
+//.SPEAR HEAD.
+//***
+
+.SHORT SPEAR.
+Same accuracy than a spear (4), so better than wooden javelin (1)!
+***
+
+.NORTHERN SPEAR HEAD.
+***
+
+.SMALL SPEAR HEAD.
+***
+
+.BONE SPEAR.
+***
+
+//.SHORTSWORD.
+//***
+
+.PRIMITIVE HUNTING BOW.
+***
+
+.HARDWOOD SHORTBOW.
+***
+
+.TWO-WOOD LONGBOW.
+***
+
+.HARDWOOD LONGBOW.
+***
+
+.RECURVED NORTHERN BOW.
+***
+
+.RETILLER NORTHERN BOW.
+***
+
+.NORTHERN STAFF-BOW.
+***

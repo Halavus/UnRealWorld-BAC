@@ -1,19 +1,10 @@
 // BAC integration of Boneworking
-//
-// Signatus v1.0
-//
-// Based on Buoidda's boneworking
-//
-// v1.0
-// - Added .Bone fishhook. and .Bear tooth necklace. from Buoidda's
-// - Created .Antler comb. and .Bone comb., now can be optionally used in clothing mod
-// - Created .Antler necklace. and .Bone necklace.
 
 [SUBMENU_START:Hide and Bone]
 
 .Antler comb.	"Hunting horn" [effort:1] [phys:hands,one-armed] *CARPENTRY* %-20% /3h/
 // [NOPAUSE]
-{*antler} #1# [remove] [noquality]
+{*antler} #1# [remove] [noquality] 'antler'
 // [NAME:%s comb] [naming:original]
 {Axe} <Carving axe> [wearpct:30]
 {Knife} <Small knife>
@@ -31,7 +22,6 @@
 [WEIGHT:0.5]
 [TILEGFX:vl-bcomb]
 
-
 .Bone artifact. "Rock" [effort:0]    [phys:arms,one-armed]   *CARPENTRY* %-20% /75/   
 {Bone} #1#	[remove] [noquality]	
 {Stone}  [noquality]	'+for grinding' 
@@ -41,11 +31,6 @@
 [WEIGHT:0.5]
 [MATERIAL:bone]
 [TILEGFX:bc-forkbahd]
-//From whittling mod by Iago.Hach
-
-// Tooth necklace
-// Partial integration of Bouidda 2.2 to allow any teeth to be used
-// 
 
 .Tooth necklace. "Birch-bark necklace" [effort:0] [phys:hands] *CARPENTRY* /2h/ [assist:1] [NOPAUSE]
 {*tooth} (12) [remove] 'Teeth' [name:%s necklace] [naming:original]
