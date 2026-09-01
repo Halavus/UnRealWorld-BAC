@@ -4,7 +4,7 @@
 [SUBMENU_START:tying equipment]
 
 .Birch cord.  "Cord"	%0%	*COMMON* 	/30/	 [effort:1] [phys:hands]  [assist:1]
-{*birch-bark strip} 		#0.5#	[remove]
+{*birch-bark strip} 		#0.5#	[remove] 'Birch-bark strip'
 {Knife}
 {Stone} (1) [ground] '+as tension holder'
 [LENGTH:15]
@@ -17,7 +17,7 @@
 [LENGTH:15] 
 
 .Refined cord.		"Cord"		[patch:5]	%20%	*TEXTILECRAFT* 	/60/	 [effort:1] [phys:hands]  [assist:1]
-{*fibre from *} 		#0.7#	[remove] [noquality] [patchwise] 'bast or birch fibre'
+{*fibre from *} 		#0.7#	[remove] [noquality] [patchwise] 'Bast or birch fibre'
 {Knife} '+ to refine quality'
 [WEIGHT:0.5]
 [PRICE:0.03]
@@ -69,7 +69,7 @@
 [LENGTH:6]
 
 .Extract Rowan fibre. 	"Hunting horn" (3)	*TEXTILECRAFT*	/15/ %-20%	[patch] 	[effort:1] 	[phys:arms,stance] [assist:1] [NOPAUSE]
-{Rowan bark} 	#1# [remove] [patchwise] [ground] 'rowan bark'
+{Rowan bark} 	#1# [remove] [patchwise] [ground] 'Rowan bark'
 {Beater} 			[noquality] '+for scutching'
 [NAME:fibre from rowan-bast]
 [TYPE:tool]
@@ -88,7 +88,7 @@
 [TILEGFX:bc-fibre] 
 
 .Fibre from raw birch-bark. "Hunting horn" (7) [phys:hands,one-armed] *TEXTILECRAFT* %-30% /1h/ [patch:5] [NOPAUSE]
-{*Birch-bark*}   #1#   [remove] [noquality] [patchwise]
+{*Birch-bark*}   #1#   [remove] [noquality] [patchwise] 'Birch-bark'
 {Knife}             [noquality]
 [NAME:Fibre from birch-bark] 
 [TYPE:tool]
