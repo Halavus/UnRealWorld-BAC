@@ -71,7 +71,7 @@
 - cleaned up comments and logs in diy_BAC_Tying_Equipment
 - started mod_diy_BAC_Boneworking.txt
 - archived inactive recipes from mod_diy_BAC_Boneworking.txt to [ObsoleteFiles](https://github.com/Halavus/UnRealWorld-BAC/tree/main/ObsoleteFiles)
-- started cleaning up comments and logs in diy_BAC_Utility
+- started cleaning up comments and logs in diy_BAC_Utility (does glue need special treatment for clarity?)
 - changed base item of the craftable canteen to Wooden canteen
 
 ## v3.88.2
