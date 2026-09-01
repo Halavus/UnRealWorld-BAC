@@ -26,7 +26,7 @@ Index of main topics:
 * BAC ITEMS             <br>
    .BAC CARPENTRY          .BAC UTILITY<br>
    .BAC LUMBER             .BAC BONEWORKING<br>
-   .BAC TOOLS              <br>
+   .BAC TOOLS              .BAC HIDEWORKING<br>
    .BAC WEAPONS            <br>
    .BAC TRANSPORT          ...more BAC categories<br>
    .BAC TYING EQUIPMENT       will come here...<br>
@@ -3493,6 +3493,10 @@ ANTLER COMB, BONE COMB, BONE ARTIFACT, TOOTH NECKLACE, ANTLER NECKLACE,
 BONE DECORATION, ANIMAL HEADDRESS, ELK HUNTING HORN
 ***
 
+.BAC HIDEWORKING.
+KOTA COVER FROM SINGLE PELT, KOTA COVER FROM HIDE PIECES, KOTA COVER OF LEATHER, KOTA COVER OF WOOL, DE-HAIRED SKIN COVER, TANNING SKIN COVER, TANNED SKIN COVER, RINSED SKIN COVER, LEATHER COVER, LEATHER TARP, LEATHER BALL
+***
+
 .BAC WEAPONS.
 BATTLEAXE HEAD, SPEAR HEAD, NORTHERN SPEAR HEAD, SMALL SPEAR HEAD, 
 BONE SPEAR, SHORTSWORD, PRIMITIVE HUNTING BOW, HARDWOOD SHORTBOW, 
@@ -3608,8 +3612,6 @@ It consists of a blade with a handle at each end. The blade is much longer (alon
 edge to back edge). It is pulled or "drawn" (hence the name) toward the user.<br>
 (https://en.wikipedia.org/wiki/Drawknife)
 ***
-
-
 
 .LUMBERPACK FRAME.
 Meant more for hauling wood or tying on bags. Currently more a decorative item or roleplaying a way to carry.
@@ -3849,28 +3851,60 @@ BAC-made flour, you need a Quern-Grinder for this recipe.
 
 //BAC BONEWORKING
 
-.ANTLER COMB.
+.ANTLER COMB.ANTLER COMBS.BONE COMB.BONE COMBS.
+Used for refining cords and as trade item.
 ***
 
-.BONE COMB.
+.BONE ARTIFACT.BONE ARTIFACTS.BONE DECORATION.BONE DECORATIONS.
+Could be inadvertently eaten by your dogs.
 ***
 
-.BONE ARTIFACT.
-***
-
-.TOOTH NECKLACE.
-***
-
-.ANTLER NECKLACE.
-***
-
-.BONE DECORATION.
+.TOOTH NECKLACE.TOOTH NECKLACES.ANTLER NECKLACE.ANTLER NECKLACES.
+Shamans aren't Shamans without a bony necklace.
 ***
 
 .ANIMAL HEADDRESS.
+For shamans, actors and those too long alone.<br>
+By Brygun
 ***
 
 .ELK HUNTING HORN.
+Hunters aren't hunters without a hunting horn. (That is not a placeholder for modded items)
+***
+
+//BAC HIDEWORKING
+
+.KOTA COVER FROM SINGLE PELT.
+***
+
+.KOTA COVER FROM HIDE PIECES.
+***
+
+.KOTA COVER OF LEATHER.
+***
+
+.KOTA COVER OF WOOL.
+***
+
+.DE-HAIRED SKIN COVER.
+***
+
+.TANNING SKIN COVER.
+***
+
+.TANNED SKIN COVER.
+***
+
+.RINSED SKIN COVER.
+***
+
+.LEATHER COVER.
+***
+
+.LEATHER TARP.
+***
+
+.LEATHER BALL.
 ***
 
 //BAC WEAPONS

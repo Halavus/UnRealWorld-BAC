@@ -589,19 +589,31 @@ Rope usage from =150= to =100= though listed as split between harness and securi
 		a battle and you will shred your clothes... or start washing
 		by brygun
 	- .Bag.  
-	Arimon 3.7x: changed \{*Cord} to \{Thin cordage}
+		Arimon 3.7x: changed \{\*Cord} to \{Thin cordage}
 	
-- mod_diy_BAC_Boneworking.txt
-	//
-	// Signatus v1.0
-	//
-	// Based on Buoidda's boneworking
-	//
-	// v1.0
-	// - Added .Bone fishhook. and .Bear tooth necklace. from Buoidda's
-	// - Created .Antler comb. and .Bone comb., now can be optionally used in clothing mod
-	// - Created .Antler necklace. and .Bone necklace.
-	- .Bone artifact.
-		From whittling mod by Iago.Hach
-	- .Tooth necklace.
-		 Partial integration of Bouidda 2.2 to allow any teeth to be used
+- mod_diy_BAC_Boneworking.txt  
+	Signatus v1.0  
+	Based on Buoidda's boneworking  
+	v1.0  
+	Added .Bone fishhook. and .Bear tooth necklace. from Buoidda's  
+	Created .Antler comb. and .Bone comb., now can be optionally used in clothing mod  
+	Created .Antler necklace. and .Bone necklace.  
+	
+	Bone necklace to bone decoration.  
+	Idea here is that it doesnt have to be necklace but toys, displays or other  
+	glue removed and it is now tied to bits of wood  
+	
+	- .Bone artifact.  
+		From whittling mod by Iago.Hach  
+	- .Tooth necklace.  
+		Partial integration of Bouidda 2.2 to allow any teeth to be used  
+		Arimon 3.7x: changed \{\*cord\*} to \{Thin cordage}  
+	- .Antler necklace.  
+		Arimon 3.7x: changed \{\*cord\*} to \{Thin cordage}  
+	- .Animal headdress.
+		Arimon 3.7x: changed \{\*cord\*} to \{Thin cordage}  
+	- .Elk hunting horn.  
+		skill penalty due to being tricky to make to get right sound  
+		Arimon 3.7x: changed \{\*cord\*} to \{Thin cordage}  
+
+

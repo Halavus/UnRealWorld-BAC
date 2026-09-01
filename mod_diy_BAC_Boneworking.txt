@@ -41,7 +41,6 @@
 [WEIGHT:0.2]
 [PRICE:2]
 [TILEGFX:bc-bearnlace]
-// Arimon 3.7x: changed {*cord*} to {Thin cordage}
 
 .Antler necklace. "Birch-bark necklace" [effort:0] [phys:hands] *CARPENTRY* /2h/ %-30% [assist:1]
 // [NOPAUSE]
@@ -54,12 +53,6 @@
 [WEIGHT:0.2]
 [PRICE:0.7]
 [TILEGFX:bc-bearnlace]
-// Arimon 3.7x: changed {*cord} to {Thin cordage}
-
-// Bone necklace to bone decoration.
-// Idea here is that it doesnt have to be necklace but toys, displays or other
-// glue removed and it is now tied to bits of wood
-//
 
 .Bone decoration. "Birch-bark necklace" [effort:0] [phys:hands] *CARPENTRY* /2h/ %-30% [assist:1] [NOPAUSE]
 {Bone} (1)	[remove] [noquality] [NAME:%s decoration] [naming:original]
@@ -84,9 +77,6 @@
 [ARMOUR_COVERAGE:skull face neck]
 [WEIGHT:3]
 [PRICE:3.5]
-// By brygun
-// for shamans, actors and those too long alone
-//Arimon 3.7x: changed {Tying equipment} to {Thin cordage}
 
 .Elk hunting horn. "Hunting horn" [effort: 2] [phys:hands] *CARPENTRY*  %-15%  /5h/
 {*elk antler} (2) [remove] '+as left and right curves to be matched'
@@ -96,7 +86,5 @@
 {*glue} #0.25# [remove] '+as glue together'
 {Fire} '+to soften glue'
 [MATERIAL:antler]
-//skill penalty due to being tricky to make to get right sound
-// Arimon 3.7x: changed {*cord} to {Thin cordage}
 
 [SUBMENU_END:Hide and Bone]
