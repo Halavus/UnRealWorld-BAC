@@ -104,7 +104,7 @@
 //Added terrain to find and work appropriate leaning pine
 .Compression pine belly. "Firewood" [phys:hands] *CARPENTRY* %-10% /320/ |2|
 {[TERRAIN:mountain pine_mire]} 				'Be in a mountain or pine mire'
-{Tree trunk} 		 [remove] [ground] [noquality]	'+as finding a leaning pine tree' 
+{Pine tree trunk} 		 [remove] [ground] [noquality]	'Pine trunk leaning down to ground' 
 {Axe} <Carving axe> [wearpct:60]
 {Knife}<Small knife>
 {Fire} 							'+for heat-treating'
