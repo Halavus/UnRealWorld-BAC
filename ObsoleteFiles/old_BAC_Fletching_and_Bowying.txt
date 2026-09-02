@@ -24,3 +24,13 @@ Arimon 3.7x: removed as there is now a vanilla Bowstring that simulates wearing
 [WEIGHT:0.3S]
 [LENGTH:6]
 Arimon 3.7x: removed as there is now a vanilla Bowstring that simulates wearing
+
+//Craftable in Vanilla since 3.80
+.Broadhead arrow.	[effort:1] [phys:hands,one-armed]   	*CARPENTRY*	/30/    [patch:5]
+{Arrow shaft}		[remove] [patchwise] 
+{Iron broadhead}	[remove] [patchwise] 
+{Feather} (3)		[remove] [patchwise] [noquality] 
+{Yarn} 	=2=  [remove] [patchwise] [nominlen]			
+//'+for thin tying'
+{Knife} <Small knife>
+{Whetstone}			 [noquality]		'+for final sharpening'

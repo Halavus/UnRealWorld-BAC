@@ -25,7 +25,7 @@
 
 //MODDED:
 
-.Forked bone arrowhead. "Hunting horn" [effort:1] [phys:hands]   *COMMON*  %-10% /45/ |-1|   [patch]
+.Forked bone arrowhead. "Bone arrowhead" [effort:1] [phys:hands]   *COMMON*  %-10% /45/ |-1|   [patch]
 {Bone}  #0.25# [remove] [patchwise] [noquality]	
 {Knife}<Small knife>
 [TYPE:weapon]
@@ -34,35 +34,9 @@
 [PRICE:0]
 [TILEGFX:bc-forkbahd]
 
-.Fur-fletched arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*   %-20% /25/    [patch:5]
-{Arrow shaft}		[remove] [patchwise]
-{*Arrowhead}		[remove] [patchwise]			
-{*Fur} 		#0.05#	[remove] [patchwise] [noquality]	'+Fur'
-{Yarn} 	=2= [remove] [patchwise] [noquality] [nominlen]	
-//'+for thin tying'
-{Knife} <Small knife>
-[WEIGHT:0.13]
-
-.Broadhead arrow.	[effort:1] [phys:hands,one-armed]   	*CARPENTRY*	/30/    [patch:5]
-{Arrow shaft}		[remove] [patchwise] 
-{Iron broadhead}	[remove] [patchwise] 
-{Feather} (3)		[remove] [patchwise] [noquality] 
-{Yarn} 	=2=  [remove] [patchwise] [nominlen]			
-//'+for thin tying'
-{Knife} <Small knife>
-{Whetstone}			 [noquality]		'+for final sharpening'
-
-.Fur-fletched Broadhead arrow. "Broadhead arrow" [effort:1] [phys:hands,one-armed]   	*CARPENTRY*	%-20% /25/    [patch:5]
-{Arrow shaft}		[remove] [patchwise]
-{Iron broadhead}	[remove] [patchwise]
-{*Fur} 		#0.05#	[remove] [patchwise] [noquality]	'+for fur as fletching instead of feathers'
-{Yarn} 	=2= [remove] [patchwise] [nominlen]			
-{Knife} <Small knife>
-{Whetstone}			 [noquality]		'+for final sharpening'
-
 .Fowling arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*        /30/    [patch:5]
 {Arrow shaft}		[remove] [patchwise]
-{Forked*arrowhead}	[remove] [patchwise]			'+Forked arrowhead'
+{Forked*arrowhead}	[remove] [patchwise]			'Forked arrowhead'
 {Feather} (3)		[remove] [patchwise] [noquality]
 {Yarn} 	=2= [remove] [patchwise] [nominlen]			
 {Knife} <Small knife>
@@ -70,11 +44,27 @@
 [POINT_ATTACK:5]
 [TILEGFX:bc-fowlarrow]
 
+.Fur-fletched arrow. "Arrow" [effort:1] [phys:hands,one-armed]   *CARPENTRY*   %-20% /25/    [patch:5]
+{Arrow shaft}		[remove] [patchwise]
+{*Arrowhead}		[remove] [patchwise]			'Arrowhead'
+{*Fur} 		#0.05#	[remove] [patchwise] [noquality]	'Fur instead of feathers'
+{Yarn} 	=2= [remove] [patchwise] [noquality] [nominlen]	
+//'+for thin tying'
+{Knife} <Small knife>
+[WEIGHT:0.13]
+
+.Fur-fletched Broadhead arrow. "Broadhead arrow" [effort:1] [phys:hands,one-armed]   	*CARPENTRY*	%-20% /25/    [patch:5]
+{Arrow shaft}		[remove] [patchwise]
+{Iron broadhead}	[remove] [patchwise]
+{*Fur} 		#0.05#	[remove] [patchwise] [noquality]	'Fur instead of feathers'
+{Yarn} 	=2= [remove] [patchwise] [nominlen]			
+{Knife} <Small knife>
+{Whetstone}			 [noquality]		'+for final sharpening'
 
 .Antler-tipped blunt arrow.  "Blunt arrow" [effort:1] [phys:hands,one-armed]  *CARPENTRY*   %20%    /70/ \1d\ [patch:5]
 {Arrow shaft}		[remove] [patchwise]
-{*antler}	#0.1#	[remove] [noquality]			'+to reinforce hitting end'
-{*glue}		#0.05# 	[remove] [noquality] 			
+{*antler}	#0.1#	[remove] [noquality]			'Antler for the tip'
+{*glue}		#0.05# 	[remove] [noquality] 			'Glue'
 {Fire} 								'+for applying glue'
 {Feather} (3)		[remove] [patchwise] [noquality]
 {Yarn} 	=2= [remove] [patchwise] [noquality] [nominlen]	
@@ -103,7 +93,7 @@
 {Knife} <Broad knife>
 {Knife} <Small knife>
 {Fire} 							'+for treating the belly'
-{Bowstring} 		 [noquality] [ground] '+as a temporary bowstring'
+{Bowstring} 		 [noquality] [ground] 'A temporary bowstring'
 {Tiller}			 [noquality] [ground]
 [MATERIAL:wood]
 [WEIGHT:3]
@@ -113,7 +103,7 @@
 // Woodworking mod notes
 //Added terrain to find and work appropriate leaning pine
 .Compression pine belly. "Firewood" [phys:hands] *CARPENTRY* %-10% /320/ |2|
-{[TERRAIN:mountain pine_mire]} 				'+be in a mountain or pine mire'
+{[TERRAIN:mountain pine_mire]} 				'Be in a mountain or pine mire'
 {Tree trunk} 		 [remove] [ground] [noquality]	'+as finding a leaning pine tree' 
 {Axe} <Carving axe> [wearpct:60]
 {Knife}<Small knife>
@@ -145,10 +135,10 @@
 .Unfinished two-wood longbow. "firewood" [effort:1] [phys:arms,hands] *BOWYER* /6h/ \5d\ |2| %+10%
 {Compression pine belly} [remove]
 {Birch backing}		 [remove]
-{*glue}  #0.8#   [remove] [noquality]	'+various glue to join parts'
-{*birch-bark*}  #1#   [remove] [noquality]     '+adding birch-bark for protection'
-{*Recurve ear} (2) 	 [remove]	'+as the two recurve ears'
-{Bowstring} 		 [noquality] [ground] '+as a temporary bowstring'
+{*glue}  #0.8#   [remove] [noquality]	'glue to join parts'
+{*birch-bark*}  #1#   [remove] [noquality]     'birch-bark for protection'
+{*Recurve ear} (2) 	 [remove]	'the two recurve ears'
+{Bowstring} 		 [noquality] [ground] 'a temporary bowstring'
 {Fire} 						'+for heating glue and wrapping bark'
 {Knife} <Small knife>
 {Tiller}			 [noquality] [ground]
@@ -160,7 +150,7 @@
 // Added here but could have gone on Lumber menu
 // BAC edit to access quarter log from lumber menu
 .Dry Quarter Log. "firewood" [effort:1] [phys:arms,hands,stance,one-armed] *TIMBERCRAFT* /5/ \30d\ |1| %20% 
-{* quarter log} (1)		[remove] [ground]	'+from the lumber menu'
+{* quarter log} (1)		[remove] [ground]	'quarter log'
 {Axe} <Carving axe> '+to trim flaws' [wearpct:20]
 [MATERIAL:wood]
 [WEIGHT:30]
@@ -171,7 +161,7 @@
 {Axe} <Carving axe> [wearpct:40]
 {Knife} <Broad knife>
 {Knife} <Small knife>
-{Bowstring} 		 [noquality] [ground] '+as a temporary bowstring'
+{Bowstring} 		 [noquality] [ground] 'a temporary bowstring'
 {Tiller}			 [noquality] [ground] '+to brace and pull bow on for testing'
 [MATERIAL:wood]
 [WEIGHT:3]

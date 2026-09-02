@@ -42,9 +42,13 @@
 - clarified Tying Equipment recipes' text descriptions
 - clarified Utilities recipes' text descriptions
 - changed the canteen's needed tying equipment to cord (who wants to carry liquid around with yarn?) and upped the price accordingly
-- reduced capacity of the canteen to 5 without changing its weight to match it to its lower price VS vanilla wooden canteen
 - made the washed bandage less controversial by requiring a knife
 - changed base item of the quern's recipes to huning horn to avoid them being consumed as stones by other recipes
+- renamed "Grind xyz-flour" to "xyz-flour" to make them pausable
+- changed COMMON to AGRICULTURE for grinding flours
+- archived outdated broadhead arrow, as it's craftable in vanilla since 3.80 (fur fletched variant remains)
+- changed base item of the Forked bone arrowhead. to "Bone arrowhead" according to Buoidda's statment that their penetration [cannot be modded](https://www.unrealworld.fi/forums/index.php?topic=5865.msg17575#msg17575)
+- updated text descriptions in diy_BAC_Fletching_and_Bowying.txt
 
 ### v3.88.3 Mod files cleanup
 - added BAC_changelogs.md
