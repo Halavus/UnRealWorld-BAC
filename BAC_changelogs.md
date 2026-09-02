@@ -5,7 +5,6 @@
 - evt. merge changelogs & contributors (currently kept separate for ease of use)
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
 - add informations about modded items to the encyclopedia (GAME.NFO)
-- Clarify if diy_BAC_Knitting (currently obsolete) should make a comeback: mod_diy_BAC_Wool has the recipes and both versions use Wool in separate ways. One with cloth, the other with Knitting needles. The TILEGFX of those needles seems to be missing and the process of Knitting shouldn't consume wool "Cloth" but wool yarn.
 - Review Tying Equipment recipes to ensure ingredients' required lengths and weights are consistent with vanilla Textilecraft options
 
 ## Known issues
@@ -49,6 +48,7 @@
 - archived outdated broadhead arrow, as it's craftable in vanilla since 3.80 (fur fletched variant remains)
 - changed base item of the Forked bone arrowhead. to "Bone arrowhead" according to Buoidda's statment that their penetration [cannot be modded](https://www.unrealworld.fi/forums/index.php?topic=5865.msg17575#msg17575)
 - updated text descriptions in diy_BAC_Fletching_and_Bowying.txt
+- changed Tree trunk to Pine tree trunk in the "Compression Pine Belly" as stated by the comments in the code
 
 ### v3.88.3 Mod files cleanup
 - added BAC_changelogs.md
