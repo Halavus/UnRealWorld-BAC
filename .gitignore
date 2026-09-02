@@ -44,6 +44,7 @@ defaults/
 gameinfo/
 messages/
 truegfx/
+ANCESTORS/*
 
 #Ignore your save directories locally in .git/info/exclude
 
