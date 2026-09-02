@@ -24,12 +24,12 @@ Index of main topics:
    .MOVING                 .VALUABLES<br>
 
 * BAC ITEMS             <br>
-   .BAC CARPENTRY          .BAC UTILITY<br>
-   .BAC LUMBER             .BAC BONEWORKING<br>
-   .BAC TOOLS              .BAC HIDEWORKING<br>
-   .BAC WEAPONS            <br>
-   .BAC TRANSPORT          ...more BAC categories<br>
-   .BAC TYING EQUIPMENT       will come here...<br>
+   .BAC CARPENTRY          .BAC ARCHERY             <br>
+   .BAC LUMBER             .BAC UTILITY             <br>
+   .BAC TOOLS              .BAC BONEWORKING         <br>
+   .BAC WEAPONS            .BAC HIDEWORKING         <br>
+   .BAC TRANSPORT                                   ...more BAC categories<br>
+   .BAC TYING EQUIPMENT                                will come here...<br>
 
 In addition, you may want to browse our Wiki for more information:<br>
 http://www.unrealworld.fi/wiki
@@ -3454,40 +3454,57 @@ a new house and have a fresh start every thirty years or so.
 ***
 
 
-// BAC ITEMS
-.BAC LUMBER.
-FIREWOOD FROM SLENDER TRUNK, SMALL WOODEN BLOCK, HALF LOG, QUARTER LOG, SHORT QUARTER LOG, RADIAL BOARD, UPPER BLOCK TUB, HALF BLOCK TUB, DEEP BLOCK TUB, BLOCK POT, BRANCH BUNDLE, UNBUNDLE BRANCH BUNDLE, SPRUCE MAT FUR, DISMANTLE SPRUCE MAT, DRIED BOARD, SANDED BOARD, CARVED BOARD, TALL BIRCH-BARK ROLL, OPENED ROLL OF BIRCH-BARK
-//are longer names complicated to use?
-***
-
-
-***
+//BAC ITEMS
 
 .BAC CARPENTRY.
-TILLER, 
+***
+
+.BAC LUMBER.
+FIREWOOD FROM SLENDER TRUNK, SMALL WOODEN BLOCK, HALF LOG, QUARTER LOG, <br>
+SHORT QUARTER LOG, RADIAL BOARD, UPPER BLOCK TUB, HALF BLOCK TUB, <br>
+DEEP BLOCK TUB, BLOCK POT, BRANCH BUNDLE, UNBUNDLE BRANCH BUNDLE, SPRUCE MAT FUR, <br>
+DISMANTLE SPRUCE MAT, DRIED BOARD, SANDED BOARD, CARVED BOARD, <br>
+TALL BIRCH-BARK ROLL, OPENED ROLL OF BIRCH-BARK
+//are longer names complicated to use?
 ***
 
 .BAC TOOLS.
 DRAW KNIFE, 
 ***
 
+.BAC WEAPONS.
+BATTLEAXE HEAD, SPEAR HEAD, NORTHERN SPEAR HEAD, SMALL SPEAR HEAD, <br>
+BONE SPEAR, SHORTSWORD, PRIMITIVE HUNTING BOW, HARDWOOD SHORTBOW, <br>
+TWO-WOOD LONGBOW, HARDWOOD LONGBOW, RECURVED NORTHERN BOW, RETILLER NORTHERN BOW, <br>
+NORTHERN STAFF-BOW, SHORT SPEAR
+***
+
 .BAC TRANSPORT.
-LUMBERPACK FRAME, FREE ROPES FROM RAFT, SLEDWAGON, LOAD TREE TRUNK, OFFLOAD TREE TRUNK, 
-LOAD LOG, OFFLOAD LOG, LOAD SLENDER TRUNK, OFFLOAD SLENDER TREE TRUNK, 
-LOAD CLINKERED PUNT, OFFLOAD CLINKERED PUNT,  
+LUMBERPACK FRAME, FREE ROPES FROM RAFT, SLEDWAGON, LOAD TREE TRUNK, <br>
+OFFLOAD TREE TRUNK, LOAD LOG, OFFLOAD LOG, LOAD SLENDER TRUNK, <br>
+OFFLOAD SLENDER TREE TRUNK, LOAD CLINKERED PUNT, OFFLOAD CLINKERED PUNT, <br>
 TARP-WEAVE PUNT, [BIRCH-BARK PUNT], FINNISH PUNT, CLINKERED PUNT
 ***
 
 .BAC TYING EQUIPMENT.
-BIRCH CORD, TWISTED CORD, REFINED CORD, REFINE A CORD, BRAIDED ROPE, BIRCH ROOT, 
-SPLIT SPRUCE TWIG, ROOT ROPE, UNTIE LOOP SNARE, EXTRACT ROWAN FIBRE, 
+BIRCH CORD, TWISTED CORD, REFINED CORD, REFINE A CORD, BRAIDED ROPE, BIRCH ROOT, <br>
+SPLIT SPRUCE TWIG, ROOT ROPE, UNTIE LOOP SNARE, EXTRACT ROWAN FIBRE, <br>
 EXTRACT SPRUCE FIBRE, FIBRE FROM RAW BIRCH-BARK
 ***
 
+.BAC ARCHERY.
+FORKED BONE ARROWHEAD, FOWLING ARROW, FUR-FLETCHED ARROW, <br>
+FUR-FLETCHED BROADHEAD ARROW, ANTLER-TIPPED BLUNT ARROW, TILLER, UNFINISHED BOW, <br>
+COMPRESSION PINE BELLY, BIRCH BACKING, RECURVE EAR, UNFINISHED TWO-WOOD LONGBOW, <br>
+DRY QUARTER LOG, UNFINISHED HARDWOOD LONGBOW
+***
+
 .BAC UTILITY.
-CANTEEN, BARK BANDAGE, WASHED BANDAGE, BAG, QUERN-GRINDER PIECE, QUERN-GRINDER, 
-GRIND BARLEY-FLOUR, GRIND RYE-FLOUR, GRIND HEMP-FLOUR, FISH-SKIN GLUE, GATHER PINE TAR, 
-PITCH GLUE FROM PINE TAR, PITCH GLUE FROM BIRCH-BARK, CAULKING
+CANTEEN, BARK BANDAGE, WASHED BANDAGE, BAG, <br>
+QUERN-GRINDER, QUERN-GRINDER PIECE, <br>
+BARLEY-FLOUR, RYE-FLOUR, HEMP-FLOUR, <br>
+FISH-SKIN GLUE, GATHER PINE TAR, PITCH GLUE FROM PINE TAR, <br>
+PITCH GLUE FROM BIRCH-BARK, CAULKING
 ***
 
 .BAC BONEWORKING.
@@ -3496,26 +3513,12 @@ BONE DECORATION, ANIMAL HEADDRESS, ELK HUNTING HORN
 ***
 
 .BAC HIDEWORKING.
-KOTA COVER FROM SINGLE PELT, KOTA COVER FROM HIDE PIECES, KOTA COVER OF LEATHER, KOTA COVER OF WOOL, DE-HAIRED SKIN COVER, TANNING SKIN COVER, TANNED SKIN COVER, RINSED SKIN COVER, LEATHER COVER, LEATHER TARP, LEATHER BALL
+KOTA COVER FROM SINGLE PELT, KOTA COVER FROM HIDE PIECES, KOTA COVER OF LEATHER, <br>
+KOTA COVER OF WOOL, DE-HAIRED SKIN COVER, TANNING SKIN COVER, TANNED SKIN COVER, <br>
+RINSED SKIN COVER, LEATHER COVER, LEATHER TARP, LEATHER BALL
 ***
 
-.BAC WEAPONS.
-BATTLEAXE HEAD, SPEAR HEAD, NORTHERN SPEAR HEAD, SMALL SPEAR HEAD, 
-BONE SPEAR, SHORTSWORD, PRIMITIVE HUNTING BOW, HARDWOOD SHORTBOW, 
-TWO-WOOD LONGBOW, HARDWOOD LONGBOW, RECURVED NORTHERN BOW, RETILLER NORTHERN BOW, 
-NORTHERN STAFF-BOW, SHORT SPEAR
-***
-
-.TILLER.TILLERS.
-Tillering is a process of bending the bow a little bit at a time. This is the true measure of a Bowmaker, 
-slowly looking at the limbs and seeing them evenly develop into the correct shape, a well balanced spring 
-of sorts, ready to propel the arrow. Tillering is a hard thing to teach, people have different opinions 
-on what a well tillered bow should look like, it can take years to perfect, or indeed develop your own 
-style. Only practice can really `teach` this art.
-
-A Tiller is the thing you attach the bow to so you can see the bend.<br>
-source: www.howtomakealongbow.co.uk/part-5-tillering
-***
+//BAC CARPENTRY
 
 //BAC LUMBER
 .FIREWOOD FROM SLENDER TRUNK.
@@ -3738,6 +3741,8 @@ stakes with the rope tied to one point. A stone shaped/hollowed for this task pr
 triangle points tend to catch on lakebed below.
 ***
 
+//BAC TYING EQUIPMENT
+
 .BIRCH CORD.
 A cord from birch-bark strip.
 ***
@@ -3798,6 +3803,60 @@ Extract fibres from a spruce twig.
 
 .FIBRE FROM RAW BIRCH-BARK.
 Extract fibres from birch-bark.
+***
+
+//BAC ARCHERY
+
+.FORKED BONE ARROWHEAD.FORKED BONE ARROWHEADS.
+Arrowheads for making fowling arrows. You can make bone arrows with those arroheads using the vanilla arrow recipe, but these arrowheads are explicitely needed for the BAC fowling arrows.
+***
+
+.FOWLING ARROW.FOWLING ARROWS.
+Intended to hunt small game. Their penetration cannot be modded but their weight is light and they do less damage to small game. <br>
+(extensively tested by their creator 'Buoidda' in 2021, from 'Buoidda's crafts 2.3.6')
+***
+
+.FUR-FLETCHED BROADHEAD ARROW.FUR-FLETCHED BROADHEAD ARROWS.FUR-FLETCHED ARROW.FUR-FLETCHED ARROWS.
+Alternate arrow recipe that uses fur instead of feathers.
+***
+
+.ANTLER-TIPPED BLUNT ARROW.ANTLER-TIPPED BLUNT ARROWS.
+Alternate blunt arrow recipe that uses antler for the tip. Outputs similar arrows as blunt arrows.
+***
+
+.TILLER.TILLERS.
+Tillering is a process of bending the bow a little bit at a time. This is the true measure of a Bowmaker, 
+slowly looking at the limbs and seeing them evenly develop into the correct shape, a well balanced spring 
+of sorts, ready to propel the arrow. Tillering is a hard thing to teach, people have different opinions 
+on what a well tillered bow should look like, it can take years to perfect, or indeed develop your own 
+style. Only practice can really `teach` this art.
+
+A Tiller is the thing you attach the bow to so you can see the bend.<br>
+source: www.howtomakealongbow.co.uk/part-5-tillering
+***
+
+.UNFINISHED BOW.
+Main component of the hardwood shortbow.
+***
+
+.COMPRESSION PINE BELLY.BIRCH BACKING.
+Used for making the Recurved northern bow and the Northern staff-bow.
+***
+
+.RECURVE EAR.
+Used for making the Recurved northern bow.
+***
+
+.UNFINISHED TWO-WOOD LONGBOW.
+Main component of the two-wood longbow.
+***
+
+.DRY QUARTER LOG.
+Used in the making of the unfinished hardwood longbow
+***
+
+.UNFINISHED HARDWOOD LONGBOW.
+Main component of the hardwood longbow.
 ***
 
 //BAC Utility

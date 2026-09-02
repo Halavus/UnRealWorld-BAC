@@ -1,0 +1,14 @@
+Words can get strangely formatted with spaces inside them if the lines exceed ~110 chars.
+i.e. '[...] strangely form  atted [...]'
+fix: insert newlines every ~110 character and/or some <br>
+
+2x newline makes a new paragraph
+1x newline doesn't change the text
+
+--
+
+Auto-Hyperlinking sometimes bug when a long article name  (=link) is broken by an automatic newline. (The encyclopedia wraps the text in its box automatically)
+i.e. 'FUR-FLETCHED BROADHEAD ARROW' or 'OPENED ROLL OF BIRCH-BARK' or even 'SHORT QUARTER LOG'
+
+fix: add a <br> before that word/link
+keep lists of links (summaries, i.e. .BAC UTILITY.) short in character length
