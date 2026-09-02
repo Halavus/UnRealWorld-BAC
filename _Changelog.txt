@@ -1,0 +1,355 @@
+R2.4, v3.84 -Sibs
+- Changed mod to use vanilla hafting system
+    - Tool making now:
+        - Forge tool head shape (eg large axe head shape)
+        - Refine shape with file, whetstone etc (Broadaxe head)
+        - Haft the tool 
+- Mod recipes now use vanilla wear system on axes and shovels
+- Bait cutting moved to fish menu
+- Changed several recipes to be back in line with vanilla (Thin cordage back to yarn for arrows, eg)
+- reordered some recipes for menu clarity
+
+
+TODOs:
+- several recipes (looking at you, toolmaking) require too many things, overflowing the menu. 
+- Take a look at inconsistent noquality usage (smithing)
+
+R2.3
+
+DELETE the diy_BAC_knitting file.
+
+
+WOOL
+HUGE overhaul to wool clothing, after a lot of reading. Knitting is not a thing any more, because it did not exist at the time and location the game simulates. 
+
+Recipes were redone (in a more complicated fashion) in order to get around the hard-coded limitation on clothing quality. Now, instead of all woollen clothing being decent quality, it can be anywhere from crude to masterwork, based on your TEXTILECRAFT skill.
+
+Large pieces of wool clothing are made primarily with wool cloth (which was a thing in a previous version of BAC), which I have now restored. 
+
+Smaller items, specifically gloves, socks and caps, were made with a process called Naalbinding (google it) which is a precursor to Knitting. The latter is somewhat slower, but does not require a loom, and is "lossless" in terms of material used. 
+
+All wool processing and clothing moved back to a single menu, though tools used in common with other textiles (e.g. loom) are still under the Textilecraft menu. 
+
+Prices were rebalanced so that each step in the wool clothing process adds value to the finished product. Wool yarn is worth 1 unit (arrow/squirrel fur) per pound. Wool cloth is worth 2 per pound. Wool clothing is worth 2.5-3 per pound (varies per clothing item; vanilla item values were not changed, and the values were built around this). This is in contrast to previous wool clothing crafted by BAC which had MUCH lower prices than the corresponding vanilla items. IT's now possible to make your living as a maker of wool clothing, if you wish.
+
+Unraveling woollen clothing to obtain yarn is now slightly lossy (0.6 pounds of clothing gives you 0.5 pounds of yarn).
+
+You can now "trade" for wool yarn in a village using a recipe that simulates that trade. The required input is one arrow (as the most common trade-item used by players), but this can be fairly
+altered in the code for any item of equivalent value (such as a squirrel fur).
+
+Weaving wool cloth increased from 90 minutes to 2h for one pound of cloth. This may still be too little.
+
+Removed 'noquality' from wool yarn creation, so that you can have higher quality wool yarn. Changed length to 100 feet per 0.5 pounds instead of 15 feet (which is silly). 100 feet per 0.5 pounds is still REALLY thick, but it roughly lines up with the thickness of the vanilla linen and nettle yarn (and is in fact slightly thicker than either).
+
+Removed noquality on spindle, but reduced the skill bonus from 30 to 10. Higher quality spindles now possible.
+
+Removed noquality from knitting needles so that you could have good quality ones.
+
+Wool cloth garments need {Fine cordage} now as opposed to specifically yarn to sew the parts together. (Yarn still works, this just makes it broader, AND prevents the annoying bug whereby the entire stack of yarn is used up)
+
+Knitting needles no longer an item; instead, you can craft more generic "textile needles" out of wood or bone. (Using bone offers a 10% skill bonus to the crafting). These are intended to be a set of needles that can be used for any of the textile processes.
+
+Woollen veil and woollen cowl presented an issue: the first weighed 0.3 pounds, the latter 1 pound, but both covered the same area (skull and neck) and provided the same protection. Veil is unbalanced in weight in comparison to other wool clothing. It should probably provide less warmth, because it is a lighter material, but that is not an option in modding. Both items were removed, and replaced with a "woollen heavy veil" that you can craft, which weighs 0.6 pounds, as a compromise item. Both vanilla items are still obtainable through trading with villages.
+
+Woollen longsocks item added, covering feet and calves, because of the large number of woollen garments that cut off above the calves.
+
+Woollen footrags removed as a craftable item. They are mechanically identical to woollen socks, and removed for redundancy since more menu space was desired. Woollen socks and woollen longsocks may be layered if double foot protection is desired.
+
+Woollen hood added as a craftable item, due to lack of face coverings. Covers the same area as the fur hood (skull, face, neck).
+
+"Woollen dress (w sleeves)" added as a craftable item. It is mechanically the same as the woollen undergarment in terms of price, weigh, and area covered. Allows layering, and RP of those who wish to wear a dress without having cold arms.
+
+
+
+MENU CHANGES
+* Renamed "Wool Processing and Garments" menu now uses the O key. Armors of Iron and Wood changed from O to I key.
+
+* Bark clothing (previously with wool clothing) moved to Earthen/Barkware menu. That menu is now 100% full, which is not ideal for future expansion, but perfectly fine for now.
+
+
+
+IRONWORKING CHANGES
+
+* Removed -30% penalty from smelting iron bloom (I don't understand why it was there)
+
+* Halved input and output and time of smelt ore into iron recipe. 4h instead of 8h, one pound instead of 2. Just to break it up.
+
+* Reworking iron and steel recipes, in order to allow you to keep working at a piece of metal to perfect it further (can take MANY MANY tries)
+
+* Removed two "fix errors" cheat recipes under ironworking. Haven't seen any need to use those yet. They are still in the file, just commented out.
+
+
+COOKING CHANGES
+* Nettle Cheese now has a price of 0.25 squirrel hides (or 0.25 arrows), as opposed to having no value.
+
+* Dried berries and mushrooms now has a price of 0.1 squirrel hides (or 0.1 arrows), as opposed to having no value. Unfortunately this will work on poisoned mushrooms, but the value is low enough that it shouldn't be a temptation to cheese.
+
+* Recipe to make berry turnovers from dried berries added
+
+
+OTHER CHANGES
+
+* FIX: Commented out prepared soil line test.
+
+* FIX: Fur mittens had been altered for a previous test, and never unaltered. Restored to normal values.
+
+* Textile needles added as a requirement for all linen and nettle clothing that use yarn to attach pieces of cloth together.
+
+* Firewood from slender trunk effort increased to match other firewood making. Patchwise option added.
+
+* clay amphora tub renamed to Amphora
+
+* clay large amphora tub renamed to Large Amphora
+
+* Changed loop snares back to using yarn because of quality issue (they were always coming out as poor quality)
+
+* Vanilla leather and fur clothing was using the COMMON skill, while all added recipes were using the HIDEWORKING skill. They now all use HIDEWORKING.
+
+
+
+
+
+
+TO DO
+Re-balance and analyze linen, leather and nettle clothing as has been done for wool. Consider the process of value added at each step. Change their recipes so that they can have higher/lower qualities. (this is more time consuming that you'd guess)
+
+(The same approach will not work with fur, because it would interfere with the way fur clothing borrows properties from the type of fur used, e.g. bear. At the present time, I don't forsee any way for me to modify fur clothing so that it can have varying quality.)
+
+Determine to what extent it makes sense for leather and fur clothing to use textile needles. Research how such clothing was actually fastened.
+
+Clay playset needs different tile graphic.
+
+Digging clay too easy? Rebalance?
+
+Incorporate manure mod into BAC.
+
+Ensure compatibility of Privateer's bees, mead and coop mods with BAC (Privateer does not wish them to be incorporated directly)
+
+Look into other mods to incorporate.
+
+MAYBE TO DO (WAY IN FUTURE)
+
+Add chainmail as optional craftable menu (ahistoric, but not implausible)
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+R2.2
+Added new recipe to lumber menu turn a slender trunk into firewood; attempted to maintain same ratio of time and mass as turning larger logs into firewood.
+
+Changed the skill used for Quern Stone creation to AGRICULTURE (instead of COMMON)
+
+Skirt items in clothing had "hig" instead of "hip" coverage. fixed.
+
+Cloth recipes changed to use 'hunting horn' base item, then other properties adjusted. This is because the 'bandage' base item was not allowing higher quality cloth from higher quality yarn (it was treated as though it had the [noquality] tag on output).
+
+Cloth recipes changed to use 225 ft of yarn in order to produce a 1 lb. cloth output of equivalent weight. Better to have cloth in single pound units. (Doing 2 units at a time will still allow the use of exactly 3 150 foot spools of yarn, or yarn can be created in 225 foot spools in previous step). Time and price adjusted proportionally. Patchwise max reduced from 5 to 4. In-recipe warning added that input should be exact length required, or surplus is lost (I know of no way around this while requiring the specific type of yarn). Shorten/join cords command allows exact length to be accomplished easily, though.
+
+Replaced the commented-out Bundle Branches recipes, as it turns out at least one person uses them.
+
+Commented out the Skin recipe that used thin cordage (as opposed to Cord). Went back and forth, but yarn seems to me to be too weak to secure a proper Skin?
+
+Restored linen breast wraps/private wraps, commented out linen breast wraps private wraps, based on new info about their relative comfort.
+
+"Warning" added for creating barrels, since if they are fully filled some lighter characters will be unable to lift them.
+
+Removed 'trim birch bark' recipe, which was a legacy option from earlier versions
+
+Combined flax into flora_BAC_cultivated file. Now that it is a vanilla plant, there is no reason for it to be a separate file.
+
+COOKERY CHANGES
+
+* added mushrooms as an [optional] element to both meat and fish soup. I like it, and since it's optional, it can't hurt anyone who doesn't want to add them.
+* Reduced required amount of berries/mushrooms to dry from 8 to 4 pounds, which is easier to obtain at once. Changed weight division from 10 to 8, to make the final weight more rounded. Single piece from berries now (to match mushrooms). 
+
+OPTIONAL COOKERY CHANGES
+
+* Added optional cookery file that I use for myself, that reduces cook times to 60-67% of original, and increases the shelf life of many of the foods (double for many short-lived foods, up to non-spoiling for dried berries and mushrooms (originally 200 days). I find this makes cooking rewarding to be worth it, but it's optional because not everyone will want this. 
+
+TO DO
+Ask permission from some other authors to incorporate aspects of their mods. E.g. bait, manure, coops, mead, honey. Or, otherwise ensure compatibility between them.
+
+
+
+
+
+Version R2.1 (changes as compared to Version R2)
+
+FIXES TO THINGS I DID: 
+
+* Commented out Linen privates wrap, and linen breast wrap, two mod-introduced clothing items. This was to bring back the "Repair Clothing" option that I'd accidentally bumped from the clothing menu; I had to cut two clothing items. I chose these two for a few reasons. First, nettle clothing is (apparently) softer, and more suitable to being against the privates or breasts. Second, this distinguishes nettle and linen clothing a bit more (linen already had some unique clothing items, such as undershirt, now nettle has some unique clothing items too). Users can easily comment out some other clothing items instead, if they so choose
+
+* Restored the block tub / block pot under lumber. I had commented them out for a test, I think, and then didn't restore them.
+
+CHANGES TO OTHER ASPECTS OF THE MOD:
+
+Changed the cloth recipes under textilecraft to require 150 feet of yarn instead of 50, and output a piece of cloth that weighs 0.66 instead of 0.5. With the reworking of the vanilla yarn system, the vanilla yarn was much lighter per length than the yarn in earlier versions of the mod (it was the same thickness as cord), and under the original recipe 0.2 pounds of yarn was becoming 0.5 pounds of cloth. With the recipe change, a full 150 bundle of yarn will be used each time (satisfying), and 0.66 pounds of yarn will become 0.66 pounds of cloth. Prices of the cloth output were scaled up proportionally (32%). Time scaled up from 36m to 1h. The time scale was difficult to judge, because the length of yarn increased three fold, but the cloth output only increased 32%, so I went with something in between. Patch option reduced from 10 to 5.
+
+Extracting fibre from rowan and spruce increased to 3 units, to be more competitive with the 7 units from birch bark. Getting 0.7 pounds of fibre from one pound of birch-bark, but 0.1 pounds of fibre from one pound of rowan bark, makes little sense to me. I don't understand the relatives trees well enough, though, to increase the entire recipe to match the 7 units confidently.
+
+
+
+Version R2 (changes as compared to arimon's 3.7x version)
+
+FIXES
+* Commented out descriptive text added to Thin cordage in recipes; the item will not display properly when it has descriptive text. I have reported this bug. This applies to the armor menu, barkware, boneworking, earthenware, fletching, hideworking, toolmaking
+
+* Changed recipe for Flax Linen Cloth to use Linen Yarn instead of Flax Yarn, to match the new weaving system.
+
+* Northern Staff-Bow base item changed from Northern Spear to Northern Bow, so that it works with the new bow string system. Credit to Nydxz for for this simple but important fix, pointed out earlier in this thread.
+
+* {Dip net} changed to {*Dip net*} in the recipe for scooping lake ore. This is not a perfectly satisfactory solution; under the new fishing rod system, the dip net becomes a "dip net with no hook". If you change its base item so that it's not a fishing rod, the name becomes just "dip net" again, but then it can't be used for fishing (as intended). Best of bad options, I think, is to live with the strange name. Thanks to Pr0man for bringing this to attention.
+ 
+* Renamed "Birch Shortbow" recipe to just "Shortbow"
+* Renamed "Tipped Arrow" recipe to just "Arrow"
+* Renamed "Wooden Blunt Arrow" recipe to just "Blunt Arrow"
+WHY: This is complicated, but a good reason. These three recipes show up under the vanilla Weapons menu. BAC aims to replace them with its own 'versions' of the recipes. It removes the vanilla recipes by commenting them out in diy_glossary. This is fine if you install the mod by overwriting. However, if you install the mod with the mod manager, the vanilla recipes are still there, in addition to the versions under Bowying and Fletching menus. By changing the new recipes to exactly match the names of the vanilla recipes, that guarantees that the vanilla ones will be 'overwritten', even if they are still in diy_glossary.  (This also applies to "Spruce quick-bow", but the BAC recipe already exactly matched the name of the vanilla recipe, and so was already overwritten.)
+
+
+REMOVED ITEMS - Removed items are "commented out"; nothing was actually deleted from the files.
+* Removed 'Woollen Garments' menu.  This duplicates items from Knitting menu, Knitting option more immersive, and more sensical, than "wool cloth".
+
+* Removed 'Weave Wool Cloth' option from textilecraft. Was only used for Woollen garments menu, so useless with the removal of that redundant menu (see above)
+
+* Removed "Caulked wooden tub" in Carpentry. It was just a harder to make wooden tub, with no real advantages (only difference is its value is 2 instead of 1)
+
+* Removed 'tub' chain of recipes in Lumber. These cluttered up the menu, and are supersceded by the containers made with the Carpentry menu. These are also too easy to make for things that store liquids, in any case.
+
+* Removed bundle/unbundle branches in Lumber, as they just used up menu space in my eyes.
+
+* Free ropes from raft recipe removed, mainly for space, but also because it's very unsatisfying to get the ropes back from a raft but the logs are destroyed.
+
+
+MOVED RECIPES / COMBINED MENUS
+
+* Moved the modded boat recipes (which are a lot of entries) into the criminally empty Fishing menu. Not the best fit, since that menu cannot be renamed, but a better fit than anything else would be. Added a note in the transport menu to look there.
+
+* Moved the Sledwagon and it's 'loading' recipes into the Transport menu.
+WHY: Frees up space under Utility for more miscellaneous recipes.
+
+* Moved the peeling and trimming of bark to the Lumber menu.
+WHY: Space optimization, and oppropriate since it uses fallen trunks.
+
+* Moved Clean Bandage from 'Mining and More' to Utility.
+WHY: Obviously a more appropriate place for the recipe
+
+* Moved Bark Bandage to Utility
+WHY: So all three bandage recipes are together.
+
+* Moved Clean Fish from 'Mining and More' to Fishing.
+WHY: Obviously a more appropriate place for the recipe
+
+* Moved Skin recipe back to Utility menu. 
+WHY: Arimon had moved it to hideworking because of space in Utility, which is no longer an issue.
+
+* Moved Wooden Shovel, Wooden Cup, Wooden Bowl to Carpentry menu
+WHY: More space in utility, fits nicely in Carpentry.
+
+* Mining and More renamed to "Mining & Iron". Initial smelting steps for iron (including charcoal) moved here.
+WHY: Frees up space in the Metalworking menu for more options there in the future, perhaps. Balanced out the spaces used in the two menus.
+
+* Glue recipes moved to Utility.
+WHY: The fact that there were two types of interchangeable glues under the barkware and bowying menus confused at least me when I first started using the mod.
+
+* Moved completed bows (final step) from Bowying to Weapons. Combined intermediate bow steps with the Fletching menu, now 'Fletching and Bowying'.
+WHY: Number one, to eliminate another menu. Number two, I think it's elegant to have all final weapons under the Weapons menu. Number three, Bowstring cannot be moved from the Weapons menu (it's a vanilla recipe without an entry in diy_glossary), and it was awkward having that separate from everything else to do with bows.
+
+* Combined Boneworking and Hideworking into "Hide and Bone" submenu
+WHY: More spaces for menus
+
+* Moved bark clothing (excluding Headdress and necklace - the decorative items) to Armors of Iron and Wood
+WHY: free up more space in bark menu, hoping to combine bark & clay. Now ALL clothing items are broken into Clothing (Nettle & Cloth), Armors of Leather and Fur, Armors of Iron and Wood (Iron, wood, bark)
+
+* Combined Earthenware and Barkware into "Earthen/Barkware" menu.
+WHY: More space for more menus
+
+* Moved all the vanilla leather and fur armors OUT of the Clothing menu, to the new Armors of Leather and Fur (A) menu.
+* Leather and fur armors moved OUT of the Armor Group One menu to the Armors of Leather and Fur Menu. 
+* A single item did not fit, so I moved Animal Headdress to Hide & Bone menu (it uses bones, and fits there well).
+WHY: Now ALL Leather and Fur armors/coverings are in a single menu, more appropriately named than 'Clothing'  Also:
+
+* Moved all nettle and cloth garments from the Cloth Garments menu to Clothing. Cloth Garments menu removed.
+
+* Armor Group One renamed to Armors of Iron and Wood (I). Retains metal and wood armors/shields.
+
+* Moved the fibre recipes under Barkware into Tying Equipment. With the fact that most *fibre* recipes have been replaced with various forms of cordage, the only use for these fibres (I'm pretty sure) is making cords from the Tying Equipment menus. Thus, it's natural to group them together.
+  
+* Moved Everything from the knitting menu that's not the clothing items (e.g. Shearing, Carding, spinning wool) to the Textilecraft menu.
+
+* Moved Caulking to Utility menu, to be with the glues.
+WHY: One more space in Carpentry (otherwise 100% full), and it naturally follows from the glue recipes.
+
+  
+  
+
+OTHER SIGNIFICANT CHANGES
+* Reorganized the way that alternate files work to make it more clear to users.
+
+* Renamed several files to match new menus.
+
+* Moved Obsolete files into separate folder (rather than delete them)
+
+* All Knitting recipes use TEXTILECRAFT now (most had no associated skill before).
+
+* Skill used for Earthenware changed from WEATHERLORE to COMMON, because Weatherlore has nothing to do with the skills. However, increased crafting bonus by 30%, in order to account for this change. MAY CHANGE IT AGAIN TO TEXTILECRAFT, since they both reflect fine manual skill.
+
+
+
+
+OTHER MENU RENAMING
+* Armor menu letter changed from I to 'A', since barkware no longer using it.
+* Metalworking renamed to Smithing. Mainly so it matches the letter (S), and because it is now only smithing.
+
+NEW ITEMS
+* Added Refine A Cord recipe under Tying, which requires a comb, and potentially increases the quality of a given Cord, with some loss of material.
+
+
+SMALLER RECIPE CHANGES
+* Spin Yarn under Knitting menu renamed to Spin Wool Yarn. The vanilla Spin Yarn option cannot handle wool yarn, and this is to distinguish it.
+
+* Removed the '+furs' added to the fur ingredient in new fur armors, making them in line with the vanilla fur armors. It caused it to display as (e.g.) "1 lb of fur furs". No impact on actual use of recipe.
+
+* Recover tarp from punt now requires a tarp-weave punt. Under the old recipe, it would allow a 'cheat' where you could create infinite tarps. Under the new recipe, it has the downside of destroying the punt, but if you're recovering a tarp from the punt, then that probably means you don't want the punt anymore.
+
+* Added "false ingredients" for ore-scooping actions, in order to make it clearer how they are meant to function to players. e.g.
+{-} [optional] '+You need to be zoomed out,'
+{-} [optional] '+in a mire, by a mountain.'
+{-} [optional] '+For most immersive play, do'
+{-} [optional] '+not use on frozen ground.'
+
+---------------diy_BAC_Carpentry changes
+
+* "Simple Wooden Tub" made 'no quality', renamed to just "Wooden Tub", because it has the exact same qualities as a base wooden tub.
+
+* Renamed Cask-style tub, Keg-style tub, and barrel-style tub to Cask, Keg, and Barrel. Changed the (disabled by default) Rainwater collector recipe to require 'Barrel' instead of '*barrel-style*'
+WHY: I strongly prefer seeing "Keg of Milk" to "keg-style tub of milk" in my menus. I'm aware that this could limit future recipes that call for *tub, but there's no recipe
+that you're going to want to use a valuable cask/keg/barrel for, when you could use a (relatively cheap) wooden tub.
+
+* Added [noquality] to caulking, firewood, and pot ingredients for Casks, Kegs, and Barrels. Made the output [noquality] as well.
+WHY: Caulking and firewood can't have a quality, so its quality should not impact the final product. Pot can have quality, but there's no reason the quality of your pot used to hold the caulking should affect the barrel quality. As for the output quality, I don't produce these things to sell them, but rather to store things. So, I don't want them named "Fine barrel of X", next to "barrel of X". They don't stack, then, if nothing else. Easy to change, though, if you want to make your living as a barrel carpenter, just remove the [noquality] from the first line of the recipes.
+
+* Added [noquality] to branches ingredient for furniture section, since branches don't have quality.
+
+* Combine wooden figurine/set for gaming into one step, because there is no need for taking up two slots for steps always done together. Combined the times for each step into a total time.
+
+---------------diy_BAC_tying_equipment
+* String renamed to 'refined cord' so that it works for *cord recipes.
+
+
+WHAT I WANT TO DO, BUT DON'T THINK I CAN
+* Move vanilla Bowstring recipe from Weapons to Bowying. It's not included in the diy_glossary, so I don't think it can be moved/edited.
+
+THINGS I'M PRETTY SURE I CAN DO, BUT HAVEN'T YET
+
+* Gather bait recipe, under fishing, to get worms (e.g.) from thawed ground.
+* Divide raw meat or fish into 'bait piece' recipes. Longer spoilage days.
