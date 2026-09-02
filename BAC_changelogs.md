@@ -22,6 +22,8 @@
 - **reworked the Transport menu**
 - **temporarly disabled the custom naming of certain items (e.g. <ins>Elk</ins> antler comb -> Antler comb) for allowing them to be pausable again**
 - **updated Tying Equipment recipes with TEXTILECRAFT skill instead of Hideworking**
+- **renamed "Grind xyz-flour" to "xyz-flour" to make them pausable**
+- **changed COMMON to AGRICULTURE for grinding flours**
 
 ### Other fixes
 - renamed "Tall roll of Birch-bark" to "Tall Birch-bark roll" to make its hyperlink work correctly in the encyclopedia
@@ -43,9 +45,6 @@
 - reduced capacity of the canteen to 5 without changing its weight to match it to its lower price VS vanilla wooden canteen
 - made the washed bandage less controversial by requiring a knife
 - changed base item of the quern's recipes to huning horn to avoid them being consumed as stones by other recipes
-- renamed "Grind xyz-flour" to "xyz-flour" to make them pausable
-- changed COMMON to AGRICULTURE for grinding flours
-
 
 ### v3.88.3 Mod files cleanup
 - added BAC_changelogs.md
