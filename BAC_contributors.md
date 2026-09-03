@@ -1,5 +1,5 @@
 # BAC creator
-**[Brygun](https://www.unrealworld.fi/forums/index.php?action=profile;u=9): first maintainer & creator of the mod. Many personnal implmentations and minor adaptations of other's mods.**
+**[Brygun](https://www.unrealworld.fi/forums/index.php?action=profile;u=9): first maintainer & creator of the mod. Many personnal implementations and minor adaptations of other's mods.**
 ## BAC contributors in alphabetical order
 Contributors listed below have been found mentioned in the mod files or somewhere on the forums:  
 - [Adamsor](https://www.unrealworld.fi/forums/index.php?action=profile;u=4361) : truetile update for fixing backgrounds for non-windows gamers
