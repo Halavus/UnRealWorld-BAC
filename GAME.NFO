@@ -3494,7 +3494,7 @@ EXTRACT SPRUCE FIBRE, FIBRE FROM RAW BIRCH-BARK
 
 .BAC ARCHERY.
 FORKED BONE ARROWHEAD, FOWLING ARROW, FUR-FLETCHED ARROW, <br>
-FUR-FLETCHED BROADHEAD ARROW, ANTLER-TIPPED BLUNT ARROW, TILLER, UNFINISHED BOW, <br>
+FUR-FLETCHED BROADHEAD ARROW, ANTLER-TIPPED BLUNT ARROW, TILLER, UNFINISHED SHORTBOW, <br>
 COMPRESSION PINE BELLY, BIRCH BACKING, RECURVE EAR, UNFINISHED TWO-WOOD LONGBOW, <br>
 DRY QUARTER LOG, UNFINISHED HARDWOOD LONGBOW
 ***
@@ -3835,8 +3835,8 @@ A Tiller is the thing you attach the bow to so you can see the bend.<br>
 source: www.howtomakealongbow.co.uk/part-5-tillering
 ***
 
-.UNFINISHED BOW.
-Main component of the hardwood shortbow.
+.UNFINISHED SHORTBOW.
+Main component of the hardwood shortbow, needs further tuning and fine shaping.
 ***
 
 .COMPRESSION PINE BELLY.BIRCH BACKING.
@@ -3848,15 +3848,15 @@ Used for making the Recurved northern bow.
 ***
 
 .UNFINISHED TWO-WOOD LONGBOW.
-Main component of the two-wood longbow.
+Main component of the two-wood longbow, needs further tuning and fine shaping.
 ***
 
 .DRY QUARTER LOG.
-Used in the making of the unfinished hardwood longbow
+Used in the making of the unfinished hardwood longbow, ideally made of birch.
 ***
 
 .UNFINISHED HARDWOOD LONGBOW.
-Main component of the hardwood longbow.
+Main component of the hardwood longbow, needs further tuning and fine shaping.
 ***
 
 //BAC Utility
@@ -4013,6 +4013,7 @@ Hunters aren't hunters without a hunting horn. (That is not a placeholder for mo
 ***
 
 .RETILLER NORTHERN BOW.
+To upgrade Northern bows to this mod's stats. Consumes a Northern bow and creates an upgraded one. 
 ***
 
 .NORTHERN STAFF-BOW.

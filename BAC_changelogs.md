@@ -6,6 +6,8 @@
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
 - add informations about modded items to the encyclopedia (GAME.NFO)
 - Review Tying Equipment recipes to ensure ingredients' required lengths and weights are consistent with vanilla Textilecraft options
+- check up intended birch requirements for the hardwood bows and find solutions for the too long text descriptions
+- update prices and attack values of the bows, as they're harder to make than vanilla
 
 ## Known issues
 - [issue with resumability](https://www.unrealworld.fi/forums/index.php?topic=7678.msg24897#msg24897) of modded items is caused by the recipe's \[name] tag not matching the '.name.' of the item.  
@@ -23,6 +25,9 @@
 - **updated Tying Equipment recipes with TEXTILECRAFT skill instead of Hideworking**
 - **renamed "Grind xyz-flour" to "xyz-flour" to make them pausable**
 - **changed COMMON to AGRICULTURE for grinding flours**
+- **Moved BAC Bowying recipes out of the 'Arrow' menu, as well as Bows out of Weapons to have all elements of these complex recipes in one place. Access them in the modded handcraft submenu: Bowyer ([O]-[Q])** (Fletching stays in 'Arrow')  
+	Clarification after some research: 3.86 introduced the 'Modded handcraft options' submenu (\[M]-\[+] or \[O]) and the old recipes dispatch hasn't been updated correctly since.  
+	BAC Bowyer options were merged into 'Arrow' by Brygun in v3.80, when the menu letter A got taken by vanilla and as new space for submenus became scarce. This merger is not required anymore, because 25 new free submenu were made available in 3.86.
 
 ### Other fixes
 - renamed "Tall roll of Birch-bark" to "Tall Birch-bark roll" to make its hyperlink work correctly in the encyclopedia
@@ -49,6 +54,7 @@
 - changed base item of the Forked bone arrowhead. to "Bone arrowhead" according to Buoidda's statment that their penetration [cannot be modded](https://www.unrealworld.fi/forums/index.php?topic=5865.msg17575#msg17575)
 - updated text descriptions in diy_BAC_Fletching_and_Bowying.txt
 - changed Tree trunk to Pine tree trunk in the "Compression Pine Belly" as stated by the comments in the code
+- changed name of 'unfinished bow' to 'unfinished shortbow' for the sake of clarity
 
 ### v3.88.3 Mod files cleanup
 - added BAC_changelogs.md

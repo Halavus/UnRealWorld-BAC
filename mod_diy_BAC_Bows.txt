@@ -1,0 +1,214 @@
+// BAC integration of Bowyer
+//
+// Signatus v1.0
+//
+// v1.0
+// - Only slightly changed from Buoidda's, reorganized and removed sinew stuff
+// changed prices, that are in squirrel hides, changed bowstrings, changed a few things
+// Part of Buoidda's crafts 1.5+
+//
+// -- Woodworking Mod Additions --
+// Mod intended to meld with BAC
+// Added detail and steps to bow making
+// Making bows beyond a primitive bow requires a Tiller setup and a temporary bowstring to align and test with
+// Didn't add finishing bows with leather grips and tallow to seal, consider it under final steps
+//
+// Important! Boards were used for Dry Quarter Log so that timberworking quality matters
+//
+// Changes by ptr987 listed above accepted into BAC
+//
+// [LENGTH:4] added to bow strings to avoid default 15 ft cord lengths
+
+
+[SUBMENU_START:bowyer]
+
+// Parts
+
+.Tiller. "Hunting Horn" [phys:hands] *CARPENTRY*  /60/ |1| [noquality]
+{Board} (2) [remove] [ground]
+{Wooden stake} (2) [remove] [noquality] '+to secure'
+{Axe} <Carving axe> [wearpct:50]
+{Knife}<Broad knife>	 			'+as a large knife'
+{Knife}<Small knife>				'+as a small knife'
+[WEIGHT:10]
+[TYPE:tool]
+[TILEGFX:ww-tiller]
+[MATERIAL:wood]
+[PRICE:1]
+
+// Woodworking mod notes
+//Added terrain to find and work appropriate leaning pine
+.Compression pine belly. "Firewood" [phys:hands] *CARPENTRY* %-10% /320/ |2|
+{[TERRAIN:mountain pine_mire]} 				'Be in a mountain or pine mire'
+{Pine tree trunk} 		 [remove] [ground] [noquality]	'Pine trunk leaning down to ground' 
+{Axe} <Carving axe> [wearpct:60]
+{Knife}<Small knife>
+{Fire} 							'+for heat-treating'
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-pinebelly]
+
+.Birch backing. "Firewood" [phys:hands]   *CARPENTRY* /240/  |1|
+{Short quarter log} 		[remove] [ground]			'+core of a Birch tree'
+{Axe} <Carving axe> [wearpct:50]
+{Knife}
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-birchback]
+//simplified
+
+.Recurve ear. "Firewood"  [phys:hands,one-armed]   *BOWYER* /60/  |1|
+{Branch} 	[remove] [noquality]		'+as a birch branch' 
+{Knife}<Broad knife>	 			'+for a large knife'
+{Knife}<Small knife>				'+for a small knife'
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:1]
+[TILEGFX:bc-bowear]
+
+// Woodworking Mod notes
+// Added here but could have gone on Lumber menu
+// BAC edit to access quarter log from lumber menu
+.Dry quarter log. "firewood" [effort:1] [phys:arms,hands,stance,one-armed] *TIMBERCRAFT* /5/ \30d\ |1| %20% 
+{* quarter log} (1)		[remove] [ground]	'Quarter log'
+{Axe} <Carving axe> '+to trim flaws' [wearpct:20]
+[MATERIAL:wood]
+[WEIGHT:30]
+[TILEGFX:ww-dry_lb_wood]
+
+.--------------------------------. "Rock" /1/
+{-} +'This is just a menu space'
+
+.--- Make bowstrings from -------. "Rock" /1/
+{-} +'This is just a menu space'
+
+.--- vanilla weapons menu -------. "Rock" /1/
+{-} +'This is just a menu space'
+
+.--------------------------------. "Rock" /1/
+{-} +'This is just a menu space'
+
+// Unfinished bows
+
+.Unfinished shortbow. "firewood" [effort:2] [phys:arms,hands,one-armed] *BOWYER* |2| /2h/ \16h\
+{Short quarter log} 		[remove] [ground]		'+Birch cut to a short quarter log'	
+{Axe} <Carving axe> [wearpct:40]
+{Knife} <Broad knife>
+{Knife}<Small knife>		'+as a small knife'
+{Fire} 							'+for treating the belly'
+{Bowstring} 		 [noquality] [ground] 'A temporary bowstring'
+{Tiller}			 [noquality] [ground]
+[MATERIAL:wood]
+[WEIGHT:3]
+[TILEGFX:wp-ubow]
+
+.Unfinished two-wood longbow. "firewood" [effort:1] [phys:arms,hands] *BOWYER* /6h/ \5d\ |2| %+10%
+{Compression pine belly} [remove]
+{Birch backing}		 [remove]
+{*glue}  #0.8#   [remove] [noquality]	'glue to join parts'
+{*birch-bark*}  #1#   [remove] [noquality]     'birch-bark for protection'
+{*Recurve ear} (2) 	 [remove]	'Recurve ear'
+{Bowstring} 		 [noquality] [ground] 'A temporary bowstring'
+{Fire} 						'Fire heating glue, wrapping bark'
+{Knife}<Small knife>		'+as a small knife'
+{Tiller}			 [noquality] [ground]
+[MATERIAL:wood]
+[WEIGHT:3]
+[TILEGFX:wp-ulongbow]
+
+.Unfinished hardwood longbow. "firewood" [effort:1] [phys:arms,hands] *BOWYER* /6h/ \16h\ |2|
+{Dry quarter log} 	[remove] [ground] '+to be taken to a tiller, tune, and shape bow'
+{Axe} <Carving axe> [wearpct:40]
+{Knife}<Broad knife>	 	'+as a large knife'
+{Knife}<Small knife>		'+as a small knife'
+{Bowstring} 		 [noquality] [ground] 'A temporary bowstring'
+{Tiller}			 [noquality] [ground] '+to brace, pull for testing'
+[MATERIAL:wood]
+[WEIGHT:3]
+[TILEGFX:wp-ulongbow]
+
+.--------------------------------. "Rock" /1/
+{-} +'This is just a menu space'
+
+// Bows
+
+.Primitive hunting bow. "Hunting bow" [effort:2] [phys:stance,arms] *BOWYER*  /120/ %-10% |1| -H-
+{Slender trunk} [remove] [noquality] [ground]
+{Animal hide} #0.3# [remove]
+{Bone}  #0.5# [remove] [noquality]  '+as bracing'
+{Cutting weapon}<Knife>
+{Bowstring}		 [remove] [noquality]
+[POINT_ATTACK:6]
+[WEIGHT:4.2]
+[PRICE:10]
+// Tying equipment removed as there is a specific bowstring call
+// Arimon 3.7x: added [noquality] to {Bowstring}
+
+.Hardwood shortbow. "Shortbow" [effort:1] [phys:stance,arms] *BOWYER*  /180/ |2| -S-
+{Unfinished shortbow} 	[remove] [ground]
+{Knife}<Small knife>		'+as a small knife'
+{Bowstring}		[remove] [noquality]
+// Arimon 3.7x: added [noquality] to {Bowstring}
+
+.Two-wood longbow. "Longbow" [effort:1] [phys:stance,arms] *BOWYER* %10%  /4h/ \12h\ |2| -T-
+{Unfinished two-wood longbow} [remove]
+{Knife}<Small knife>		'+as a small knife'
+{Bowstring}		[remove] [noquality]
+{Tiller}		[noquality] [ground]
+// Arimon 3.7x: added [noquality] to {Bowstring}
+
+.Northern staff-bow. "Northern bow" [effort:2] [phys:stance,arms] *BOWYER*  /7h/ \1d\ |2| -N-
+{Compression pine belly} [remove]
+{Birch backing}		 [remove]
+{*perch*} 		 [remove] [noquality] 	'Perch (its skin for the glue)'
+{Birch-bark strip} =9=  [remove] [noquality]	
+//'+for protection'
+{Birch root}		 [remove] [noquality]	'+for ski-basket'
+{Leather}	#0.2#	 [remove] [noquality]	'+for basket'
+{Knife}<Small knife>		'+as a small knife'
+{Bowstring}		 [remove] [noquality]
+[BLUNT_ATTACK:-]
+[EDGE_ATTACK:-]
+[POINT_ATTACK:6]
+[AD_CLASS:0/0]
+[WEIGHT:4]
+[SKILL:bow]
+[PRICE:4.7]
+[TILEGFX:bc-staffbow]
+//[NAME:Staff-bow]
+//edit removed custom name to avoid item being consumed as {Staff} in other recipes 
+// Arimon 3.7x: added [noquality] to {Bowstring}
+
+.Hardwood longbow. "Longbow" [effort:1] [phys:stance,arms] *BOWYER*  %5%	/4h/ \12h\ |2| -L-
+{Unfinished hardwood longbow} 	[remove] [ground]
+{Knife} <Small knife> '+to fine tune the shape'
+{Bowstring} 		 [remove] [noquality]
+// Arimon 3.7x: added [noquality] to {Bowstring}
+
+.Recurved northern bow. "Northern bow" [effort:2] [phys:stance,arms] *BOWYER* %-10% /5h/ \1d\ |2| -R-
+{Compression pine belly} [remove]
+{Birch backing}		 [remove]
+{*antler} #2# [remove] [noquality] 'antler for some strips'
+{Recurve ear} (2) 	 [remove]
+{*glue}  #0.8#   [remove] [noquality]	'glue'
+{Birch-bark strip} =9= [remove] [noquality]	
+//'+for protection'
+{Leather}	#0.5#	 [remove] [noquality]	'+for basket'
+{Fire} 				'Fire heating glue, wrapping bark'
+{Knife}<Small knife>		'+as a small knife'
+{Bowstring}		 [remove] [noquality]
+[POINT_ATTACK:9]
+[WEIGHT:3.5]
+[TILEGFX:wp-northbow]
+[PRICE:18]
+// Arimon 3.7x: added [noquality] to {Bowstring}
+
+.Retiller northern bow. *BOWYER* "Northern bow" %100% /1/ [NOPAUSE] -Z-
+{Northern bow}		 [remove]
+[NAME:Northern bow]
+[POINT_ATTACK:9]
+[TILEGFX:wp-northbow]
+
+[SUBMENU_END:bowyer]

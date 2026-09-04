@@ -1,4 +1,4 @@
-// BAC integration of Fletching and Bowying
+// BAC integration of Fletching
 
 [SUBMENU_START:arrow]
 
@@ -72,99 +72,5 @@
 [WEIGHT:0.35]
 [BLUNT_ATTACK:7]
 
-.----------------------------------------. "Rock" /1/
-{-} +'This is just a menu space'
-
-.Tiller. "Hunting Horn" [phys:hands] *CARPENTRY*  /60/ |1| [noquality]
-{Board} (2) [remove] [ground]
-{Wooden stake} (2) [remove] [noquality] '+to secure'
-{Axe} <Carving axe> [wearpct:50]
-{Knife}<Broad knife>	 			'+as a large knife'
-{Knife}<Small knife>				'+as a small knife'
-[WEIGHT:10]
-[TYPE:tool]
-[TILEGFX:ww-tiller]
-[MATERIAL:wood]
-[PRICE:1]
-
-.Unfinished bow. "firewood" [effort:2] [phys:arms,hands,one-armed] *BOWYER* |2| /2h/ \16h\
-{Short quarter log} 		[remove] [ground]		'+Birch cut to a short quarter log'	
-{Axe} <Carving axe> [wearpct:40]
-{Knife} <Broad knife>
-{Knife} <Small knife>
-{Fire} 							'+for treating the belly'
-{Bowstring} 		 [noquality] [ground] 'A temporary bowstring'
-{Tiller}			 [noquality] [ground]
-[MATERIAL:wood]
-[WEIGHT:3]
-[TILEGFX:wp-ubow]
-
-
-// Woodworking mod notes
-//Added terrain to find and work appropriate leaning pine
-.Compression pine belly. "Firewood" [phys:hands] *CARPENTRY* %-10% /320/ |2|
-{[TERRAIN:mountain pine_mire]} 				'Be in a mountain or pine mire'
-{Pine tree trunk} 		 [remove] [ground] [noquality]	'Pine trunk leaning down to ground' 
-{Axe} <Carving axe> [wearpct:60]
-{Knife}<Small knife>
-{Fire} 							'+for heat-treating'
-[TYPE:tool]
-[MATERIAL:wood]
-[WEIGHT:1]
-[TILEGFX:bc-pinebelly]
-
-.Birch backing. "Firewood" [phys:hands]   *CARPENTRY* /240/  |1|
-{Short quarter log} 		[remove] [ground]			'+core of a Birch tree'
-{Axe} <Carving axe> [wearpct:50]
-{Knife}
-[TYPE:tool]
-[MATERIAL:wood]
-[WEIGHT:1]
-[TILEGFX:bc-birchback]
-//simplified
-
-.Recurve ear. "Firewood"  [phys:hands,one-armed]   *BOWYER* /60/  |1|
-{Branch} 	[remove] [noquality]		'+as a birch branch' 
-{Knife}<Broad knife>	 			'+for a large knife'
-{Knife}<Small knife>				'+for a small knife'
-[TYPE:tool]
-[MATERIAL:wood]
-[WEIGHT:1]
-[TILEGFX:bc-bowear]
-
-.Unfinished two-wood longbow. "firewood" [effort:1] [phys:arms,hands] *BOWYER* /6h/ \5d\ |2| %+10%
-{Compression pine belly} [remove]
-{Birch backing}		 [remove]
-{*glue}  #0.8#   [remove] [noquality]	'glue to join parts'
-{*birch-bark*}  #1#   [remove] [noquality]     'birch-bark for protection'
-{*Recurve ear} (2) 	 [remove]	'the two recurve ears'
-{Bowstring} 		 [noquality] [ground] 'a temporary bowstring'
-{Fire} 						'+for heating glue and wrapping bark'
-{Knife} <Small knife>
-{Tiller}			 [noquality] [ground]
-[MATERIAL:wood]
-[WEIGHT:3]
-[TILEGFX:wp-ulongbow]
-
-// Woodworking Mod notes
-// Added here but could have gone on Lumber menu
-// BAC edit to access quarter log from lumber menu
-.Dry quarter log. "firewood" [effort:1] [phys:arms,hands,stance,one-armed] *TIMBERCRAFT* /5/ \30d\ |1| %20% 
-{* quarter log} (1)		[remove] [ground]	'quarter log'
-{Axe} <Carving axe> '+to trim flaws' [wearpct:20]
-[MATERIAL:wood]
-[WEIGHT:30]
-[TILEGFX:ww-dry_lb_wood]
-
-.Unfinished hardwood longbow. "firewood" [effort:1] [phys:arms,hands] *BOWYER* /6h/ \16h\ |2|
-{Dry Quarter Log} 	[remove] [ground] '+to be taken to a tiller, tune, and shape bow'
-{Axe} <Carving axe> [wearpct:40]
-{Knife} <Broad knife>
-{Knife} <Small knife>
-{Bowstring} 		 [noquality] [ground] 'a temporary bowstring'
-{Tiller}			 [noquality] [ground] '+to brace and pull bow on for testing'
-[MATERIAL:wood]
-[WEIGHT:3]
-[TILEGFX:wp-ulongbow]
-
 [SUBMENU_END:arrow]
+
