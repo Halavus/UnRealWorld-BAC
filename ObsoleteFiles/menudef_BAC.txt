@@ -1,0 +1,65 @@
+//
+// Using menudef_<anyname>.txt files it's possible to add sub-menus to
+// MAKE items and COOKERY menus.
+//
+// Just make a list of submenu headers like this:
+//
+// .my weapons.       -Y- *MAKE*
+// .extended recipes. -E- *COOKERY*
+//
+// use lower case name for your submenu
+// -K- is the menu key, it must be specified and be any upper case key
+//     that doesn't exist in the target menu yet.
+//
+// *<parent menu>* defines the parent menu.
+//                 Possible options are: *MAKE* and *COOKERY*
+//
+// then just place the craftable items in your diy_ or cookery_ files between
+// submenu start and end tags for the according submenuname
+//
+// [SUBMENU_START:submenuname]
+//
+// [SUBMENU_END:submenuname]
+//
+//
+// The informations below are relevant for this 'menudef_BAC.txt' file. Not the same purpose as the existing and released 'mod_menudef_BAC.txt'
+// menudef_*.txt     = add submenus to Vanilla 'Handcraft options' menu ([M]ake)
+// mod_menudef_*.txt = add submenus to 'Modded handcraft options' submenu ([M]-[+] or [O])
+// Currently BAC does not add any submenu in the Vanilla 'Handcraft options' menu.
+//
+// Reference of vanilla entries:
+//
+// A = Arrows (added in 3.80)
+// B = Building
+// C = Clothes
+// F = Fishing
+// H = Hafting
+// L = Lumber
+// T = Trapping
+// R = Transport
+// O = Containers
+// U = Utility articles
+// Y = Tying equipment
+// W = Weapons
+// X = Textilecraft (added in 3.70)
+// + = Modded handcraft options (added in 3.86)
+
+// Available after vanilla defaults
+// D
+// E
+// G
+// I
+// J
+// K
+// M
+// N
+// P
+// Q
+// S
+// V
+// Z
+// Note: The menu should display 25 entries so two letters
+// at least must be left vacant
+// = 24 letters and '+'
+
+
