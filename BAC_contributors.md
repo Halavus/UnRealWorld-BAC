@@ -26,6 +26,7 @@ Contributors listed below have been found mentioned in the mod files or somewher
 - [Shrike](https://www.unrealworld.fi/forums/index.php?action=profile;u=5823): Menu decluttering; moved all of Brygun's boat overhaul over to "Boats". So as to let fishing be about fishing.
 - [Sibs](https://www.unrealworld.fi/forums/index.php?action=profile;u=4892): updates and fixes
 - [Signatus](https://www.unrealworld.fi/forums/index.php?action=profile;u=2489): Fletching and bowying, updates and fixes
+- [thefinn](https://www.tapatalk.com/groups/urwforum/memberlist.php?mode=viewprofile&u=1932) : [The Finn's Wilderness Living Modpack](https://www.tapatalk.com/groups/urwforum/the-finn-39-s-wilderness-living-modpack-v1-3-t8082.html) and other mods
 - [TheyCallMeSibs](https://www.unrealworld.fi/forums/index.php?action=profile;u=4892): updates and fixes
 - [Thiebs](https://www.unrealworld.fi/forums/index.php?action=profile;u=5829): updates and fixes, BAC encyclopedia implementation
 - [Warslay](https://www.unrealworld.fi/forums/index.php?action=profile;u=5520): updates and fixes
