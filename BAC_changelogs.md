@@ -1,7 +1,6 @@
 ## TODOs
-- create a readme
+- update the 3.85 readme
 - **keep diy_glossary as vanilla as possible**: if a file is not labelled "BAC", it should be changed the least possible. (although sometimes imperative for fixes) NB: some vanilla recipes have been updated by Sami but never updated in the BAC files (see Lumber below)
-- update diy_BAC_Lumber and mod_diy_BAC_Carpentry with the 3.86 added \[masterwoodtype] modding tag. 
 - evt. merge changelogs & contributors (currently kept separate for ease of use)
 - clean up all BAC files from contributor mentions & changelog comments, and add them to their respective file
 - add informations about modded items to the encyclopedia (GAME.NFO)
@@ -12,11 +11,10 @@
 ## Known issues
 - [issue with resumability](https://www.unrealworld.fi/forums/index.php?topic=7678.msg24897#msg24897) of modded items is caused by the recipe's \[name] tag not matching the '.name.' of the item.  
 	Many, many BAC items and tweaks use this naming trick to work (e.g. "Offload a tree trunk") or use this naming convention for simply... good naming. \[NOPAUSE] tag has been added to them.
-- a few lengthier encyclopedia hyperlinks don't get (automatically) linked properly
 
 ## v3.88.3 - Encyclopedia release
 ### Notable changes
-- **Added GAME.NFO to the mod package to document modded items in the **Encyclopedia (F1)** instead of leaving comments in the code, hidden from the player**
+- **added GAME.NFO to the mod package to document modded items in the **Encyclopedia (F1)** instead of leaving comments in the code, hidden from the player**
 - **added BAC_contributors.md**
 - **tweaked building menu and submenu for making the modded Kota work again**
 - **renamed Boats menu to 'Brygun's watercrafts', this person needs credit for the research and work they've done for all BAC enjoyers.**
@@ -25,8 +23,9 @@
 - **updated Tying Equipment recipes with TEXTILECRAFT skill instead of Hideworking**
 - **renamed "Grind xyz-flour" to "xyz-flour" to make them pausable**
 - **changed COMMON to AGRICULTURE for grinding flours**
-- **Moved BAC Bowying recipes out of the 'Arrow' menu, as well as Bows out of Weapons to have all elements of these complex recipes in one place. Access them in the modded handcraft submenu: Bowyer ([O]-[Q])** (Fletching stays in 'Arrow')  
-	Clarification after some research: 3.86 introduced the 'Modded handcraft options' submenu (\[M]-\[+] or \[O]) and the old recipes dispatch hasn't been updated correctly since.  
+- **moved BAC Bowying recipes out of the 'Arrow' menu, as well as Bows out of Weapons to have all elements of these complex recipes in one place. Access them in the modded handcraft submenu: Bowyer ([O]-[Q])** (Fletching stays in 'Arrow')  
+	Clarification after some research:  
+	3.86 introduced the 'Modded handcraft options' submenu (\[M]-\[+] or \[O]) and the old recipes dispatch hasn't been updated correctly since.  
 	BAC Bowyer options were merged into 'Arrow' by Brygun in v3.80, when the menu letter A got taken by vanilla and as new space for submenus became scarce. This merger is not required anymore, because 25 new free submenu were made available in 3.86.
 
 ### Other fixes
