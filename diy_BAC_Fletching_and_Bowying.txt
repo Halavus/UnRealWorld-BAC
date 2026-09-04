@@ -53,7 +53,7 @@
 {Knife} <Small knife>
 [WEIGHT:0.13]
 
-.Fur-fletched Broadhead arrow. "Broadhead arrow" [effort:1] [phys:hands,one-armed]   	*CARPENTRY*	%-20% /25/    [patch:5]
+.Fur-fletched broadhead arrow. "Broadhead arrow" [effort:1] [phys:hands,one-armed]   	*CARPENTRY*	%-20% /25/    [patch:5]
 {Arrow shaft}		[remove] [patchwise]
 {Iron broadhead}	[remove] [patchwise]
 {*Fur} 		#0.05#	[remove] [patchwise] [noquality]	'Fur instead of feathers'
@@ -149,7 +149,7 @@
 // Woodworking Mod notes
 // Added here but could have gone on Lumber menu
 // BAC edit to access quarter log from lumber menu
-.Dry Quarter Log. "firewood" [effort:1] [phys:arms,hands,stance,one-armed] *TIMBERCRAFT* /5/ \30d\ |1| %20% 
+.Dry quarter log. "firewood" [effort:1] [phys:arms,hands,stance,one-armed] *TIMBERCRAFT* /5/ \30d\ |1| %20% 
 {* quarter log} (1)		[remove] [ground]	'quarter log'
 {Axe} <Carving axe> '+to trim flaws' [wearpct:20]
 [MATERIAL:wood]

@@ -4,11 +4,11 @@
 // DISCLAIMER
 // ----------
 // Menu full (at 3.88) or nearly full depending on BAC version
-// If menu has 0-9 then letters the last letter is letter 'N'
+// If menu has 0-9 then letters the last letter is letter 'O'
 //
 // There are vanilla/glossary recipes which load after the modded ones
-// the recipe for "shingle" is prone to being lost
-// If you see "shingle" in the menu you should be okay
+// the recipe for "Shingle" is prone to being lost
+// If you see "Shingle" in the menu you should be okay
 
 
 [SUBMENU_START:lumber]
