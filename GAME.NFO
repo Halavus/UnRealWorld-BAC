@@ -3621,7 +3621,7 @@ edge to back edge). It is pulled or "drawn" (hence the name) toward the user.<br
 //BAC TRANSPORT
 
 .FREE ROPES FROM RAFT.
-Destroy a raft to get ropes back.
+Destroy a raft to get ropes back - CANNOT BE PAUSED.
 
 The intention is that you are travelling a long distance overland and would abandon the raft. If you were to be 
 coming back likely you would leave the raft assembled.<br>
@@ -3634,6 +3634,8 @@ just leave rafts all over the place...
 
 .SLEDWAGON.
 For loading and unloading tree trunks, logs, slender trunks and clinkered punt.
+
+You pull this item along with ropes, on skis in the winter and on wheels during summertime. Securring the load on the sledwagon can be done with any strong cordage.
 
 The sled will only hold one type of object at a time!
 

@@ -27,6 +27,8 @@
 	Clarification after some research:  
 	3.86 introduced the 'Modded handcraft options' submenu (\[M]-\[+] or \[O]) and the old recipes dispatch hasn't been updated correctly since.  
 	BAC Bowyer options were merged into 'Arrow' by Brygun in v3.80, when the menu letter A got taken by vanilla and as new space for submenus became scarce. This merger is not required anymore, because 25 new free submenu were made available in 3.86.
+- **reworked many text descriptions in recipes (☐ you need this and that) that were extending beyond the game window and became partly unreadable and others badly formatted.**  
+	If meaningful informations about the work being executed were given by these descriptions, they've been replaced by encyclopedia entries.
 
 ### Other fixes
 - renamed "Tall roll of Birch-bark" to "Tall Birch-bark roll" to make its hyperlink work correctly in the encyclopedia
@@ -38,12 +40,11 @@
 - changed rope to strong cordage in the "Bark tassets" recipe (Barkware)
 - grouped every watercraft entry together in the game menu using alternating numbers and letters groups
 - renamed "Lumber pack frame" to "Lumberpack frame" for it to show in the encyclopedia
+- changed Sledwagon recipe to 'Rope for pulling harness' but 'Strong Cordage' for securring the load left as is
 - removed "Gather Rowan Sapling" as it was used for the already removed BAC Arrowshaft making
 - added \[masterwoodtype] tag to half and quarter logs [a wildcard is needed when used as ingredients](https://www.unrealworld.fi/forums/index.php?topic=7699.msg24992#msg24992) (\*) in the subsequent recipes
 - removed nopause where unnecessary in boneworking recipes
 - removed unnecessary descriptive text in boneworking recipes
-- clarified Tying Equipment recipes' text descriptions
-- clarified Utilities recipes' text descriptions
 - changed the canteen's needed tying equipment to cord (who wants to carry liquid around with yarn?) and upped the price accordingly
 - made the washed bandage less controversial by requiring a knife
 - changed base item of the quern's recipes to huning horn to avoid them being consumed as stones by other recipes
@@ -51,7 +52,6 @@
 - changed COMMON to AGRICULTURE for grinding flours
 - archived outdated broadhead arrow, as it's craftable in vanilla since 3.80 (fur fletched variant remains)
 - changed base item of the Forked bone arrowhead. to "Bone arrowhead" according to Buoidda's statment that their penetration [cannot be modded](https://www.unrealworld.fi/forums/index.php?topic=5865.msg17575#msg17575)
-- updated text descriptions in diy_BAC_Fletching_and_Bowying.txt
 - changed Tree trunk to Pine tree trunk in the "Compression Pine Belly" as stated by the comments in the code
 - changed name of 'unfinished bow' to 'unfinished shortbow' for the sake of clarity
 

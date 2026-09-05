@@ -19,11 +19,11 @@
 [LENGTH:12]
 
 .Sledwagon. "Wooden tub"	*TIMBERCRAFT*	/2h/ [effort:3] [phys:arms,stance] [assist:3] |1| [noquality]
-{Board}		(8)	[remove] [ground] '+ for frame and skis'
-{Block of wood}	(4)	[remove] [ground] '+ for summertime wheels'
+{Board}		(8)	[remove] [ground] '+for frame and skis'
+{Block of wood}	(4)	[remove] [ground] '+for wheels'
 {Axe} <Carving axe>	'+ for shaping' [wearpct:50]
-{Strong cordage}	=40=		[remove] '+ Rope for pulling harness'
-{Strong cordage}	=60=		[remove] '+ Rope for securing loads'
+{Rope}	=40=		[remove] '+for pulling harness'
+{Strong cordage}	=60=		[remove] '+tying load'
 [WEIGHT:25]
 [CONT_CAPACITY:240]
 [TILEGFX:gg-sledge]
