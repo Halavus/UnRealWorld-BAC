@@ -57,6 +57,7 @@
 - changed base item of the Forked bone arrowhead. to "Bone arrowhead" according to Buoidda's statment that their penetration [cannot be modded](https://www.unrealworld.fi/forums/index.php?topic=5865.msg17575#msg17575)
 - changed Tree trunk to Pine tree trunk in the "Compression Pine Belly" as stated by the comments in the code
 - changed name of 'unfinished bow' to 'unfinished shortbow' for the sake of clarity
+- removed vanilla items out of mod_diy_BAC_Carpentry, as it's not the same menu anymore and duplicates
 
 ### v3.88.3 Mod files cleanup
 - added BAC_changelogs.md

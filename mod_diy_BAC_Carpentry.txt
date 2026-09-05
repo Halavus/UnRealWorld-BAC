@@ -16,30 +16,6 @@
 
 [SUBMENU_START:Carpentry]
 
-.Wooden cup.  [effort:2] [phys:arms,one-armed]  *CARPENTRY*     /90/    %20%    |-1|   [patch:5]
-{Block of wood} <Birch> [remove] [yield:5] [patchwise]
-{Axe} 		<Carving axe> [wearpct:40]
-{Knife}	
-
-.Wooden bowl. [effort:2] [phys:arms,one-armed]  *CARPENTRY*   	/3h/ 	%20%  [patch:4]			
-{Block of wood} <Birch> [remove] [yield:2] [patchwise]
-{Axe} 		<Carving axe> [wearpct:40]
-{Knife}	
-
-.Wooden shovel.	[effort:2] [phys:arms,stance] *CARPENTRY*   /8h/	%10%  
-{Board} <Birch> [remove] 
-{Axe} <Handaxe> 'An axe for rough cutting' [wearpct:30]
-{Axe} <Carving axe> 'An axe for finishing the shape' [wearpct:30]
-{Knife} 
-// updated to 3.85
-
-
-.Shingle basket. [effort:1]  [phys:hands,one-armed] [assist:1]  *CARPENTRY*  /6h/          
-{Shingle} (50) [remove]
-{Tying equipment} =8= [remove] '+(for the handles)'
-{Knife}
-
-
 //.Axe haft. "Hunting horn" (4) [effort:2] [phys:arms,hands,stance]	*TIMBERCRAFT* %10% |0| /120/ [patch:4]
 //{Short quarter log}	 	[remove] [patchwise]
 //{Axe}<Carving axe>		 [noquality]
@@ -410,7 +386,6 @@
 [TILEGFX:bc-antpieces]
 // Some games would be played on a "Carved board" (see lumber)
 
-
 .Wooden comb. "Sesta" [effort:1] [phys:arms,one-armed]  *CARPENTRY*   	/60/ 	%0% |0| 		
 {Small whittled block} [remove] 
 {Knife}	<Small knife>	
@@ -419,7 +394,6 @@
 [TILEGFX:vl-bcomb]
 [WEIGHT:0.2]
 [PRICE:0.1]
-
 
 .Wooden dollhouse. "Sesta" [effort:1] [phys:arms,one-armed]  *CARPENTRY* /4h/ %-15%  	|1|		
 {Wooden stake} (24) [remove] 
