@@ -3504,7 +3504,8 @@ CANTEEN, BARK BANDAGE, WASHED BANDAGE, BAG, <br>
 QUERN-GRINDER, QUERN-GRINDER PIECE, <br>
 BARLEY-FLOUR, RYE-FLOUR, HEMP-FLOUR, <br>
 FISH-SKIN GLUE, GATHER PINE TAR, PITCH GLUE FROM PINE TAR, <br>
-PITCH GLUE FROM BIRCH-BARK, CAULKING
+PITCH GLUE FROM BIRCH-BARK, CAULKING, <br>
+WOODEN TUB, CASK, KEG, BARREL
 ***
 
 .BAC BONEWORKING.
@@ -3867,6 +3868,9 @@ Main component of the hardwood longbow, needs further tuning and fine shaping.
 Less valuable than the wooden canteen, but you made it yourself.
 
 Needs a cord to make and not some 'thin cordage'. Who wants to haul water around with a thread of yarn?
+
+WEIGHT: 2 lbs<br>
+CAPACITY: 6 lbs
 ***
 
 .BARK BANDAGE.
@@ -3886,7 +3890,10 @@ by Brygun
 ***
 
 .BAG.
-A craftable version of the vanilla Bag container.
+A craftable version of the vanilla Bag. Usually found in villages as Bag of salt.
+
+WEIGHT: 0.2 lbs<br>
+CAPACITY: 20 lbs
 ***
 
 .QUERN-GRINDER PIECE.
@@ -3918,6 +3925,53 @@ BAC-made flour, you need a Quern-Grinder for this recipe.
 ***
 
 .CAULKING.
+***
+
+.WOODEN TUB.
+A craftable version of the vanilla Wooden tub.
+
+Simple wooden tub adapted from Buoidda. Uses easily sourced materials and represents a bushcraft 
+or primitive construction, that takes a lot of time due to needing precise wood joints. Likely 
+will get 'leaky'.
+
+Using split spruce twigs represent packing spruce and other small plant materials into the cracks 
+for lack of proper caulking. Usually doesn't have a lid.
+
+WEIGHT: 10 lbs<br>
+CAPACITY: 2 lbs
+***
+
+.CASK.
+A strong, round, wooden container shaped like a barrel and used to store liquids.
+
+Mortise and tenon joints packed with caulking for effecient and reliable construction. Assumed to have a lid.
+
+WEIGHT: 10 lbs<br>
+CAPACITY: 66 lbs
+***
+
+.KEG.
+WARNING: you must weigh 100 lbs to lift a fully filled keg, so take caution in overfilling or you 
+won't be able to lift or interact with its contents after dropping it. In case this happens and you 
+need it gone, you can push it somewhere free of other items (p), stand on top of it and discard it 
+forever (shift+D).
+
+Mortise and tenon joints packed with caulking for effecient and reliable construction. Assumed to have a lid.
+
+WEIGHT: 16 lbs<br>
+CAPACITY: 133 lbs
+***
+
+.BARREL.
+WARNING: you must weigh 133 lbs to lift a fully filled barrel, so take caution in overfilling or you 
+won't be able to lift or interact with its contents after dropping it. In case this happens and you 
+need it gone, you can push it somewhere free of other items (p), stand on top of it and discard it 
+forever (shift+D).
+
+Mortise and tenon joints packed with caulking for effecient and reliable construction. Assumed to have a lid.
+
+WEIGHT: 25.5 lbs<br>
+CAPACITY: 174.5 lbs
 ***
 
 //BAC BONEWORKING

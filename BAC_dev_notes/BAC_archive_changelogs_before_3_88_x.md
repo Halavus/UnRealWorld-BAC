@@ -615,5 +615,80 @@ Rope usage from =150= to =100= though listed as split between harness and securi
 	- .Elk hunting horn.  
 		skill penalty due to being tricky to make to get right sound  
 		Arimon 3.7x: changed \{\*cord\*} to \{Thin cordage}  
+	
+- mod_diy_BAC_Carpentry.txt  
+Carpentry submenu added to make space on crowded lumber menu
+
+Meant to be moderate and above complexity wood working  
+other than boats (which are in transport)
+
+Woodworking mod notes  
+Adjusted prices as they were too high in squirrel hides
+
+Sibs: Upgraded to 3.84  
+	- .Wooden tub.  
+		Simple wooden tub
+		adapted from Bouidda  
+		Uses easily sourced materials  
+		Represents a bushcraft or primitive construction  
+		Takes a lot of time due to needing precise wood joints  
+		Likely will get "leaky"  
+		Price reduced based on materials and prone to wear  
+		Represents packing spruce and other small gatherings into  
+		the cracks when you don't have caulking to use  
+	- Cask, Keg, Barrel  
+		In researching sizes and weights good info was  
+		found for barrel with the smaller ones set from that  
+		Approx 0.5 volume (capacity) is 0.35 surface area (weight)  
+		By the square/cube law  
+
+		Mortise and tenon joints packed with caulking for  
+		effecient and reliable construction  
+		
+		Barrel research  
+		
+		Research on volume and mass  
+		https://en.wikipedia.org/wiki/Barrel  
+		https://www.thebarrelmill.com/barrels  
+		32 gallons at 8.32 lbs per gal is 267 pounds   
+		30 gal barrel weight 78 with sqr/cube law  
+		as 32 gal barrel weighs ~80 lbs  
+		Total 347lbs most characters can't lift  
+		Push on ground of a full tube is possible  
+		Assumed to have a lid  
+		Price estimates based on wooden bowl best wiki figures as  
+		weight 1.5 capacity 6.5 price 2 arrows at 8 each = 16 price  
+		for price 2 to 3 per capacity at bowl size  
+		likely diminishing price return as you get bigger  
+
+		Names end in \*tub so as to be useable in recipes converted to  
+		accept them as a possibility. Caulked wooden tub has full  
+		"wooden tub" in name for recipe matches  
+
+		Table of weight/capacity/total of caulked builds and prices  
+		wooden tub   2/10/12 p25 (usually no lid)  
+		cask 10/66/77 p66  
+		keg 28/133/161 p133  
+		barrel 80/267/346 p178  
+		reduced by game mechanic barrel 25.5 holding 174.5  
+
+		discussions:  
+		Saami advised issues with containers over weight of 25.5  
+		So a square-cube law rule is applied from the base tub  
+		This is not correct as while the surface area rises in this  
+		way the higher liquid volume has more pressure requiring  
+		thicker walls to the container  
+
+		Price adjustments closer to BAC original / 17 rather than  
+		Woodworking suggestions mostly on I recall digging around  
+		for pricing relative to the different container sizes  
+
+		2023-05-11  
+		with the bug on lifting meaning not accessing the contents  
+		barrel load + own weight trimmed to total 200 lb  
+		reduction is from 267 to 174.5 or 0.65  
+		price value and materials adjusted to that  
+		thus consider this a squat barrel  
+		
 
 

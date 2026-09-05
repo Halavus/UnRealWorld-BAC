@@ -18,6 +18,55 @@
 {Thin cordage}	=3=		[remove] 
 {Knife}
 
+.Wooden tub. "Wooden tub" [effort:2] [phys:arms,hands] *CARPENTRY* /240/ [noquality] |1|
+{Board}	(6)		[remove]
+{Split spruce twig} (8)	[remove] [noquality]
+{Axe}<Carving axe> [wearpct:20]
+{Knife}<Small knife>
+[PRICE:1]
+
+.Cask. "Wooden tub" [effort:2] [phys:arms,hands] [noquality] *CARPENTRY* /150/ \30\ %15% |1|
+{Board} (4) [remove] [ground]
+{Cord} =24= [remove] [nominlen] '+as banding'
+{Caulking} #2# [remove] [noquality] '+caulk seams'
+{*pot} (1) [ground] [noquality] '+to hold hot caulking'
+{Fire}      '+to soften caulking'
+{Firewood} (2) [remove] [ground] [noquality] '+to sustain fire'
+{Axe} <Carving axe> '+for main shaping' [wearpct:40]
+{Knife} <Small knife> '+for fine whittling'
+[WEIGHT:10]
+[CONT_CAPACITY:66]
+[PRICE:4]
+
+.Keg. "Wooden tub" [effort:2] [phys:arms,hands] [noquality] *CARPENTRY* /180/ \30\ %15% |1|
+{Board} (6) [remove] [ground]
+{Cord} =36= [remove] [nominlen] '+as banding'
+{Caulking} #3# [remove] [noquality] '+caulk seams'
+{*pot} (1) [ground] [noquality] '+to hold hot caulking'
+{Fire}      '+to soften caulking'
+{Firewood} (3) [remove] [ground] [noquality] '+to sustain fire'
+{Axe} <Carving axe> '+for main shaping' [wearpct:40]
+{Knife} <Small knife> '+for fine whittling'
+[WEIGHT:16]
+[CONT_CAPACITY:133]
+[TILEGFX:ww-barrel]
+[PRICE:8]
+
+.Barrel. "Wooden tub" [effort:2] [phys:arms,hands] [noquality] *CARPENTRY* /210/ \30\ %15% |1|
+{Board} (6) [remove] [ground]
+{Cord} =30= [remove] [nominlen]
+//'+as banding'
+{Caulking} #3# [remove] [noquality] '+caulk seams'
+{*pot} (1) [ground] [noquality] 'Pot to hold hot caulking'
+{Fire}      '+to soften caulking'
+{Firewood} (4) [remove] [ground] [noquality] '+to sustain fire'
+{Axe} <Carving axe> [wearpct:40] '+for main shaping'
+{Knife} <Small knife> '+for fine whittling'
+[WEIGHT:25.5]
+[CONT_CAPACITY:174.5]
+[TILEGFX:ww-barrel]
+[PRICE:6.8]
+
 [SUBMENU_END:containers]
 
 

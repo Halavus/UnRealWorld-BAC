@@ -27,6 +27,7 @@
 	Clarification after some research:  
 	3.86 introduced the 'Modded handcraft options' submenu (\[M]-\[+] or \[O]) and the old recipes dispatch hasn't been updated correctly since.  
 	BAC Bowyer options were merged into 'Arrow' by Brygun in v3.80, when the menu letter A got taken by vanilla and as new space for submenus became scarce. This merger is not required anymore, because 25 new free submenu were made available in 3.86.
+- **same as the above for all wooden containers moved to the vanilla Containers submenu (\[M]-\[O])** (submenu was introduced in 3.87)
 - **reworked many text descriptions in recipes (☐ you need this and that) that were extending beyond the game window and became partly unreadable and others badly formatted.**  
 	If meaningful informations about the work being executed were given by these descriptions, they've been replaced by encyclopedia entries.
 
@@ -57,7 +58,6 @@
 - changed base item of the Forked bone arrowhead. to "Bone arrowhead" according to Buoidda's statment that their penetration [cannot be modded](https://www.unrealworld.fi/forums/index.php?topic=5865.msg17575#msg17575)
 - changed Tree trunk to Pine tree trunk in the "Compression Pine Belly" as stated by the comments in the code
 - changed name of 'unfinished bow' to 'unfinished shortbow' for the sake of clarity
-- removed vanilla items out of mod_diy_BAC_Carpentry, as it's not the same menu anymore and duplicates
 
 ### v3.88.3 Mod files cleanup
 - added BAC_changelogs.md
@@ -87,6 +87,8 @@
 - started cleaning up comments and logs in diy_BAC_Utility (does glue need special treatment for clarity?)
 - changed base item of the craftable canteen to Wooden canteen
 - removed Elk hunting horn duplicate from hafting 
+- started mod_diy_BAC_Carpentry.txt
+- removed vanilla recipes out of mod_diy_BAC_Carpentry, as it's not the same menu anymore and duplicates
 
 ## v3.88.2
 - Commented out vanilla arrow recipes in the diy_glossary file as they are being added by diy_BAC_Fletching_and_Bowying in order to keep menu order (having both was creating duplicate menu items)

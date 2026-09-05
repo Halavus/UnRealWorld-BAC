@@ -1,0 +1,97 @@
+// BAC archive of Carpentry
+
+
+[SUBMENU_START:Carpentry]
+
+.Axe haft. "Hunting horn" (4) [effort:2] [phys:arms,hands,stance]	*TIMBERCRAFT* %10% |0| /120/ [patch:4]
+{Short quarter log}	 	[remove] [patchwise]
+{Axe}<Carving axe>		 [noquality]
+{Knife}<Small knife>
+[MATERIAL:wood]
+[WEIGHT:1]
+[PRICE:0]
+[TILEGFX:bc-axehaft]
+//was 30 min for 1
+//Now produces multiple with longer time
+//removed for vanilla hafting in 3.84
+
+// Caulked Tub
+// Size of existing wooden tub
+//
+// In researching sizes and weights good info was 
+// found for barrel with the smaller ones set from that
+// Approx 0.5 volume (capacity) is 0.35 surface area (weight)
+// By the square/cube law
+// 
+// Mortise and tenon joints packed with caulking for 
+// effecient and reliable construction
+//
+// Barrel research
+//
+// Research on volume and mass
+// https://en.wikipedia.org/wiki/Barrel
+// https://www.thebarrelmill.com/barrels
+// 32 gallons at 8.32 lbs per gal is 267 pounds 
+// 30 gal barrel weight 78 with sqr/cube law 
+// as 32 gal barrel weighs ~80 lbs
+// Total 347lbs most characters can't lift
+// Push on ground of a full tube is possible
+// Assumed to have a lid
+// Price estimates based on wooden bowl best wiki figures as 
+// weight 1.5 capacity 6.5 price 2 arrows at 8 each = 16 price
+// for price 2 to 3 per capacity at bowl size
+// likely diminishing price return as you get bigger
+//
+// Names end in *tub so as to be useable in recipes converted to
+// accept them as a possibility. Caulked wooden tub has full
+// "wooden tub" in name for recipe matches
+//
+// Table of weight/capacity/total of caulked builds and prices
+// wooden tub   2/10/12 p25 (usually no lid)
+// cask 10/66/77 p66
+// keg 28/133/161 p133
+// barrel 80/267/346 p178
+// reduced by game mechanic barrel 25.5 holding 174.5
+//
+// discussions:
+// Saami advised issues with containers over weight of 25.5
+// So a square-cube law rule is applied from the base tub
+// This is not correct as while the surface area rises in this
+// way the higher liquid volume has more pressure requiring
+// thicker walls to the container
+
+.Caulked wooden tub. "Wooden tub" [effort:2] [phys:arms,hands] *CARPENTRY* /105/ \30\ %15% |1|
+{Board} (2) [remove]
+{*cord} =12= [remove] '+as banding'
+{Caulking} #1# [remove] '+to caulk seams'
+{*pot} (1) [ground] '+to hold hot caulking'
+{Fire}      '+to soften caulking'
+{Firewood} (1) [remove] [ground] '+to sustain fire'
+{Axe} <Carving axe> '+for main shaping'
+{Knife} <Small knife> '+for fine whittling'
+[WEIGHT:2]
+[CONT_CAPACITY:10]
+[PRICE:2]
+
+.Barrel Warning. "Rock" /0/
+{-} +'Warning: you must weigh 120lbs'
+{-} +'to lift a fully filled barrel,'
+{-} +'so take caution in overfilling'
+{-} +'or you will not be able to lift'
+{-} +'or interact with its contents.'
+
+
+////////////////////////////
+// Decorations, toys and valaubles
+//
+.Shape a figurine. "Sesta" [effort:1] [phys:arms,one-armed]  *CARPENTRY*   /60/	%-10%  |-1|		
+{Small whittled block} [remove] 
+{Knife}	
+[NAME:Partially shaped figurine]
+[TYPE:tool]
+[MATERIAL:wood]
+[WEIGHT:1]
+[PRICE:0]
+From whittling mod by Iago.Hach
+
+[SUBMENU_END:Carpentry]
