@@ -3890,7 +3890,7 @@ by Brygun
 ***
 
 .BAG.
-A craftable version of the vanilla Bag. Usually found in villages as Bag of salt.
+Vanilla item, made craftable by BAC. Usually found in villages as Bag of salt.
 
 WEIGHT: 0.2 lbs<br>
 CAPACITY: 20 lbs
@@ -3913,26 +3913,36 @@ BAC-made flour, you need a Quern-Grinder for this recipe.
 ***
 
 .FISH-SKIN GLUE.
+TODO.
 ***
 
 .GATHER PINE TAR.
+TODO.
 ***
 
 .PITCH GLUE FROM PINE TAR.
+TODO.
 ***
 
 .PITCH GLUE FROM BIRCH-BARK.
+TODO.
 ***
 
 .CAULKING.
+TODO.
 ***
 
-.WOODEN TUB.
-A craftable version of the vanilla Wooden tub.
+.355.
+Encyclopedia entry #355 seems to bug completely when rendering its first sentence on the bottom center 
+of the screen. Leave this article as placeholder.
+***
+
+.WOODEN TUB.WOODEN TUBS.
+Vanilla item, made craftable by BAC.
 
 Simple wooden tub adapted from Buoidda. Uses easily sourced materials and represents a bushcraft 
 or primitive construction, that takes a lot of time due to needing precise wood joints. Likely 
-will get 'leaky'.
+will get leaky.
 
 Using split spruce twigs represent packing spruce and other small plant materials into the cracks 
 for lack of proper caulking. Usually doesn't have a lid.
@@ -3941,7 +3951,7 @@ WEIGHT: 10 lbs<br>
 CAPACITY: 2 lbs
 ***
 
-.CASK.
+.CASK.CASKS.
 A strong, round, wooden container shaped like a barrel and used to store liquids.
 
 Mortise and tenon joints packed with caulking for effecient and reliable construction. Assumed to have a lid.
@@ -3950,7 +3960,7 @@ WEIGHT: 10 lbs<br>
 CAPACITY: 66 lbs
 ***
 
-.KEG.
+.KEG.KEGS.
 WARNING: you must weigh 100 lbs to lift a fully filled keg, so take caution in overfilling or you 
 won't be able to lift or interact with its contents after dropping it. In case this happens and you 
 need it gone, you can push it somewhere free of other items (p), stand on top of it and discard it 
@@ -3962,7 +3972,7 @@ WEIGHT: 16 lbs<br>
 CAPACITY: 133 lbs
 ***
 
-.BARREL.
+.BARREL.BARRELS.
 WARNING: you must weigh 133 lbs to lift a fully filled barrel, so take caution in overfilling or you 
 won't be able to lift or interact with its contents after dropping it. In case this happens and you 
 need it gone, you can push it somewhere free of other items (p), stand on top of it and discard it 
