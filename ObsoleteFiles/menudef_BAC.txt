@@ -37,7 +37,7 @@
 // L = Lumber
 // T = Trapping
 // R = Transport
-// O = Containers
+// O = Containers (added in 3.87)
 // U = Utility articles
 // Y = Tying equipment
 // W = Weapons
