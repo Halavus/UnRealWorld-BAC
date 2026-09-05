@@ -1,19 +1,29 @@
 // BAC integration of Utility
 
-
-[SUBMENU_START:utility article]
-
+[SUBMENU_START:containers]
 
 //MODDED:
 
 .Canteen. "Wooden canteen" [effort:1] [phys:arms,two-armed] *CARPENTRY*   /30/ |-1|
-{Wooden cup} (2) [remove] "+halves to join together"
-{Knife} "+shaping and fitting"
-{Branch} (1) [remove] "+seams and stopper"
-{* cord}	=4=	[remove] "Cord for binding and lanyard"
+{Wooden cup} (2) [remove] '+joined together'
+{Knife} '+for shaping and fitting'
+{Branch} (1) [remove] '+as seams and stopper'
+{* cord}	=4=	[remove] 'Cord as binding & lanyard'
 [WEIGHT:2]
 [CAPACITY:6]
 [PRICE:1]
+
+.Bag.					[noquality]	*CLOTHCRAFT*	/30/ |-2| 	[effort:1] [phys:hands] [assist:1]
+{Cloth}			#1.0#  	[remove] 
+{Thin cordage}	=3=		[remove] 
+{Knife}
+
+[SUBMENU_END:containers]
+
+
+[SUBMENU_START:utility article]
+
+//MODDED:
 
 .Bark bandage. "Bandage"  *HIDEWORKING* [effort:1] [phys:hands,one-armed] /30/ |-2| %-80% [assist:1] [NOPAUSE]
 {Knife} <Small knife>
@@ -25,11 +35,6 @@
 .Washed bandage. "Bandage"	[effort:1]	[noquality]	*COMMON*	/10/
 {Knife}  '+ONLY return applied bandage'
 {Water} #0.5# '+as Washing water'
-
-.Bag.					[noquality]		  	/30/  	[effort:1] [phys:hands] [assist:1]
-{Cloth}			#1.0#  	[remove] 
-{Thin cordage}	=3=		[remove] 
-{Knife}
 
 .Quern-Grinder Piece. "Hunting horn"   *AGRICULTURE* [effort:1] [phys:arms,hands]   /8h/ [assist:1]
 {Stone} (1) [remove] [noquality]
@@ -154,7 +159,6 @@
 // perform that role.
 //
 // 2023-05-04 as 3.70 has fibre change from branches to fibre
-
 
 
 [SUBMENU_END:utility article]

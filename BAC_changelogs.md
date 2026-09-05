@@ -46,6 +46,9 @@
 - removed nopause where unnecessary in boneworking recipes
 - removed unnecessary descriptive text in boneworking recipes
 - changed the canteen's needed tying equipment to cord (who wants to carry liquid around with yarn?) and upped the price accordingly
+- moved Canteen to Containers menu
+- added CLOTHCRAFT skill to bag
+- moved Bag to Containers menu
 - made the washed bandage less controversial by requiring a knife
 - changed base item of the quern's recipes to huning horn to avoid them being consumed as stones by other recipes
 - renamed "Grind xyz-flour" to "xyz-flour" to make them pausable
