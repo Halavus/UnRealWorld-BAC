@@ -1,7 +1,14 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+#Git
 /.gitignore export-ignore
 /.gitattributes export-ignore
+
+#Hidden files
 /.* export-ignore
+
+#BAC development 
 BAC_dev_notes/ export-ignore
 ObsoleteFiles/ export-ignore
+diy_BAC_a_dummyitem.txt export-ignore

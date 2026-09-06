@@ -1,0 +1,21 @@
+// BAC Dummy item for in-game testing purposes
+//
+// Access it quickly with [+]-[a]-[a] or [M]-[a]-[a]
+// with -A- in the first line
+// 
+// Example uses would be to remove all ingredients, but a knife or a rock and reducing crafting time to /1/
+// in order to spawn some items
+// or fiddle with tags and see what happens
+
+
+[SUBMENU_START:arrow]
+
+.stone.  "Hunting horn"  [effort:1] [phys:hands,one-armed] *CARPENTRY* %-20% /3h/ -A-
+{Antler} #1# [remove] [noquality] [NAME:%s stone] [naming:first word]
+{Axe} <Carving axe> [wearpct:30]
+{Knife} <Small knife>
+[MATERIAL:antler]
+[PRICE:0.4]
+[TILEGFX:bc-acomb]
+
+[SUBMENU_END:arrow]
