@@ -1,0 +1,137 @@
+
+
+[SUBMENU_START:baking]
+
+.Flatbread. (5)	    *COOKERY*	/45/ 		%30%	|-1|	:148:  
+{Flour}     #0.5#   [remove] [roast] [name]
+{Water}     #0.25#  [remove] 
+{Seasoning} #0.15#  [remove] [roast] [optional]
+[TILEGFX:it-flbread]
+
+[SUBMENU_END:baking]
+
+
+[SUBMENU_START:porridge]
+
+.Porridge. 		*COOKERY*	/20/  	%50%	|-1|	[portion:5]
+{Flour} 	#0.3# 	[remove] [boil] [name] [patchwise]
+{Water} 	#1# 	[remove] [boil] [patchwise]
+
+.Oven porridge. 	*COOKERY* 	/5/   \240\ 	%50%	|-1|     [portion:5]	
+{Flour} 	#0.3# 	[remove] [bake] [name] [patchwise]
+{Water} 	#1# 	[remove] [bake] [patchwise]
+
+.Seed porridge.		*COOKERY*	/25/    %50%	|-1|	   [portion:5]
+{Seeds} 	#0.3# 	[remove] [boil] [name] [patchwise]
+{Water} 	#1#     [remove] [boil] [patchwise]
+
+.Berry porridge.	*COOKERY*	/15/  	\90\ 	%50%	|-1|	[portion:5]
+{Berries} 	#0.3#   [remove] [boil] [name:%s porridge] [patchwise]
+{Water}	   	#0.8#  	[remove] [boil] [patchwise]
+{Flour} 	#0.2#   [remove] [boil] [patchwise] [optional] 
+
+
+[SUBMENU_END:porridge]
+
+[SUBMENU_START:meat]
+
+.Meat soup. 		*COOKERY* /15/  \45\	%20%   [portion:3]	
+{Raw or salted meat}	#0.66# 	[remove] [boil] [name] [patchwise]
+{Water}		        #1#	[remove] [boil] [patchwise]
+{Vegetables}	        #0.33#	[remove] [boil] [patchwise]
+{Knife}	'+for chopping and peeling' 
+{Seasoning}	        #0.1#	[remove] [boil] [patchwise] [optional]
+
+.Meat stew. 		*COOKERY* /30/  \180\	%20%	[portion:2]
+{Raw or salted meat}	#2#	 [remove] [bake] [name] [patchwise]
+{Water}		#0.5#	[remove] [bake] [patchwise]
+{Vegetables}	#0.5#	[remove] [bake] [patchwise]
+{Knife}	'+for chopping and peeling'
+{Mushrooms}	#0.25#	[remove] [bake] [patchwise] [optional]
+{Seasoning}	#0.25#	[remove] [bake] [patchwise] [optional]
+
+.Dried meat soup. 	*COOKERY* /30/  \150\	%20%   [portion:3]
+{Dried meat}    #0.2#   [remove] [boil] [patchwise] [name:dried %s soup]
+{Water}		#1.5#	[remove] [boil] [patchwise]
+{Vegetables}	#0.3#	[remove] [boil] [patchwise]
+{Knife}	'+for chopping and peeling' 
+{Seasoning}	#0.1#	[remove] [boil] [patchwise] [optional]
+
+.Smoked meat soup. 	*COOKERY* /30/  \90\	%20%   [portion:3]
+{Smoked meat}   #0.3#   [remove] [boil] [patchwise] [name:smoked %s soup]
+{Water}		#1.5#	[remove] [boil] [patchwise]
+{Vegetables}	#0.3#	[remove] [boil] [patchwise]
+{Knife}	'+for chopping and peeling' 
+{Seasoning}	#0.1#	[remove] [boil] [patchwise] [optional]
+
+[SUBMENU_END:meat]
+
+[SUBMENU_START:fish]
+
+.Fish soup.           *COOKERY* /15/  \45\	%20%   [portion:3]
+{Raw or salted fish}  #0.66#    [remove] [boil] [name:%s soup] [patchwise]
+{Water}		      #1#      [remove] [boil] [patchwise]
+{Vegetables}          #0.33#    [remove] [boil] [patchwise]
+{Knife}	'+for chopping and peeling' 
+{Seasoning}	      #0.1#    [remove] [boil] [optional] [patchwise]
+
+.Dried fish soup. 	*COOKERY* /20/  \30\	%20%   [portion:3]
+{Dried fish}    #0.15#   [remove] [boil] [name:%s soup] [patchwise] [naming:original]
+{Water}		#1.5#	[remove] [boil] [patchwise]
+{Vegetables}	#0.35#	[remove] [boil] [patchwise]
+{Knife}	'+for chopping and peeling' 
+{Flour}		#0.1#	[remove] [boil] [optional] [patchwise]
+{Seasoning}	#0.1#	[remove] [boil] [optional] [patchwise]
+
+.Smoked fish soup. 	*COOKERY* /15/  \60\	%20%   [portion:3]
+{Smoked fish}   #0.2#   [remove] [boil] [name:%s soup] [patchwise] [naming:original]
+{Water}		#1.5#	[remove] [boil] [patchwise]
+{Vegetables}	#0.3#	[remove] [boil] [patchwise]
+{Knife}	'+for chopping and peeling' 
+{Seasoning}	#0.1#	[remove] [boil] [optional] [patchwise]
+
+[SUBMENU_END:fish]
+
+[SUBMENU_START:vegetable]
+
+.Pea soup. 		*COOKERY* /10/  \120\	%20%	[portion:2]
+{Peas} 			#1# 	[remove] [boil] [patchwise]
+{Water}		  	#1.75#	[remove] [boil] [patchwise]
+{Raw or salted meat}	#0.5#	[remove] [boil] [optional] [patchwise]
+{Seasoning}	  	#0.15#	[remove] [optional] [boil] [patchwise]
+
+.Green soup. 		*COOKERY* /5/  \10\	%20%	[portion:3]
+{Herbs} 		#1#	[remove] [boil] [name:%s soup] [patchwise]
+{Water}		  	#1#	[remove] [boil]	[patchwise]		
+{Flour}			#0.1#	[remove] [boil] [optional] [patchwise]	
+{Seasoning}	  	#0.1#	[remove] [boil] [optional] [patchwise]
+
+.Vegetable soup. 		*COOKERY* /20/  \45\	%20%	[portion:3]
+{Vegetables} 		#1#	[remove] [boil] [name:%s soup] [patchwise]
+{Knife} '+for chopping and peeling'
+{Water}		  	#1#	[remove] [boil] [patchwise]
+{Seasoning}	  	#0.15#	[remove] [optional] [boil] [patchwise]
+
+.Mushroom soup. 		*COOKERY* /10/  \20\	%20%	[portion:3]
+{Mushrooms}		#1.5#   [remove] [boil] [name:%s soup] [patchwise]
+{Water}			#0.5#	[remove] [boil] [patchwise]
+{Flour}			#0.15#	[remove] [boil] [optional] [patchwise]
+{Seasoning}		#0.15#	[remove] [boil] [optional] [patchwise]
+
+.Vegetable stew.		*COOKERY* /15/  \120\	%20%   [portion:2]
+{Vegetables} 		#2.5#	[remove] [bake] [name:%s stew] [patchwise]
+{Water}			#0.3#	[remove] [patchwise]
+{Mushrooms}		#0.5#	[remove] [bake] [optional] [patchwise]
+{Knife} '+for chopping and peeling'
+{Seasoning}		#0.2#	[remove] [bake] [optional] [patchwise]
+
+
+[SUBMENU_END:vegetable]
+
+
+
+
+
+
+
+

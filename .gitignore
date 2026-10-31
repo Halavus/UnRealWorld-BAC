@@ -19,7 +19,7 @@
 *.SAV
 
 #Encyclopedia
-!GAME.NFO
+!GAME*.NFO
 
 #Non mod .txt
 audio.txt
